@@ -10,8 +10,8 @@ You are to construct an LaTeX document with the following components:
     3. A set of use case descriptions of the tasks in #1 above. Read the lecture notes (and/or google it) for definition and examples of use case descriptions. Your format should resemble my examples.
     
 
-Windows TeX editor:
-http://sourceforge.net/projects/texstudio/
+LaTeX editor:
+http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.10.8/
 
-Windows LaTeX 'Compiler' (Required):
+Windows LaTeX 'Compiler' (Required for Windows):
 http://miktex.org/download
