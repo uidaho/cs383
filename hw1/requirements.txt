@@ -8,3 +8,10 @@ You are to construct an LaTeX document with the following components:
     1. Identify how many distinct kinds of user/player tasks are required. A task is a set of user actions that combine together to form a single indivisible phase a distinct change of state for those hases where multiple changes of state can occur.
     2. Your assessment of the requirements for a computer adaptation of your assigned parts of the application domain. How will manual elements be translated? What parts have to change? What parts of the manual (or legacy) system can be retained as-is? You can include sketches or sample screen shots of what various application domain elements should look like in the new system.
     3. A set of use case descriptions of the tasks in #1 above. Read the lecture notes (and/or google it) for definition and examples of use case descriptions. Your format should resemble my examples.
+    
+
+Windows TeX editor:
+http://sourceforge.net/projects/texstudio/
+
+Windows LaTeX 'Compiler' (Required):
+http://miktex.org/download
