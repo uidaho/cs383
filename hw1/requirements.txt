@@ -13,5 +13,15 @@ You are to construct an LaTeX document with the following components:
 LaTeX editor:
 http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.10.8/
 
-Windows LaTeX 'Compiler' (Required for Windows):
+LaTeX 'Compiler' (Required for Windows):
 http://miktex.org/download
+
+Here's a few example site for piratepad
+    
+    http://piratepad.nl - this one is the one I"ve used before. Very simple UI.
+    
+    http://piratepad.ca - Bad certificate, but the site runs clean for me. The UI is a little more streamlined than the .nl site.
+    
+    And for an example IDE, I suppose we have c9.io :P
+    
+    If you have other online sites to study, feel free to list them here! - G.Fish

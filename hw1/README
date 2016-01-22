@@ -1,0 +1,6 @@
+Project File Descriptions
+-------------------------
+attendance.txt      - where we track attendance and keep meeting summaries
+requirements.txt    - list of requirements for this homework assignment
+hw1.tex             - source latex file used to generate .dvi
+hw1.dvi             - compiled output of hw1.tex
