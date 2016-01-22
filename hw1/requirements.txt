@@ -23,5 +23,12 @@ Here's a few example site for piratepad
     http://piratepad.ca - Bad certificate, but the site runs clean for me. The UI is a little more streamlined than the .nl site.
     
     And for an example IDE, I suppose we have c9.io :P
+        - The IDE that c9 uses is called the Ace editor: https://en.wikipedia.org/wiki/Ace_(editor)  -brandonj
     
     If you have other online sites to study, feel free to list them here! - G.Fish
+    
+    
+    https://sharelatex.com - web based collab LaTeX
+    http://www.pythonanywhere.com/ - you guesed it, web based collaborative python
+    these all use Ace, we should probably use Ace too ;) -brandonj
+    
