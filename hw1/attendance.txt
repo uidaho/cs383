@@ -18,15 +18,24 @@ Brandon Ratcliff    ratc8795@vandals.uidaho.edu     nondon4         nondon4
 E-mail List:
 guan2264@vandals.uidaho.edu; knic1468@vandals.uidaho.edu; carl7595@vandals.uidaho.edu; bolt1003@vandals.uidaho.edu; jank6275@vandals.uidaho.edu; ratc8795@vandals.uidaho.edu; benz5834@vandals.uidaho.edu; mora5651@vandals.uidaho.edu
 
-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 Class Meeting - Friday 1/22/2015
+Absent Members: None 
 Tasks:
 - Take attendance.
 - Meet your team members and exchange contact information.
 - Elect someone from your team to e-mail me attendance and a brief summary after each hours' meeting.
-- Discuss schedule availability for CS 383 work. 
-- Work on this homework. 
+- Discuss schedule availability for CS 383 work.
+- Who would like help with git or c9?
+- Any LaTeX gurus in the group?
+- Additional Meeting. Needed? When? Where? Skype?
+- Work on this homework:
+    - Application Domain Study. What things exist that are similar to "Squire"?
+    - "Fleshing out". What will Squire do? What are the major objectives to getting a functional Squire application? Need 4+ so we can have 2 or 1 person groups, each group working on "fleshing out" a single objective. 
+    - Application Domain Specification. Each person should be assigned sections of the specification to complete. See hw1.html for ADS requirements.
 
 
 Class Meeting - Monday 1/25/2015
+Absent Members: None 
+Tasks:
