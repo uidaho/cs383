@@ -1,0 +1,31 @@
+Class Meeting - Friday 1/22/2015
+Absent Members: None
+Tasks:
+[x] Take attendance.
+[x] Meet your team members and exchange contact information.
+[x] Elect someone from your team to e-mail me attendance and a brief summary after each hours' meeting.
+[x] Discuss schedule availability for CS 383 work.
+[x] Who would like help with git or c9?
+[x] Any LaTeX gurus in the group?
+[x] Additional Meeting. Needed? When? Where? Skype?
+[x] Work on this homework:
+    [x] Application Domain Study. What things exist that are similar to "Squire"?
+    [x] "Fleshing out". What will Squire do? What are the major objectives to getting a functional Squire application? Need 4+ so we can have 2 or 1 person groups, each group working on "fleshing out" a single objective. 
+    [x] Application Domain Specification. Each person should be assigned sections of the specification to complete. See hw1.html for ADS requirements.
+    
+Attendance Taken - No absences.
+    
+Elected Wyatt Knickerbocker (Gentlefish) to take minutes
+    
+Additional weekly meeting 5:30 PM @ Engineering Think Tank.
+
+Work will be assigned @ meeting, due next meeting. Information on who's doing what will be in the ToDo.txt in main folder.
+
+Crash course in github? Commits need to be specific. File/Function information.
+
+4 useful commands:
+    1. git pull - gets fresh code
+    2. edit.
+    3. git add <FILENAME> - uploads new code. Error? Oops. Fixable.
+    4. git pull - in case you've had the code for a while.
+    5. git commit -m "<CHANGELOG>"
