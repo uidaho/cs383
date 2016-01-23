@@ -29,3 +29,4 @@ Crash course in github? Commits need to be specific. File/Function information.
     3. git add <FILENAME> - uploads new code. Error? Oops. Fixable.
     4. git pull - in case you've had the code for a while.
     5. git commit -m "<CHANGELOG>"
+    6. git push

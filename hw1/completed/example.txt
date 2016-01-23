@@ -1,0 +1,23 @@
+EXAMPLE Use Case Decription
+by Some Body <sbody@uidaho.edu>
+
+Exit parking lot, paying cash
+-----------------------------
+Actor: car driver
+Goal: to leave the parking lot
+Precondition: driver previously entered the parking lot, picked up a ticket, and has stayed in the lot long enough that they must pay to leave.
+Summary: driver brings their vehicle to an exit lane, inserts their ticket into a machine, and pays the amount shown on the machine.
+Related use case: exit parking lot, paying via credit card.
+
+Steps:
+1. Drive to exit lane, triggering a sensor.
+2. System prompts driver to insert their ticket.
+3. Insert ticket.
+4. System displays amount due.
+5. Insert money into slot until cash in exceeds amount due. 
+6. System returns change (if any) and raises exit barrier
+7. Drive through exit, triggering a sensor.
+8. Lower exit barrier
+
+Alternative: User crashes through exit barrier with rambars on front of truck in step 1. (just kidding)
+Postconditions: None

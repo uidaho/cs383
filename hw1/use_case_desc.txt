@@ -35,8 +35,8 @@ Postconditions: None
 registration
 login                           Feng Guan (gf545576676gf)
 logout                          Feng Guan (gf545576676gf)
-choose project                  (bolt1003)
-create project                  (bolt1003)
+choose project                  Ben Bolton (bolt1003)
+create project                  Ben Bolton (bolt1003)
 join project
 delete project
 edit project
