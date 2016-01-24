@@ -1,0 +1,35 @@
+http://www2.cs.uidaho.edu/~jeffery/courses/383/hw1.html
+http://www2.cs.uidaho.edu/~jeffery/courses/383/squire.html
+
+You are to construct an LaTeX document with the following components:
+- Results from application domain study, e.g. examination and test of a similar (previous and/or manual) system.
+- Major expansion ("fleshing out") of the basic premise of this program Agree with your team on the basics (objective(s)), and then break this task out into individual or 2-person assignments.
+- Divide the application domain specification up approximately evenly by volume amongst your team members. Note who was assigned what sections, by name and number. Each team member should, for their assigned sections:
+    1. Identify how many distinct kinds of user/player tasks are required. A task is a set of user actions that combine together to form a single indivisible phase a distinct change of state for those hases where multiple changes of state can occur.
+    2. Your assessment of the requirements for a computer adaptation of your assigned parts of the application domain. How will manual elements be translated? What parts have to change? What parts of the manual (or legacy) system can be retained as-is? You can include sketches or sample screen shots of what various application domain elements should look like in the new system.
+    3. A set of use case descriptions of the tasks in #1 above. Read the lecture notes (and/or google it) for definition and examples of use case descriptions. Your format should resemble my examples.
+    
+
+LaTeX editor:
+http://sourceforge.net/projects/texstudio/files/texstudio/TeXstudio%202.10.8/
+
+LaTeX 'Compiler' (Required for Windows):
+http://miktex.org/download
+
+Here's a few example site for piratepad
+    
+    http://piratepad.nl - this one is the one I"ve used before. Very simple UI.
+    
+    http://piratepad.ca - Bad certificate, but the site runs clean for me. The UI is a little more streamlined than the .nl site.
+    
+    And for an example IDE, I suppose we have c9.io :P
+        - The IDE that c9 uses is called the Ace editor: https://en.wikipedia.org/wiki/Ace_(editor)  -brandonj
+    
+    If you have other online sites to study, feel free to list them here! - G.Fish
+    
+    
+    https://sharelatex.com - web based collab LaTeX
+    http://www.pythonanywhere.com/ - you guesed it, web based collaborative python
+    these all use Ace, we should probably use Ace too ;) -brandonj
+    
+    

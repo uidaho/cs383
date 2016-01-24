@@ -1,0 +1,7 @@
+\contentsline {part}{I\hspace {1em}Squire: A Web Based Collaborative Editor}{2}
+\contentsline {section}{\numberline {0.1}Program Premise}{3}
+\contentsline {section}{\numberline {0.2}Application Domain Study}{3}
+\contentsline {section}{\numberline {0.3}Use Case Descriptions}{3}
+\contentsline {subsection}{\numberline {0.3.1}use case title}{3}
+\contentsline {subsection}{\numberline {0.3.2}Example case 2 (jank6275)}{4}
+\contentsline {subsection}{\numberline {0.3.3}Example case 3 (jank6275)}{5}

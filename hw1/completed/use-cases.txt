@@ -1,0 +1,37 @@
+Use Case Description
+--------------------
+Name: Name of the use case.
+Actors: What participants are involved in this task
+Goals: What are people trying to accomplish
+Preconditions: The inital state or event that triggers this task
+Summary: Short paragraph explaiin what this task is about
+Related: What cases does this use case use or extend? What uses/extends this case?
+Steps:
+Alternatives: 
+Postconditions:
+
+
+Example candidate tasks for an online collaborative IDE:
+
+#   Use Case                        Assigned
+--- ------------------------------- -------------------------
+1   registration
+2   login                           Feng Guan (gf545576676gf)
+3   logout                          Feng Guan (gf545576676gf)
+4   choose project                  Ben Bolton (bolt1003)
+5   create project                  Ben Bolton (bolt1003)
+6   join project                    Kevin Morales(mora5651)
+7   delete project                  Kevin Morales(mora5651)
+8   edit project
+9   invite user to project          
+10  accept invite to project        Robert Carlson (carl7595)
+11  remove user from project        Robert Carlson (carl7595)
+12  project chat                    Brandon Jank (jank6275)
+13  global chat                     Brandon Jank (jank6275)
+14  project permissions             Kevin Benzing (benz5834)
+15  user preferences                Kevin Benzing (benz5834)
+16  Import file                     Wyatt (G.Fish)
+17  Export file                     Wyatt (G.Fish)
+
+
+
