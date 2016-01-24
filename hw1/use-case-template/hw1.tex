@@ -1,102 +1,91 @@
-%% Use Cases Template File
-%% Created by Tom Desair (http://www.tomdesair.com)
-%% Downloadable at: http://www.tomdesair.com/downloads/use-case-latex-template.zip
-%% Date Modified: 03/04/2012
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License, either version 1.3
-% of this license or (at your option) any later version.
-% The latest version of this license is in
-%   http://www.latex-project.org/lppl.txt
-% and version 1.3 or later is part of all distributions of LaTeX
-% version 2005/12/01 or later.
 
-\documentclass[letterpaper, 12pt, oneside, draft]{article}
+\documentclass[11pt]{report}
 
-%include the usecases package
-\usepackage{usecases}
+\marginparwidth 0.5in 
+\oddsidemargin 0.25in 
+\evensidemargin 0.25in 
+\marginparsep 0.25in
+\topmargin 0.25in 
+\textwidth 6in \textheight 8 in
 
 \begin{document}
 
-\begin{usecase}
+\title{Application Domain Specification: Squire}
+%\author{Kevin Benzing, Ben Bolton, Robert Carlson, Feng Guan, Brandon Jank, Wyatt Knickerbocker, Kevin Morales, Brandon Ratcliff}
+\author{benz5834, bolt1003, carl7595, guan2264, jank6275, knic1468, mora5651, ratc8795}
+\maketitle
 
-\addtitle{Use Case 1}{Template test} 
+\tableofcontents
 
-%Actor: What participants are involved in this task?
-\addfield{Actor:}{End-User}
+\part{Squire: A Web Based Collaborative Editor}
 
-%Goal: What are people trying to accomplish?
-\addfield{Goal:}{User-goal}
+\section{Program Premise}
+Major expansion (``fleshing out'') of the basic premise of this program Agree with your team on the basics (objective(s)), and then break this task out into individual or 2-person assignments.
 
-%Preconditions: The inital state or event that triggers this task.
-\additemizedfield{Preconditions:}{
-	\item a condition
-	\item another condition
-}
+\section{Application Domain Study}
+An examination and test of a similar (previous and/or manual) system.
 
-%Summary: Short paragraph explaiin what this task is about.
-\addfield{Summary:}{A short summary.}
+\section{Use Case Descriptions}
+Identify how many distinct kinds of user/player tasks are required. A task is a set of user actions that combine together to form a single indivisible phase a distinct change of state for those phases where multiple changes of state can occur.
 
-%Related
-\additemizedfield{Related:}{
-	\item first related case
-	\item second related case
-}
+\subsection{use case title}
+Your assessment of the requirements for a computer adaptation of your assigned parts of the application domain. How will manual elements be translated? What parts have to change? What parts of the manual (or legacy) system can be retained as-is? You can include sketches or sample screen shots of what various application domain elements should look like in the new system.
+A set of use case descriptions of the tasks in \#1 above. Read the lecture notes (and/or google it) for definition and examples of use case descriptions. Your format should resemble my examples.
 
-%Steps: sdfasdfasdf.
-\addscenario{Steps:}{
-	\item[2.a] Invalid login data:
-		\begin{enumerate}
-		\item[1.] System shows failure message
-		\item[2.] User returns to step 1
-		\end{enumerate}
-	\item[5.a] Invalid subsriber data:
-		\begin{enumerate}
-		\item[1.] System shows failure message
-		\item[2.] User returns to step 2 and corrects the errors
-		\end{enumerate}
-}
+\subsection{Example case 2 (jank6275)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actor:} & car driver \\ 
+ \\
+ \textit{Goal:} & to leave the parking lot \\
+ \\
+ \textit{Precondition:} & driver previously entered the parking lot, picked up a ticket, and has stayed in the lot long enough that they must pay to leave. \\
+ \\
+ \textit{Summary:} & driver brings their vehicle to an exit lane, inserts their ticket into a machine, and pays the amount shown on the machine. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Drive to exit lane, triggering a sensor.
+  \item System prompts driver to insert their ticket.
+  \item Insert ticket.
+  \item System displays amount due.
+  \item Insert money into slot until cash in exceeds amount due.
+  \item System returns change (if any) and raises exit barrier.
+  \item Drive through exit, triggering a sensor.
+  \item Lower exit barrier.
+ \end{enumerate} \\
+ \\
+ \textit{Alternative:} & User crashes through exit barrier with rambars on front of truck in step 1. (just kidding) \\
+ \\
+\hline
+\end{tabular}
 
-%Alternatives: Alternate scenarios of success or failure.
-\addscenario{Alternatives:}{
-	\item[2.a] Invalid login data:
-		\begin{enumerate}
-		\item[1.] System shows failure message
-		\item[2.] User returns to step 1
-		\end{enumerate}
-	\item[5.a] Invalid subsriber data:
-		\begin{enumerate}
-		\item[1.] System shows failure message
-		\item[2.] User returns to step 2 and corrects the errors
-		\end{enumerate}
-}
-
-%Postconditions: What must be true on successful completion and worth telling the reader.
-\additemizedfield{Postconditions:}{
-	\item a condition
-	\item another condition
-}
-
-
-
-
-
-
-
-
-
-%Main Success Scenario: A typical, unconditional happy path scenario of success.
-\addscenario{Main Success Scenario:}{
-	\item The first action
-	\item The second action
-}
-
-
-
-
-
-
-\end{usecase}
+\subsection{Example case 3 (jank6275)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actor:} & car driver \\ 
+ \\
+ \textit{Goal:} & to leave the parking lot \\
+ \\
+ \textit{Precondition:} & driver previously entered the parking lot, picked up a ticket, and has stayed in the lot long enough that they must pay to leave. \\
+ \\
+ \textit{Summary:} & driver brings their vehicle to an exit lane, inserts their ticket into a machine, and pays the amount shown on the machine. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Drive to exit lane, triggering a sensor.
+  \item System prompts driver to insert their ticket.
+  \item Insert ticket.
+  \item System displays amount due.
+  \item Insert money into slot until cash in exceeds amount due.
+  \item System returns change (if any) and raises exit barrier.
+  \item Drive through exit, triggering a sensor.
+  \item Lower exit barrier.
+ \end{enumerate} \\
+ \\
+ \textit{Alternative:} & User crashes through exit barrier with rambars on front of truck in step 1. (just kidding) \\
+ \\
+\hline
+\end{tabular}
 
 \end{document}
-
