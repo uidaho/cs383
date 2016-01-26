@@ -1,0 +1,226 @@
+\subsection{Invite user to project (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User sending invites, user receiving invites \\ 
+ \\
+ \textit{Goals:} & Give another user access to a project. \\
+ \\
+ \textit{Pre-conditions:} & User has the permissions necessary to invite a user to a project. \\
+ \\
+ \textit{Summary:} & User opens a dialog to invite users, inputs one or more users, and the level of access to the project that they should be given. \\ 
+ \\
+ \textit{Related use cases:} & Accept invite to project,  project permissions \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks on a button to invite users.
+  \item A dialog is displayed to the user.
+  \item User types in one or more emails.
+  \item User specifies the level of access for each user.
+  \item User clicks submit.
+  \item The dialog disappears.
+  \item Emails are sent to the email addresses specified containing invites.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User does not have permission to invite others to the project, so the button to invite users is not displayed. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Edit project file (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & One or more users editing a file \\ 
+ \\
+ \textit{Goals:} & Make changes to a file and sync those changes with other users editing the same file. \\
+ \\
+ \textit{Pre-conditions:} & User has the permissions necessary to edit the project, and the file is open.\\
+ \\
+ \textit{Summary:} & A user makes a change to a file in a text editor, and those changes are reflected to other users editing the same file. \\ 
+ \\
+ \textit{Related use cases:} & None. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User makes a change in the editor.
+  \item The editor of other users editing the same file reflects the change
+  \item The editor updates any syntax highlighting and formatting
+  \item A note in the margin updates to show the user was the last one to edit that line
+  \item The editor of other users editing the same file shows the same note in the margin
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User does not have permission to edit the file, so the editor ignores any input from that user. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Open project file (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{actors:} & User \\ 
+ \\
+ \textit{goals:} & A user selects a file from the project for editing or viewing. \\
+ \\
+ \textit{pre-conditions:} & The file already exists \\
+ \\
+ \textit{summary:} & A user selects a file from the project which opens, replacing any file that is already open. \\ 
+ \\
+ \textit{related use cases:} & Close a project file \\ 
+ \\
+ \textit{steps:} & \begin{enumerate}
+  \item A user selects a file from the list of files in the project.
+  \item If a file is currently open, that file is closed.
+  \item The file is opened in the editor.
+  \item The editor shows the user as being active in the file.
+ \end{enumerate} \\
+ \\
+ \textit{alternatives:} & None. \\
+ \\
+ \textit{post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Close a project file (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{actors:} & User \\ 
+ \\
+ \textit{goals:} & Closing a file. \\
+ \\
+ \textit{pre-conditions:} & A user clicks a button to close an open file and the editor is closed. \\
+ \\
+ \textit{summary:} & The file is closed. \\ 
+ \\
+ \textit{related use cases:} & Open a file. \\ 
+ \\
+ \textit{steps:} & \begin{enumerate}
+  \item A user clicks on a button to close the file, or has selected another file to open.
+  \item The file is closed, and removed from the editor.
+  \item The editor now longer shows the user as being active in the file.
+ \end{enumerate} \\
+ \\
+ \textit{alternatives:} & none. \\
+ \\
+ \textit{post-conditions:} & none. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Create a project file (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{actors:} & User \\ 
+ \\
+ \textit{goals:} & Creating a new file. \\
+ \\
+ \textit{pre-conditions:} & The user has permission to create a new file. \\
+ \\
+ \textit{summary:} & A user new project file is cr \\ 
+ \\
+ \textit{related use cases:} & Move a file, Delete a file \\ 
+ \\
+ \textit{steps:} & \begin{enumerate}
+  \item A user clicks on a button to create a file.
+  \item A dialog is displayed asking for a file path.
+  \item The user types in the file path.
+  \item The file is created.
+ \end{enumerate} \\
+ \\
+ \textit{alternatives:} & The specified file name contains invalid characters, so an error is displayed. \\
+ \\
+ \textit{post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Move a file (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{actors:} & User \\ 
+ \\
+ \textit{goals:} & A user moved from one location to another\\
+ \\
+ \textit{pre-conditions:} & The user has permission to move a file. \\
+ \\
+ \textit{summary:} & A file is moved from it's location to a new location specified by the user \\ 
+ \\
+ \textit{related use cases:} & Create a file, Delete a file \\ 
+ \\
+ \textit{steps:} & \begin{enumerate}
+  \item A user clicks on a button next to a file to rename it
+  \item A dialog is displayed asking for a file name.
+  \item The user types in the file name.
+  \item The file is moved to the new location
+ \end{enumerate} \\
+ \\
+ \textit{alternatives:} & The user types in a location that is invalid; an error is displayed. \\
+ \\
+ \textit{post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Delete a file (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{actors:} & User \\ 
+ \\
+ \textit{goals:} & A file is deleted \\
+ \\
+ \textit{pre-conditions:} & The user has permission to delete a file. \\
+ \\
+ \textit{summary:} & A user clicks a button to delete a file, and it is removed from the project \\ 
+ \\
+ \textit{related use cases:} & Create a file, Delete a file \\ 
+ \\
+ \textit{steps:} & \begin{enumerate}
+  \item A user clicks on a button next to a file to delete it
+  \item A dialog is displayed asking for confirmation.
+  \item The user clicks yes.
+  \item The file is deleted.
+ \end{enumerate} \\
+ \\
+ \textit{alternatives:} & The user clicks no in the confirmation so the file is not deleted. \\
+ \\
+ \textit{post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Gain an achievement (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{actors:} & User \\ 
+ \\
+ \textit{goals:} & Notify the user that they gained an achievement \\
+ \\
+ \textit{pre-conditions:} & The user has met the requirements for the achievement. \\
+ \\
+ \textit{summary:} & A user is informed that the earned an achievement, and users in the project chat are informed that the user earned an achievement, and the user's profile is updated to include the achievement \\ 
+ \\
+ \textit{related use cases:} & None. \\ 
+ \\
+ \textit{steps:} & \begin{enumerate}
+  \item A user earns an achievement.
+  \item A pop up is displayed to the user informing them of the achievement.
+  \item After a couple seconds, the pop up goes away.
+  \item A message is sent to the group chat informing other users of the achievement.
+ \end{enumerate} \\
+ \\
+ \textit{alternatives:} & None. \\
+ \\
+ \textit{post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}

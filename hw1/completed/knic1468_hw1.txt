@@ -1,0 +1,41 @@
+16  Import file                     Wyatt (G.Fish)
+17  Export file                     Wyatt (G.Fish)
+
+Import File Use Case Decription
+by Wyatt Knickerbocker <knic1468@vandals.uidaho.edu>
+
+Import file into work space
+-----------------------------
+Actor: Squire User
+Goal: Import a file to the workspace
+Precondition: User is logged on and in a room where they have read/write access
+
+Steps:
+1. User clicks on "Import File" button
+2. System requests a file to be imported
+3. User selects a file to imported
+4. System determines if file is valid
+5a. File is invalid; System rejects file. Return to precondition
+5b. File is valid; System accepts file.
+6. System reads file and loads text into workspace.
+
+Alternative: None
+Postconditions: None
+
+Export File Use Case Decription
+by Wyatt Knickerbocker <knic1468@vandals.uidaho.edu>
+
+Export file into work space
+-----------------------------
+Actor: Squire User
+Goal: Export a file to the workspace
+Precondition: User is logged on and in a room where they have read access, with information in workspace.
+
+Steps:
+1. User clicks on "Export File" button
+2. System requests a file destination to be selected
+3. User selects a destination for the file
+4. System exports file to file destination
+
+Alternative: None
+Postconditions: None

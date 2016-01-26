@@ -1,0 +1,86 @@
+EXAMPLE Use Case Decription
+by Some Body <sbody@uidaho.edu>
+
+Exit parking lot, paying cash
+-----------------------------
+Actor: car driver
+Goal: to leave the parking lot
+Precondition: driver previously entered the parking lot, picked up a ticket, and has stayed in the lot long enough that they must pay to leave.
+Summary: driver brings their vehicle to an exit lane, inserts their ticket into a machine, and pays the amount shown on the machine.
+Related use case: exit parking lot, paying via credit card.
+
+Steps:
+1. Drive to exit lane, triggering a sensor.
+2. System prompts driver to insert their ticket.
+3. Insert ticket.
+4. System displays amount due.
+5. Insert money into slot until cash in exceeds amount due. 
+6. System returns change (if any) and raises exit barrier
+7. Drive through exit, triggering a sensor.
+8. Lower exit barrier
+
+Alternative: User crashes through exit barrier with rambars on front of truck in step 1. (just kidding)
+Postconditions: None
+
+
+\subsection{Exit parking lot, paying cash (jank6275)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & car driver \\ 
+ \\
+ \textit{Goals:} & to leave the parking lot \\
+ \\
+ \textit{Pre-conditions:} & driver previously entered the parking lot, picked up a ticket, and has stayed in the lot long enough that they must pay to leave. \\
+ \\
+ \textit{Summary:} & driver brings their vehicle to an exit lane, inserts their ticket into a machine, and pays the amount shown on the machine. \\ 
+ \\
+ \textit{Related use cases:} & None. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Drive to exit lane, triggering a sensor.
+  \item System prompts driver to insert their ticket.
+  \item Insert ticket.
+  \item System displays amount due.
+  \item Insert money into slot until cash in exceeds amount due.
+  \item System returns change (if any) and raises exit barrier.
+  \item Drive through exit, triggering a sensor.
+  \item Lower exit barrier.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User crashes through exit barrier with rambars on front of truck in step 1. (just kidding) \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+
+\subsection{use case title}
+Your assessment of the requirements for a computer adaptation of your assigned parts of the application domain. How will manual elements be translated? What parts have to change? What parts of the manual (or legacy) system can be retained as-is? You can include sketches or sample screen shots of what various application domain elements should look like in the new system.
+A set of use case descriptions of the tasks in \#1 above. Read the lecture notes (and/or google it) for definition and examples of use case descriptions. Your format should resemble my examples.
+
+\subsection{Example case 2 (jank6275)}
+\begin{tabular}{ p{2cm} p{12cm} }   
+ \hline
+ \\
+ \textit{Actors:} & What participants are involved in this task. \\ 
+ \\
+ \textit{Goals:} & What those people are trying to accomplish. \\
+ \\
+ \textit{Pre-conditions:} & The initial state or event that triggers this task. \\
+ \\
+ \textit{Summary:} & Short paragraph stating what this task is all about. \\ 
+ \\
+ \textit{Related use cases:} & What use cases does this use case use or extend? What uses/extends this use case? \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The most common sequence of actions that are performed for this task. Lethbridge divides actions into two columns: user input is given in the left column, while system response is given in the right column. The two column format is optional, but saves on paper and may improve clarity. The steps are numbered, so there is no ambiguity in using both columns on each line.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & Some use cases may vary the normal sequence of steps. \\
+ \\
+ \textit{Post-conditions:} & What does this task produce? \\
+ \\
+\hline
+\end{tabular}

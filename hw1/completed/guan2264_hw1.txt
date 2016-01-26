@@ -1,0 +1,57 @@
+\section{Login(guan2264)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Squire User \\ 
+ \\
+ \textit{Goals:} & Allows user to login to the system and use functions of the system. \\
+ \\
+ \textit{Pre-conditions:} & The user must have user account. \\
+ \\
+ \textit{Summary:} & User types in the correct user name and password, click the login button, and login to the system. When login successfully, the system will display the access page for user. \\ 
+ \\
+ \textit{Related use cases:} & choose project, create project, join project, delete project, edit project, invite user to project, accept invite to project, remove user from project, project chat, global chat, roject permissions, user preferences, import file, export file, gain achivement, view user profile, and logout. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The system displays the Login page that asks the user to enter username and password.
+  \item The user types in their username and password.
+  \item The user click the login button.
+  \item The system checks the username and password from the data base.
+  \item The system verifies username and password.
+  \item	The system displays the access page for the user.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & If the user do not enter the correct username and password, the system will ask the user to enter the correct username and password \\
+ \\
+ \textit{Post-conditions:} & User logs in and use functions of the system. \\
+ \\
+\hline
+\end{tabular}
+
+\section{Logout(guan2264)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Squire User \\ 
+ \\
+ \textit{Goals:} & Allows user to logout to the system. \\
+ \\
+ \textit{Pre-conditions:} & The user must have user account and already login to the system. \\
+ \\
+ \textit{Summary:} & User click the logout button and their session is terminated. \\ 
+ \\
+ \textit{Related use cases:} & N/A \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The user click the logout button.
+  \item The system logs the user out.
+  \item The system invalidates the session.
+  \item The system redirects to the default login page.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & N/A\\
+ \\
+ \textit{Post-conditions:} & User's previous session is terminated and the system displays the login page. \\
+ \\
+\hline
+\end{tabular}

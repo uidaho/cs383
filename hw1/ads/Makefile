@@ -1,13 +1,14 @@
 # CS 383 HW #1 - Makefile
 
-FILES = hw1.tex
+FILE = hw1
 CC = latex
 FLAGS = -output-format=pdf
 
-all: hw1.pdf
+all: ${FILE}.pdf
 
-hw1.pdf: hw1.tex
-	${CC} ${FLAGS} ${FILES}
+${FILE}.pdf: ${FILE}.tex
+	${CC} ${FLAGS} ${FILE}.tex
+	${CC} ${FLAGS} ${FILE}.tex
 
 clean:
-	rm -f hw1.aux hw1.dvi hw1.log hw1.pdf
+	rm -f ${FILE}.aux ${FILE}.dvi ${FILE}.log ${FILE}.pdf

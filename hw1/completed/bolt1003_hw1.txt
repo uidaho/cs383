@@ -1,0 +1,101 @@
+Create Project
+
+Actor: Users of sQuire.
+
+Goal: Create a Project.
+
+Preconditions: The user is logged in.
+
+Summary: User opens the project manager and creates a project.
+
+Steps:
+
+1. User selects the project manager from the main menu.
+2. User selects open.
+3. Create new project is selected from the task bar.
+4. A name is choosen for the project.
+5. A location is selected for the project.
+6. Language is selected from a drop down menu.
+7. User clicks finish.
+
+
+
+
+
+
+Choose Project
+
+Actor: Users of sQuire.
+
+Goal: Open a Project.
+
+Preconditions: A project has been created and the user is logged in.
+
+Summary: User looks through the list of project and selects the desired project.
+
+Steps:
+
+1. User selects the project manager from the main menu.
+2. User clicks open.
+3. User selects the desired project.
+4. User clicks open in the list of options.
+
+
+\subsection{Create Project (bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Users of sQuire. \\ 
+ \\
+ \textit{Goals:} & Create a Project. \\
+ \\
+ \textit{Pre-conditions:} & The user is logged in. \\
+ \\
+ \textit{Summary:} & User opens the project manager and creates a project. \\ 
+ \\
+ \textit{Related use cases:} & None. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User selects the project manager from the main menu.
+  \item User selects open.
+  \item Create new project is selected from the task bar.
+  \item A name is choosen for the project.
+  \item A location is selected for the project.
+  \item Language is selected from a drop down menu.
+  \item User clicks finish.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Choose Project (bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Users of sQuire. \\ 
+ \\
+ \textit{Goals:} & Open a Project. \\
+ \\
+ \textit{Pre-conditions:} & A project has been created and the user is logged in. \\
+ \\
+ \textit{Summary:} & User looks through the list of project and selects the desired project. \\ 
+ \\
+ \textit{Related use cases:} & None. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User selects the project manager from the main menu.
+  \item User selects open.
+  \item User selects the desired project.
+  \item User clicks open in the list of options.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}

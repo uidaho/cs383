@@ -1,0 +1,45 @@
+
+Tasks for an online collaborative IDE:
+
+#   Use Case (task)                 Assigned
+--- ------------------------------- -------------------------
+1   registration                    Wyatt (G.Fish)
+2   login                           Feng Guan (gf545576676gf)
+3   logout                          Feng Guan (gf545576676gf)
+4   choose project                  Ben Bolton (bolt1003)
+5   create project                  Ben Bolton (bolt1003)
+6   join project                    Kevin Morales(mora5651)
+7   delete project                  Kevin Morales(mora5651)
+8   edit project                    Brandon Ratcliff (ratc8795)                   
+9   invite user to project          Brandon Ratcliff (ratc8795)
+10  accept invite to project        Robert Carlson (carl7595)
+11  remove user from project        Robert Carlson (carl7595)
+12  project chat                    Brandon Jank (jank6275)
+13  global chat                     Brandon Jank (jank6275)
+14  project permissions             Kevin Benzing (benz5834)
+15  user preferences                Kevin Benzing (benz5834)
+16  Import file                     Wyatt (G.Fish)
+17  Export file                     Wyatt (G.Fish)
+18  Gain achivement                 Brandon Ratcliff (ratc8795)
+19  View user profile
+
+Use Case Description
+--------------------
+Name:
+    The name of the use case.
+Actors:
+    What participants are involved in this task.
+Goals:
+    What those people are trying to accomplish.
+Preconditions:
+    The initial state or event that triggers this task.
+Summary:
+    Short paragraph stating what this task is all about.
+Related use cases:
+    What use cases does this use case use or extend? What uses/extends this use case?
+Steps:
+    The most common sequence of actions that are performed for this task. Lethbridge divides actions into two columns: user input is given in the left column, while system response is given in the right column. The two column format is optional, but saves on paper and may improve clarity. The steps are numbered, so there is no ambiguity in using both columns on each line.
+Alternatives:
+    Some use cases may vary the normal sequence of steps.
+Postconditions:
+    What does this task produce?

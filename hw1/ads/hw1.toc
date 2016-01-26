@@ -1,7 +1,19 @@
-\contentsline {part}{I\hspace {1em}Squire: A Web Based Collaborative Editor}{2}
-\contentsline {section}{\numberline {0.1}Program Premise}{3}
-\contentsline {section}{\numberline {0.2}Application Domain Study}{3}
-\contentsline {section}{\numberline {0.3}Use Case Descriptions}{3}
-\contentsline {subsection}{\numberline {0.3.1}use case title}{3}
-\contentsline {subsection}{\numberline {0.3.2}Example case 2 (jank6275)}{4}
-\contentsline {subsection}{\numberline {0.3.3}Example case 3 (jank6275)}{5}
+\contentsline {chapter}{\numberline {1}Application Domain Specification}{2}
+\contentsline {section}{\numberline {1.1}Program Premise (benz5834, carl7595, guan2264, jank6275)}{2}
+\contentsline {subsection}{\numberline {1.1.1}Core Features (carl7595)}{2}
+\contentsline {subsection}{\numberline {1.1.2}?? (guan2264)}{2}
+\contentsline {subsection}{\numberline {1.1.3}Stuff (jank6275)}{2}
+\contentsline {subsection}{\numberline {1.1.4}Security Nightmare (jank6275)}{3}
+\contentsline {subsection}{\numberline {1.1.5}Storage and Organization (benz5834)}{3}
+\contentsline {section}{\numberline {1.2}Application Domain Study (knic1468, ratc8795, bolt1003, mora5651)}{3}
+\contentsline {section}{\numberline {1.3}Use Case Descriptions}{4}
+\contentsline {subsection}{\numberline {1.3.1}Open project chat (jank6275)}{4}
+\contentsline {subsection}{\numberline {1.3.2}Open global chat (jank6275)}{5}
+\contentsline {subsection}{\numberline {1.3.3}Close project chat (jank6275)}{6}
+\contentsline {subsection}{\numberline {1.3.4}Close global chat (jank6275)}{7}
+\contentsline {subsection}{\numberline {1.3.5}Write to project chat (jank6275)}{8}
+\contentsline {subsection}{\numberline {1.3.6}Write to global chat (jank6275)}{9}
+\contentsline {subsection}{\numberline {1.3.7}Modify chat font (jank6275)}{10}
+\contentsline {subsection}{\numberline {1.3.8}Modify chat color (jank6275)}{11}
+\contentsline {subsection}{\numberline {1.3.9}Create Project (bolt1003)}{12}
+\contentsline {subsection}{\numberline {1.3.10}Choose Project (bolt1003)}{13}

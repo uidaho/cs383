@@ -1,0 +1,60 @@
+Name: Accept Invite to Project
+Actors:
+	New or registered user who received the invite (Invitee)
+	*Quire user who has sent the invite (Referrer)
+	Owner of the Project (Owner. May be the same as the Referrer)
+
+Goals: Gain access to a shared Project
+
+Preconditions: Authorized user with access to the project sends an email invite to another user.
+
+Summary: Access is granted to a project space using an invitation email.
+
+Related use cases: Create an account (if the invitee does not already have one). Login (if user is not logged in). Create project (if the project has been deleted)
+
+Steps:
+
+	1. Invitee clicks on the link received by email.
+	2. New browser window opens with Squire site.
+	3. Message appears that invitee's account has been added to the access list for the Project.
+	4. The project is added to their Projects list.
+	5. Owner and Referrer (who may be the same) receive an email informing them a new collaborator has been added
+	6. Project is opened in active pane of Squire tab after a short delay.
+
+Alternatives:
+	2B. If invitee is not logged in to Squire, they are prompted for their credentials.
+	2C. If invitee is does not have an Squire account, they are prompted to first create an account.
+	3B. Project has been deleted. Invitee is informed the project does not exist and asks if they would like to create a new project with that name.
+	3C. Join link has been deactivated because of previous use/time limit. Invitee is informed that the invite has expired and is no longer valid, instructing them to contact the Project Owner for access.
+	
+Postconditions: Invitee has been added to Project access list. Invite link is deactivated to prevent mulitple joins off of old links. Owner has been notified of new collaborator.
+
+Name: Remove User from Project
+Actors:
+	*Quire user with access to the Project (Member)
+	Authorized user who requests the removal (Agent)
+	Owner of the Project (Owner. May be the same as the Agent)
+
+Goals: Revoke access to the Project for a single user
+
+Preconditions: Agent has permission to edit the Project access list. Agent is logged into Squire and has opened this Project.
+
+Summary: One or more user accounts are removed from the access list for a Project.
+
+Related use cases: None.
+
+Steps:
+
+	1. Agent selects the access list for this Project.
+	2. Agent selects an account (or multiple accounts) and selects "Remove from Project".
+	3. Agent is prompted for confirmation, and selects 'Yes'.
+	4. The access list is modified to remove the selected account(s).
+	5. Owner and Member(s) receive an email informing of the change of access.
+	6. Member's Project lists are updated to no longer display the Project.
+	7. Member's Project panes related to this Project forced to close on next refresh.
+
+Alternatives:
+	2B. Agent does not have correct permissions. Error messsage informs them that they cannot edit Project access list.
+	3B. Agent clicks 'No'. Access list is not modified.
+	
+Postconditions: Members have been removed from the Project, and their client windows closed to prevent continued access. Owner and Member have been notified of the change.
