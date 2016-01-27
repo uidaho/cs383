@@ -8,8 +8,8 @@
 \oddsidemargin 0.25in 
 \evensidemargin 0.25in 
 \marginparsep 0.25in
-\topmargin 0.25in 
-\textwidth 6in \textheight 8 in
+\topmargin 0.0in 
+\textwidth 6in \textheight 8.5in
 
 \title{sQuire: A Web Based Collaborative Editor}
 \author{Kevin Benzing, Ben Bolton, Robert Carlson, Feng Guan, Brandon Jank, Wyatt Knickerbocker, Kevin Morales, Brandon Ratcliff}
@@ -30,7 +30,6 @@
 \end{figure}
 
 \subsection{Core Features (carl7595)}
-\subsection{Core Features (carl7595)}
 \begin{itemize}
   \item Web based
   \item Some Common IDE features
@@ -44,14 +43,15 @@ The central idea behind sQuire is a somewhat akin to a code hostel. A collaborat
 With this vision in mind, sQuire best accomodates its users by being a browser based application. There should be no need for a user to download a client program, which would require periodic updates and ultimately require deletion on the users' end. By doing all of the collaboration and storage on a central server, accessed by the browser, we can make it more accessible to a wider audience. It may also encourage the development of collaborative "toy" projects by making it easier to start project spaces and find assistance when a project stalls.
 
 sQuire will be focused on coding in the Java language, though there are many worthwhile languages to choose from. Focusing on a single language will allow us to add more IDE-like features to assist in collaboration and make the language more accessible to those learning it.
-\begin{IDE-like Features}
+IDE-like Features:
+\begin{itemize}
   \item Key word color coding
   \item Parenthesis mismatch detection
   \item Missing end of line detection/prompting
 \end{itemize}
 
 sQuire is a collaborative tool, rather than a fully featured IDE with step through run-time debugging. Its features should be geared towards making it easier to debug code collaboratively, in the browser, without over-reliance on other tools. At a minimum, it needs:
-\begin{}
+\begin{itemize}
   \item Native chat functionality
   \item Author attribution for code (colored underlining, footnote, etc.)
   \item Ability to "jump to" another user's cursor
@@ -59,7 +59,8 @@ sQuire is a collaborative tool, rather than a fully featured IDE with step throu
   \item Account based access to projects
 \end{itemize}
 
-\begin{Collaborative features that would be "nice":}
+Collaborative features that would be "nice":
+\begin{itemize}
   \item Ability to save/restore to "snapshots" of the project
   \item Achievement and statistic tracking
 \end{itemize}
@@ -97,29 +98,12 @@ In order to make Squire interesting, but still retain its usability, Squire will
 \subsection{Permissions System (bolt1003)}
 Squire will have a permissions system that encompasses files, folders, users and rooms. The administrator will have the ability to delegate permission to other users.  The administrator will have the ability to set global permissions to users to control read, write, execute, room creation and sharing.  Each room with have its own set of permissions. These permissions are controlled by the moderator that is assigned to that room and the administrator. By default the creator of the room is the moderator of the room but this duty can be delegated to another if desired. The system has three default user groups, Administrator, Moderators and Users. Users have the ability to read, write and execute code by default. Moderators have the ability to manage rooms by adding or removing users to their rooms, creating sub-rooms and managing moderators for those rooms. Administrators have all encompassing power over all permissions in the system.
 
-\subsection{Stuff to write about (jank6275)}
-Think of squire as a collaborative version of "pastebin.com" that compiles Java code.
-Squire will be a web-based collobarative text editor that compiles java code in throwaway "rooms".
-execution - Where code will run? Server based in container, or clientside?
-    Execute editor client side thru Ace.
-    Execute compiled code client side.
-compiler
-    Compile code server side.
-    Built-in compiler/interpreter to show input/output.
-    Built-in, in-line compile-time/interpret-time debugging.
-language
-    Written in PHP5 - tried and true, required to know for web development.
-    Java - language we support for online compile?
-browser based?
-    yes
-    The back-end will be written in PHP
-    The front end will be HTML5, JavaScript, Ace Editor.
+\subsection{Interface Structure (mora5651)}
+Since sQuire is an online collaborative editor, and interface structure plays a key roll in organizing all the features to fit properly. We decided in using Cloud9's interface as a base for sQuire's interface layout/structure. Cloud9 incorporates many of the same features as sQuire including file management, editor, and chat options. Other collaborative IDEs to consider Floobits, Kobra, and Codebox. 
 
-\subsection{?? (mora5651)}
-a paragraph or two about a feature or process in squire.
+\subsection{Chat System (knic1468)}
+We will most likely use a websocket-based chat system for sQuire, as it allows the easiest modification; Users and their coded colors will be listed, and their names next to their chat lines. The goal is to make a simple and lightweight, secure chat that allows users to collaborate with each other in an area outside the workspace.
 
-\subsection{?? (knic1468)}
-a paragraph or two about a feature or process in squire.
 
 
 
@@ -146,16 +130,16 @@ Codenvy provides basic features free of charge, most of which would be fine for 
 
 \subsection{Floobits (mora5651)}
 \includegraphics[width=\textwidth]{Floobits}
-Floobits is a web based application that allows users to collaborate on the same code while using there favorite editor. Examples of editors that are supported in Floobits include Emacs, Sublime, Atom, and more. Although Floobits focuses towards "paired programming" it also supports multi user groups integrating voice chat, as well as a video chat options using Google Hangouts. Floobits is fairly simple to customize giving the users options to install diffrent plugins for diffrent functionality Floobits has to offer. However, to access some of these features you will need an upgraded paided account. Floobits also suffers from security issues.
+Floobits is a web based application that allows users to collaborate on the same code while using there favorite editor. Examples of editors that are supported in Floobits include Emacs, Sublime, Atom, and more. Although Floobits focuses towards "paired programming" it also supports multi user groups integrating voice chat, as well as a video chat options using Google Hangouts. Floobits is fairly simple to customize giving the users options to install different plugins for different functionality Floobits has to offer. However, to access some of these features you will need an upgraded paided account. Floobits also suffers from security issues.
 
-\subsection{?? (benz5834)}
-An examination and test of a similar (previous and/or manual) system.
+\subsection{Google Docs (benz5834)}
+Google Docs is a collaborative document editor built around the Google ecosystem. Anyone with an account can create documents, spreadsheets, slideshows, and forms. Within each one of these documents there is a menu to share your document and even give editing privileges. In this sense it is very similar to what we want to accomplish with Squire. Account based document creation with the ability to collaborate and work together on the same document at the same time. There are even a few features that google docs has that our squire program could benefit from. A running comment thread within each document allows for editors and viewers to be able to leave notes and comments about what they have done outside of the document itself. There are a large number of document templates included within each document type as well. The project management page is also very clean and easy to organize with both a list and grid view of saved documents. And because accounts are tied in with email addresses, it is very easy to send messages to collaborators about your documents. Google Docs is well used for every type of user so I think it is a very important tool to study while creating Squire.
 
-\subsection{PythonPad (carl7595)}
-An examination and test of a similar (previous and/or manual) system.
+\subsection{Sharelatex (carl7595)}
+Sharelatex is a collaborative text editor targeted towards the Latex language. Sharelatex.com uses a similar email based registration scheme, and does allow for compiling in the browser. It also includes a history feature of changes made to the document, which is one way that snapshots could be added at working compile. I particularly like that in the interface there is a share button that immediately prompted for the email address of the person you want to share with. The chat window is a pane that opens on the right side, squeezing the rest of the windows to accomodate this. This is not a problem in full screen mode, but I think I would prefer the chat to be always open and near the bottom of the screen. It has an option for creating a sample project, which would be a great feature for giving someone a template container to work with to make things more accessible to new coders. 
 
-\subsection{Mibbit and Kongregate (knic1468)}
-An examination and test of a similar (previous and/or manual) system.
+\subsection{Mibbit and Ratchet (knic1468)}
+Because sQuire will require a chat function to truly be a collaborative IDE, I took a look at two lightweight chat clients, mibbit and the demo on Ratchet. Both were lightweight, but one used irc protocols and connected to servers, while Ratchet is websocket based, and the chat rooms can be more custom and hosted on the local server. Since the Ratchet demo is a simple example of the Ratchet API, it allows one to really see what it can let you do. As a PHP-based API, it is developed for being browser-based as well. While not as lightweight as a built-in irc client, the websocket-based client would be more secure and modifiable.
 
 
 
@@ -788,7 +772,7 @@ An examination and test of a similar (previous and/or manual) system.
 \hline
 \end{tabular}
 
-\subsection{Join project(mora5651)}
+\subsection{Join Project(mora5651)}
 \begin{tabular}{ p{2cm} p{12cm} }
 \hline
 \\
@@ -811,12 +795,12 @@ An examination and test of a similar (previous and/or manual) system.
 \\
 \textit{Alternatives:} & User may decline an inventation to join a project. \\
 \\
-\textit{Post-conditions:} & None. \\
+\textit{Post-conditions:} & You entered a Project. \\
 \\
 \hline
 \end{tabular}
 
-\subsection{Delete project(mora5651)}
+\subsection{Delete Project(mora5651)}
 \begin{tabular}{ p{2cm} p{12cm} }
 \hline
 \\
@@ -828,7 +812,7 @@ An examination and test of a similar (previous and/or manual) system.
 \\
 \textit{Summary:} & Users are done with the project, and if the user has permission then they are allowed to delete the project. project is then deleted. \\
 \\
-\textit{Realted use cases:} & Project Permissions. \\
+\textit{Related use cases:} & Project Permissions. \\
 \\
 \textit{Steps:} & \begin{enumerate}
  \item The user clicks on the "Delete project" button. 
@@ -838,6 +822,252 @@ An examination and test of a similar (previous and/or manual) system.
  \end{enumerate}\\
  \\
  \textit{Alternatives:} & User may choose not to delete the project in the confirmation display.\\
+ \\
+ \textit{Post-conditions:} & Deleted Project. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Import File (Knic1468)}
+\begin{tabular}{ p{2cm} p{12cm} }
+\hline
+\\
+\textit{Actors:} & User with permission.\\
+\\
+\textit{Goals:} & To upload a file to the workspace. \\
+\\
+\textit{Pre-conditions:} & Must have permission to read/write. 
+\\
+\textit{Summary:} & User uploads a file into the workspace for collaborative editing. \\
+\\
+\textit{Related use cases:} & Project Permissions. \\
+\\
+\textit{Steps:} & \begin{enumerate}
+ \item The user clicks on the "Import File" button. 
+ \item System asks for a file to upload. 
+ \item User picks a file to upload. 
+ \item System reads file and uploads it into workspace. 
+ \end{enumerate}\\
+ \\
+ \textit{Alternatives:} & System may reject a file if it is not the correct format.\\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Export Project(knic1468)}
+\begin{tabular}{ p{2cm} p{12cm} }
+\hline
+\\
+\textit{Actors:} & User with permission.\\
+\\
+\textit{Goals:} & To export a workspace to a local file. \\
+\\
+\textit{Pre-conditions:} & Must have read permission. 
+\\
+\textit{Summary:} & User saves a file to the local storage. \\
+\\
+\textit{Related use cases:} & Project Permissions. \\
+\\
+\textit{Steps:} & \begin{enumerate}
+ \item The user clicks on the "Export File" button. 
+ \item System promts the user to select a location and name. 
+ \item User selects a file location. 
+ \item System exports the file to the location. 
+ \end{enumerate}\\
+ \\
+ \textit{Alternatives:} & System will display an error message of the location is write-protected.\\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Accept Invite to Project (carl7595)}
+\begin{tabular}{ p{2cm} p{12cm} }   
+ \hline
+ \\
+ \textit{Actors:} & User who received the invite (Invitee), sQuire user who sent the invite (Referrer), and Project Owner (Owner. May be the same as the Referrer). \\
+ \\
+ \textit{Goals:} & Gain access to a shared Project \\
+ \\
+ \textit{Pre-conditions:} & Authorized user with access to the project sends an email invite to another user. \\
+ \\
+ \textit{Summary:} & Access is granted to a project space using an invitation email. \\ 
+ \\
+ \textit{Related use cases:} & Create an account (if the invitee does not already have one), Login (if user is not logged in), and Create project (if the project has been deleted). \\
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Invitee clicks on the link received by email.
+	 \item New browser window opens with sQuire site.
+	 \item Message appears that invitee's account has been added to the access list for the Project.
+	 \item The project is added to their Projects list.
+	 \item Owner and Referrer (who may be the same) receive an email informing them a new collaborator has been added
+	 \item Project is opened in active pane of sQuire tab after a short delay.
+	\end{enumerate} \\
+ \\
+ \textit{Alternatives:} & 2B. If invitee is not logged in to Squire, they are prompted for their credentials.
+ 
+	2C. If invitee is does not have an Squire account, they are prompted to first create an account.
+	
+	3B. Project has been deleted. Invitee is informed the project does not exist and asks if they would like to create a new project with that name.
+	
+	3C. Join link has been deactivated because of previous use/time limit. Invitee is informed that the invite has expired and is no longer valid, instructing them to contact the Project Owner for access. \\
+ \\
+ \textit{Post-conditions:} & Invitee has been added to Project access list. Invite link is deactivated to prevent mulitple joins off of old links. Owner has been notified of new collaborator. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Remove User to Project (carl7595)}
+\begin{tabular}{ p{2cm} p{12cm} }   
+ \hline
+ \\
+ \textit{Actors:} & sQuire user with access to the Project (Member), Authorized user who requests the removal (Agent), and Owner of the Project (Owner. May be the same as the Agent) \\
+ \\
+ \textit{Goals:} & Revoke access to the Project for a single or multuple users. \\
+ \\
+ \textit{Pre-conditions:} & Agent has permission to edit the Project access list, and agent is logged into Squire and has opened this Project. \\
+ \\
+ \textit{Summary:} & One or more user accounts are removed from the access list for a Project. \\ 
+ \\
+ \textit{Related use cases:} & None.  \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Agent selects the access list for this Project.
+	 \item Agent selects an account (or multiple accounts) and selects "Remove from Project".
+	 \item Agent is prompted for confirmation, and selects 'Yes'.
+	 \item The access list is modified to remove the selected account(s).
+	 \item Owner and Member(s) receive an email informing of the change of access.
+	 \item Member's Project lists are updated to no longer display the Project.
+	 \item Member's Project panes related to this Project forced to close on next refresh.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & \begin{itemize} 
+	 \item 2B. Agent does not have correct permissions. Error messsage informs them that they cannot edit Project access list.
+	 \item 3B. Agent clicks 'No'. Access list is not modified.
+	\end{itemize}\\
+ \\
+ \textit{Post-conditions:} & \begin{itemize}
+	 \item Members have been removed from the Project, and their client windows closed to prevent continued access.
+	 \item Owner and Member have been notified of the change.
+ \end{itemize}\\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Edit Project Permissions (benz5834)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Squire user \\ 
+ \\
+ \textit{Goals:} & Edit the permissions for a project \\
+ \\
+ \textit{Pre-conditions:} & User must have the project that he wants to edit the permissions of open. \\
+ \\
+ \textit{Summary:} & User opens up the settings menu and navigates to permissions, adds (or removes) users individual access rights to the project.  \\ 
+ \\
+ \textit{Related use cases:} & Add user to project, Remove user from project. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Click the settings button in project.
+  \item System opens settings menu.
+  \item User clicks permissions link.
+  \item System opens the permissions menu.
+  \item User selects user from list of users.
+  \item User adds read or write permissions to user.
+  \item User saves changes and exits permissions.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User can remove read or write permission instead in step 6. User can discard changes instead in step 7. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Open User Preferences (benz5834)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Squire user \\ 
+ \\
+ \textit{Goals:} & Open preferences for current user \\
+ \\
+ \textit{Pre-conditions:} & User must be logged into squire. \\
+ \\
+ \textit{Summary:} & User opens up the settings menu, navigates to preferences.  \\ 
+ \\
+ \textit{Related use cases:} & Change user color, Change password. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Click the settings button.
+  \item System opens settings menu.
+  \item User navigates to preferences. 
+  \item System opens preferences menu.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Edit User Color (benz5834)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Squire user \\ 
+ \\
+ \textit{Goals:} & Change user color from within preferences \\
+ \\
+ \textit{Pre-conditions:} & User must have preferences open. \\
+ \\
+ \textit{Summary:} & User selects their color and saves their changes.  \\ 
+ \\
+ \textit{Related use cases:} & Open user preferences. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks select color.
+  \item System opens color selection window.
+  \item User selects their color.
+  \item System updates and previews color.
+  \item User saves changes.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User can discard changes by canceling on color selection window. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Change User Password (benz5834)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Squire user \\ 
+ \\
+ \textit{Goals:} & Change user password from within preferences \\
+ \\
+ \textit{Pre-conditions:} & User must have preferences open. \\
+ \\
+ \textit{Summary:} & User types a new password and saves their changes.  \\ 
+ \\
+ \textit{Related use cases:} & Open user preferences. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks “change password”.
+  \item System opens password changing window.
+  \item User types their new password.
+  \item System requests confirmation.
+  \item User saves changes.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User can discard changes by canceling on confirmation window. \\
  \\
  \textit{Post-conditions:} & None. \\
  \\

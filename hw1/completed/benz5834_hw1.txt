@@ -1,0 +1,191 @@
+Use cases:
+
+Edit Project Permissions
+----------------------------------------
+Actor: Squire user
+Goal: Edit the permissions for a project
+Precondition: User must have the project that he wants to edit the permissions of open.
+Summary: User opens up the settings menu and navigates to permissions, adds (or removes) users individual access rights to the project. 
+Related use: Add user to project, Remove user from project.
+Steps:
+1. Click the settings button in project.
+2. System opens settings menu.
+3. User clicks permissions link.
+4. System opens the permissions menu.
+5. User selects user from list of users.
+6. User adds read or write permissions to user.
+7. User saves changes and exits permissions.
+
+Alternative: User can remove read or write permission instead in step 6. User can discard changes instead in step 7.
+
+
+Open User Preferences
+----------------------------------------
+Actor: Squire user
+Goal: Open preferences for current user
+Precondition: User must be logged into squire.
+Summary: User opens up the settings menu, navigates to preferences.
+Related use: Change user color, Change password.
+
+Steps:
+1. Click the settings button.
+2. System opens settings menu.
+3. User navigates to preferences. 
+4. System opens preferences menu.
+
+Alternative: None
+
+Edit User Color
+----------------------------------------
+Actor Squire user
+Goal: Change user color from within preferences
+Precondition: User must have preferences open.
+Summary: User selects their color and saves their changes.
+Relates use: Open user preferences.
+
+Steps:
+1. User clicks select color.
+2. System opens color selection window.
+3. User selects their color.
+4. System updates and previews color.
+5. User saves changes.
+
+Alternative: user can discard changes by canceling on color selection window.
+
+
+Change user password
+----------------------------------------
+Actor Squire user
+Goal: Change user password from within preferences
+Precondition: User must have preferences open.
+Summary: User types a new password and saves their changes.
+Relates use: Open user preferences.
+
+Steps:
+1. User clicks “change password”.
+2. System opens password changing window.
+3. User types their new password.
+4. System requests confirmation.
+5. User saves changes.
+
+Alternative: user can discard changes by canceling on confirmation window.
+
+\subsection{Edit Project Permissions (benz5834)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Squire user \\ 
+ \\
+ \textit{Goals:} & Edit the permissions for a project \\
+ \\
+ \textit{Pre-conditions:} & User must have the project that he wants to edit the permissions of open. \\
+ \\
+ \textit{Summary:} & User opens up the settings menu and navigates to permissions, adds (or removes) users individual access rights to the project.  \\ 
+ \\
+ \textit{Related use cases:} & Add user to project, Remove user from project. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Click the settings button in project.
+  \item System opens settings menu.
+  \item User clicks permissions link.
+  \item System opens the permissions menu.
+  \item User selects user from list of users.
+  \item User adds read or write permissions to user.
+  \item User saves changes and exits permissions.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User can remove read or write permission instead in step 6. User can discard changes instead in step 7. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+
+\subsection{Open User Preferences (benz5834)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Squire user \\ 
+ \\
+ \textit{Goals:} & Open preferences for current user \\
+ \\
+ \textit{Pre-conditions:} & User must be logged into squire. \\
+ \\
+ \textit{Summary:} & User opens up the settings menu, navigates to preferences.  \\ 
+ \\
+ \textit{Related use cases:} & Change user color, Change password. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Click the settings button.
+  \item System opens settings menu.
+  \item User navigates to preferences. 
+  \item System opens preferences menu.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+
+\subsection{Edit User Color (benz5834)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Squire user \\ 
+ \\
+ \textit{Goals:} & Change user color from within preferences \\
+ \\
+ \textit{Pre-conditions:} & User must have preferences open. \\
+ \\
+ \textit{Summary:} & User selects their color and saves their changes.  \\ 
+ \\
+ \textit{Related use cases:} & Open user preferences. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks select color.
+  \item System opens color selection window.
+  \item User selects their color.
+  \item System updates and previews color.
+  \item User saves changes.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User can discard changes by canceling on color selection window. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+
+\subsection{Change User Password (benz5834)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Squire user \\ 
+ \\
+ \textit{Goals:} & Change user password from within preferences \\
+ \\
+ \textit{Pre-conditions:} & User must have preferences open. \\
+ \\
+ \textit{Summary:} & User types a new password and saves their changes.  \\ 
+ \\
+ \textit{Related use cases:} & Open user preferences. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks “change password”.
+  \item System opens password changing window.
+  \item User types their new password.
+  \item System requests confirmation.
+  \item User saves changes.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User can discard changes by canceling on confirmation window. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}

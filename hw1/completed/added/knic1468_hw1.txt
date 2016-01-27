@@ -1,0 +1,97 @@
+16  Import file                     Wyatt (G.Fish)
+17  Export file                     Wyatt (G.Fish)
+
+Import File Use Case Decription
+by Wyatt Knickerbocker <knic1468@vandals.uidaho.edu>
+
+Import file into work space
+-----------------------------
+Actor: Squire User
+Goal: Import a file to the workspace
+Precondition: User is logged on and in a room where they have read/write access
+
+Steps:
+1. User clicks on "Import File" button
+2. System requests a file to be imported
+3. User selects a file to imported
+4. System determines if file is valid
+5a. File is invalid; System rejects file. Return to precondition
+5b. File is valid; System accepts file.
+6. System reads file and loads text into workspace.
+
+Alternative: None
+Postconditions: None
+
+Export File Use Case Decription
+by Wyatt Knickerbocker <knic1468@vandals.uidaho.edu>
+
+Export file into work space
+-----------------------------
+Actor: Squire User
+Goal: Export a file to the workspace
+Precondition: User is logged on and in a room where they have read access, with information in workspace.
+
+Steps:
+1. User clicks on "Export File" button
+2. System requests a file destination to be selected
+3. User selects a destination for the file
+4. System exports file to file destination
+
+Alternative: None
+Postconditions: None
+
+\subsection{Import File (Knic1468)}
+\begin{tabular}{ p{2cm} p{12cm} }
+\hline
+\\
+\textit{Actors:} & User with permission.\\
+\\
+\textit{Goals:} & To upload a file to the workspace. \\
+\\
+\textit{Pre-conditions:} & Must have permission to read/write. 
+\\
+\textit{Summary:} & User uploads a file into the workspace for collaborative editing. \\
+\\
+\textit{Related use cases:} & Project Permissions. \\
+\\
+\textit{Steps:} & \begin{enumerate}
+ \item The user clicks on the "Import File" button. 
+ \item System asks for a file to upload. 
+ \item User picks a file to upload. 
+ \item System reads file and uploads it into workspace. 
+ \end{enumerate}\\
+ \\
+ \textit{Alternatives:} & System may reject a file if it is not the correct format.\\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Export Project(knic1468)}
+\begin{tabular}{ p{2cm} p{12cm} }
+\hline
+\\
+\textit{Actors:} & User with permission.\\
+\\
+\textit{Goals:} & To export a workspace to a local file. \\
+\\
+\textit{Pre-conditions:} & Must have read permission. 
+\\
+\textit{Summary:} & User saves a file to the local storage. \\
+\\
+\textit{Related use cases:} & Project Permissions. \\
+\\
+\textit{Steps:} & \begin{enumerate}
+ \item The user clicks on the "Export File" button. 
+ \item System promts the user to select a location and name. 
+ \item User selects a file location. 
+ \item System exports the file to the location. 
+ \end{enumerate}\\
+ \\
+ \textit{Alternatives:} & System will display an error message of the location is write-protected.\\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}

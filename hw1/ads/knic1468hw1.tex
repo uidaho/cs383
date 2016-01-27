@@ -1,0 +1,85 @@
+
+\documentclass[11pt]{report}
+
+\usepackage{graphicx}
+%\graphicspath{ {images/} }
+
+\marginparwidth 0.5in 
+\oddsidemargin 0.25in 
+\evensidemargin 0.25in 
+\marginparsep 0.25in
+\topmargin 0.0in 
+\textwidth 6in \textheight 8.5in
+
+\title{sQuire: A Web Based Collaborative Editor}
+\author{Kevin Benzing, Ben Bolton, Robert Carlson, Feng Guan, Brandon Jank, Wyatt Knickerbocker, Kevin Morales, Brandon Ratcliff}
+\author{benz5834, bolt1003, carl7595, guan2264, jank6275, knic1468, mora5651, ratc8795}
+
+\begin{document}
+
+\maketitle
+
+\subsection{Chat System (knic1468)}
+We will most likely use a websocket-based chat system for sQuire, as it allows the easiest modification; Users and their coded colors will be listed, and their names next to their chat lines. The goal is to make a simple and lightweight, secure chat that allows users to collaborate with each other in an area outside the workspace.
+
+\subsection{Mibbit and Ratchet (knic1468)}
+Because sQuire will require a chat function to truly be a collaborative IDE, I took a look at two lightweight chat clients, mibbit and the demo on Ratchet. Both were lightweight, but one used irc protocols and connected to servers, while Ratchet is websocket based, and the chat rooms can be more custom and hosted on the local server. Since the Ratchet demo is a simple example of the Ratchet API, it allows one to really see what it can let you do. As a PHP-based API, it is developed for being browser-based as well. While not as lightweight as a built-in irc client, the websocket-based client would be more secure and modifiable.Because
+
+
+\subsection{Import File (Knic1468)}
+\begin{tabular}{ p{2cm} p{12cm} }
+\hline
+\\
+\textit{Actors:} & User with permission.\\
+\\
+\textit{Goals:} & To upload a file to the workspace. \\
+\\
+\textit{Pre-conditions:} & Must have permission to read/write. 
+\\
+\textit{Summary:} & User uploads a file into the workspace for collaborative editing. \\
+\\
+\textit{Related use cases:} & Project Permissions. \\
+\\
+\textit{Steps:} & \begin{enumerate}
+ \item The user clicks on the "Import File" button. 
+ \item System asks for a file to upload. 
+ \item User picks a file to upload. 
+ \item System reads file and uploads it into workspace. 
+ \end{enumerate}\\
+ \\
+ \textit{Alternatives:} & System may reject a file if it is not the correct format.\\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Export File(knic1468)}
+\begin{tabular}{ p{2cm} p{12cm} }
+\hline
+\\
+\textit{Actors:} & User with permission.\\
+\\
+\textit{Goals:} & To export a workspace to a local file. \\
+\\
+\textit{Pre-conditions:} & Must have read permission. 
+\\
+\textit{Summary:} & User saves a file to the local storage. \\
+\\
+\textit{Related use cases:} & Project Permissions. \\
+\\
+\textit{Steps:} & \begin{enumerate}
+ \item The user clicks on the "Export File" button. 
+ \item System promts the user to select a location and name. 
+ \item User selects a file location. 
+ \item System exports the file to the location. 
+ \end{enumerate}\\
+ \\
+ \textit{Alternatives:} & System will display an error message of the location is write-protected.\\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\end{document}
