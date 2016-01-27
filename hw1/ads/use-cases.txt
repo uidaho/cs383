@@ -21,7 +21,7 @@ Tasks for an online collaborative IDE:
 16  Import file                     Wyatt (G.Fish)
 17  Export file                     Wyatt (G.Fish)
 18  Gain achivement                 Brandon Ratcliff (ratc8795)
-19  View user profile
+19  View user profile               Ben Bolton (bolt1003)
 
 Use Case Description
 --------------------

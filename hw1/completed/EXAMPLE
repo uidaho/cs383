@@ -56,11 +56,7 @@ Postconditions: None
 \end{tabular}
 
 
-\subsection{use case title}
-Your assessment of the requirements for a computer adaptation of your assigned parts of the application domain. How will manual elements be translated? What parts have to change? What parts of the manual (or legacy) system can be retained as-is? You can include sketches or sample screen shots of what various application domain elements should look like in the new system.
-A set of use case descriptions of the tasks in \#1 above. Read the lecture notes (and/or google it) for definition and examples of use case descriptions. Your format should resemble my examples.
-
-\subsection{Example case 2 (jank6275)}
+\subsection{Example case (jank6275)}
 \begin{tabular}{ p{2cm} p{12cm} }   
  \hline
  \\

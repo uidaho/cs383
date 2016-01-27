@@ -2,7 +2,7 @@
 \documentclass[11pt]{report}
 
 \usepackage{graphicx}
-\graphicspath{ {images/} }
+%\graphicspath{ {images/} }
 
 \marginparwidth 0.5in 
 \oddsidemargin 0.25in 
@@ -11,8 +11,8 @@
 \topmargin 0.25in 
 \textwidth 6in \textheight 8 in
 
-\title{Squire: A Web Based Collaborative Editor}
-%\author{Kevin Benzing, Ben Bolton, Robert Carlson, Feng Guan, Brandon Jank, Wyatt Knickerbocker, Kevin Morales, Brandon Ratcliff}
+\title{sQuire: A Web Based Collaborative Editor}
+\author{Kevin Benzing, Ben Bolton, Robert Carlson, Feng Guan, Brandon Jank, Wyatt Knickerbocker, Kevin Morales, Brandon Ratcliff}
 \author{benz5834, bolt1003, carl7595, guan2264, jank6275, knic1468, mora5651, ratc8795}
 
 \begin{document}
@@ -23,41 +23,83 @@
 
 \chapter{Application Domain Specification}
 
-\section{Program Premise (benz5834, carl7595, guan2264, jank6275)}
-Think of squire as a collaborative version of "pastebin.com" that compiles Java code.
-Squire will be a web-based collobarative text editor that compiles java code in throwaway "rooms".
+\section{Program Premise}
+\begin{figure}[h!]
+\caption{Squire will be a web-based collaborative text editor that compiles java code in throwaway "rooms". Multiple users can edit and communicate in real time.}
+\includegraphics[width=0.7\textwidth]{squire}
+\end{figure}
 
 \subsection{Core Features (carl7595)}
-	Web based
-		All editing and collaboration is done in the browser
-	Limited IDE like features
-		Code word color coding
-		Parenthesis counting
-		Missing end of line detection
-	Collaborative tools
-		Way to tell who coded what (color, footnote, etc)
-		Built in chat functionality
-	Seperate coding spaces for projects
-		Access is controlled by user account
-	Compile code and open it on user's computer
-	Rooms are self destructing
-		After some period of inactivity, coding space is recycled without user intervention
+\subsection{Core Features (carl7595)}
+\begin{itemize}
+  \item Web based
+  \item Some Common IDE features
+  \item Collaborative tools
+  \item Encapsulated Workspaces
+  \item Compile and Download
+  \item Self Destructing Rooms
+\end{itemize}
+The central idea behind sQuire is a somewhat akin to a code hostel. A collaborative editor which provides private, but shareable on demand spaces, with a low overhead for creation and ease of use. These spaces are meant for short term use, over an indeterminate period. Once the collaboration is done, the space is cleared and made available for others to use.
 
-\subsection{?? (guan2264)}
+With this vision in mind, sQuire best accomodates its users by being a browser based application. There should be no need for a user to download a client program, which would require periodic updates and ultimately require deletion on the users' end. By doing all of the collaboration and storage on a central server, accessed by the browser, we can make it more accessible to a wider audience. It may also encourage the development of collaborative "toy" projects by making it easier to start project spaces and find assistance when a project stalls.
 
-\subsection{Stuff (jank6275)}
-security - Security Nightmare?              (jank6275)
-    docker and dokku
-    Code will be compiled and run in each container.
-    The project will run on a virtual machine that creates virtual machines for each project.
-    If the user wants to hack their own container... so be it. 
-storage - Where will data be saved?         (benz5834)
-    Data will be stored in MySQL.
-organization - Rooms lol?                   (benz5834)
-    Domain -> User -> Project -> Files
-    Unused projects will be deleted after 30 days.
-    Multiple files ("pages") allowed per project.
-    Ability to import and export files.
+sQuire will be focused on coding in the Java language, though there are many worthwhile languages to choose from. Focusing on a single language will allow us to add more IDE-like features to assist in collaboration and make the language more accessible to those learning it.
+\begin{IDE-like Features}
+  \item Key word color coding
+  \item Parenthesis mismatch detection
+  \item Missing end of line detection/prompting
+\end{itemize}
+
+sQuire is a collaborative tool, rather than a fully featured IDE with step through run-time debugging. Its features should be geared towards making it easier to debug code collaboratively, in the browser, without over-reliance on other tools. At a minimum, it needs:
+\begin{}
+  \item Native chat functionality
+  \item Author attribution for code (colored underlining, footnote, etc.)
+  \item Ability to "jump to" another user's cursor
+  \item Ability to import/export code as plain text
+  \item Account based access to projects
+\end{itemize}
+
+\begin{Collaborative features that would be "nice":}
+  \item Ability to save/restore to "snapshots" of the project
+  \item Achievement and statistic tracking
+\end{itemize}
+
+User workspaces will be encapsulated, for both security and privacy. This could be accomplished using a container solution such as Docker or lmctfy (a free Google version). Containers have a lower performance hit to the host server than virtual machines, which are also a commonly implemented solution.  
+
+While security is a concern, we hope to address this using user space encapsulation, and by not running user code on the server. When users compile code, the compiled jar is downloaded and run locally from their own machines. While this means users are responsible for vetting the function of the code before running it on their machines, it means that our server resources are not being used as part of a bot net or similar exploit.
+
+Finally rooms must be self-destructing. For the convenience of the user, deletion of the space should be automatic after an appropriate period of inactivity. While a notification email should be sent to the space owner prior to deletion, again no user intervention should be required.
+
+\subsection{Storage and Organization (benz5834)}
+The squire program will have a top down directory structure.
+Under the top domain, each individual registered user will have the ability to create projects (rooms) where they can build their program. 
+Inside the room the user will be able to create any number of files or pages to keep track of their project. 
+They will also have the ability to import and export files to and from their own machine and the project. 
+After creation the user will be able to switch between projects and create and delete pages from within the project itself.  
+They will have the ability to share their projects and invite other users to read or edit their work. 
+All of the user data, as well as each user’s relevant project and page information, as well as who has access to each project will be stored and maintained by a MySQL database.
+
+\subsection{Security Nightmare (jank6275)}
+The issue of security comes to mind every time compiling and executing an outside application in a secure area. Rooting or destroying data and infrastructure is trivial when you are freely allowed to execute arbitrary Java. In order to allow for this functionality we must implement some type of security strategy. We could limit or block functionality in Java which is a cat and mouse game that breaks usability. We could compile and execute code on the client side. This would require a compiler written in JavaScript and cause compatibility issues on certain clients with reduced permissions or an exotic build environment. Or we could just Docker.
+
+
+Docker allows us to create containers that contain not only the user's build environment, but the server infrastructure to host their project. Containers include the application and all of its dependencies, but share the kernel with other containers. Simply put, users can destroy their own containers but nobody else’s. Obviously we will want to harden against known and obvious vectors, but at least any damage a user can do is limited to their own project. Containerization also allows us to take snapshots so that even if something goes wrong, we can always revert back to a working state.
+
+\subsection{Execution (guan2264)}
+The Squire program will have a browser based client. Squire users can use this client to login their account, manipulate their project, and logout. The Squire editor will run clientside through Ace. Ace is an embeddable code editor written in JavaScript. It can be easily embedded in any web page, JavaScript application, and browser based client. On the other hand, the user data, user project, and edit information will saved in a MySQL database on the owner's hard drive.  
+
+\subsection{Collaboration (ratc8795)}
+The code editor will be a collaborative editor. Multiple users can edit the same file at the same time. This means that any changes one user makes need to be synced to the server, and then to the editors of any other users editing the same file. Some research shows that all popular collaborate editors (Google Docs, Cloud 9, etc) use an algorithm called Operational Transformation. On a basic level, this algorithm works by treating every change to a file as either an insert command, or a delete command. These commands are synced across clients to keep the file state the same. Squire will need something similar. It looks like there are several open source implementations of this algorithm, notably OT.js. These may or may not be adequate for use in Squire.
+ 
+\subsection{Achievement System (ratc8795)}
+In order to make Squire interesting, but still retain its usability, Squire will contain an achievement system. Achievements will be publicly visible to all users in the user's profile. When a user gains an achievement, it will be announced in the project chat. Achievements should be fun, and should be obtainable just by writing code (i.e, users shouldn’t have to actively try to get achievements). Some possible achievements: Lucky Break (a file compiles successfully on the first try), Social Butterfly (a user joins a project that has 10+ users), Job Security (Write a 1000+ line file without any comments).
+
+\subsection{Permissions System (bolt1003)}
+Squire will have a permissions system that encompasses files, folders, users and rooms. The administrator will have the ability to delegate permission to other users.  The administrator will have the ability to set global permissions to users to control read, write, execute, room creation and sharing.  Each room with have its own set of permissions. These permissions are controlled by the moderator that is assigned to that room and the administrator. By default the creator of the room is the moderator of the room but this duty can be delegated to another if desired. The system has three default user groups, Administrator, Moderators and Users. Users have the ability to read, write and execute code by default. Moderators have the ability to manage rooms by adding or removing users to their rooms, creating sub-rooms and managing moderators for those rooms. Administrators have all encompassing power over all permissions in the system.
+
+\subsection{Stuff to write about (jank6275)}
+Think of squire as a collaborative version of "pastebin.com" that compiles Java code.
+Squire will be a web-based collobarative text editor that compiles java code in throwaway "rooms".
 execution - Where code will run? Server based in container, or clientside?
     Execute editor client side thru Ace.
     Execute compiled code client side.
@@ -73,26 +115,51 @@ browser based?
     The back-end will be written in PHP
     The front end will be HTML5, JavaScript, Ace Editor.
 
-\subsection{Security Nightmare (jank6275)}
-The issue of security comes to mind every time compiling and executing an outside application in a secure area. Rooting or destroying data and infrastruture is trivial when you are freely alowed to execute arbitrary Java. In order to allow for this functionality we must impliment some type of security strategy. We could limit or block functionality in Java which is a cat and mouse game that breaks useability. We could compile and execute code on the client side. This would require a compiler written in JavaScript and cause compatibility issues on certain clients with reduced permissions or an exotic build environment. Or we could just Docker.
+\subsection{?? (mora5651)}
+a paragraph or two about a feature or process in squire.
+
+\subsection{?? (knic1468)}
+a paragraph or two about a feature or process in squire.
 
 
-Docker allows us to create containers that contain not only the user's build enviornment, but the server infrastructure to host their project. Containers include the application and all of its dependencies, but share the kernel with other containers. Simply put, users can destroy their own containers but nobody elses. Obviously we will want to harden against known and obvious vectors, but at least any damage a user can do is limited to their own project. Containerization also allows us to take snapshots so that even if something goes wrong, we can always revert back to a working state.
 
-\subsection{Storage and Organization (benz5834)}
-The squire program will have a top down directory structure.
-Under the top domain, each individual registered user will have the ability to create projects (rooms) where they can build their program. 
-Inside the room the user will be able to create any number of files or pages to keep track of their project. 
-They will also have the ability to import and export files to and from their own machine and the project. 
-After creation the user will be able to switch between projects and create and delete pages from within the project itself.  
-They will have the ability to share their projects and invite other users to read or edit their work. 
-All of the user data, as well as each user’s relevant project and page information, as well as who has access to each project will be stored and maintained by a MySQL database. 
+\section{Application Domain Study}
+\subsection{codepad.org (jank6275)}
+\includegraphics[width=\textwidth]{codepad}
+Codepad is an online compiler and simple collaboration tool that compiles interactive code from the web. Safely compiling and executing arbitrary code from the web will always be a security problem. Steven Hazel, the creator of codepad.org, used Docker to containerize each development environment and then execute the user’s code. This limits the damage an unwitting or malicious user can do to just their container. We should utilize this technology with sQuire. The webserver, database, front-end, and user application can be copied from a template and a virtual machine spun up just for that user’s project.
 
-\section{Application Domain Study (knic1468, ratc8795, bolt1003, mora5651)}
+
+Even though codepad.org uses cool technology for solving the security issue, it is not without its flaws. There is no live chat functionality and communication is critical for online collaboration. You cannot edit code with someone at the same time, you can only save-and-share. This slows down the development process and can cause code "collisions". These areas are a niche for sQuire to shine in among a large swath of online collaborative IDEs.
+
+\subsection{Cloud9 IDE - c9.io (guan2264)}
+\includegraphics[width=\textwidth]{cloud9}
+Cloud9 IDE is a freeware online integrated development environment. It supports hundreds of programming languages, including PHP, Ruby, Perl, Python, and JavaScript. It enables users to get started with coding immediately with pre-setup work spaces, collaborate with their peers with collaborative coding features, and web development features like live preview and browser compatibility testing. It is written almost entirely in JavaScript, and uses Node.js on the back-end. The editor component uses Ace. 
+
+\subsection{IDEone (ratc8795)}
+Ideone (ideone.com) is a online compiling and debugging system. It allows online compiling and debugging of over 60 languages. It is implemented using Sphere-engine's api. Sphere-engine provides a system to allow execution of untrusted code. This is reflected in Ideone. For example, when you try and run a program that does the equivalent of "sleep 60", "ping google.com", or "rm -rf /", an error is thrown and the code is not run. Ideone is extremely simple. It provides a basic code editor, an option to select the language, a box to type in any standard input, and an output box showing any errors or output. It also provides functionality to save and share scripts with other people. Notable limitations are that there is only one file, and no collaborative editing. As far as a simple way to execute code from many different languages, Ideone does a very good job.
+
+\subsection{Codenvy (bolt1003)}
+Codenvy is an online IDE that supports a variety of languages. This includes C, C++, Go, Python, Java, JavaScript, PHP and Ruby. Codenvy has a dedicated virtual machine per project (implemented using docker) to compile and execute code within. Codenvy allows for multiuser editing of code in real-time. Codenvy allows a user to create a temporary clone of a project to modify and execute in its own dedicated VM. Codenvy integrates with popular subversion control systems and hosting such as GitHub. SSH is provided so that users can login to the VM directly to make modification and execute code.
+
+
+Codenvy provides basic features free of charge, most of which would be fine for moderate use by a single user or small group.  Their business model is targeted at larger business so premium features come at a premium. The integrated interpreter is difficult to setup initially and often provides cryptic error messages. Logging in via ssh and executing code is more consistent experience. Codenvy lacks an integrated chat client so a third party client is needed.
+
+\subsection{Floobits (mora5651)}
+\includegraphics[width=\textwidth]{Floobits}
+Floobits is a web based application that allows users to collaborate on the same code while using there favorite editor. Examples of editors that are supported in Floobits include Emacs, Sublime, Atom, and more. Although Floobits focuses towards "paired programming" it also supports multi user groups integrating voice chat, as well as a video chat options using Google Hangouts. Floobits is fairly simple to customize giving the users options to install diffrent plugins for diffrent functionality Floobits has to offer. However, to access some of these features you will need an upgraded paided account. Floobits also suffers from security issues.
+
+\subsection{?? (benz5834)}
 An examination and test of a similar (previous and/or manual) system.
 
-\section{Use Case Descriptions}
+\subsection{PythonPad (carl7595)}
+An examination and test of a similar (previous and/or manual) system.
 
+\subsection{Mibbit and Kongregate (knic1468)}
+An examination and test of a similar (previous and/or manual) system.
+
+
+
+\section{Use Case Descriptions}
 \subsection{Open project chat (jank6275)}
 \begin{tabular}{ p{2cm} p{12cm} }
  \hline
@@ -378,4 +445,404 @@ An examination and test of a similar (previous and/or manual) system.
 \hline
 \end{tabular}
 
+\subsection{View User Profile(bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Users of sQuire. \\ 
+ \\
+ \textit{Goals:} & Users looks at their profile page. \\
+ \\
+ \textit{Pre-conditions:} & The user has an account and is logged in. \\
+ \\
+ \textit{Summary:} & User opens their profile from the main menu to view.\\ 
+ \\
+ \textit{Related use cases:} & User modifies their profile. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The user selects their profile picture from the main menu.
+  \item The user selects view Profile from the drop down menu.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Modify User Profile(bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Users of sQuire. \\ 
+ \\
+ \textit{Goals:} & Users updates their profile. \\
+ \\
+ \textit{Pre-conditions:} & The user is on the view profile page. \\
+ \\
+ \textit{Summary:} & User modifies their profile information.\\ 
+ \\
+ \textit{Related use cases:} & None. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The user selects modify. 
+  \item The user changes their username.
+  \item The user clicks update.
+  \item The user updates their contact email.
+  \item The user clicks update.
+  \item The user changes their "About me" information
+  \item The user clicks update.
+  \item The user clicks finish to disable modify.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Login (guan2264)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Squire User \\ 
+ \\
+ \textit{Goals:} & Allows user to login to the system and use functions of the system. \\
+ \\
+ \textit{Pre-conditions:} & The user must have user account. \\
+ \\
+ \textit{Summary:} & User types in the correct user name and password, click the login button, and login to the system. When login successfully, the system will display the access page for user. \\ 
+ \\
+ \textit{Related use cases:} & Choose project, create project, join project, delete project, edit project, invite user to project, accept invite to project, remove user from project, project chat, global chat, roject permissions, user preferences, import file, export file, gain achivement, view user profile, and logout. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The system displays the Login page that asks the user to enter username and password.
+  \item The user types in their username and password.
+  \item The user click the login button.
+  \item The system checks the username and password from the data base.
+  \item The system verifies username and password.
+  \item	The system displays the access page for the user.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & If the user do not enter the correct username and password, the system will ask the user to enter the correct username and password \\
+ \\
+ \textit{Post-conditions:} & User logs in and use functions of the system. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Logout (guan2264)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Squire User \\ 
+ \\
+ \textit{Goals:} & Allows user to logout to the system. \\
+ \\
+ \textit{Pre-conditions:} & The user must have user account and already login to the system. \\
+ \\
+ \textit{Summary:} & User click the logout button and their session is terminated. \\ 
+ \\
+ \textit{Related use cases:} & Close project chat, close global chat, close project file, and login. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The user click the logout button.
+  \item The system invalidates the session.
+  \item The system logs the user out.
+  \item The system redirects to the default login page.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None\\
+ \\
+ \textit{Post-conditions:} & User's previous session is terminated and the system displays the login page. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Invite user to project (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User sending invites, user receiving invites \\ 
+ \\
+ \textit{Goals:} & Give another user access to a project. \\
+ \\
+ \textit{Pre-conditions:} & User has the permissions necessary to invite a user to a project. \\
+ \\
+ \textit{Summary:} & User opens a dialog to invite users, inputs one or more users, and the level of access to the project that they should be given. \\ 
+ \\
+ \textit{Related use cases:} & Accept invite to project,  project permissions \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks on a button to invite users.
+  \item A dialog is displayed to the user.
+  \item User types in one or more emails.
+  \item User specifies the level of access for each user.
+  \item User clicks submit.
+  \item The dialog disappears.
+  \item Emails are sent to the email addresses specified containing invites.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User does not have permission to invite others to the project, so the button to invite users is not displayed. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Edit project file (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & One or more users editing a file \\ 
+ \\
+ \textit{Goals:} & Make changes to a file and sync those changes with other users editing the same file. \\
+ \\
+ \textit{Pre-conditions:} & User has the permissions necessary to edit the project, and the file is open.\\
+ \\
+ \textit{Summary:} & A user makes a change to a file in a text editor, and those changes are reflected to other users editing the same file. \\ 
+ \\
+ \textit{Related use cases:} & None. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User makes a change in the editor.
+  \item The editor of other users editing the same file reflects the change
+  \item The editor updates any syntax highlighting and formatting
+  \item A note in the margin updates to show the user was the last one to edit that line
+  \item The editor of other users editing the same file shows the same note in the margin
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User does not have permission to edit the file, so the editor ignores any input from that user. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Open project file (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{actors:} & User \\ 
+ \\
+ \textit{goals:} & A user selects a file from the project for editing or viewing. \\
+ \\
+ \textit{pre-conditions:} & The file already exists \\
+ \\
+ \textit{summary:} & A user selects a file from the project which opens, replacing any file that is already open. \\ 
+ \\
+ \textit{related use cases:} & Close a project file \\ 
+ \\
+ \textit{steps:} & \begin{enumerate}
+  \item A user selects a file from the list of files in the project.
+  \item If a file is currently open, that file is closed.
+  \item The file is opened in the editor.
+  \item The editor shows the user as being active in the file.
+ \end{enumerate} \\
+ \\
+ \textit{alternatives:} & None. \\
+ \\
+ \textit{post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Close a project file (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{actors:} & User \\ 
+ \\
+ \textit{goals:} & Closing a file. \\
+ \\
+ \textit{pre-conditions:} & A user clicks a button to close an open file and the editor is closed. \\
+ \\
+ \textit{summary:} & The file is closed. \\ 
+ \\
+ \textit{related use cases:} & Open a file. \\ 
+ \\
+ \textit{steps:} & \begin{enumerate}
+  \item A user clicks on a button to close the file, or has selected another file to open.
+  \item The file is closed, and removed from the editor.
+  \item The editor now longer shows the user as being active in the file.
+ \end{enumerate} \\
+ \\
+ \textit{alternatives:} & none. \\
+ \\
+ \textit{post-conditions:} & none. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Create a project file (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{actors:} & User \\ 
+ \\
+ \textit{goals:} & Creating a new file. \\
+ \\
+ \textit{pre-conditions:} & The user has permission to create a new file. \\
+ \\
+ \textit{summary:} & A user new project file is cr \\ 
+ \\
+ \textit{related use cases:} & Move a file, Delete a file \\ 
+ \\
+ \textit{steps:} & \begin{enumerate}
+  \item A user clicks on a button to create a file.
+  \item A dialog is displayed asking for a file path.
+  \item The user types in the file path.
+  \item The file is created.
+ \end{enumerate} \\
+ \\
+ \textit{alternatives:} & The specified file name contains invalid characters, so an error is displayed. \\
+ \\
+ \textit{post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Move a file (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{actors:} & User \\ 
+ \\
+ \textit{goals:} & A user moved from one location to another\\
+ \\
+ \textit{pre-conditions:} & The user has permission to move a file. \\
+ \\
+ \textit{summary:} & A file is moved from it's location to a new location specified by the user \\ 
+ \\
+ \textit{related use cases:} & Create a file, Delete a file \\ 
+ \\
+ \textit{steps:} & \begin{enumerate}
+  \item A user clicks on a button next to a file to rename it
+  \item A dialog is displayed asking for a file name.
+  \item The user types in the file name.
+  \item The file is moved to the new location
+ \end{enumerate} \\
+ \\
+ \textit{alternatives:} & The user types in a location that is invalid; an error is displayed. \\
+ \\
+ \textit{post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Delete a file (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{actors:} & User \\ 
+ \\
+ \textit{goals:} & A file is deleted \\
+ \\
+ \textit{pre-conditions:} & The user has permission to delete a file. \\
+ \\
+ \textit{summary:} & A user clicks a button to delete a file, and it is removed from the project \\ 
+ \\
+ \textit{related use cases:} & Create a file, Delete a file \\ 
+ \\
+ \textit{steps:} & \begin{enumerate}
+  \item A user clicks on a button next to a file to delete it
+  \item A dialog is displayed asking for confirmation.
+  \item The user clicks yes.
+  \item The file is deleted.
+ \end{enumerate} \\
+ \\
+ \textit{alternatives:} & The user clicks no in the confirmation so the file is not deleted. \\
+ \\
+ \textit{post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Gain an achievement (ratc8795)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{actors:} & User \\ 
+ \\
+ \textit{goals:} & Notify the user that they gained an achievement \\
+ \\
+ \textit{pre-conditions:} & The user has met the requirements for the achievement. \\
+ \\
+ \textit{summary:} & A user is informed that the earned an achievement, and users in the project chat are informed that the user earned an achievement, and the user's profile is updated to include the achievement \\ 
+ \\
+ \textit{related use cases:} & None. \\ 
+ \\
+ \textit{steps:} & \begin{enumerate}
+  \item A user earns an achievement.
+  \item A pop up is displayed to the user informing them of the achievement.
+  \item After a couple seconds, the pop up goes away.
+  \item A message is sent to the group chat informing other users of the achievement.
+ \end{enumerate} \\
+ \\
+ \textit{alternatives:} & None. \\
+ \\
+ \textit{post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Join project(mora5651)}
+\begin{tabular}{ p{2cm} p{12cm} }
+\hline
+\\
+\textit{Actors:} & User.\\
+\\
+\textit{Goals:} & To join an existing project.\\
+\\
+\textit{Pre-conditions:} & Must be registered, logged in, then must choose a project to join.\\
+\\
+\textit{Summary:} & User has logged in, user then chooses a project to join, if user is allowed then the user joins the project. \\
+\\
+\textit{Related use cases:} & Invite user to project, Accept user invite. \\
+\\
+\textit{Steps:} & \begin{enumerate}
+ \item The user chooses the "join a project" button. 
+ \item If the project is held in a public room then the user joins. 
+ \item If the project is held in a private room then the user will need permission. 
+ \item If the admin of the project the user wants to join is accepted. Then the user joins the project. 
+\end{enumerate}\\
+\\
+\textit{Alternatives:} & User may decline an inventation to join a project. \\
+\\
+\textit{Post-conditions:} & None. \\
+\\
+\hline
+\end{tabular}
+
+\subsection{Delete project(mora5651)}
+\begin{tabular}{ p{2cm} p{12cm} }
+\hline
+\\
+\textit{Actors:} & User with permission.\\
+\\
+\textit{Goals:} & To delete an existing project. \\
+\\
+\textit{Pre-conditions:} & Must have permission to delete project. 
+\\
+\textit{Summary:} & Users are done with the project, and if the user has permission then they are allowed to delete the project. project is then deleted. \\
+\\
+\textit{Realted use cases:} & Project Permissions. \\
+\\
+\textit{Steps:} & \begin{enumerate}
+ \item The user clicks on the "Delete project" button. 
+ \item A dialog is displayed. 
+ \item User clicks either yes or no to delete project. 
+ \item Project is then deleted. 
+ \end{enumerate}\\
+ \\
+ \textit{Alternatives:} & User may choose not to delete the project in the confirmation display.\\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
 \end{document}
+
