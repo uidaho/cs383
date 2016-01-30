@@ -4,7 +4,6 @@
 4. Separately: everyone develop one or more use case diagrams (e.g. in plantUML) that summarizes those use cases. Discuss them, make fixes, and turn in copies with your names on them. Avoid the usual student mistake of trying to use this diagram to design the UI or control flow of the program!
 5. Jointly: vote and merge on a team's combined best-effort use case diagram(s) and use case descriptions. Show team members how to improve diagrams and descriptions to achieve an overall consistent look and feel. Generate .png images from your UML diagrams. Write a makefile rule for building your latex document with UML diagrams up front as a table of contents, followed by your use case descriptions.
 6. Coordinate your team's efforts on Github (if there were a reason that you cannot use Github, discuss alternatives with the instructor).
-7. Given the decision to do networked multi-player, write a description of how that should look and feel.
 8. Each person turnin hard copies of your own "best effort" use case diagrams and descriptions.
 9. Turnin a LaTeX document containing your team's "voted best" use case diagram(s) and the set of "refined, polished, merged" use case descriptions.
 10. Send Dr. J e-mail with attached .zip archive of files.
