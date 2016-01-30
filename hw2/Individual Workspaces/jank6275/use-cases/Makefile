@@ -1,6 +1,6 @@
-# CS 383 HW #1 - Makefile
+# CS 383 HW #2 - Makefile
 
-FILE = hw1
+FILE = hw2-team4
 CC = latex
 FLAGS = -output-format=pdf
 
