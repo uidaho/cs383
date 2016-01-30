@@ -1,14 +1,11 @@
-Project File Descriptions
--------------------------
-attendance.txt      - where we track attendance and keep meeting summaries
-requirements.txt    - list of requirements for this homework assignment
-hw1.tex             - source latex file used to generate .dvi
-hw1.dvi             - compiled output of hw1.tex
+Project Folder & File Descriptions
+-----------------------------------
+Completed/              - completed individual assigments for integration into group assignment.
+Contacts and Meetings/  - where we track attendance and keep meeting summaries
+Deliverables/           - where we compile the group assignment
+Individual Workspaces/  - where we keep personal work.
+Templates/              - LaTeX and UML templates to keep things consistent.
+
 
 
 The password for the rar is: cs383
-
-
-
-You can find the latex source code for our team's deliverables at:
-https://www.sharelatex.com/project/56a47ec0e1c2a68970b32306
