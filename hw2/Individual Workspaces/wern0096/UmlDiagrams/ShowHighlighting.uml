@@ -1,0 +1,14 @@
+@startuml
+
+title Show Highlighting
+
+"Registered \n Must be logged in \n A file is open \n Write permission \n Another user is connected to the same file" as (Reqs)
+
+
+:User1: ..> (Reqs) : requires 
+:User1: --> :Editor: : highlights text
+:Editor: --> :System: : sends data
+:Other Users: <-- :System: : shows User1's highlighting
+:Other Users: ..> (Have same document open)
+
+@enduml

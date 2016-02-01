@@ -1,8 +1,8 @@
 # CS 383 HW #2 - PlantUML Makefile
 
-FILE = jank6275
+FILE = hw2-uml-team4
 CC = java -jar plantuml.jar
-FLAGS = -tpng
+FLAGS = -tlatex
 
 all: ${FILE}.tex
 

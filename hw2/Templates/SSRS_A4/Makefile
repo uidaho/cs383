@@ -1,6 +1,6 @@
 # CS 383 HW #2 - Makefile
 
-FILE = jank6275
+FILE = SSRS_A4
 CC = latex
 FLAGS = -output-format=pdf
 

@@ -1,6 +1,6 @@
 # CS 383 HW #2 - Makefile
 
-FILE = jank6275
+FILE = SSDD_Template_A2
 CC = latex
 FLAGS = -output-format=pdf
 

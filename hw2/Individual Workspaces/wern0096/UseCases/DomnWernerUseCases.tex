@@ -1,0 +1,358 @@
+\documentclass[14pt, a4paper]{article}
+
+\usepackage{float}
+\usepackage{framed}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{tabto}
+\usepackage[a4paper]{geometry}
+\usepackage{tikz}
+\graphicspath{ {images/}}
+\geometry{a4paper,total={210mm,297mm},left=30mm,right=30mm,top=30mm,bottom=30mm}
+
+\begin{document}
+
+\noindent Author: Domn Werner (wern0096) \\
+Date: 01/31/2016 \\
+Class: CS383-01
+
+\tableofcontents
+
+\newpage
+
+\section{Project Management}
+
+\subsection{Create New Project}
+
+\begin{framed}
+	\noindent\textbf{Name:} Create New Project \\ \\
+	\textbf{Category:} Project Management \\ \\
+	\textbf{Summary:} The user performs this task to create a new project. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User must be registered.
+		\item User must be logged in.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks \textit{File} in the top menu bar.
+		\item System opens a drop-down menu.
+		\item User selects \textit{New} -$>$ \textit{Project}.
+		\item System opens a \textit{New Project} dialog window.
+		\item User fills out the name of the project, selects a language, enters a description, and selects the \textit{Private} or \textit{Public} radio buttons.
+		\item User clicks the \textit{Create} button.
+		\item System creates a new project and displays it.
+	\end{enumerate}
+	\textbf{Alternatives:} 
+	\begin{enumerate}
+		\item Step 1: The user right clicks in the project pane and the system continues to step 2.
+		\item Step 5: The user clicks \textit{Cancel} and a new project is not created.
+	\end{enumerate}
+	\textbf{Postconditions:}
+	\begin{enumerate}
+		\item A new project with the selected settings is created.
+		\item The database is updated to reflect the new project and its data.
+	\end{enumerate}
+\end{framed} 
+
+\newpage
+
+\subsection{Add New File to Project}
+
+\begin{framed}
+	\noindent\textbf{Task Name:} Add New File to Project \\ \\
+	\textbf{Task Category:} Project Management \\ \\
+	\textbf{Summary:} The user performs this task to add a new file to the project. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User must be registered.
+		\item User must be logged in.
+		\item User must have a project open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks \textit{File} in the top menu bar.
+		\item System opens a drop-down menu.
+		\item User navigates to \textit{Add} -$>$ \textit{New File}.
+		\item System opens an \textit{Add New File} dialog window.
+		\item User selects the file type and names the file.
+		\item User clicks \textit{Add}.
+		\item System adds the file to the project.
+	\end{enumerate}
+	\textbf{Alternatives:} 
+	\begin{enumerate}
+		\item Step 1: The user right clicks in the project pane and the system continues on to step 2 above.
+		\item Step 5: The user clicks \textit{Cancel} and a new file is not added to the project.
+	\end{enumerate}
+	\textbf{Postconditions:}
+	\begin{enumerate}
+		\item A new file is added to the project.
+		\item The database is updated to reflect the changes.
+	\end{enumerate}
+	\textbf{Related:} Add Existing File to Project
+\end{framed} 
+
+\newpage
+
+\subsection{Add Existing File to Project}
+
+\begin{framed}
+	\noindent\textbf{Task Name:} Add Existing File to Project \\ \\
+	\textbf{Task Category:} Project Management \\ \\
+	\textbf{Summary:} The user performs this task to add an existing file to the project. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User must be registered.
+		\item User must be logged in.
+		\item User must have a project open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks \textit{File} in the top menu bar.
+		\item System opens a drop-down menu.
+		\item User navigates to \textit{Add} -$>$ \textit{Existing File}.
+		\item System opens an \textit{Add Existing File} dialog window.
+		\item User selects \textit{PC} or \textit{SQuire} or \textit{Github}.
+		\item System updates the dialog to reflect the selected source.
+		\item User navigates to the file's location and selects it.
+		\item User clicks \textit{Add}.
+		\item System adds the file to the project.
+	\end{enumerate}
+	\textbf{Alternatives:} 
+	\begin{enumerate}
+		\item Step 1: The user right clicks in the project pane and the system continues on to step 2 above.
+		\item Step 5-7: The user clicks \textit{Cancel} and a new file is not added to the project.
+	\end{enumerate}
+	\textbf{Postconditions:}
+	\begin{enumerate}
+		\item An existing file is added to the project.
+		\item The database is updated to reflect the changes.
+	\end{enumerate}
+	\textbf{Related:} Add New File to Project
+\end{framed} 
+
+\newpage
+
+\subsection{Delete File}
+
+\begin{framed}
+	\noindent\textbf{Task Name:} Delete File \\ \\
+	\textbf{Task Category:} Project Management \\ \\
+	\textbf{Summary:} The user performs this task to delete a file from the project. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User must be registered.
+		\item User must be logged in.
+		\item User must have a project open.
+		\item The project must have at least one file.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks right clicks a file in the project pane.
+		\item System opens a drop-down menu.
+		\item User navigates to \textit{Delete}.
+		\item System opens an \textit{Delete File} dialog window, asking if the user is sure.
+		\item User selects \textit{Yes}.
+		\item System deletes the file from the project.
+	\end{enumerate}
+	\textbf{Alternatives:} 
+	\begin{enumerate}
+		\item Step 5: The user clicks \textit{Cancel} instead and the file is not deleted from the project.
+	\end{enumerate}
+	\textbf{Postconditions:}
+	\begin{enumerate}
+		\item The file is deleted from the project.
+		\item The database is updated to reflect the changes.
+	\end{enumerate}
+\end{framed} 
+
+\newpage
+
+\subsection{Export Project}
+
+\begin{framed}
+	\noindent\textbf{Task Name:} Export Project \\ \\
+	\textbf{Task Category:} Project Management \\ \\
+	\textbf{Summary:} The user performs this task to download a project as a zip file. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User must be registered.
+		\item User must be logged in.
+		\item User must have a project open.
+		\item User must have download permissions.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks \textit{File} in the top menu bar.
+		\item System opens a drop-down menu.
+		\item User navigates to \textit{Export} -$>$ \textit{Project}.
+		\item System opens an \textit{Export} dialog window.
+		\item User navigates to the export location.
+		\item User clicks \textit{Export}.
+		\item System zips the file and downloads it to the specified location.
+	\end{enumerate}
+	\textbf{Alternatives:} 
+	\begin{enumerate}
+		\item Step 1: The user right clicks in the project pane and the system continues on to step 2 above.
+		\item Step 5: The user clicks \textit{Cancel} and the project is not exported.
+	\end{enumerate}
+	\textbf{Related:} Export Files
+\end{framed}
+
+\newpage
+
+\subsection{Export Files}
+
+\begin{framed}
+	\noindent\textbf{Task Name:} Export Files \\ \\
+	\textbf{Task Category:} Project Management \\ \\
+	\textbf{Summary:} The user performs this task to download a number of files from a project. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User must be registered.
+		\item User must be logged in.
+		\item User must have a project open.
+		\item Must have at least one file in the project.
+		\item User must have download permissions.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks \textit{File} in the top menu bar.
+		\item System opens a drop-down menu.
+		\item User navigates to \textit{Export} -$>$ \textit{Files}.
+		\item System opens an \textit{Export} dialog window showing the project files on the left pane and the export location in the right pane.
+		\item User selects a number of files on the left pane.
+		\item User navigates to the export location in the right pane.
+		\item User clicks \textit{Export}.
+		\item System downloads the selected files to the specified location.
+	\end{enumerate}
+	\textbf{Alternatives:} 
+	\begin{enumerate}
+		\item Step 1: The user right clicks in the project pane and the system continues on to step 2 above.
+		\item Step 5: User selects a folder and all files under that folder are selected.
+		\item Step 5-6: The user clicks \textit{Cancel} and the project is not exported.
+	\end{enumerate}
+	\textbf{Related:} Export Project
+\end{framed}
+
+\newpage	
+		
+\section{Editor/IDE}
+
+\subsection{Display Typing User}
+
+\begin{framed}
+	\noindent\textbf{Name:} Display Typing User \\ \\
+	\textbf{Category:} Editor/IDE \\ \\
+	\textbf{Summary:} As a user starts typing, the cursor changes color to that user’s specified color. It will also show a little box with their name in front of the cursor. \\ \\
+	\textbf{Purpose:} Make it clear when and who is collaborating. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item A file is open.
+		\item One or more users are connected to the same file.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User starts typing.
+		\item System displays a separate cursor with the typing user’s name above it to other users.
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{Display Author and Date}
+
+\begin{framed}
+	\noindent\textbf{Name:} Display Author and Date \\ \\
+	\textbf{Category:} Editor/IDE \\ \\
+	\textbf{Summary:} Display the authors and dates above each written line of code when this option is selected. \\ \\
+	\textbf{Purpose:} Allow users to see who wrote what line of code and when. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User is registered.
+		\item User is logged in.
+	\end{enumerate}	
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks on the \textit{View} menu option in the menu bar.
+		\item The system displays a drop-down menu with the option to Display Authors, among others.
+		\item The user clicks on the Display Authors option.
+		\item The editor will display the author and date in small font above each line of code.
+	\end{enumerate}
+	\textbf{Alternatives:} Same idea, but option to display user colors beside their code lines. When hovering over the color, it will display the username.
+\end{framed}
+
+\newpage
+
+\subsection{Show Hightlighting}
+
+\begin{framed}
+	\noindent\textbf{Name:} Show Highlighting \\ \\
+	\textbf{Category:} Editor/IDE \\ \\
+	\textbf{Summary:} Shows users what other users are highlighting. \\ \\
+	\textbf{Purpose:} Aid communication and collaboration by showing what other users are highlighting. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User has a file or project open.
+		\item User is in a shared project.
+		\item Another user is connected to the project.
+		\item User has read permission.
+	\end{enumerate}		
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User highlights text in an open text file.
+		\item System displays that user’s highlighting in a different color to other users in same file.
+	\end{enumerate}	
+\end{framed}
+\newpage
+
+\subsection{Open File in New Tab}
+
+\begin{framed}
+	\noindent\textbf{Name:} Open File in New Tab \\ \\
+	\textbf{Category:} Editor/IDE \\ \\
+	\textbf{Summary:} Allows users to open a file. \\ \\
+	\textbf{Purpose:} Opening files is essential in being able to work on a project. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User is logged in.
+		\item User has a project open.
+		\item Project contains at least one file.
+		\item User has read permission.
+	\end{enumerate}		
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User double clicks a file.
+		\item The editor opens its contents in a new tab and focuses on it.
+	\end{enumerate}	
+	\textbf{Alternatives:} Step 1: Instead of double clicking a file, the user right clicks it and navigates to \textit{Open}.
+\end{framed}
+\newpage
+
+\subsection{Close Tab}
+
+\begin{framed}
+	\noindent\textbf{Name:} Close Tab \\ \\
+	\textbf{Category:} Editor/IDE \\ \\
+	\textbf{Summary:} Allows users to close a tab. \\ \\
+	\textbf{Purpose:} Closing tabs is essential for increasing efficiency and productivity. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User is logged in.
+		\item User has a project open.
+		\item A file is open.
+		\item User has read permission.
+	\end{enumerate}		
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks the `x' on a tab.
+		\item The editor closes the tab.
+	\end{enumerate}	
+	\textbf{Alternatives:} Step 1: The user right-clicks the tab and selects \textit{Close}. \\ \\
+	\textbf{Related:} Close All Tabs.
+\end{framed}
+
+\end{document}

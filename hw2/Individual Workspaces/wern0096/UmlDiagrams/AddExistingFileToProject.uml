@@ -1,0 +1,13 @@
+@startuml
+
+title Add Existing File to Project
+
+"Must be registered \n Must be logged in \n Must have a project open \n Must have W permission" as (Reqs)
+"Adds an existing file to project" as (Add File)
+
+:User: ..> (Reqs)
+:User: --> (Add File)
+:System: <-- (Add File)
+(Add File) . (Cancel)
+
+@enduml

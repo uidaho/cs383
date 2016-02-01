@@ -1,0 +1,13 @@
+@startuml
+
+title Close Tab
+
+"Registered \n Logged in \n At least one tab open \n Read permission" as (Reqs)
+
+
+:User: ..> (Reqs) : requires 
+:User: --> :Editor: : 1. Clicks 'x' on tab
+:Editor: --> :User: : 3. Closes tab
+:Editor: --> :System Thread: : 2. Saves file
+
+@enduml
