@@ -1,0 +1,122 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\begin{document}
+
+\subsection{Browse Project Ideas}
+\begin{tabular}{|p{6cm}|p{6cm}|} \hline
+\multicolumn{2}{|l|}{Title: Browse Project Ideas}                                                                                       \\ \hline
+\multicolumn{2}{|l|}{Actor: User}                                                                                                       \\ \hline
+\multicolumn{2}{|l|}{Goal: Examine a list of available project ideas}                                                                 \\ \hline
+\multicolumn{2}{|l|}{Preconditions: None}                                                                                               \\ \hline
+\multicolumn{2}{|p{12cm}|}{Summary: User looks through posted project ideas to find projects to work on or discuss}                           \\ \hline
+\multicolumn{2}{|p{12cm}|}{Related Use Case: Comment on Project Idea, Vote on Project Idea, Share Project Idea}                               \\ \hline
+Steps:                                                                              &                                                 \\ \hline
+1. Actor selects Browse Project Ideas button                                         &                                                 \\ \hline
+2. Actor refines search by selecting from list of project categories as desired     &                                                 \\ \hline
+3. Actor enters terms into search field as desired and views a list of top projects &                                                 \\ \hline
+4. Actor selects desired project                                                    & 5. System displays detailed project information \\ \hline
+\end{tabular}
+
+
+\subsection{Create Project Idea Thread}
+\begin{tabular}{|p{6cm}|p{6cm}|} \hline
+\multicolumn{2}{|p{12cm}|}{Title: Create Project Idea Thread}                                                                                       \\ \hline
+\multicolumn{2}{|p{12cm}|}{Actor: Project Administrator}                                                                                                       \\ \hline
+\multicolumn{2}{|p{12cm}|}{Goal: Generate public interest in project idea	} \\ \hline
+\multicolumn{2}{|p{12cm}|}{Preconditions: Prospective project administrator is signed in	}                                                                                               \\ \hline
+\multicolumn{2}{|p{12cm}|}{Summary: A user with interest in heading up own project can post ideas to get feedback and/or recruit collaborators	}                           \\ \hline
+\multicolumn{2}{|p{12cm}|}{Related Use Case: Comment on Project Idea, Vote on Project Idea, Share Project Idea}                               \\ \hline
+Steps:                                                                              &                                                 \\ \hline
+1. Actor selects Create Project Idea button  &                                                 \\ \hline
+2. Actor enters prospective project title and thoughts and ideas as a description     &                                                 \\ \hline
+3. Actor selects Submit button&                                                 \\ \hline
+
+\end{tabular}
+
+
+
+
+
+
+
+\subsection{Manage Project Idea Thread	}
+\begin{tabular}{|p{6cm}|p{6cm}|} \hline
+\multicolumn{2}{|p{12cm}|}{Title: Manage Project Idea Thread	}                                                                                       \\ \hline
+\multicolumn{2}{|p{12cm}|}{Actor: Project Administrator}                                                                                                       \\ \hline
+\multicolumn{2}{|p{12cm}|}{Goal: Respond to feedback and manage project idea	} \\ \hline
+\multicolumn{2}{|p{12cm}|}{Preconditions: Prospective project administrator is signed in and has navigated to one of his or her own project threads}                                                                                               \\ \hline
+\multicolumn{2}{|p{12cm}|}{Summary: A prospective project administrator responds to others' questions/comments}                           \\ \hline
+\multicolumn{2}{|p{12cm}|}{Related Use Case: Create Project Idea Thread	}                               \\ \hline
+Steps:                                                                              &                                                 \\ \hline
+1. Actor selects Reply button on a comment &                                                 \\ \hline
+2. Actor types feedback to other user &                                                 \\ \hline
+3. Actor selects Submit button&     
+4. System shows confirmation that feedback was received                                             \\ \hline
+\multicolumn{2}{|p{12cm}|}{Alternative: Actor selects Delete Comment instead of Reply to remove harmful feedback	} \\ \hline
+\end{tabular}
+
+
+
+
+
+\subsection{Comment on Project Idea	}
+\begin{tabular}{|p{6cm}|p{6cm}|} \hline
+\multicolumn{2}{|p{12cm}|}{Title: Comment on Project Idea	}                                                                                       \\ \hline
+\multicolumn{2}{|p{12cm}|}{Actor: User	}                                                                                                       \\ \hline
+\multicolumn{2}{|p{12cm}|}{Goal: Provide detailed feedback on project ideas	} \\ \hline
+\multicolumn{2}{|p{12cm}|}{Preconditions: User is signed in, has navigated to a project idea	}                                                                                               \\ \hline
+\multicolumn{2}{|p{12cm}|}{Summary: User provides feedback to or asks questions about a prospective project.	}                           \\ \hline
+\multicolumn{2}{|p{12cm}|}{Related Use Case: Browse Project Ideas, Vote on Project Idea, Manage Project Idea Thread	}                               \\ \hline
+Steps:                                                                              &                                                 \\ \hline
+1. Actor selects Comment button &                                                 \\ \hline
+2. Actor types feedback into field      &                                                 \\ \hline
+3. Actor selects Submit button&                 
+4. System shows confirmation that feedback was received                                 \\ \hline
+
+
+\end{tabular}
+
+
+
+\subsection{Vote on Project Idea	}
+\begin{tabular}{|p{6cm}|p{6cm}|} \hline
+\multicolumn{2}{|p{12cm}|}{Title: Vote on Project Idea	}                                                                                       \\ \hline
+\multicolumn{2}{|p{12cm}|}{Actor: User	}                                                                                                       \\ \hline
+\multicolumn{2}{|p{12cm}|}{Goal: Support promising project ideas or offer criticism to unfavorable ones	} \\ \hline
+\multicolumn{2}{|p{12cm}|}{Preconditions: User is signed in, has navigated to a project idea	}                                                                                               \\ \hline
+\multicolumn{2}{|p{12cm}|}{Summary: User offers support/discourages a project idea so that prospective project administrators get feedback and promising project ideas get publicity		}                           \\ \hline
+\multicolumn{2}{|p{12cm}|}{Related Use Case: Comment on Project Idea	}                               \\ \hline
+Steps:                                                                              &                                                 \\ \hline
+1. Actor selects and Up Vote or Down Vote button &                                                 \\ \hline
+2. Actor selects Submit button      & 3. System highlights which button the user has selected                                                 \\ \hline
+
+
+\end{tabular}
+
+
+
+
+
+\subsection{Share Project Idea	}
+\begin{tabular}{|p{6cm}|p{6cm}|} \hline
+\multicolumn{2}{|p{12cm}|}{Title: Share Project Idea	}                                                                                       \\ \hline
+\multicolumn{2}{|p{12cm}|}{Actor: User, Project Administrator	}                                                                                                       \\ \hline
+\multicolumn{2}{|p{12cm}|}{Goal: Generate excitement about a project		} \\ \hline
+\multicolumn{2}{|p{12cm}|}{Preconditions: User is signed in, has navigated to a project idea	}                                                                                               \\ \hline
+\multicolumn{2}{|p{12cm}|}{Summary: Prospective project administrators or users show other users which projects they believe are worthwhile		}                           \\ \hline
+\multicolumn{2}{|p{12cm}|}{Related Use Case: Vote on Project Idea		}                               \\ \hline
+Steps:                                                                              &                                                 \\ \hline
+1. Actor selects Share button &                                                 \\ \hline
+2. Actor selects an audience and method with which to share selected project     &                                                 \\ \hline
+3. Actor selects Submit button&                 
+4. System notifies or shows audience the shared project idea \\ \hline
+
+
+\end{tabular}
+
+
+\end{document}

@@ -1,6 +1,6 @@
 # CS 383 HW #2 - PlantUML Makefile
 
-FILE = jank6275
+FILE = user-management
 CC = java -jar plantuml.jar
 FLAGS = -tpng
 

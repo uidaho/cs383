@@ -8,7 +8,7 @@
  \\
  \textit{Goals:} & Create a Project. \\
  \\
- \textit{Pre-conditions:} & The user is logged in. \\
+ \textit{Pre-conditions:} & The user is logged in and at the bashboard. \\
  \\
  \textit{Summary:} & The user creates a project. \\ 
  \\
@@ -21,37 +21,35 @@
   \item User clicks finish.
  \end{enumerate} \\
  \\
- \textit{Alternatives:} & Create project from the editor window. \\
+ \textit{Alternatives:} & Create project from the editor. \\
  \\
  \textit{Post-conditions:} & The user assigns permissions to access the project. \\
  \\
 \hline
 \end{tabular}
 
-\subsection{Choose Project (bolt1003)}
+\subsection{Open a project (bolt1003)}
 \begin{tabular}{ p{2cm} p{12cm} }
  \hline
  \\
  \textit{Actors:} & Users of sQuire. \\ 
  \\
- \textit{Goals:} & Open a Project. \\
+ \textit{Goals:} & Choose the desired project and open it. \\
  \\
- \textit{Pre-conditions:} & A project has been created and the user is logged in. \\
+ \textit{Pre-conditions:} & One or more projects are available, the user is logged in and at the dashboard. \\
  \\
- \textit{Summary:} & User looks through the list of project and selects the desired project. \\ 
+ \textit{Summary:} & User looks through a list of projects and selects the desired project. \\ 
  \\
  \textit{Related use cases:} & None. \\ 
  \\
  \textit{Steps:} & \begin{enumerate}
-  \item 
-  \item User selects open.
-  \item User selects the desired project.
-  \item User clicks open in the list of options.
+  \item User clicks on projects in the menu bar.
+  \item A list of projects appears and the user clicks on the desired project.
  \end{enumerate} \\
  \\
- \textit{Alternatives:} & None. \\
+ \textit{Alternatives:} & Open a project from recent projects. \\
  \\
- \textit{Post-conditions:} & None. \\
+ \textit{Post-conditions:} & User closes sQuire. \\
  \\
 \hline
 \end{tabular}
@@ -62,20 +60,20 @@
  \\
  \textit{Actors:} & Users of sQuire. \\ 
  \\
- \textit{Goals:} & Users looks at their profile page. \\
+ \textit{Goals:} & Users views their public profile page. \\
  \\
- \textit{Pre-conditions:} & The user has an account and is logged in. \\
+ \textit{Pre-conditions:} & The user is logged in and at the dashboard. \\
  \\
- \textit{Summary:} & User opens their profile from the main menu to view.\\ 
+ \textit{Summary:} & User opens their profile to see the public view of the profile.\\ 
  \\
  \textit{Related use cases:} & User modifies their profile. \\ 
  \\
  \textit{Steps:} & \begin{enumerate}
-  \item The user selects their profile picture from the main menu.
-  \item The user selects view Profile from the drop down menu.
+  \item The user selects their avatar from the menu bar in the dashboard.
+  \item A drop down appears and the user selects "View public profile".
  \end{enumerate} \\
  \\
- \textit{Alternatives:} & None. \\
+ \textit{Alternatives:} & User views their profile while logged out. \\
  \\
  \textit{Post-conditions:} & None. \\
  \\
@@ -90,26 +88,24 @@
  \\
  \textit{Goals:} & Users updates their profile. \\
  \\
- \textit{Pre-conditions:} & The user is on the view profile page. \\
+ \textit{Pre-conditions:} & The user is logged in and at the dashboard. \\
  \\
- \textit{Summary:} & User modifies their profile information.\\ 
+ \textit{Summary:} & User navigates their profile to change their username.\\ 
  \\
- \textit{Related use cases:} & None. \\ 
+ \textit{Related use cases:} & The user modifies their email address or biography. \\ 
  \\
  \textit{Steps:} & \begin{enumerate}
+  \item The user select their avatar in the menu bar.
+  \item A drop down appears and the users selects profile.
   \item The user selects modify. 
   \item The user changes their username.
-  \item The user clicks update.
-  \item The user updates their contact email.
-  \item The user clicks update.
-  \item The user changes their "About me" information
-  \item The user clicks update.
+  \item The user clicks update to save the changes.
   \item The user clicks finish to disable modify.
  \end{enumerate} \\
  \\
  \textit{Alternatives:} & None. \\
  \\
- \textit{Post-conditions:} & None. \\
+ \textit{Post-conditions:} & The user returns to the dashboard or exits sQuire. \\
  \\
 \hline
 \end{tabular}

@@ -1,0 +1,30 @@
+@startuml
+
+(Manage Project Members) as root
+(Manage User Permissions) as perms
+(Manage User Membership) as membership
+(View User Impact) as impact
+
+root <.. membership
+  membership <.. (Invite user to project)
+  membership <.. (Remove user from project)
+  membership <.. (Block user from project)
+  membership <.. (Promote user to admin)
+  membership <.. (Demote admin to user)
+  membership <.. (Generate Invite Codes)
+  membership <.. (Invalidated Invite Codes)
+  membership <.. (Allow any user to join)
+  membership <.. (Restrict access to invites)
+
+root <.. perms
+  perms <.. (Grant read access to\nfile/directory/project)
+  perms <.. (Revoke read access)
+  perms <.. (Grant write access to\nfile/directory/project)
+  perms <.. (Revoke write access)
+
+root <.. impact
+  impact <.. (Rollback user changes)
+  impact <.. (Create patch for user changes)
+  impact <.. (Disable user changes)
+
+@enduml

@@ -1,0 +1,116 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\title{tables}
+\author{snev7821 }
+\date{January 2016}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+
+
+\\
+\subsection{title}
+Compiled/edited by John Snevily\\
+\begin{tabular}{ |p{5cm} | p {5cm}| }
+  \hline
+  \textbf{table title} & [blank] \\ \hline
+  \textbf{Summary: } & hurr \\ \hline
+  \textbf{Goal: }  &  yes \\ \hline
+  \textbf{Preconditions: } & sure\\ \hline
+   \textbf{Actor 1: } & \textbf{Actor 2: } \\ \hline
+  1 & 2 \\ \hline
+ \textbf{Alternative: } & \\ \hline
+\end{tabular}
+
+
+
+\subsection{Create an account}
+Compiled/edited by John Snevily \\
+\begin{tabular}{ |p{5cm} | p {5cm}| }
+  \hline
+  \textbf{Create an Account} &  \\ \hline
+  \textbf{Summary: } & Uses email confirmation for new user to create an account. \\ \hline
+  \textbf{Goal: }  &  New users will create an account with email confirmation, to allow future access to online IDE. With the account they can log in, access projects, etc. \\ \hline
+  \textbf{Preconditions: } & User must have active email account.\\ \hline
+   \textbf{Actor 1: }End User & \textbf{Actor 2: }System\\ \hline
+   1 User clicks "Create new account" button on home page. & 2 System continues to "create account" page.  \\ \hline
+   3 User enters email info, and password. & 4 System checks if password is secure, once it is, an email is sent to the provided email.\\ \hline
+   5 User must log into email and click on the confirmation link. & 6 System takes user back to homepage, but logged into new account. \\ \hline
+   \textbf{Alternative 1:} User cancels process during info session. User is returned to homepage. & \textbf{Alternative 2:} User never confirms email, account is deleted after 24 hours.\\ \hline 
+\end{tabular}
+
+
+
+\subsection{Edit Account}
+Compiled/edited by John Snevily\\
+\begin{tabular}{ |p{5cm} | p {5cm}| }
+  \hline
+  \textbf{Edit Account} & \\ \hline
+  \textbf{Summary:} &  Allow user to personalize account\\ \hline
+  \textbf{Goal: }  &  Allow users to add information, change their avatar, settings, (such as context highlighting, chat noises, etc) and make their projects and profiles public or private. \\ \hline
+  \textbf{Preconditions: } & User must already have an account\\ \hline
+   \textbf{Actor 1: }End user & \textbf{Actor 2: }System\\ \hline
+  1 User clicks on "edit account" from account homepage & 2 System brings user to account editing page. \\ \hline
+  3 User has options to edit noises, avatar (from system provided photos, no uploads), or colorblind mode. & 4 System responds and saves new settings. \\ \hline
+  5 User can make profile or projects public or private with a slider. & 6 System saves each change as it is made. \\ \hline
+ \textbf{Alternative: } & None, as system saves each change, and user can exit at any time.\\ \hline
+\end{tabular}
+
+
+\subsection{Create Project}
+Compiled/edited by John Snevily\\
+\begin{tabular}{ |p{5cm} | p {5cm}| }
+  \hline
+  \textbf{Create new project} &  \\ \hline
+  \textbf{Summary: } & Creates a new project \\ \hline
+  \textbf{Goal: }  &  System creates a project for user(s), either from a template, or completely blank. A few settings can be chosen before project is created. \\ \hline
+  \textbf{Preconditions: } & 1 User must have an account. 2 User must have account set to public if they wish to make the project public\\ \hline
+   \textbf{Actor 1: End user} & \textbf{Actor 2: System} \\ \hline
+  1 User clicks "create new project" button & 2 System brings up template for new projects \\ \hline
+  3 User can set to private or public. If the user sets the project to public, they can share it with other users via email. & 4 System saves changes and presents user with templates or blank file choices.\\ \hline
+  5 User can choose a template or blank project & 6 System loads template if chosen, or blank file otherwise. \\ \hline
+  . & 7 System notifies all users project is shared with. \\ \hline
+ \textbf{Alternative: } & User cancels process at any time. System responds and exits project template.\\ \hline
+\end{tabular}
+
+
+\subsection{Request Access to Public Project}
+Compiled/edited by John Snevily\\
+\begin{tabular}{ |p{5cm} | p {5cm}| }
+  \hline
+  \textbf{Request Access to Project} &  \\ \hline
+  \textbf{Summary: } & User finds interesting public process, wishes to collaborate. \\ \hline
+  \textbf{Goal: }  & A user (probably browsing public files) finds one of interest, and wishes to help collaborate. They may request access to be reviewed by project admin. \\ \hline
+  \textbf{Preconditions: } & User must be logged in, project must be set to public.\\ \hline
+   \textbf{Actor 1: } User & \textbf{Actor 2: } System \\ \hline
+   \textbf{Actor 3:} Project Admin & \\ \hline
+  1 User finds project through project browser &  \\ \hline
+  2 User clicks "request access" button and can send optional message to project admin. & 3 System notifies project admin. \\ \hline
+  4 Project admin can review user's profile, and decide to accept or reject user. & System notifies User of project Admin's response. \\ \hline
+ \textbf{Alternative: } & Admin never responds, request times out after 7 days, request is denied. \\ \hline
+\end{tabular}
+
+
+
+\subsection{Delete Project}
+Compiled/edited by John Snevily\\
+\begin{tabular}{ |p{5cm} | p {5cm}| }
+  \hline
+  \textbf{Delete Project} &  \\ \hline
+  \textbf{Summary: } & Project Admin deletes project \\ \hline
+  \textbf{Goal: }  &  Project admin wishes to delete project. If more than one admin, each admin must accept. \\ \hline
+  \textbf{Preconditions: } & User(s) must be project admin(s)\\ \hline
+   \textbf{Actor 1: Project Admin(s) } & \textbf{Actor 2: System} \\ \hline
+  1 Admin clicks "delete project" & 2 System checks if actor is only admin. If so, project is deleted. Otherwise, all admins are notified. \\ \hline
+  3 Each admin must also click the "delte project" button. & 4 System checks as each admin clicks button, if current instance is last admin. If so, project is deleted. Any users on project page are returned to home page. Project is made unavailable.\\ \hline
+ \textbf{Alternative: } & Not all admins concur, project remains active. User can still quit project.\\ \hline
+\end{tabular}
+
+
+\end{document}

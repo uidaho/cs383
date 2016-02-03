@@ -1,6 +1,6 @@
 # CS 383 HW #2 - PlantUML Makefile
 
-FILE = hw2-uml-team4
+FILE = bolt1003
 CC = java -jar plantuml.jar
 FLAGS = -tlatex
 

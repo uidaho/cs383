@@ -1,0 +1,37 @@
+@startuml
+
+actor User
+
+(Dashboard) as dash
+(Manage Account) as mgact
+(Manage Privacy) as mgprv
+(Public Profile) as pub
+(Friend Access) as frnd
+(Save changes and return) as scr
+(Save and close) as sc
+
+User ..> dash
+	dash ..> (View Public Profile)
+	dash ..> mgact
+		mgact ..> (Change Username)
+		mgact ..> (Change Password)
+		mgact ..> (Change Email Address)
+		mgact ..> (Change Name)
+		mgact ..> (Update "About Me")
+		mgact ..> mgprv
+			mgprv ..> pub
+				pub ..> (Display Name on Public profile)
+				pub ..> (Display Email Address on Public profile)
+				pub ..> (Receive an messages from anyone)
+				pub ..> (Receive an email when someone messages me)
+			mgprv ..> frnd
+				frnd ..> (Display Name to Friends)
+				frnd ..> (Display Email Address to friends)
+				frnd ..> (Receive an Email when a friend messages me)
+			mgprv ..> (Receive update emails)
+			mgprv ..> scr
+		mgact ..> sc			
+		mgact <.. scr
+	dash <.. sc
+			
+@enduml

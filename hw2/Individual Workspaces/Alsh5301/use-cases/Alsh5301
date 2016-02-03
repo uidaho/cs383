@@ -1,0 +1,53 @@
+
+
+\subsection{Sign Up (alsh5301)} 
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} user. \\ 
+ \\
+ \textit{Goals:} & To register and create an account in the program. \\
+ \\
+ \textit{Pre-conditions:} & None. \\
+ \\
+ \textit{Summary:} & The user signs up and creates an account using their email address and creates username and password. Once they can access to the program. \\ 
+ \\
+ \textit{Related use cases:} & None. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User is prompted to enter email and password.
+  \item System sends confirmation email.
+  \item User verifies email.
+  \item User clicks finishSystem presents user with additional info page.
+  \item User enters password, may choose to upload photo, works, etc.
+  \item System saves information, takes user to home page. 
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User already has an account. \\ & User doesn't confirm email. Delete request after timeout period. \\
+ \\
+\hline
+\end{tabular}
+\\
+\subsection{Logout}
+
+\begin{tabular}{ |p{6cm} | p {6cm}| }
+ \hline
+ \\
+ \textit{Actor:} &  User \\
+ \\
+ \textit{Goal:} & Existing user logs out \\ 
+ \\
+ \textit{Precondition:} & User must be logged in \\
+ \\
+ \textit{Summary:}  & The user can log-out of the program after finishing process the project  \\
+ \\
+ \textit{Steps:} & \\ 
+ \item User clicks the "log-out" button.
+ \item System prompts user to ensure non-accidental click.
+ \item User verifies.
+ \item System logs user out.
+ \item User enters password, may choose to upload photo, works, etc. 
+ \item System saves information, takes user to home page \\ \hline
+  Alternative 1: & The program will send notification to ask if the user is sure to sign out. \\
+  Alternative 2: & user cancels on step two. Return to home page. \\ 
+\end{tabular}

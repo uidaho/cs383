@@ -1,6 +1,6 @@
 # CS 383 HW #2 - PlantUML Makefile
 
-FILE = change_password
+FILE = Project_Mgmt
 CC = java -jar plantuml.jar
 FLAGS = -tlatex
 

@@ -14,55 +14,22 @@
 \begin{document}
 
 \noindent Author: Domn Werner (wern0096) \\
+Class: CS383-01 \\
 Date: 01/31/2016 \\
-Class: CS383-01
+Assignment: HW\#2
 
 \tableofcontents
 
 \newpage
 
-\section{Project Management}
-
-\subsection{Create New Project}
-
-\begin{framed}
-	\noindent\textbf{Name:} Create New Project \\ \\
-	\textbf{Category:} Project Management \\ \\
-	\textbf{Summary:} The user performs this task to create a new project. \\ \\
-	\textbf{Preconditions:} 
-	\begin{enumerate}
-		\item User must be registered.
-		\item User must be logged in.
-	\end{enumerate}
-	\textbf{Steps:}
-	\begin{enumerate}
-		\item User clicks \textit{File} in the top menu bar.
-		\item System opens a drop-down menu.
-		\item User selects \textit{New} -$>$ \textit{Project}.
-		\item System opens a \textit{New Project} dialog window.
-		\item User fills out the name of the project, selects a language, enters a description, and selects the \textit{Private} or \textit{Public} radio buttons.
-		\item User clicks the \textit{Create} button.
-		\item System creates a new project and displays it.
-	\end{enumerate}
-	\textbf{Alternatives:} 
-	\begin{enumerate}
-		\item Step 1: The user right clicks in the project pane and the system continues to step 2.
-		\item Step 5: The user clicks \textit{Cancel} and a new project is not created.
-	\end{enumerate}
-	\textbf{Postconditions:}
-	\begin{enumerate}
-		\item A new project with the selected settings is created.
-		\item The database is updated to reflect the new project and its data.
-	\end{enumerate}
-\end{framed} 
-
-\newpage
+\section{File Management}
 
 \subsection{Add New File to Project}
 
 \begin{framed}
 	\noindent\textbf{Task Name:} Add New File to Project \\ \\
-	\textbf{Task Category:} Project Management \\ \\
+	\textbf{Task Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
 	\textbf{Summary:} The user performs this task to add a new file to the project. \\ \\
 	\textbf{Preconditions:} 
 	\begin{enumerate}
@@ -99,7 +66,8 @@ Class: CS383-01
 
 \begin{framed}
 	\noindent\textbf{Task Name:} Add Existing File to Project \\ \\
-	\textbf{Task Category:} Project Management \\ \\
+	\textbf{Task Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
 	\textbf{Summary:} The user performs this task to add an existing file to the project. \\ \\
 	\textbf{Preconditions:} 
 	\begin{enumerate}
@@ -138,14 +106,15 @@ Class: CS383-01
 
 \begin{framed}
 	\noindent\textbf{Task Name:} Delete File \\ \\
-	\textbf{Task Category:} Project Management \\ \\
+	\textbf{Task Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
 	\textbf{Summary:} The user performs this task to delete a file from the project. \\ \\
 	\textbf{Preconditions:} 
 	\begin{enumerate}
 		\item User must be registered.
 		\item User must be logged in.
 		\item User must have a project open.
-		\item The project must have at least one file.
+		\item Current project must have at least one file.
 	\end{enumerate}
 	\textbf{Steps:}
 	\begin{enumerate}
@@ -159,6 +128,7 @@ Class: CS383-01
 	\textbf{Alternatives:} 
 	\begin{enumerate}
 		\item Step 5: The user clicks \textit{Cancel} instead and the file is not deleted from the project.
+		\item The user selects multiple files before step 1.
 	\end{enumerate}
 	\textbf{Postconditions:}
 	\begin{enumerate}
@@ -173,7 +143,8 @@ Class: CS383-01
 
 \begin{framed}
 	\noindent\textbf{Task Name:} Export Project \\ \\
-	\textbf{Task Category:} Project Management \\ \\
+	\textbf{Task Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
 	\textbf{Summary:} The user performs this task to download a project as a zip file. \\ \\
 	\textbf{Preconditions:} 
 	\begin{enumerate}
@@ -206,7 +177,8 @@ Class: CS383-01
 
 \begin{framed}
 	\noindent\textbf{Task Name:} Export Files \\ \\
-	\textbf{Task Category:} Project Management \\ \\
+	\textbf{Task Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
 	\textbf{Summary:} The user performs this task to download a number of files from a project. \\ \\
 	\textbf{Preconditions:} 
 	\begin{enumerate}
@@ -236,91 +208,22 @@ Class: CS383-01
 	\textbf{Related:} Export Project
 \end{framed}
 
-\newpage	
-		
-\section{Editor/IDE}
-
-\subsection{Display Typing User}
-
-\begin{framed}
-	\noindent\textbf{Name:} Display Typing User \\ \\
-	\textbf{Category:} Editor/IDE \\ \\
-	\textbf{Summary:} As a user starts typing, the cursor changes color to that user’s specified color. It will also show a little box with their name in front of the cursor. \\ \\
-	\textbf{Purpose:} Make it clear when and who is collaborating. \\ \\
-	\textbf{Preconditions:} 
-	\begin{enumerate}
-		\item Must be registered.
-		\item Must be logged in.
-		\item A file is open.
-		\item One or more users are connected to the same file.
-	\end{enumerate}
-	\textbf{Steps:}
-	\begin{enumerate}
-		\item User starts typing.
-		\item System displays a separate cursor with the typing user’s name above it to other users.
-	\end{enumerate}
-\end{framed}
-
-\newpage
-
-\subsection{Display Author and Date}
-
-\begin{framed}
-	\noindent\textbf{Name:} Display Author and Date \\ \\
-	\textbf{Category:} Editor/IDE \\ \\
-	\textbf{Summary:} Display the authors and dates above each written line of code when this option is selected. \\ \\
-	\textbf{Purpose:} Allow users to see who wrote what line of code and when. \\ \\
-	\textbf{Preconditions:} 
-	\begin{enumerate}
-		\item User is registered.
-		\item User is logged in.
-	\end{enumerate}	
-	\textbf{Steps:}
-	\begin{enumerate}
-		\item User clicks on the \textit{View} menu option in the menu bar.
-		\item The system displays a drop-down menu with the option to Display Authors, among others.
-		\item The user clicks on the Display Authors option.
-		\item The editor will display the author and date in small font above each line of code.
-	\end{enumerate}
-	\textbf{Alternatives:} Same idea, but option to display user colors beside their code lines. When hovering over the color, it will display the username.
-\end{framed}
-
-\newpage
-
-\subsection{Show Hightlighting}
-
-\begin{framed}
-	\noindent\textbf{Name:} Show Highlighting \\ \\
-	\textbf{Category:} Editor/IDE \\ \\
-	\textbf{Summary:} Shows users what other users are highlighting. \\ \\
-	\textbf{Purpose:} Aid communication and collaboration by showing what other users are highlighting. \\ \\
-	\textbf{Preconditions:} 
-	\begin{enumerate}
-		\item User has a file or project open.
-		\item User is in a shared project.
-		\item Another user is connected to the project.
-		\item User has read permission.
-	\end{enumerate}		
-	\textbf{Steps:}
-	\begin{enumerate}
-		\item User highlights text in an open text file.
-		\item System displays that user’s highlighting in a different color to other users in same file.
-	\end{enumerate}	
-\end{framed}
 \newpage
 
 \subsection{Open File in New Tab}
 
 \begin{framed}
 	\noindent\textbf{Name:} Open File in New Tab \\ \\
-	\textbf{Category:} Editor/IDE \\ \\
+	\textbf{Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
 	\textbf{Summary:} Allows users to open a file. \\ \\
 	\textbf{Purpose:} Opening files is essential in being able to work on a project. \\ \\
 	\textbf{Preconditions:} 
 	\begin{enumerate}
+		\item User is registered.
 		\item User is logged in.
 		\item User has a project open.
-		\item Project contains at least one file.
+		\item Current project contains at least one file.
 		\item User has read permission.
 	\end{enumerate}		
 	\textbf{Steps:}
@@ -330,29 +233,429 @@ Class: CS383-01
 	\end{enumerate}	
 	\textbf{Alternatives:} Step 1: Instead of double clicking a file, the user right clicks it and navigates to \textit{Open}.
 \end{framed}
+
 \newpage
 
-\subsection{Close Tab}
+\subsection{Save File}
 
 \begin{framed}
-	\noindent\textbf{Name:} Close Tab \\ \\
-	\textbf{Category:} Editor/IDE \\ \\
-	\textbf{Summary:} Allows users to close a tab. \\ \\
-	\textbf{Purpose:} Closing tabs is essential for increasing efficiency and productivity. \\ \\
+	\noindent\textbf{Name:} Save File \\ \\
+	\textbf{Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} Allows users save edited files. \\ \\
+	\textbf{Purpose:} Saving files is essential in maintaining the integrity of a project. \\ \\
 	\textbf{Preconditions:} 
 	\begin{enumerate}
+		\item User is registered.
 		\item User is logged in.
 		\item User has a project open.
-		\item A file is open.
+		\item Project contains at least one file.
 		\item User has read permission.
+		\item User has write permission.
+		\item At least one file has been edited since the last save.
 	\end{enumerate}		
 	\textbf{Steps:}
 	\begin{enumerate}
-		\item User clicks the `x' on a tab.
-		\item The editor closes the tab.
+		\item User edits one or more files.
+		\item System enables a flag signaling that edits have occurred.
+		\item User clicks a save button or keybind.
+		\item System saves current open file.
 	\end{enumerate}	
-	\textbf{Alternatives:} Step 1: The user right-clicks the tab and selects \textit{Close}. \\ \\
-	\textbf{Related:} Close All Tabs.
+	\textbf{Alternatives:} 
+	\begin{enumerate}
+		\item A \textit{Save All} button that saves all open, edited files.
+	\end{enumerate}
+	\textbf{Postconditions:}
+	\begin{enumerate}
+		\item The database is update to reflect the save operation.
+		\item The save button is grayed out.
+		\item The save all button is grayed out if it was clicked.
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{Close Saved File}
+
+\begin{framed}
+	\noindent\textbf{Name:} Close Saved File \\ \\
+	\textbf{Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} Allows users to close opened, saved files. \\ \\
+	\textbf{Purpose:} Closing files is essential in managing the workspace and increasing productivity. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User is registered.
+		\item User is logged in.
+		\item User has a project open.
+		\item User has at least one file open.
+		\item User has read permission
+		\item User has write permission.
+		\item Current opened file has no unsaved changes.
+	\end{enumerate}		
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks the 'x' on the edge of an open tab.
+		\item System closes current open file.
+	\end{enumerate}	
+	\textbf{Postconditions:}
+	\begin{enumerate}
+		\item The opened tab and file are closed.
+	\end{enumerate}
+	\textbf{Related:} Close Unsaved File
+\end{framed}
+
+\newpage
+
+\subsection{Close Unsaved File}
+
+\begin{framed}
+	\noindent\textbf{Name:} Close Unsaved File \\ \\
+	\textbf{Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} Allows users to close opened, unsaved files. \\ \\
+	\textbf{Purpose:} Closing unsaved files is a possibly risky procedure. It is important that the use case reduces the chance of the user losing their work. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User is registered.
+		\item User is logged in.
+		\item User has a project open.
+		\item User has at least one file open.
+		\item User has read permission
+		\item User has write permission.
+		\item Current opened file has unsaved changes.
+	\end{enumerate}		
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks the 'x' on the edge of an open tab.
+		\item System presents a dialog telling the user that there are unsaved changes to the file.
+		\item System asks the use if he wants to \textit{Save Changes and Don't Close}, \textit{Save and Close}, \textit{Close and Don't Save}, or \textit{Cancel}.
+	\end{enumerate}	
+	\textbf{Alternatives:}
+	\begin{enumerate}
+		\item If the user selects \textit{Save Changes}, the file is saved as per the Save File use-case.
+		\item If the user selects \textit{Save and Close}, the file is saved as per the Save File use-case and closed as per the Close Saved File use-case.
+		\item If the user selects \textit{Close and Don't Save}, the file is closed.
+		\item If the user selects \textit{Cancel}, nothing happens.
+	\end{enumerate}
+	\textbf{Postconditions:}
+	\begin{enumerate}
+		\item The database is updated if the user chose to save the file.
+	\end{enumerate}
+	\textbf{Related:} 
+	\begin{enumerate}
+		\item Close Saved File
+		\item Save File
+	\end{enumerate}
+\end{framed}
+
+\subsection{Use-Case Diagram}
+
+\hspace*{-1cm}\includegraphics[scale=0.45]{fileManagementDiagram}
+
+
+\newpage	
+		
+\section{File Editing}
+
+\subsection{View Line Numbers}
+
+\begin{framed}
+	\noindent\textbf{Name:} View Line Numbers \\ \\
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Summary:} Allows the user to view line numbers to the left of the document. \\ \\
+	\textbf{Purpose:} Makes it easier to communicate position in code. It is also a useful metric to have.\\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has view permission.
+		\item A file is open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User selects the \textit{View} menu option.
+		\item System displays a drop-down with various options.
+		\item User selects the \textit{View Line Numbers} option.
+		\item System displays line numbers to the left of the document.
+	\end{enumerate}
+	\textbf{Related:}
+	\begin{enumerate}
+		\item View References
+		\item View Dates
+		\item View Authors
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{View References}
+
+\begin{framed}
+	\noindent\textbf{Name:} View References \\ \\
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Summary:} Allows the user to view the number of references to a given function. \\ \\
+	\textbf{Purpose:} It is useful to know the number of references to a given function for optimization and debugging purposes. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has view permission.
+		\item A \textbf{code} file is open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User selects the \textit{View} menu option.
+		\item System displays a drop-down with various options.
+		\item User selects the \textit{View References} option.
+		\item System displays the number of references above each method declaration.
+	\end{enumerate}
+	\textbf{Related:}
+	\begin{enumerate}
+		\item View Line Numbers
+		\item View Dates
+		\item View Authors
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{View Dates}
+
+\begin{framed}
+	\noindent\textbf{Name:} View Dates \\ \\
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Summary:} Allows the user to view the last date that each line of a document was edited. \\ \\
+	\textbf{Purpose:} This provides a useful metric for how up-to-date parts of the document are. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has view permission.
+		\item A file is open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User selects the \textit{View} menu option.
+		\item System displays a drop-down with various options.
+		\item User selects the \textit{View Dates} option.
+		\item System displays the last date that each line of a document was edited.
+	\end{enumerate}
+	\textbf{Related:}
+	\begin{enumerate}
+		\item View Line Numbers
+		\item View References
+		\item View Authors
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{View Authors}
+
+\begin{framed}
+	\noindent\textbf{Name:} View Authors \\ \\
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Summary:} Allows the user to view the last author that edited each of line of the document. \\ \\
+	\textbf{Purpose:} This is an accountability tool allowing other users to identify who is responsible for a change to a document. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has read permission.
+		\item A file is open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User selects the \textit{View} menu option.
+		\item System displays a drop-down with various options.
+		\item User selects the \textit{View Authors} option.
+		\item System displays the name of the last editor of each line of the document.
+	\end{enumerate}
+	\textbf{Related:}
+	\begin{enumerate}
+		\item View Line Numbers
+		\item View References
+		\item View Dates
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{Format Document}
+
+\begin{framed}
+	\noindent\textbf{Name:} Format Document \\ \\
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Summary:} Allows the user to format the document to a specified format \\ \\
+	\textbf{Purpose:} An easy tool for making sweeping changes to a large part of a document. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has read/write permission.
+		\item A file is open.
+		\item The document has formatting options set.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User selects the \textit{Edit} menu option.
+		\item System displays a drop-down with various options.
+		\item User selects the \textit{Format Document} option.
+		\item System formats the current document to the formatting settings currently set.
+	\end{enumerate}
+	\textbf{Alternatives:}
+	\begin{enumerate}
+		\item If no formatting settings are currently set, display a dialog box after step 3 and give the option for the user to do so now.
+	\end{enumerate}
+	\textbf{Related:}
+	\begin{enumerate}
+		\item Find/Replace
+		\item Comment Section
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{Find/Replace}
+
+\begin{framed}
+	\noindent\textbf{Name:} Find/Replace \\ \\
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Summary:} Allows the user to find and/or replace phrases. \\ \\
+	\textbf{Purpose:} This is a powerful tool that allows a user to make safer, quicker, and more efficient changes to a document. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has read/write permission.
+		\item A file is open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User selects the \textit{Edit} menu option.
+		\item System displays a drop-down with various options.
+		\item User selects the \textit{Find/Replace} option.
+		\item System displays a small form in an unobtrusive location.
+		\item User enter the phrase to find and selects find.
+		\item System highlights and focuses on the first occurrence of the phrase and all highlights all other occurrences.
+	\end{enumerate}
+	\textbf{Alternatives:}
+	\begin{enumerate}
+		\item User selects option to replace in step 5 and enters a phrase with which to replace the found occurrences of the searched phrase. The system replaces each occurrence.
+	\end{enumerate}
+	\textbf{Related:}
+	\begin{enumerate}
+		\item Format Document
+		\item Find/Replace
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{Comment Section}
+
+\begin{framed}
+	\noindent\textbf{Name:} Comment Section \\ \\
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Summary:} Allows the user to comment out a part of a document. \\ \\
+	\textbf{Purpose:} A useful and quick way to disable a large part of a document. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item A file is open.
+		\item User has read/write permission.
+		\item Current open document supports commenting.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User selects the \textit{Edit} menu option.
+		\item System displays a drop-down with various options.
+		\item User selects the \textit{Comment Section} option.
+		\item System comments the selected area.
+	\end{enumerate}
+	\textbf{Alternatives:}
+	\begin{enumerate}
+		\item If document does not support commenting, display a dialog box telling the user.
+	\end{enumerate}
+	\textbf{Related:}
+	\begin{enumerate}
+		\item Format Document
+		\item Find/Replace
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{Display Typing User}
+
+\begin{framed}
+	\noindent\textbf{Name:} Display Typing User \\ \\
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Summary:} As the user types, the system displays their name, their typing, and their caret, in a different color, to other users. \\ \\
+	\textbf{Purpose:} Differentiate who is typing what. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has read/write permission.
+		\item A file is open.
+		\item Other users have the same document open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User begins typing.
+		\item System displays the user's typing, the user's name, and the user's caret, in a different color, to other users.
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{Display Syntax Errors}
+
+\begin{framed}
+	\noindent\textbf{Name:} Display Syntax Errors \\ \\
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Summary:} As the user types code, the editor will underline syntax errors with a red line. \\ \\
+	\textbf{Purpose:} Aids the user is writing correct code. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has read/write permission.
+		\item A supported code file is open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User begins typing.
+		\item System displays any syntax errors as a red underline under the incorrect section.
+	\end{enumerate}
+	\textbf{Related:} Display Syntax Highlighting
+\end{framed}
+
+\newpage
+
+\subsection{Display Syntax Highlighting}
+
+\begin{framed}
+	\noindent\textbf{Name:} Display Syntax Highlighting \\ \\
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Summary:} As the user types code, the editor will change font color for different code structures and keywords. \\ \\
+	\textbf{Purpose:} Aids the user is writing code and identifying key code parts. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has read/write permission.
+		\item A supported code file is open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User begins typing.
+		\item System automatically colors special code structures and keywords.
+	\end{enumerate}
+	\textbf{Related:} Display Syntax Errors
 \end{framed}
 
 \end{document}
