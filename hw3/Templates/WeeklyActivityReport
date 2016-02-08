@@ -1,0 +1,32 @@
+From: David Wallace Croft 
+To: Client or Project Manager 
+Subject: status report, David Croft, 2001-06-17 
+
+Weekly Status Report of David Wallace Croft 
+for the Last Week Ending 2001-06-17 Sunday 
+Activities Planned for Last Week
+
+Document the revised architecture.
+Rework the database connectivity.
+Revise the installation documentation.
+Activities Accomplished Last Week
+Discovered that source code files had been corrupted during project version control synchronization. In attempting to restore from backup, I was informed by the Sys Admin that the most recent run of the automatic backup process had already overwritten all files with the corrupted versions. I was further surprised to learn that periodic full backup snapshots are not created and stored off-site. Restored files to near original state by writing script to seek and remove all spurious characters.
+Implemented temporary backup solution.
+Documented the revised architecture.
+Activities Planned for Next Week
+Track progress of systems backup policy revision request.
+Rework the database connectivity.
+Revise the installation documentation.
+New Issues
+We need to create full backups periodically and store them off-site.
+Old Issues
+The application server needs to be upgraded.
+-----
+Section Descriptions
+
+Subject Line
+Assuming that the status reports will be sent by e-mail and then archived in message folders sortable by subject, using a consistent subject line format can make searching for a particular status report much easier.
+Activities Planned for Last Week
+This will always be a cut-and-paste verbatim copy of the content of the "Activities Planned for Next Week" section from the previous status report. Although redundant, this allows the report reviewer to quickly compare the activities projected with the activities actually accomplished as documented in the section immediately following. The report author will use this section to remind himself of planned activities as he fills in the template with his accomplishments throughout the week. Many developers print a paper copy of this section and pin it to their wall at the beginning of each new reporting period for quick reference. This promotes a concentration of focus and a sense of progress as each planned activity on the list is initiated and completed.
+Activities Accomplished Last Week
+This section is the heart of the report. The accurate documentation of recent activities facilitates management by the employer and communicates progress to the client. It provides the employee with the opportunity to advertise his contributions and permits the contractor to justify his invoice. The activities actually accomplished in the previous week may or may not have any relationship to what was planned. It is important to both the author and the reviewer that actual activities are listed, regardless of whether planned or not, in order to validate and manage the consumption of time and labor. Throughout the week the report author will add items to this section as they are accomplished. This incremental approach ensures the all relevant activities are recorded and reduces the probability that a report will be delayed or skipped due to the difficulty of writing the report when memories have faded or the deadline is imminent. I recommend that the author avoid delaying the submission of a report for the purpose of including additional activities within.

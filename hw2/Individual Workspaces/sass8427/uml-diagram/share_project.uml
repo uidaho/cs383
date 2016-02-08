@@ -1,9 +1,0 @@
-@startuml
-:Admin: -> [Share Project]
-[Share Project] <|- (Invite User)
-(Invite User) --> (By username)
-(Invite User) --> (By email)
-(Share Project) <|-- (Permissions)
-(Permissions) --> (read only)
-(Permissions) --> (read and write)
-@enduml

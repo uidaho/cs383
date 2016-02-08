@@ -16,12 +16,3 @@ ${LFILE}.pdf: ${LFILE}.tex diagrams
 
 clean:
 	rm -f ${LFILE}.aux ${LFILE}.dvi ${LFILE}.toc ${LFILE}.log ${LFILE}.pdf ${PFILES}*.png
-	
-	
-	
-	
-	
-	
-	
-	
-	

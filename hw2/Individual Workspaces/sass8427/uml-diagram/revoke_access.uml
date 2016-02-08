@@ -1,6 +1,0 @@
-@startuml
-:Admin: -> [Revoke Access to Project]
-[Revoke Access to Project] -right-> (Access List)
-[Revoke Access to Project] <|-- (Remove)
-(Confirm) .right-* (Remove)
-@enduml

@@ -3,14 +3,80 @@
 \contentsline {section}{\numberline {1.2}Use Case Diagrams}{3}
 \contentsline {subsection}{\numberline {1.2.1}Overview (jank6275)}{3}
 \contentsline {subsection}{\numberline {1.2.2}Project Ideas (dani2918)}{3}
-\contentsline {subsection}{\numberline {1.2.3}Communication (jank6275)}{3}
-\contentsline {section}{\numberline {1.3}Use Case Descriptions}{3}
-\contentsline {subsection}{\numberline {1.3.1}Communication (jank6275)}{3}
-\contentsline {subsubsection}{Open project chat (jank6275)}{3}
-\contentsline {subsubsection}{Open global chat (jank6275)}{4}
-\contentsline {subsubsection}{Close project chat (jank6275)}{5}
-\contentsline {subsubsection}{Close global chat (jank6275)}{6}
-\contentsline {subsubsection}{Write to project chat (jank6275)}{7}
-\contentsline {subsubsection}{Write to global chat (jank6275)}{8}
-\contentsline {subsubsection}{Modify chat font (jank6275)}{9}
-\contentsline {subsubsection}{Modify chat color (jank6275)}{10}
+\contentsline {subsection}{\numberline {1.2.3}Authentication (alsh5301)}{4}
+\contentsline {subsection}{\numberline {1.2.4}Communication (jank6275)}{4}
+\contentsline {subsection}{\numberline {1.2.5}File Editing (wern0096)}{5}
+\contentsline {subsection}{\numberline {1.2.6}File Management (wern0096)}{6}
+\contentsline {subsection}{\numberline {1.2.7}Project Management (sass8427)}{7}
+\contentsline {subsection}{\numberline {1.2.8}User Profile Management (bolt1003)}{7}
+\contentsline {subsection}{\numberline {1.2.9}Project User Management (boss2849)}{8}
+\contentsline {subsection}{\numberline {1.2.10}User Editor Preferences (snev7821)}{8}
+\contentsline {section}{\numberline {1.3}Use Case Descriptions}{9}
+\contentsline {subsection}{\numberline {1.3.1}Authentication (alsh5301)}{9}
+\contentsline {subsubsection}{Sign up (alsh5301)}{9}
+\contentsline {subsubsection}{Sign in (alsh5301)}{10}
+\contentsline {subsubsection}{Logout (alsh5301)}{11}
+\contentsline {subsection}{\numberline {1.3.2}Project Ideas (dani2918)}{12}
+\contentsline {subsubsection}{Browse Project Ideas (dani2918)}{12}
+\contentsline {subsubsection}{Create Project Idea Thread (dani2918)}{13}
+\contentsline {subsubsection}{Manage Project Idea Thread (dani2918)}{14}
+\contentsline {subsubsection}{Comment on Project Idea (dani2918)}{15}
+\contentsline {subsubsection}{Vote on Project Idea (dani2918)}{16}
+\contentsline {subsubsection}{Share Project Idea (dani2918)}{17}
+\contentsline {subsection}{\numberline {1.3.3}Communication (jank6275)}{18}
+\contentsline {subsubsection}{Open project chat (jank6275)}{18}
+\contentsline {subsubsection}{Open global chat (jank6275)}{19}
+\contentsline {subsubsection}{Close project chat (jank6275)}{20}
+\contentsline {subsubsection}{Close global chat (jank6275)}{21}
+\contentsline {subsubsection}{Write to project chat (jank6275)}{22}
+\contentsline {subsubsection}{Write to global chat (jank6275)}{23}
+\contentsline {subsubsection}{Modify chat font (jank6275)}{24}
+\contentsline {subsubsection}{Modify chat color (jank6275)}{25}
+\contentsline {subsection}{\numberline {1.3.4}File Management (wern0096)}{26}
+\contentsline {subsubsection}{Add New File to Project (wern0096)}{26}
+\contentsline {subsubsection}{Add Existing File to Project (wern0096)}{27}
+\contentsline {subsubsection}{Delete File (wern0096)}{28}
+\contentsline {subsubsection}{Export Project (wern0096)}{29}
+\contentsline {subsubsection}{Export Files (wern0096)}{30}
+\contentsline {subsubsection}{Open File in New Tab (wern0096)}{31}
+\contentsline {subsubsection}{Save File (wern0096)}{32}
+\contentsline {subsubsection}{Close Saved File (wern0096)}{33}
+\contentsline {subsubsection}{Close Unsaved File (wern0096)}{34}
+\contentsline {subsection}{\numberline {1.3.5}File Editing (wern0096)}{36}
+\contentsline {subsubsection}{View Line Numbers (wern0096)}{36}
+\contentsline {subsubsection}{View References (wern0096)}{37}
+\contentsline {subsubsection}{View Dates (wern0096)}{38}
+\contentsline {subsubsection}{View Authors (wern0096)}{39}
+\contentsline {subsubsection}{Format Document (wern0096)}{40}
+\contentsline {subsubsection}{Find/Replace (wern0096)}{41}
+\contentsline {subsubsection}{Comment Section (wern0096)}{42}
+\contentsline {subsubsection}{Display Typing User (wern0096)}{43}
+\contentsline {subsubsection}{Display Syntax Errors (wern0096)}{44}
+\contentsline {subsubsection}{Display Syntax Highlighting (wern0096)}{45}
+\contentsline {subsection}{\numberline {1.3.6}User Prefrences (snev7821)}{46}
+\contentsline {subsubsection}{View User Preferences (snev7821)}{46}
+\contentsline {subsubsection}{Modify Chat Font (snev7821)}{47}
+\contentsline {subsubsection}{Modify Chat Color (snev7821)}{48}
+\contentsline {subsubsection}{Edit User Editor Theme (snev7821)}{49}
+\contentsline {subsubsection}{Turn Off Global Chat (snev7821)}{50}
+\contentsline {subsubsection}{Psuedo-offline Mode (snev7821)}{51}
+\contentsline {subsection}{\numberline {1.3.7}Project Management (sass8427)}{52}
+\contentsline {subsubsection}{Create project (sass8427)}{52}
+\contentsline {subsubsection}{Delete project (sass8427)}{53}
+\contentsline {subsubsection}{Join project (sass8427)}{54}
+\contentsline {subsubsection}{Unjoin project (sass8427)}{55}
+\contentsline {subsubsection}{Accept invite to project (sass8427)}{56}
+\contentsline {subsubsection}{Rate project (sass8427)}{57}
+\contentsline {subsection}{\numberline {1.3.8}User Profile Management (bolt1003)}{58}
+\contentsline {subsubsection}{View User Profile (bolt1003)}{58}
+\contentsline {subsubsection}{Modify User Profile (bolt1003)}{59}
+\contentsline {subsubsection}{Modify notifications from friends (bolt1003)}{60}
+\contentsline {subsubsection}{Modify public messaging preferences (bolt1003)}{61}
+\contentsline {subsubsection}{Modify global email settings (bolt1003)}{62}
+\contentsline {subsection}{\numberline {1.3.9}Project User Management (boss2849)}{63}
+\contentsline {subsubsection}{Modify read/write access (boss2849)}{63}
+\contentsline {subsubsection}{Remove User (boss2849)}{64}
+\contentsline {subsubsection}{Invite User to Project (boss2849)}{65}
+\contentsline {subsubsection}{Promote User to Admin (boss2849)}{66}
+\contentsline {subsubsection}{Demote Admin (boss2849)}{67}
+\contentsline {subsubsection}{Block User (boss2849)}{68}

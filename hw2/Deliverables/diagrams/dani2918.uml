@@ -1,15 +1,31 @@
 @startuml
-:Project Administrator: as PA
-:User: as U
 
-U --> (Browse Project Ideas)
+:User: as U
+:Project Administrator: as PA
+
+
+rectangle "User Actions"{
 (Browse Project Ideas) --> (Comment on Project Idea)
 (Browse Project Ideas) --> (Vote on Project Idea)
-(Browse Project Ideas) -->  (Share Project Idea)
 
-PA --> (Create Project Idea Thread)
+}
+
+
+rectangle "Authentication" {
+    U --> (View Home) 
+    PA --> (View Home) 
+    
+}
+(View Home) --> (View Project Idea Home)
+
+rectangle "Project Administrator Actions"{
 (Create Project Idea Thread) --> (Manage Project Idea Thread)
-(Create Project Idea Thread) --> (Share Project Idea)
 
+}
+
+(Browse Project Ideas) --> (Share Project Idea)
+(Create Project Idea Thread) --> (Share Project Idea)
+(View Project Idea Home) --> (Create Project Idea Thread)
+(View Project Idea Home) --> (Browse Project Ideas)
 
 @enduml

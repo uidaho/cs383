@@ -1,0 +1,32 @@
+@startuml
+scale 800 width
+title SQuire Usecase Diagram (Chat)
+
+'left to right direction
+
+actor User << Human >>
+actor Admin << Human >>
+actor Server << Application >>
+
+rectangle "Authentication" {
+    User --> (View home) : Authenticated
+    Admin --> (View home) : Authenticated
+}
+
+rectangle "Project Management" {
+    (View home) --> (View projects)
+    (View projects) --> (Choose project)
+}
+
+rectangle "Communication" {
+    (Choose project) ..> (Open project chat) : Automatically opened
+        (Open project chat) --> (Write to project chat)
+        (Open project chat) --> (Close project chat)
+    (View home) ..> (Open global chat) : Automatically opened
+        (Open global chat) --> (Write to global chat)
+        (Open global chat) --> (Close global chat)
+}
+
+Server <--> (Write to global chat)
+Server <--> (Write to project chat)
+@enduml
