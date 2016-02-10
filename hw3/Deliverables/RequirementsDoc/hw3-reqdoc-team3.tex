@@ -1,6 +1,6 @@
 %%%% hw3-reqdoc.team3.tex
 %%%% Requirements Documentation for sQuire
-%%%% Due on BBLearn before class on Tuesday 2/9/2016
+%%%% Due on BBLearn before 10pm on Tuesday 2/9/2016
 
 \documentclass[11pt]{report}
 
@@ -26,25 +26,19 @@
 \chapter{Introduction}
 
 \section{Program Premise}
-    \begin{figure}[h!]
-        \caption{Squire will be a web-based collaborative software development environment with a project development center. Squire will allow multiple users to edit files and communicate in real time. First, projects are stubbed out by a user and then other users can join and/or vote to support for their favorite projects. After a certain amount of support, planning, and documentation is reached for a project, the project becomes a fully fleged project and then community development can start. Think ``kickstarter for code'' where people pledge their help with the project and not just money.}
+        Squire will be a web-based collaborative software development environment with a project development center. Squire will allow multiple users to edit files and communicate in real time. First, projects are stubbed out by a user and then other users can join and/or vote to support for their favorite projects. After a certain amount of support, planning, and documentation is reached for a project, the project becomes a fully fleged project and then community development can start. Think ``kickstarter for code'' where people pledge their help with the project and not just money.
         \includegraphics[width=\textwidth]{squire}
-    \end{figure}
-
-\section{Use Case Overview (jank6275)}
-    \includegraphics[width=\textwidth]{diagrams/overview-jank6275}
-    A usecase diagram that shows all of sQuire\'s features.
 
 \chapter{Requirements Documentation}
 
 \section{Functional Requirements}
     Functional requirements will specify a behaviour or function, for example ``Display the name, total size, available space and format of a flash drive connected to the USB port'' Other examples are ``add customer'' and ``print invoice''. Some of the more typical functional requirements include:
     
-    \subsection Authentication (mars2681)
+    \subsection{Authentication (mars2681)}
         \begin{itemize}
             \item First, the user can input their email address and password in order to sign into their account. If they do not have an account, they can sign up by providing an email address and a password. A confirmation email will then be sent to their email address, which they can use to confirm and access their account. If the user forgets their password, they can click “forgot password” and input their email address. The system with confirm an email addresses associated with an account, and email the user a temporary password. 
         \end{itemize}
-    \subsection Project Management (mora5651) 
+    \subsection{Project Management (mora5651)}
         \begin{itemize}
             \item Admin controls features.  
             \item Public and private sharing of project.
@@ -52,7 +46,7 @@
             \item Password controls. 
             \item File management. 
         \end{itemize}
-    \subsection Project Ideas (snev7821) 
+    \subsection{Project Ideas (snev7821)}
         \begin{itemize}
             \item Forum to browse potential projects
             \item Up- and down-votes for project selection
@@ -61,7 +55,7 @@
             \item Ability to delete a project (but only by project author)
             \item Convert potential project stub into active working project 
         \end{itemize}
-    \subsection User Profile (brec9824) 
+    \subsection{User Profile (brec9824)}
         \begin{itemize}
             \item Viewable profile by other users and by oneself
             \item Includes editable email, profile image, password, and personal bio.
@@ -70,7 +64,7 @@
             \item Option to have account deleted.
         	\item Direct access to projects that are listed under project ownerships and project memberships.
         \end{itemize}
-    \subsection Project File Editor (jank6275) 
+    \subsection{Project File Editor (jank6275)}
         \begin{itemize}
             \item The editor will be multi-user, up to 32 users can share an IDE session.
             \item Text will be underlined in the user\'s color, if they edited/created that text.
@@ -80,7 +74,7 @@
             \item Any user can save the document at any time.
             \item The current location of any user\'s cursor can be quickly jumped to by any user with the project open.
         \end{itemize}
-    \subsection Communication (bolt1003) 
+    \subsection{Communication (bolt1003)}
         \begin{itemize}
             \item Built-in, global text chat per project.
             \item Private communications between other users.
@@ -91,7 +85,7 @@
             \item Text chat will be built using standard protocols such as XMPP or IRC.
             \item Allows the use of third-party chat clients.
         \end{itemize}
-    \subsection Security (gall7417) 
+    \subsection{Security (gall7417)}
         \begin{itemize}
             \item Resource defense strategy that includes not subjecting any sQuire server to becoming unresponsive due to a runaway program, and not allowing any sQuire server to give up shell access via an executing program in sQuire.
             \item Require authentication to access all user files and user information.
@@ -109,7 +103,7 @@
             \item Restrict access to resources and files outside of the users given resources.
             \item Deny access to security protocols and configurations.
         \end{itemize}
-    \subsection Compiler (boss2849) 
+    \subsection{Compiler (boss2849)}
         \begin{itemize}
             \item Capable of supporting editing, compilation, and execution of Java programs. Programs to be composed as projects and support multiple source code files across multiple directories within a shared top-level directory.
             \item Design as a 'plugin' to the system - initial will be a Java compiler, but allow new compiler plugins to be written for other languages.
