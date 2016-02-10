@@ -1,14 +1,14 @@
 \contentsline {chapter}{\numberline {1}Introduction}{2}
 \contentsline {section}{\numberline {1.1}Program Premise}{2}
-\contentsline {chapter}{\numberline {2}Requirements Documentation}{4}
-\contentsline {section}{\numberline {2.1}Functional Requirements}{4}
-\contentsline {subsection}{\numberline {2.1.1}Authentication (mars2681)}{4}
-\contentsline {subsection}{\numberline {2.1.2}Project Management (mora5651)}{4}
-\contentsline {subsection}{\numberline {2.1.3}Project Ideas (snev7821)}{4}
-\contentsline {subsection}{\numberline {2.1.4}User Profile (brec9824)}{5}
-\contentsline {subsection}{\numberline {2.1.5}Project File Editor (jank6275)}{5}
-\contentsline {subsection}{\numberline {2.1.6}Communication (bolt1003)}{5}
-\contentsline {subsection}{\numberline {2.1.7}Security (gall7417)}{6}
-\contentsline {subsection}{\numberline {2.1.8}Compiler (boss2849)}{6}
-\contentsline {section}{\numberline {2.2}Non-Functional Requirements}{7}
-\contentsline {section}{\numberline {2.3}Unused Requirements}{8}
+\contentsline {chapter}{\numberline {2}Requirements Documentation}{3}
+\contentsline {section}{\numberline {2.1}Functional Requirements}{3}
+\contentsline {subsection}{\numberline {2.1.1}Authentication (mars2681)}{3}
+\contentsline {subsection}{\numberline {2.1.2}Project Management (mora5651)}{3}
+\contentsline {subsection}{\numberline {2.1.3}Project Ideas (snev7821)}{3}
+\contentsline {subsection}{\numberline {2.1.4}User Profile (brec9824)}{4}
+\contentsline {subsection}{\numberline {2.1.5}Project File Editor (jank6275)}{4}
+\contentsline {subsection}{\numberline {2.1.6}Communication (bolt1003)}{4}
+\contentsline {subsection}{\numberline {2.1.7}Security (gall7417)}{5}
+\contentsline {subsection}{\numberline {2.1.8}Compiler (boss2849)}{5}
+\contentsline {section}{\numberline {2.2}Non-Functional Requirements}{6}
+\contentsline {section}{\numberline {2.3}Unused Requirements}{7}
