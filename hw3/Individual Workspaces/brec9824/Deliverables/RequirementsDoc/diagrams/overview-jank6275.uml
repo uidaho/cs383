@@ -1,0 +1,34 @@
+@startuml
+scale 800 width
+title SQuire Usecase Diagram
+'left to right direction
+
+User << Human >>
+Admin << Human >>
+'Server << Application >>
+
+User --> (Authentication \n alsh5301)
+Admin --> (Authentication \n alsh5301)
+
+(Authentication \n alsh5301) --> (Project Management \n sass8427)
+(Authentication \n alsh5301) --> (Project Ideas \n dani2918)
+(Authentication \n alsh5301) --> (User Preferences \n snev7821)
+(Authentication \n alsh5301) --> (User Profile \n bolt1003)
+(Authentication \n alsh5301) --> (Communication \n jank6275)
+
+(Project Management \n sass8427) --> (Communication \n jank6275)
+(Project Management \n sass8427) --> (Project User Management \n boss2849)
+(Project Management \n sass8427) --> (Project File Management \n wern0096)
+
+/'
+Server -- (Authentication \n alsh5301)
+Server -- (Project Ideas \n dani2918)
+Server -- (User Preferences \n snev7821)
+Server -- (User Profile \n bolt1003)
+Server -- (Communication \n jank6275)
+Server -- (Project Management \n sass8427)
+Server -- (Project User Management \n boss2849)
+Server -- (Project File Management \n wern0096)
+'/
+
+@enduml
