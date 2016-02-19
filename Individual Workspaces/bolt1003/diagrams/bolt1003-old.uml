@@ -1,0 +1,88 @@
+@startuml
+
+hide circle
+hide empty methods
+hide empty fields
+
+title Project Management
+scale 800 width
+
+class Project_Manager{
+  PROJECT PROJECTS[]
+  
+  createProject()
+  removeProject(Project)
+  
+}
+
+
+class Project{
+  String Name
+  GROUP GROUPS[]
+  FOLDER root
+  
+  addUser(USER)
+  removeUser(USER)
+  shareProject()
+}
+
+class USER{
+  String name
+}
+
+class GROUP{
+  string name
+  USER USERS[]
+  
+  addUser(USER)
+  removeUser(USER)
+}
+
+class FOLDER{
+  String Name
+  FILE FILES[]
+  FOLDER FOLDERS[]
+  
+  addFile(FILE)
+  addFolder(FOLDER)
+  
+  removeFile(FILE)
+  removeFolder(FOLDER)
+}
+
+class FILE{
+  string name
+  DATA DATA_LINKS[]
+
+}
+
+class PERMISSIONS{
+  USER OWNER
+  GROUP READ[]
+  GROUP WRITE[]
+  GROUP EXECUTE[]
+  GROUP SHARE[]
+  
+  currentOwner()
+  changeOwner(OWNER)
+  
+  addGroup(GROUP)
+  removeGroup(GROUP)
+  
+  allowRead(GROUP)
+  allowWrite(GROUP)
+  allowExecute(GROUP)
+}
+
+Project_Manager *--"1.." Project
+
+Project *--"1.." GROUP
+GROUP *--"1..32" USER
+Project *--"1.." PERMISSIONS
+
+FOLDER *--"1.." FILE
+
+PERMISSIONS <|-- FILE
+PERMISSIONS <|-- FOLDER
+
+@enduml

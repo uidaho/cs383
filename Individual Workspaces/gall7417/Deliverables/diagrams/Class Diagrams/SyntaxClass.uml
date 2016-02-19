@@ -1,0 +1,27 @@
+@startuml
+scale 800 width
+title Syntax Class Diagram
+'left to right direction
+
+User << Human >>
+Admin << Human >>
+
+User --> (Authentication \n alsh5301)
+Admin --> (Authentication \n alsh5301)
+
+rectangle "Authentication" {
+    User --> (View home) : Authenticated
+    Admin --> (View home) : Authenticated
+}
+
+
+(View home) --> (Open Project)
+(Open Project) --> (Start Compiler)
+
+rectangle "Syntax" {
+    (Start Compiler) --> (Lexical Analysis)
+    (Lexical Analysis) --> (Syntax Analysis)
+    (Syntax Analysis) --> (Semantic Analysis)
+}
+
+@enduml

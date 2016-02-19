@@ -1,0 +1,34 @@
+@startuml
+scale 800 width
+title Chat Server Class Diagram
+footer 
+Created by jank6275 and reviewed by mora5651.
+endfooter
+
+hide circle
+'left to right direction
+
+'Extension	<|--
+'Composition	*--
+'Aggregation	o--
+
+ChatServer "1"--"1" ChatServerThread
+
+ChatServerThread "1"--"1" ChatSocket
+ChatServerThread "1"--"1" ServerConnectionPool
+
+ChatSocket "1"--"1" ServerConnection
+ChatSocket <-- ServerSendThread
+ChatSocket <-- ServerRecieveThread
+
+ServerConnectionPool "1"--"1" ChatLogBuffer
+ServerConnectionPool <-- ServerRecieveThread
+ServerConnectionPool "1"--"1..*" ServerConnection
+
+ChatLogBuffer "1"--"1" ChatLogThread
+ChatLogBuffer "1"--"0..*" ChatHistoryItem
+
+ServerConnection "1"--"1" ServerSendThread
+ServerConnection "1"--"1" ServerRecieveThread
+
+@enduml

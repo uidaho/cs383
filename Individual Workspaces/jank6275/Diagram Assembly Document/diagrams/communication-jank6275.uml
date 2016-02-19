@@ -1,0 +1,25 @@
+@startuml
+scale 800 width
+title Squire Class Diagram (Communication)
+hide circle
+
+ChatServer -- ChatServerThread
+
+ChatServerThread -- ChatSocket
+ChatServerThread -- ServerConnectionPool
+
+ChatSocket -- ServerConnection
+ChatSocket <-- ServerSendThread
+ChatSocket <-- ServerRecieveThread
+
+ServerConnectionPool -- ChatLogBuffer
+ServerConnectionPool <-- ServerRecieveThread
+ServerConnectionPool -- ServerConnection
+
+ChatLogBuffer -- ChatLogThread
+ChatLogBuffer -- ChatHistoryItem
+
+ServerConnection -- ServerSendThread
+ServerConnection -- ServerRecieveThread
+
+@enduml

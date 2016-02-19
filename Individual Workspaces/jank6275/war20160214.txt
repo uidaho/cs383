@@ -1,0 +1,22 @@
+From: Brandon Jank (jank6275), Team 3
+To: Dr. J 
+Subject: Status Report, Team 3, 2016-02-14
+
+Weekly Status Report of Team 3 for the Last Week Ending 2016-02-14 Sunday 
+
+Activities Planned for Last Week:
+    - Agree on a common set of use cases
+    - Agree on and write out all functional and non-functional requirements, then compose a Latex document for turn in
+    - Develop a class diagram, with each member producing their own UML diagram
+    - Develop an overview diagram, to show the big picture of the project
+    
+Activities Accomplished for Last Week:
+    - Agreed on a common set of use cases
+    - Listed all agreed functional and non-functional requirements and turned in a PDF.
+    - Individually worked on describing our share of functional and non-function requirements
+    
+Activities Planned for Next Week:
+    - Complete rough draft of class diagram for review
+    - Assign group for overview diagram.
+    - Review each other’s class diagrams.
+    - Integrate individual diagrams into Assembly Document for delivery to Dr. J.

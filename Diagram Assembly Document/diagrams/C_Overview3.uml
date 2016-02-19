@@ -1,0 +1,92 @@
+@startuml
+hide circles 
+title <b>Final Diagram</b>
+hide members
+
+
+'Authentication 
+'------------------------------------
+Authentication  o-- "*" UserAuthenticationProcess 
+UserAuthenticationProcess *-left- Login
+UserAuthenticationProcess -- Logout
+Login *-- "1..*" Username
+Login *-- "1..*" Password
+Username  *-- "1..*" User
+Password  *-- "1..*" User
+User *-- "1..*" Admin
+User *-- "1..*" RegularUser
+Logout -left-  User
+RegularUser "*" *-- "1" Profile
+Admin "*" *-- "1" Profile 
+
+
+
+'Settings Profile/Preferences  
+'-------------------------------------
+WebMod --|> User
+Profile -- SettingsManager
+SettingsManager o-down- "1" Profile
+SettingsManager -right- UpdateProfileData : "Update Data"
+
+
+'File Editor 
+'------------------------------
+File -> Directory : stored 
+Directory -- System :organizes <
+class File --> System
+class System - Git : saves and retrieves >
+
+
+'Syntax Class Diagram
+'--------------------------------------------
+File -- LexicalAnalysis : "Interprets"
+LexicalAnalysis -- Type_Check : "Performs"
+LexicalAnalysis -- Color_Code : "Assigns"
+LexicalAnalysis -- Error_Check : "Checks"
+
+
+'Project Management 
+'----------------------------------------
+Admin -- Project_Manager
+Project_Manager *--"1..*" Projects
+Projects *--"1..*" Groups
+Projects *--"1..*" Settings
+Groups --"1..*" Permissions : "Control Access"
+Projects *-- Directory
+'removed User, Tools, Files, folders
+Projects -down-* UserProjects
+Projects -down-* BrowseProject
+
+
+'Communication Chat client 
+'--------------------------------
+MainWindow -- Projects
+ChatClient "1"--"1" MainWindow
+ChatClient "1"--"1" ClientConnectionThread
+MainWindow "1"--"1" DisplayTextArea
+MainWindow "1"--"1" SendTextArea
+ClientConnectionThread "1"--"1" ChatSocket
+ClientConnectionThread "1"--"1" ClientSendThread
+ClientConnectionThread "1"--"1" ClientRecieveThread
+DisplayTextArea <-- ClientRecieveThread
+SendTextArea --> ClientSendThread
+ClientRecieveThread --> ChatSocket
+ClientSendThread --> ChatSocket
+
+
+'Chat Server
+'-------------------------------
+ChatServer "1"--"1" ChatServerThread
+ChatServerThread "1"--"1" ChatSocket
+ChatServerThread "1"--"1" ServerConnectionPool
+ChatSocket "1"--"1" ServerConnection
+ChatSocket <-- ServerSendThread
+ChatSocket <-- ServerRecieveThread
+ServerConnectionPool "1"--"1" ChatLogBuffer
+ServerConnectionPool <-- ServerRecieveThread
+ServerConnectionPool "1"--"1..*" ServerConnection
+ChatLogBuffer "1"--"1" ChatLogThread
+ChatLogBuffer "1"--"0..*" ChatHistoryItem
+ServerConnection "1"--"1" ServerSendThread
+ServerConnection "1"--"1" ServerRecieveThread
+@enduml

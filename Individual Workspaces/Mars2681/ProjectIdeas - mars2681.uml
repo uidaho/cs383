@@ -1,0 +1,23 @@
+@startuml
+scale 800 width
+title Squire Class Diagram (Project Ideas)
+hide circle
+
+'left to right direction
+
+actor User << Human >>
+actor Admin << Human >>
+
+rectangle "Authentication" {
+    User --> (View home) : Authenticated
+    Admin --> (View home) : Authenticated
+}
+
+rectangle "Project Ideas" {
+    (View home) ..> (View Project Ideas) 
+    (View Project Ideas) --> (Create New Project Idea)
+    (View Project Ideas) --> (Delete Project Idea)
+    (View Project Ideas) --> (Follow Other Project Ideas)
+}
+
+@enduml

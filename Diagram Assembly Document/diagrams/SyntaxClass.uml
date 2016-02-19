@@ -1,0 +1,38 @@
+@startuml
+scale 800 width
+title Syntax Class Diagram
+hide circle
+'left to right direction
+footer
+Created by Eric Gallegos
+Reviewed by Rick Boss
+endfooter
+
+class File{
+Update_Interface()
+}
+
+File -- LexicalAnalysis : "Interprets"
+
+class LexicalAnalysis{
+parse()
+}
+
+class Type_Check{
+is_conditional()
+is_variable()
+is_function()
+is_regular_expression()
+...
+}
+
+class Color_Code{
+Check_Preferences()
+Color_Code(word, type)
+}
+
+LexicalAnalysis -- Type_Check : "Performs"
+LexicalAnalysis -- Color_Code : "Assigns"
+LexicalAnalysis -- Error_Check : "Checks"
+
+@enduml

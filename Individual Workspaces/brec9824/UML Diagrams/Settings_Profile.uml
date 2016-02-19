@@ -1,0 +1,43 @@
+@startuml
+title Settings Profile/Prefrences
+footer 
+Created by brec9824 and reviewed by Butters.
+endfooter
+hide circles
+
+class SettingsManager {
+profile : Profile
+changeEmail()
+changePassword()
+changeBio()
+changePrivacy()
+}
+class UpdateProfileData {
+}
+class User {
+username : String
+password : String
+email : String
+}
+class Authentication {
+user : User
+}
+class Profile {
+user : User
+pImageID : int
+bio : string
+publicBitmask : int
+friendBitmask : int
+prefColor : int
+prefShape : int
+projOwnerList[] : string
+projMemberList[] : string
+}
+class WebMod {
+}
+WebMod -up-|> User
+Profile *-left- "1" User
+SettingsManager o-down- "1" Profile
+SettingsManager -right- UpdateProfileData : "Update Data"
+Authentication o-down- "1" User
+Authentication -right- SettingsManager : "Authenticate"

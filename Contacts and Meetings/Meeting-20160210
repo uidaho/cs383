@@ -1,0 +1,18 @@
+ Team Meeting - Monday 2/08/2016
+ 
+ Absent Members: MORA
+ Tasks:
+ - Github carash course.
+ - Take attendance.
+ - Starting from Monday's Backlog, develop your team's backlog for this sprint, prioritize which are the items that need attention first, and break those into pieces that can be assigned to individuals or small groups.
+  - Use Cases:
+   - Agree on common set of use cases.
+ - Class Diagram:
+   - For this sprint, as one of your team's sprint commitments, the team should develop a set of class diagrams for your project. Focus on the application domain, not auxiliary classes that are likely to be used in the implementation (e.g. GUI class libraries).
+   - Each person on the team is given one or more UML class diagrams that describe details about a portion of the project.
+   - A "detail" subteam (1-3 persons) should be assigned to each major subsystem. The number of subteams is up to your team, but remember to include:
+      + code editing
+      + translation/execution/debugging
+      + chat/codeshare/common view
+      + awareness/invitation/finding others online
+ 

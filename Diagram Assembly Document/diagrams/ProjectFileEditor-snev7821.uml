@@ -1,0 +1,28 @@
+@startuml
+
+footer 
+Created by snev7821 and reviewed by brec9824.
+endfooter
+hide circle
+
+
+
+FileItem <|-- File
+FileItem <|-- Directory
+
+File "*" -  "1"Directory   
+Directory -- System : resides >
+
+class File{
++save()
++open()
+-move()
+-delete()
+}
+class File -- System
+class System - Git : saves and retrieves 
+
+
+
+
+@enduml
