@@ -1,0 +1,42 @@
+@startuml
+scale max 800*600
+title Chat Server Class Diagram
+footer 
+Created by jank6275 and reviewed by mora5651.
+endfooter
+hide circle
+
+ChatServer *-- ChatServerThread
+ChatServer *-- ChatLogThread
+
+ChatServerThread *-- ServerConnectionPool
+ChatServerThread *-- ChatSocket
+
+ChatLogThread *-- ChatLogBuffer
+ChatLogBuffer *--"0..*" ChatHistoryItem
+ChatLogBuffer o-- ServerConnectionPool : gets broadcast
+
+ServerConnectionPool *--"1..*" ServerConnection
+ServerConnection *-- ServerSendThread
+ServerConnection *-- ServerRecieveThread
+ServerConnection o-- ChatSocket
+
+ChatSocket <-- ServerSendThread : notifies
+ChatSocket --> ServerRecieveThread : listens
+
+class ChatSocket {
+    int SocketNumber
+    String Address
+    close()
+}
+
+class ServerConnectionPool {
+    broadcast()
+    getConnection()
+}
+
+class ServerSendThread {
+    broadcast()
+}
+
+@enduml

@@ -1,0 +1,92 @@
+@startuml
+hide circles 
+title <b>Final Diagram</b>
+hide members
+
+
+'Authentication 
+'------------------------------------
+Authentication  o-- "1..*" Users 
+Users *-- Profile
+Users *-- Permissions
+
+
+'Settings Profile/Preferences  
+'-------------------------------------
+WebMod --|> User
+SettingsManager -- Authentication
+SettingsManager o-down- "1" Profile
+SettingsManager -right- UpdateProfileData : "Update Data"
+
+
+'File Editor 
+'------------------------------
+File -> Directory : stored 
+Directory -- System :organizes <
+class File --> System
+class System - Git : saves and retrieves >
+
+
+'Syntax Class Diagram
+'--------------------------------------------
+File -- LexicalAnalysisDriver : "Invokes"
+LexicalAnalysisDriver -- LexicalAnalysisJava
+LexicalAnalysisJava <|-u- JavaSyntaxLib
+
+
+'Project Management 
+'----------------------------------------
+Admin -- Project_Manager
+Project_Manager *--"1..*" Projects
+Projects *--"1..*" Groups
+Projects *--"1..*" Settings
+Groups --"1..*" Permissions : "Control Access"
+Projects *-- Directory
+'removed User, Tools, Files, folders
+
+'Project Ideas
+'---------------------------------------
+Projects -down-* UserProjects
+Projects -down-* BrowseProject
+
+
+'Communication Chat client 
+'--------------------------------
+MainWindow -- Projects
+ChatClient -- MainWindow
+ChatClient -- ClientConnectionThread
+MainWindow -- DisplayTextArea
+MainWindow -- SendTextArea
+ClientConnectionThread -- ChatSocket
+ClientConnectionThread -- ClientSendThread
+ClientConnectionThread -- ClientRecieveThread
+DisplayTextArea <-- ClientRecieveThread
+SendTextArea --> ClientSendThread
+ClientRecieveThread --> ChatSocket
+ClientSendThread --> ChatSocket
+
+
+'Chat Server
+'-------------------------------
+ChatServer -- ChatServerThread
+ChatServerThread -- ChatSocket
+ChatServerThread -- ServerConnectionPool
+ChatSocket -- ServerConnection
+ChatSocket <-- ServerSendThread
+ChatSocket <-- ServerRecieveThread
+ServerConnectionPool -- ChatLogBuffer
+ServerConnectionPool <-- ServerRecieveThread
+ServerConnectionPool --"1..*" ServerConnection
+ChatLogBuffer -- ChatLogThread
+ChatLogBuffer --"0..*" ChatHistoryItem
+ServerConnection -- ServerSendThread
+ServerConnection -- ServerRecieveThread
+
+'Compiler
+'-------------------------------
+MainWindow -- Compiler : shows to
+JavaCompiler --|> CompilerPlugin : Compiles Code
+Compiler o--"1..*" CompilerPlugin : uses
+Compiler o-- SnapshotManager : invokes
+SnapshotManager -- CompilerPlugin : uses
+@enduml

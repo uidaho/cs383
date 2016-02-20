@@ -1,0 +1,38 @@
+@startuml
+scale max 800*600
+title Chat Client Class Diagram
+footer 
+Created by jank6275 and reviewed by mora5651.
+endfooter
+hide circle
+
+MainWindow *-- ChatClient
+MainWindow *-- DisplayTextArea
+MainWindow *-- SendTextArea
+
+ChatClient *-- ClientConnectionThread
+DisplayTextArea <-- ClientRecieveThread : listens to
+SendTextArea --> ClientSendThread : sends to
+
+ClientConnectionThread o-- ChatSocket
+ClientConnectionThread *-- ClientSendThread
+ClientConnectionThread *-- ClientRecieveThread
+
+ClientRecieveThread --> ChatSocket : uses
+ClientSendThread --> ChatSocket : uses
+
+class MainWindow {
+    exit()
+}
+
+class DisplayTextArea {
+    displayMessage()
+}
+
+class ChatSocket {
+    int SocketNumber
+    String Address
+    close()
+}
+
+@enduml
