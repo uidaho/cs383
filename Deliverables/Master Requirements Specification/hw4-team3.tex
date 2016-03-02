@@ -215,57 +215,57 @@
     Non-functional requirements cover all the remaining requirements which are not covered by the functional requirements. They specify criteria that judge the operation of a system, rather than specific behaviours. Squire's non-functional requirements are:
     \begin{itemize}
         % Performance (jank6275)
-            \item The editor will be multi-user, up to 32 users can share an IDE session. (jank6275)
-            \item The current location of any user's cursor can be quickly jumped to by any user with the project open. (jank6275)
-            \item Text written by the user in the editor should be visible instantaneously. (jank6275)
-            \item Text written by other users in the editor should be visible within 2 seconds. (jank6275)
-            \item Text will be underlined in the user's color, if they edited/created that text. (jank6275)
-            \item The line number will be highlighted in the users color, if they created the line. (jank6275)
-            \item Each line edited by a user should be saved to create a edit history for each user in a document. (jank6275)
-            \item Users will be able to edit the same document concurrently. (jank6275)
-            \item Any user can save the document at any time. (jank6275)
+        \item The editor will be multi-user, up to 32 users can share an IDE session. (jank6275)
+        \item The current location of any user's cursor can be quickly jumped to by any user with the project open. (jank6275)
+        \item Text written by the user in the editor should be visible instantaneously. (jank6275)
+        \item Text written by other users in the editor should be visible within 2 seconds. (jank6275)
+        \item Text will be underlined in the user's color, if they edited/created that text. (jank6275)
+        \item The line number will be highlighted in the users color, if they created the line. (jank6275)
+        \item Each line edited by a user should be saved to create a edit history for each user in a document. (jank6275)
+        \item Users will be able to edit the same document concurrently. (jank6275)
+        \item Any user can save the document at any time. (jank6275)
         % Scalability (boss2849)
-            \item Scalability is important to keep in mind during development. The system should be designed in such a way that will easily and reliably scale to accommodate a growing user base. One method of dealing with scalability would be allowing the core system to reactively spawn new slaves to aid in computational needs, such as compilation (as that will be more resource intensive the user base grows). (boss2849)
+        \item Scalability is important to keep in mind during development. The system should be designed in such a way that will easily and reliably scale to accommodate a growing user base. One method of dealing with scalability would be allowing the core system to reactively spawn new slaves to aid in computational needs, such as compilation (as that will be more resource intensive the user base grows). (boss2849)
         % Capacity (boss2849)
-            \item Limited space for projects that haven't been initiated (enough for documentation, images, etc.) (boss2849)
-            \item Reactively increasing capacity for projects proportional to the absolute needs of the projects. (no fluff) (boss2849)
-            \item Encourage developers to store large files elsewhere, e.g. GitHub LFS, AWS, etc. (boss2849)
+        \item Limited space for projects that haven't been initiated (enough for documentation, images, etc.) (boss2849)
+        \item Reactively increasing capacity for projects proportional to the absolute needs of the projects. (no fluff) (boss2849)
+        \item Encourage developers to store large files elsewhere, e.g. GitHub LFS, AWS, etc. (boss2849)
         % Availability (brec9824) 
-            \item Since sQuire is web based, downtime for the servers most be kept to a minimum and be no more then once or twice a week for a few hours. This downtime will allow for database uprgrades and backups. (brec9824)
+        \item Since sQuire is web based, downtime for the servers most be kept to a minimum and be no more then once or twice a week for a few hours. This downtime will allow for database uprgrades and backups. (brec9824)
         % Reliability (bolt1003) 
-             \item sQuire will leverage technology developed for the web to ensure reliablity. Technologies such as redunant hardware, redunant power providers, redunant internet services, load balancing and virtualization will enable sQuire to be reliable.(bolt1003)
+        \item sQuire will leverage technology developed for the web to ensure reliablity. Technologies such as redunant hardware, redunant power providers, redunant internet services, load balancing and virtualization will enable sQuire to be reliable.(bolt1003)
         % Recoverability (mora5651) 
-            \item SQuire will have the ability for the user to save on sQuire's database for recoverability isurance. It will also incorporate autosave feature. (mora5651)
+        \item SQuire will have the ability for the user to save on sQuire's database for recoverability isurance. It will also incorporate autosave feature. (mora5651)
         % Maintainability (mora5651) 
-            \item Since sQuire is a web based application running on a webhost. There are 
-            many maintenance tools that can be used to track performance. Maintainability of sQuire will also include regular backup schedules, speed test, and security monotoring. (mora5651)
+        \item Since sQuire is a web based application running on a webhost. There are 
+        many maintenance tools that can be used to track performance. Maintainability of sQuire will also include regular backup schedules, speed test, and security monotoring. (mora5651)
         % Serviceability (bolt1003) 
-             \item sQuire will run in a virtual machine on top of redunant hardware. Using a virtual machine allows for mutliple instance to be running and tested. The backend will run on redunant hardware which will prevent hardware failure from affecting sQuire usage. In turn, allowing infrastructure to be serviced without affecting sQuire. (bolt1003)
+        \item sQuire will run in a virtual machine on top of redunant hardware. Using a virtual machine allows for mutliple instance to be running and tested. The backend will run on redunant hardware which will prevent hardware failure from affecting sQuire usage. In turn, allowing infrastructure to be serviced without affecting sQuire. (bolt1003)
         % Security (jank6275)
-            \item Each project should be containerized so that users can't harm each others projects. (jank6275)
+        \item Each project should be containerized so that users can't harm each others projects. (jank6275)
         % Regulatory (mars2681) 
-            \item Upon creation of account, user must agree to terms and conditions. (mars2681)
-            \item User must comply with DMCA (Copy right law) (mars2681)
-            \item User must confirm they are 18 or older (COPPA law) (mars2681)
+        \item Upon creation of account, user must agree to terms and conditions. (mars2681)
+        \item User must comply with DMCA (Copy right law) (mars2681)
+        \item User must confirm they are 18 or older (COPPA law) (mars2681)
         % Manageability (brec9824) 
-            \item Will include monitoring of subsystems to collect and report performance data. (brec9824)
-            \item Subsystem monititory must be highly efficient and take up less than 10\% of resources to keep noticeability to a minimum. (brec9824)
-            \item Subsystems must be modular to allow for efficient monitoring, implementation of subsystems, and the addition of new subsystems. (brec9824)
+        \item Will include monitoring of subsystems to collect and report performance data. (brec9824)
+        \item Subsystem monititory must be highly efficient and take up less than 10\% of resources to keep noticeability to a minimum. (brec9824)
+        \item Subsystems must be modular to allow for efficient monitoring, implementation of subsystems, and the addition of new subsystems. (brec9824)
         % Environmental (gall7417) 
-            \item sQuire will run as a browser application in google chrome. (gall7417)
-            \item sQire will run on virtually all modern processors. (gall7417)
+        \item sQuire will run as a browser application in google chrome. (gall7417)
+        \item sQire will run on virtually all modern processors. (gall7417)
         % Data Integrity (gall7417) 
-            \item sQuire will use tcp to for reliable data communications. (gall7417)
-            \item sQuire will use error checking upon large changes to ensure no drastic data corruption occurs. (gall7417)
-            \item sQuire will use a history/autosave feature in case of data loss. (gall7417)
+        \item sQuire will use tcp to for reliable data communications. (gall7417)
+        \item sQuire will use error checking upon large changes to ensure no drastic data corruption occurs. (gall7417)
+        \item sQuire will use a history/autosave feature in case of data loss. (gall7417)
         % Usability (snev7821) 
-            \item Provides code compilation and file system for users with limited resources. (snev7821)
-            \item Easy to learn system, helpful syntax highlighting. (snev7821)
-            \item More satisfying than competitors products, because of social/kickstarter aspect. (snev7821)
+        \item Provides code compilation and file system for users with limited resources. (snev7821)
+        \item Easy to learn system, helpful syntax highlighting. (snev7821)
+        \item More satisfying than competitors products, because of social/kickstarter aspect. (snev7821)
         % Interoperability (snev7821) 
-            \item Provides github integration. (snev7821)
-            \item Runs on any of the main browsers (chrome, firefox, safari). (snev7821)
-            \item Due to web based design, works on lower end machines. (snev7821)
+        \item Provides github integration. (snev7821)
+        \item Runs on any of the main browsers (chrome, firefox, safari). (snev7821)
+        \item Due to web based design, works on lower end machines. (snev7821)
     \end{itemize}
 
 %##########################################################################################################################################################################
@@ -276,86 +276,87 @@
     \subsection{Overview (jank6275)}
         \includegraphics[width=\textwidth]{diagrams/usecase-overview}
         A usecase diagram that shows all of sQuire\'s features.
-    \subsection{Project Ideas (dani2918)}
-        \includegraphics[width=\textwidth]{diagrams/usecase-projectideas}
-    \subsection{Authentication (alsh5301)}
+    \subsection{Authentication (mora5651)}
         \includegraphics[width=\textwidth]{diagrams/usecase-authentication}
+    \subsection{Project Management (bolt1003)}
+        \includegraphics[width=\textwidth]{diagrams/usecase-projectmanagement}
+    \subsection{Project User Management (bolt1003)} 
+        \includegraphics[width=\textwidth]{diagrams/usecase-usermanagement}
+    \subsection{Project Ideas (mars2681)}
+        \includegraphics[width=\textwidth]{diagrams/usecase-projectideas}
+    \subsection{Settings, Preferences, and Profile (brec9824)}
+        \includegraphics[width=\textwidth]{diagrams/usecase-settingsmanager}
+    \subsection{Compiler (boss2849)}
+        \includegraphics[width=\textwidth]{diagrams/usecase-compiler}
     \subsection{Communication (jank6275)}
         \includegraphics[width=\textwidth]{diagrams/usecase-communication}
         A usecase diagram for sQuire\'s communication features.
-    \subsection{File Editing (wern0096)}
+    \subsection{File Editing (snev7821)}
         \includegraphics[width=\textwidth]{diagrams/usecase-fileeditor}
-    \subsection{File Management (wern0096)}
+    \subsection{File Management (snev7821)}
         \includegraphics[width=\textwidth]{diagrams/usecase-filemanagement}
-    \subsection{Project Management (bolt1003)}
-        \includegraphics[width=\textwidth]{diagrams/usecase-projectmanagement}
-    \subsection{Settings - Preferences and Profile (brec9824)}
-        \includegraphics[width=\textwidth]{diagrams/usecase-settingsmanager}
-    \subsection{Project User Management (boss2849)} 
-        \includegraphics[width=\textwidth]{diagrams/usecase-usermanagement}
     \subsection{User Editor Preferences (snev7821)}
         \includegraphics[width=\textwidth]{diagrams/usecase-preferences}
-    \subsection{Compiler (boss2849)}
-        \includegraphics[width=\textwidth]{diagrams/usecase-compiler}
-
 
 %##########################################################################################################################################################################
 % Use Case Descriptions
 %##########################################################################################################################################################################
 
+%% TODO: ucd's still need rename, reorder and reformat -jank6275
+
 \chapter{Use Case Descriptions}
 
 \section{Authentication (mora5651)}
 \subsection{Sign up (mora5651)}
-\begin{tabular}{ p{2cm} p{12cm} }
- \hline
- \\
- \textit{Actors:} & User. \\ 
- \\
- \textit{Goals:} & To register and create an account in sQuire. \\
- \\
- \textit{Pre-conditions:} & None. \\
- \\
- \textit{Summary:} & The user signs up and creates an account using their email address and, creates a username and password. \\ 
- \\
- \textit{Related use cases:} & None. \\ 
- \\
- \textit{Steps:} & \begin{enumerate}
-  \item User is prompted to enter email, username and password. 
-  \item System sends confirmation email. 
-  \item User verifies email. 
-  \item System saves information, and redirectes user to sign in page. 
- \end{enumerate} \\
- \\
- \textit{Alternative 1:} & User already has an account. \\ 
- \\
- \textit{Alternative 2:} & User doesn't confirm email. Delete request after timeout period. \\
- \\
-\hline
-\end{tabular}
+    \begin{tabular}{ p{2cm} p{12cm} }
+        \hline
+        \\
+        \textit{Actors:} & User. \\ 
+        \\
+        \textit{Goals:} & To register and create an account in sQuire. \\
+        \\
+        \textit{Pre-conditions:} & None. \\
+        \\
+        \textit{Summary:} & The user signs up and creates an account using their email address and, creates a username and password. \\ 
+        \\
+        \textit{Related use cases:} & None. \\ 
+        \\
+        \textit{Steps:} & \begin{enumerate}
+            \item User is prompted to enter email, username and password. 
+            \item System sends confirmation email. 
+            \item User verifies email. 
+            \item System saves information, and redirectes user to sign in page. 
+        \end{enumerate} \\
+        \\
+        \textit{Alternative 1:} & User already has an account. \\ 
+        \\
+        \textit{Alternative 2:} & User doesn't confirm email. Delete request after timeout period. \\
+        \\
+        \hline
+    \end{tabular}
 
 \subsection{Sign in (mora5651)}
-\begin{tabular}{ p{2cm} p{12cm} }
- \hline
- \\
- \textit{Actors:} & Users. \\ 
- \\
- \textit{Goals:} & Pre-existing user signs into profile. \\
- \\
-\textit{Precondition:} & User must already have an account \\
-\\
-\textit{Summary:} & User wishes to access their account, projects and info. \\
-\\
- \textit{Steps:} & \begin{enumerate}
-  \item User is prompted to enter username/e-mail, and password. 
-  \item System verifies information
-  \item Correct information prompts user to their home page. 
- \end{enumerate} \\
- \\
- \textit{Alternatives:} & Information is incorrect, user tries again. Or makes a new account \\
- \\
-\hline
-\end{tabular}
+    \begin{tabular}{ p{2cm} p{12cm} }
+        \hline
+        \\
+        \textit{Actors:} & Users. \\ 
+        \\
+        \textit{Goals:} & Pre-existing user signs into profile. \\
+        \\
+        \textit{Precondition:} & User must already have an account \\
+        \\
+        \textit{Summary:} & User wishes to access their account, projects and info. \\
+        \\
+        \textit{Steps:} & \begin{enumerate}
+            \item User is prompted to enter username/e-mail, and password. 
+            \item System verifies information
+            \item Correct information prompts user to their home page. 
+        \end{enumerate} \\
+        \\
+        \textit{Alternatives:} & Information is incorrect, user tries again. Or makes a new account \\
+        \\
+        \hline
+    \end{tabular}
 
 \subsection{Logout (mora5651)}
 \begin{tabular}{ p{2cm} p{12cm} }
@@ -2027,271 +2028,276 @@ an email with the username. \\
 
 \subsection{Remove User  (boss2849)}
 \begin{tabular}{ p{2cm} p{12cm} }
- \hline
- \\
- \textit{Actors:} & User \\ 
- \\
- \textit{Goals:} & Remove a user from project. \\
- \\
- \textit{Pre-conditions:} & User is signed in, in project with Admin rights, and is on User Management page\\
- \\
- \textit{Summary:} & User removes a selected user from the Project \\ 
- \\
- \textit{Related use cases:} & Invite User, Modify Read/Write Access \\ 
- \\
- \textit{Steps:} & \begin{enumerate}
-  \item User clicks Remove User button.
-  \item System displays list of active users for project.
-  \item User selects one or more other users from the list and presses Remove.
-  \item System prompts User for verification.
-  \item User presses Confirm.
-  \item System removes the selected users from the project.
-  \item System revokes read and write access from the selected users.
-  \item System notifies selected users that they have been removed from the project.
- \end{enumerate} \\
- \\
- \textit{Alternatives:} & User presses Cancel in steps 3 or 5, System returns user to User Management page \\
- \\
- \textit{Post-conditions:} & None. \\
- \\
-\hline
+    \hline
+    \\
+    \textit{Actors:} & User \\ 
+    \\
+    \textit{Goals:} & Remove a user from project. \\
+    \\
+    \textit{Pre-conditions:} & User is signed in, in project with Admin rights, and is on User Management page\\
+    \\
+    \textit{Summary:} & User removes a selected user from the Project \\ 
+    \\
+    \textit{Related use cases:} & Invite User, Modify Read/Write Access \\ 
+    \\
+    \textit{Steps:} & \begin{enumerate}
+        \item User clicks Remove User button.
+        \item System displays list of active users for project.
+        \item User selects one or more other users from the list and presses Remove.
+        \item System prompts User for verification.
+        \item User presses Confirm.
+        \item System removes the selected users from the project.
+        \item System revokes read and write access from the selected users.
+        \item System notifies selected users that they have been removed from the project.
+    \end{enumerate} \\
+    \\
+    \textit{Alternatives:} & User presses Cancel in steps 3 or 5, System returns user to User Management page \\
+    \\
+    \textit{Post-conditions:} & None. \\
+    \\
+    \hline
 \end{tabular}
 
 \subsection{Invite User to Project  (boss2849)}
 \begin{tabular}{ p{2cm} p{12cm} }
- \hline
- \\
- \textit{Actors:} & User \\ 
- \\
- \textit{Goals:} & Invite user(s) to project \\
- \\
- \textit{Pre-conditions:} & User is signed in, in project with Admin rights, and is on User Management page \\
- \\
- \textit{Summary:} & User invites user(s) to the current project. \\ 
- \\
- \textit{Related use cases:} & Remove User, Join Project \\ 
- \\
- \textit{Steps:} & \begin{enumerate}
-  \item User clicks Invite Users button
-  \item System prompts user to enter username(s)/email(s)
-  \item User enters username(s)/email(s) of the user(s) to invite and presses Ok.
-  \item System looks up the specified user(s) and notifies them of invitation to the Project
- \end{enumerate} \\
- \\
- \textit{Alternatives:} & \begin{enumerate}
-  \item User presses cancel in step 3, System returns User to User Management page
-  \item In step 4, username(s)/email(s) don\'t match any users, System notifies User of failed invitiations.
- \end{enumerate} 
- \\
- \textit{Post-conditions:} & None. \\
- \\
-\hline
+    \hline
+    \\
+    \textit{Actors:} & User \\ 
+    \\
+    \textit{Goals:} & Invite user(s) to project \\
+    \\
+    \textit{Pre-conditions:} & User is signed in, in project with Admin rights, and is on User Management page \\
+    \\
+    \textit{Summary:} & User invites user(s) to the current project. \\ 
+    \\
+    \textit{Related use cases:} & Remove User, Join Project \\ 
+    \\
+    \textit{Steps:} & \begin{enumerate}
+        \item User clicks Invite Users button
+        \item System prompts user to enter username(s)/email(s)
+        \item User enters username(s)/email(s) of the user(s) to invite and presses Ok.
+        \item System looks up the specified user(s) and notifies them of invitation to the Project
+    \end{enumerate} \\
+    \\
+    \textit{Alternatives:} & \begin{enumerate}
+        \item User presses cancel in step 3, System returns User to User Management page
+        \item In step 4, username(s)/email(s) don\'t match any users, System notifies User of failed invitiations.
+    \end{enumerate} 
+    \\
+    \textit{Post-conditions:} & None. \\
+    \\
+    \hline
 \end{tabular}
 
 \subsection{Promote User to Admin  (boss2849)}
 \begin{tabular}{ p{2cm} p{12cm} }
- \hline
- \\
- \textit{Actors:} & User \\ 
- \\
- \textit{Goals:} & Promote a specified User to Admin \\
- \\
- \textit{Pre-conditions:} & User is signed in, in project with Admin rights, and is on User Management page \\
- \\
- \textit{Summary:} & User selects another User to be given Admin rights for the project. \\ 
- \\
- \textit{Related use cases:} & Demote Admin \\ 
- \\
- \textit{Steps:} & \begin{enumerate}
-  \item User selects Promote to Admin.
-  \item System displays a list of non-Admin active users.
-  \item User selects user(s) and presses Submit.
-  \item System prompts user for confirmation.
-  \item User selects Confirm.
-  \item System grants Admin permissions to the selected user(s).
- \end{enumerate} \\
- \\
- \textit{Alternatives:} & User presses cancel in steps 3 or 5, no action taken. \\
- \\
- \textit{Post-conditions:} & None. \\
- \\
-\hline
+    \hline
+    \\
+    \textit{Actors:} & User \\ 
+    \\
+    \textit{Goals:} & Promote a specified User to Admin \\
+    \\
+    \textit{Pre-conditions:} & User is signed in, in project with Admin rights, and is on User Management page \\
+    \\
+    \textit{Summary:} & User selects another User to be given Admin rights for the project. \\ 
+    \\
+    \textit{Related use cases:} & Demote Admin \\ 
+    \\
+    \textit{Steps:} & \begin{enumerate}
+        \item User selects Promote to Admin.
+        \item System displays a list of non-Admin active users.
+        \item User selects user(s) and presses Submit.
+        \item System prompts user for confirmation.
+        \item User selects Confirm.
+        \item System grants Admin permissions to the selected user(s).
+    \end{enumerate} \\
+    \\
+    \textit{Alternatives:} & User presses cancel in steps 3 or 5, no action taken. \\
+    \\
+    \textit{Post-conditions:} & None. \\
+    \\
+    \hline
 \end{tabular}
 
 \subsection{Demote Admin  (boss2849)}
 \begin{tabular}{ p{2cm} p{12cm} }
- \hline
- \\
- \textit{Actors:} & User \\ 
- \\
- \textit{Goals:} & Demote Admin to user \\
- \\
- \textit{Pre-conditions:} & User is signed in, in project with Admin rights, and is on User Management page \\
- \\
- \textit{Summary:} & User demotes selected Admins to normal Users for the project. \\ 
- \\
- \textit{Related use cases:} & Promote User to Admin \\ 
- \\
- \textit{Steps:} & \begin{enumerate}
-  \item User selects Demote Admin
-  \item System displays list of Admins
-  \item User selects Admin(s) to demote and presses Submit.
-  \item System prompts User for confirmation.
-  \item User presses Confirm.
-  \item System revokes Admin rights from selected User(s)
- \end{enumerate} \\
- \\
- \textit{Alternatives:} & \begin{enumerate}
-  \item User presses cancel in steps 3 or 5, no action taken
-  \item User attempts to demote Admin that is the Owner of the project, System rejects request and notifies User.
- \end{enumerate}
- \\
- \textit{Post-conditions:} & None. \\
- \\
-\hline
+    \hline
+    \\
+    \textit{Actors:} & User \\ 
+    \\
+    \textit{Goals:} & Demote Admin to user \\
+    \\
+    \textit{Pre-conditions:} & User is signed in, in project with Admin rights, and is on User Management page \\
+    \\
+    \textit{Summary:} & User demotes selected Admins to normal Users for the project. \\ 
+    \\
+    \textit{Related use cases:} & Promote User to Admin \\ 
+    \\
+    \textit{Steps:} & \begin{enumerate}
+        \item User selects Demote Admin
+        \item System displays list of Admins
+        \item User selects Admin(s) to demote and presses Submit.
+        \item System prompts User for confirmation.
+        \item User presses Confirm.
+        \item System revokes Admin rights from selected User(s)
+    \end{enumerate} \\
+    \\
+    \textit{Alternatives:} & \begin{enumerate}
+        \item User presses cancel in steps 3 or 5, no action taken
+        \item User attempts to demote Admin that is the Owner of the project, System rejects request and notifies User.
+    \end{enumerate}
+    \\
+    \textit{Post-conditions:} & None. \\
+    \\
+    \hline
 \end{tabular}
 
 \subsection{Block User (boss2849)}
 \begin{tabular}{ p{2cm} p{12cm} }
- \hline
- \\
- \textit{Actors:} & User \\ 
- \\
- \textit{Goals:} & Block a user from the project \\
- \\
- \textit{Pre-conditions:} & User is signed in, in project with Admin rights, and is on User Management page \\
- \\
- \textit{Summary:} & User blocks a user from the project, making them unable to view the project. \\ 
- \\
- \textit{Related use cases:} & Demote Admin \\ 
- \\
- \textit{Steps:} & \begin{enumerate}
-  \item User clicks Block User.
-  \item System displays a list of active users.
-  \item User selects other user(s) to block and presses Submit.
-  \item System prompts User for confirmation.
-  \item User presses Confirm.
-  \item System blocks selected user(s) from the project, revoking read/write access, and revoking Admin status as necessary.
- \end{enumerate} \\
- \\
- \textit{Alternatives:} & User presses cancel in steps 3 or 5.
- \\
- \textit{Post-conditions:} & None. \\
- \\
-\hline
+    \hline
+    \\
+    \textit{Actors:} & User \\ 
+    \\
+    \textit{Goals:} & Block a user from the project \\
+    \\
+    \textit{Pre-conditions:} & User is signed in, in project with Admin rights, and is on User Management page \\
+    \\
+    \textit{Summary:} & User blocks a user from the project, making them unable to view the project. \\ 
+    \\
+    \textit{Related use cases:} & Demote Admin \\ 
+    \\
+    \textit{Steps:} & \begin{enumerate}
+        \item User clicks Block User.
+        \item System displays a list of active users.
+        \item User selects other user(s) to block and presses Submit.
+        \item System prompts User for confirmation.
+        \item User presses Confirm.
+        \item System blocks selected user(s) from the project, revoking read/write access, and revoking Admin status as necessary.
+    \end{enumerate} \\
+    \\
+    \textit{Alternatives:} & User presses cancel in steps 3 or 5.
+    \\
+    \textit{Post-conditions:} & None. \\
+    \\
+    \hline
 \end{tabular}
 
 \section{Compile (boss2849)}
 \begin{tabular}{ p{2cm} p{12cm} }
- \hline
- \\
- \textit{Actors:} & User \\ 
- \\
- \textit{Goals:} & Compile source \\
- \\
- \textit{Pre-conditions:} & User is logged in and viewing project. \\
- \\
- \textit{Summary:} & User requests that the code be compiled, the server compiles the code. \\
- \\
- \textit{Related use cases:} & Run, Compile To Jar \\ 
- \\
- \textit{Steps:} & \begin{enumerate}
-   \item User selects ``Compile'' from ``Build'' dropdown menu for the current module.
-   \item The Server receives the request to compile.
-   \item The Server caches the current state of the project using the SnapshotManager and compiles it using the active CompilerPlugin.
-   \item The Server returns the results of compilation to the User.
- \end{enumerate} \\
- \\
- \textit{Alternatives:} & In step 1, user chooses to compile entire project, including all sub modules. \\
- \\
- \textit{Post-conditions:} & None. \\
- \\
-\hline
+    \hline
+    \\
+    \textit{Actors:} & User \\ 
+    \\
+    \textit{Goals:} & Compile source \\
+    \\
+    \textit{Pre-conditions:} & User is logged in and viewing project. \\
+    \\
+    \textit{Summary:} & User requests that the code be compiled, the server compiles the code. \\
+    \\
+    \textit{Related use cases:} & Run, Compile To Jar \\ 
+    \\
+    \textit{Steps:} & \begin{enumerate}
+        \item User selects ``Compile'' from ``Build'' dropdown menu for the current module.
+        \item The Server receives the request to compile.
+        \item The Server caches the current state of the project using the SnapshotManager and compiles it using the active CompilerPlugin.
+        \item The Server returns the results of compilation to the User.
+    \end{enumerate} \\
+    \\
+    \textit{Alternatives:} & In step 1, user chooses to compile entire project, including all sub modules. \\
+    \\
+    \textit{Post-conditions:} & None. \\
+    \\
+    \hline
 \end{tabular}
 
 \section{Run (boss2849)}
 \begin{tabular}{ p{2cm} p{12cm} }
- \hline
- \\
- \textit{Actors:} & User. \\ 
- \\
- \textit{Goals:} & Run the program. \\
- \\
- \textit{Pre-conditions:} & User is logged in and viewing a project. \\
- \\
- \textit{Summary:} & User chooses to run the program and the server compiles it or executes the last compilation result if no changes. \\
- \\
- \textit{Related use cases:} & Compile \\ 
- \\
- \textit{Steps:} & \begin{enumerate}
-  \item User selects ``Run'' from the ``Build'' menu drop down.
-  \item The Server receives the request to execute.
-  \item The Server retrieves the most recent compilation from the SnapshotManager.
-  \item The Server spawns a new window for the client that is the interface to the program.
- \end{enumerate} \\
- \\
- \textit{Alternatives:} & In step 3 the SnapshotManager has either an out of date compilation or no last compilation, the Server invokes the compiler to compile the project. \\
- \\
- \textit{Post-conditions:} & None. \\
- \\
-\hline
+     \hline
+     \\
+     \textit{Actors:} & User. \\ 
+     \\
+     \textit{Goals:} & Run the program. \\
+     \\
+     \textit{Pre-conditions:} & User is logged in and viewing a project. \\
+     \\
+     \textit{Summary:} & User chooses to run the program and the server compiles it or executes the last compilation result if no changes. \\
+     \\
+     \textit{Related use cases:} & Compile \\ 
+     \\
+     \textit{Steps:} & \begin{enumerate}
+        \item User selects ``Run'' from the ``Build'' menu drop down.
+        \item The Server receives the request to execute.
+        \item The Server retrieves the most recent compilation from the SnapshotManager.
+        \item The Server spawns a new window for the client that is the interface to the program.
+     \end{enumerate} \\
+     \\
+     \textit{Alternatives:} & In step 3 the SnapshotManager has either an out of date compilation or no last compilation, the Server invokes the compiler to compile the project. \\
+     \\
+     \textit{Post-conditions:} & None. \\
+     \\
+    \hline
 \end{tabular}
 
 \section{Package to Jar (boss2849)}
 \begin{tabular}{ p{2cm} p{12cm} }
- \hline
- \\
- \textit{Actors:} & User \\ 
- \\
- \textit{Goals:} & Compile and package source to a jar\\
- \\
- \textit{Pre-conditions:} & User is signed in and viewing a project. \\
- \\
- \textit{Summary:} & User selects to build the project to a jar, the server outputs a jar on the project path. \\
- \\
- \textit{Related use cases:} & Compile \\ 
- \\
- \textit{Steps:} & \begin{enumerate}
-  \item The user seclects ``Compile To Jar'' from ``Build'' dropdown menu.
-  \item The Server receives the request to build a jar.
-  \item The Server fetches the most recent compilation from the SnapshotManager.
-  \item The Server packages the result of the last compilation to a jar and outputs it on the project path.
-  \item The Server notifies the user of success.
- \end{enumerate} \\
- \\
- \textit{Alternatives:} & In step 3 the SnapshotManager has either an out of date compilation or no last compilation, the Server invokes the compiler to compile the project. In step 4 or 5, the compilation process fails and the Server notifies the user with the reason of failure. \\
- \\
- \textit{Post-conditions:} & None. \\
- \\
-\hline
+     \hline
+     \\
+     \textit{Actors:} & User \\ 
+     \\
+     \textit{Goals:} & Compile and package source to a jar\\
+     \\
+     \textit{Pre-conditions:} & User is signed in and viewing a project. \\
+     \\
+     \textit{Summary:} & User selects to build the project to a jar, the server outputs a jar on the project path. \\
+     \\
+     \textit{Related use cases:} & Compile \\ 
+     \\
+     \textit{Steps:} & \begin{enumerate}
+        \item The user seclects ``Compile To Jar'' from ``Build'' dropdown menu.
+        \item The Server receives the request to build a jar.
+        \item The Server fetches the most recent compilation from the SnapshotManager.
+        \item The Server packages the result of the last compilation to a jar and outputs it on the project path.
+        \item The Server notifies the user of success.
+     \end{enumerate} \\
+     \\
+     \textit{Alternatives:} & In step 3 the SnapshotManager has either an out of date compilation or no last compilation, the Server invokes the compiler to compile the project. In step 4 or 5, the compilation process fails and the Server notifies the user with the reason of failure. \\
+     \\
+     \textit{Post-conditions:} & None. \\
+     \\
+    \hline
 \end{tabular}
 
 \section{Enable code freeze (boss2849)}
-\begin{tabular}{ p{2cm} p{12cm} }
- \hline
- \\
- \textit{Actors:} & User \\ 
- \\
- \textit{Goals:} & Impose a code freeze on the project. \\
- \\
- \textit{Pre-conditions:} & User is signed in, viewing a project, and has admin rights.\\
- \\
- \textit{Summary:} & User places a code freeze on the project, preventing editing until undone. \\
- \\
- \textit{Related use cases:} & None. \\ 
- \\
- \textit{Steps:} & \begin{enumerate}
-  \item The User selects ``Code Freeze'' from the dropdown menu.
-  \item The Server receives the request for code freeze.
-  \item The Server restricts all editing of project files.
- \end{enumerate} \\
- \\
- \textit{Alternatives:} & None. \\
- \\
- \textit{Post-conditions:} & None. \\
- \\
-\hline
+    \begin{tabular}{ p{2cm} p{12cm} }
+     \hline
+     \\
+     \textit{Actors:} & User \\ 
+     \\
+     \textit{Goals:} & Impose a code freeze on the project. \\
+     \\
+     \textit{Pre-conditions:} & User is signed in, viewing a project, and has admin rights.\\
+     \\
+     \textit{Summary:} & User places a code freeze on the project, preventing editing until undone. \\
+     \\
+     \textit{Related use cases:} & None. \\ 
+     \\
+     \textit{Steps:} & \begin{enumerate}
+        \item The User selects ``Code Freeze'' from the dropdown menu.
+        \item The Server receives the request for code freeze.
+        \item The Server restricts all editing of project files.
+     \end{enumerate} \\
+     \\
+     \textit{Alternatives:} & None. \\
+     \\
+     \textit{Post-conditions:} & None. \\
+     \\
+    \hline
 \end{tabular}
+
+
+%##########################################################################################################################################################################
+% Class Diagrams
+%##########################################################################################################################################################################
 
 \chapter{Class Diagrams}
 \section{Overview (brec9824, jank6275)}
@@ -2322,12 +2328,12 @@ an email with the username. \\
 \section{Project Ideas (mars2681)}
     \begin{minipage}{1\textwidth}
         \begin{center}
-            \includegraphics[width=0.7\textwidth]{diagrams/class-projectideas}
+            \includegraphics[width=0.7\textwidth]{diagrams/class-ProjectIdeas}
         \end{center}
         \captionof{figure}{The Project Ideas page allows the user to browse other user's projects ideas, as well as create and customize their own project ideas. It starts at the main page. From here, the user can select to view their own projects, and from there create, delete, or edit their ideas. Also at the main page, users can view other projects. Here will be categories of projects, the most popular projects, and new projects. Through browsing these pages, the user can see the description of projects, the amount of support, likes, dislikes, and they can follow and pledge their assistance to the project.}
     \end{minipage}
 
-\section{Settings - Preferences \& Profile (brec9824)}
+\section{Settings, Preferences, and Profile (brec9824)}
     \begin{minipage}{1\textwidth}
         \begin{center}
             \includegraphics[width=0.9\textwidth]{diagrams/class-SettingsManager}
@@ -2343,7 +2349,7 @@ an email with the username. \\
         \captionof{figure}{The Compiler is invoked from the main window. From here, the Compiler will select the appropriate CompilerPlugin determined by the configured compiler for the project. The compiler also invokes the SnapshotManager, which stores the current state of the code to be used during compilation. In this simple example, only a JavaCompiler plugin is present, but there can be more than one plugins available in the future. The JavaCompiler plugin retrieves the code snapshot from the SnapshotManager and compiles the code.}
     \end{minipage}
 
-\section{Lexer (gall7417)}
+\section{Syntax (gall7417)}
     \begin{minipage}{1\textwidth}
         \begin{center}
             \includegraphics[width=0.9\textwidth]{diagrams/class-lexer}
@@ -2375,8 +2381,61 @@ an email with the username. \\
     %\includegraphics[scale=0.7]{diagrams/ProjectFileEditor-snev7821}
     %The project File Editor is simply the file system for Squire. It provides basic read/write permission for any user related to a project. Only admins of a project may move %project files, delete old files, and create new files.
 
+%##########################################################################################################################################################################
+% Sequence Diagrams
+%##########################################################################################################################################################################
+
 \chapter{Sequence Diagrams}
 \section{Authentication (jank6275)}
+    \begin{minipage}{1\textwidth}
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{diagrams/state-authentication}
+        \end{center}
+        \captionof{figure}{Authentication authenticates stuff.}
+    \end{minipage}
+\section{Project Management (mars2681)}
+    \begin{minipage}{1\textwidth}
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{diagrams/state-authentication}
+        \end{center}
+        \captionof{figure}{Authentication authenticates stuff.}
+    \end{minipage}
+\section{Project Ideas (snev7821)}
+    \begin{minipage}{1\textwidth}
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{diagrams/state-authentication}
+        \end{center}
+        \captionof{figure}{Authentication authenticates stuff.}
+    \end{minipage}
+\section{Settings, Preferences, and Profile (gall7417)}
+    \begin{minipage}{1\textwidth}
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{diagrams/state-authentication}
+        \end{center}
+        \captionof{figure}{Authentication authenticates stuff.}
+    \end{minipage}
+\section{Compiler (bolt1003)}
+    \begin{minipage}{1\textwidth}
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{diagrams/state-authentication}
+        \end{center}
+        \captionof{figure}{Authentication authenticates stuff.}
+    \end{minipage}
+\section{Syntax (mora5651)}
+    \begin{minipage}{1\textwidth}
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{diagrams/state-authentication}
+        \end{center}
+        \captionof{figure}{Authentication authenticates stuff.}
+    \end{minipage}
+\section{Communication (boss2849)}
+    \begin{minipage}{1\textwidth}
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{diagrams/state-authentication}
+        \end{center}
+        \captionof{figure}{Authentication authenticates stuff.}
+    \end{minipage}
+\section{Project File Editor (brec9824)}
     \begin{minipage}{1\textwidth}
         \begin{center}
             \includegraphics[width=0.7\textwidth]{diagrams/state-authentication}
