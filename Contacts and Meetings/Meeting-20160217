@@ -1,0 +1,30 @@
+Team Meeting - Wednesday 2/17/2016
+
+Absent Members: None
+Important Notes:
+- Assignment is due: Friday 2/19/16 10:00pm
+- The finished turnin, via Blackboard, should consist of an assembly document, image files, and plantUML files for each diagram.
+
+Tasks:
+- Finalize major sub-systems:
+    - Authentication                (mora5651)
+    - Project Management            (bolt1003)
+    - Project Ideas                 (mars2681)
+    - Settings-Preferences/Profile  (brec9824)
+    - Compiler                      (boss2849)
+    - Syntax                        (gall7417)
+    - Communication                 (jank6275)
+    - Project File Editor           (snev7821)
+
+- E-mail Dr.J with team officers and github:
+    - Elect a scrum master. (jank6275)
+    - Elect a github boss. (boss2849)
+    - Elect a reporter for WARs. (mars2671)
+    - https://github.com/uidaho/cs383
+
+- Class Diagram:
+    - For this sprint, as one of your team's sprint commitments, the team should develop a set of class diagrams for your project. Focus on the application domain, not auxiliary classes that are likely to be used in the implementation (e.g. GUI class libraries).
+    - Each person on the team is given one or more UML class diagrams that describe details about a portion of the project.
+    - A "detail" subteam (1-3 persons) should be assigned to each major subsystem. The number of subteams is up to your team, but remember to include:
+
+

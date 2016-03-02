@@ -1,0 +1,30 @@
+\documentclass[11pt]{report}
+
+\usepackage{graphicx}
+
+\marginparwidth 0.5in 
+\oddsidemargin 0.25in 
+\evensidemargin 0.25in 
+\marginparsep 0.25in
+\topmargin 0.0in 
+\textwidth 6in \textheight 8.5in
+
+\title{HW4: Non-Functional Requirements}
+\author{bolt1003}
+
+\begin{document}
+\maketitle
+
+
+\chapter{Requirements Documentation}
+
+\section{Non-Functional Requirements}
+    Non-functional requirements cover all the remaining requirements which are not covered by the functional requirements. They specify criteria that judge the operation of a system, rather than specific behaviours. Squire's non-functional requirements are:
+    % Reliablity
+    \begin{itemize}
+         \item sQuire will leverage technology developed for the web to ensure reliablity. Technologies such as redunant hardware, redunant power providers, redunant internet services, load balancing and virtualization will enable sQuire to be reliable.(bolt1003)
+     % Serviceability (bolt1003)
+         \item sQuire will run in a virtual machine on top of redunant hardware. Using a virtual machine allows for mutliple instance to be running and tested. The backend will run on redunant hardware which will prevent hardware failure from affecting sQuire usage. In turn, allowing infrastructure to be serviced without affecting sQuire. (bolt1003)
+
+    \end{itemize}
+\end{document}

@@ -1,0 +1,2002 @@
+%%%% CS 383 HW #3 - hw3-team3.tex
+%%%% Due on BBLearn before 10pm on Friday 2/19/2016
+
+
+%##########################################################################################################################################################################
+% Header
+%##########################################################################################################################################################################
+
+\documentclass[11pt]{report}
+
+\usepackage{graphicx}
+\usepackage{caption}
+
+\marginparwidth 0.5in 
+\oddsidemargin 0.25in 
+\evensidemargin 0.25in 
+\marginparsep 0.25in
+\topmargin 0.0in 
+\textwidth 6in \textheight 8.5in
+
+
+\begin{document}
+
+
+
+%##########################################################################################################################################################################
+% Use Case Descriptions
+%##########################################################################################################################################################################
+
+\chapter{Use Case Descriptions}
+
+\section{Authentication (mora5651)}
+\subsection{Sign up (mora5651)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User. \\ 
+ \\
+ \textit{Goals:} & To register and create an account in sQuire. \\
+ \\
+ \textit{Pre-conditions:} & None. \\
+ \\
+ \textit{Summary:} & The user signs up and creates an account using their email address and, creates a username and password. \\ 
+ \\
+ \textit{Related use cases:} & None. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User is prompted to enter email, username and password. 
+  \item System sends confirmation email. 
+  \item User verifies email. 
+  \item System saves information, and redirectes user to sign in page. 
+ \end{enumerate} \\
+ \\
+ \textit{Alternative 1:} & User already has an account. \\ 
+ \\
+ \textit{Alternative 2:} & User doesn't confirm email. Delete request after timeout period. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Sign in (mora5651)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Users. \\ 
+ \\
+ \textit{Goals:} & Pre-existing user signs into profile. \\
+ \\
+\textit{Precondition:} & User must already have an account \\
+\\
+\textit{Summary:} & User wishes to access their account, projects and info. \\
+\\
+ \textit{Steps:} & \begin{enumerate}
+  \item User is prompted to enter username/e-mail, and password. 
+  \item System verifies information
+  \item Correct information prompts user to their home page. 
+  \item If user forgot their user name, they can click "Forgot Username button. They then input their email address.
+  \item System validates their email address with an account, and sends an email with the username  
+  \item If user forgot their password, they click "Forgot password" button. Then they input their email address.
+  \item System validates their email address with an account, and sends an email to them with a temporary password.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & Information is incorrect, user tries again. Or makes a new account \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Logout (mora5651)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Users. \\ 
+  \\
+ \textit{Goal:} & Existing user logs out \\ 
+ \\
+ \textit{Precondition:} & User must be logged in \\
+ \\
+ \textit{Summary:}  & The user can log-out of the program at any time. \\
+ \\
+ \textit{Steps:} & \begin{enumerate}
+ \item User clicks the "log-out" button. 
+ \item System prompts user to ensure all unsaved work has been saved. 
+ \item User verifies. 
+ \item System logs user out. 
+ \end{enumerate} \\
+\\
+  \textit{Alternative 1:} & The program will send notification to ask if the user is sure to sign out. \\
+  \textit{Alternative 2:} & User cancels on step two. Return to home page. \\ 
+ \\
+\hline
+\end{tabular}
+
+\subsection{Forgotten Account Information (mora5651)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Users. \\ 
+  \\
+ \textit{Goal:} & Recover forgotten account information. \\ 
+ \\
+ \textit{Precondition:} & User must already have an account. \\
+ \\
+ \textit{Summary:}  & User has forgotten their account information, and wishes to recover information. \\
+ \\
+ \textit{Steps:} & \begin{enumerate}
+ \item User clicks the "Forgotten username/password" button. 
+ \item User inputs their email address. 
+ \item System validates their email address with an account, and sends
+an email with the username or password reset. \\ 
+ \item System logs user out. 
+ \end{enumerate} \\
+\\
+  \textit{Alternative 1:} & Information is incorrect, user tries again. Or makes a new account. \\
+\\
+\hline
+\end{tabular}
+
+
+\section{Project Ideas (dani2918)}
+\subsection{Browse Project Ideas (dani2918)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Examine a list of available project ideas  \\
+ \\
+ \textit{Pre-conditions:} & User is signed in  \\
+ \\
+ \textit{Summary:} & User looks through posted project ideas to find projects to work on/discuss \\ 
+ \\
+ \textit{Related use cases:} & Comment on Project Idea, Vote on Project Idea, Share Project Idea \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Actor selects Browse Project Ideas button
+  \item Actor refines search by selecting from list of project categories as desired
+  \item Actor enters terms into search field as desired and views a list of top projects
+  \item Actor selects desired project
+  \item System displays detailed project information
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Create Project Idea Thread (dani2918)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Project Administrator \\ 
+ \\
+ \textit{Goals:} & Generate public interest in project idea  \\
+ \\
+ \textit{Pre-conditions:} & Prospective project administrator is signed in  \\
+ \\
+ \textit{Summary:} &  A user with interest in heading up own project can post ideas to get feedback and/or recruit collaborators \\ 
+ \\
+ \textit{Related use cases:} & Manage Project Idea Thread \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Actor selects Create Project Idea button
+  \item Actor enters prospective project title and thoughts and ideas as a description
+  \item Actor selects Submit button
+
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Manage Project Idea Thread (dani2918)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Project Administrator \\ 
+ \\
+ \textit{Goals:} & Respond to feedback and manage project idea  \\
+ \\
+ \textit{Pre-conditions:} & Prospective project administrator is signed in and has navigated to one of his or her own project threads  \\
+ \\
+ \textit{Summary:} &  A prospective project administrator responds to others' questions/comments \\ 
+ \\
+ \textit{Related use cases:} & Create Project Idea Thread \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Actor selects Reply button on a comment
+  \item Actor types feedback to other user
+  \item Actor selects Submit button 
+  \item System shows confirmation that feedback was received 
+  
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & Actor selects Delete Comment instead of Reply to remove harmful feedback. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Comment on Project Idea (dani2918)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Provide detailed feedback on project ideas  \\
+ \\
+ \textit{Pre-conditions:} & Actor is signed in, has navigated to a project idea  \\
+ \\
+ \textit{Summary:} &  User provides feedback to or asks questions about a prospective project. \\ 
+ \\
+ \textit{Related use cases:} & Browse Project Ideas, Vote on Project Idea, Manage Project Idea Thread \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Actor selects Comment button
+  \item Actor types feedback into field 
+  \item Actor clicks Submit button
+  \item System shows confirmation that feedback was received 
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline 
+\end{tabular}
+
+\subsection{Vote on Project Idea (dani2918)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Support promising project ideas or offer criticism to unfavorable ones  \\
+ \\
+ \textit{Pre-conditions:} & Actor is signed in, has navigated to a project idea  \\
+ \\
+ \textit{Summary:} &  User offers support/discourages a project idea so that prospective project administrators get feedback and promising project ideas get publicity \\ 
+ \\
+ \textit{Related use cases:} & Comment on Project Idea \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Actor selects and Up Vote or Down Vote button
+  \item Actor selects Submit button 
+  \item System highlights which button the user has selected
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Share Project Idea (dani2918)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User, Project Administrator \\ 
+ \\
+ \textit{Goals:} & Generate excitement about a project  \\
+ \\
+ \textit{Pre-conditions:} & Actor is signed in, has navigated to a project idea  \\
+ \\
+ \textit{Summary:} &  Prospective project administrators or users show other users which projects they believe are worthwhile \\ 
+ \\
+ \textit{Related use cases:} & Comment on Project Idea \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Actor selects Share button
+  \item Actor selects an audience and method with which to share selected project
+  \item Actor selects Submit button
+  \item System notifies or shows audience the shared project idea
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+
+
+\section{Communication (jank6275)}
+\subsection{Open project chat (jank6275)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & To open the project chat window. \\
+ \\
+ \textit{Pre-conditions:} & User must be registered, signed in, and have a open project.  \\
+ \\
+ \textit{Summary:} & User opens a project and the project chat automatically opens. The chat window displays chat history and updates when new chat messages are received. \\ 
+ \\
+ \textit{Related use cases:} & Join global chat. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User opens a project.
+  \item Chat is notified that user has joined.
+  \item System displays project chat window to the user.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Open global chat (jank6275)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & To open the global chat window. \\
+ \\
+ \textit{Pre-conditions:} & User must be registered, signed in, and anywhere on website.  \\
+ \\
+ \textit{Summary:} & User authenticates with the server and the global chat automatically opens. The chat window displays chat history and updates when new chat messages are received.  \\ 
+ \\
+ \textit{Related use cases:} & Join project chat. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks open global chat.
+  \item Chat is notified that user has joined.
+  \item System displays global chat window.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Close project chat (jank6275)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & To close the project chat window. \\
+ \\
+ \textit{Pre-conditions:} & User must be registered, signed in, and in editor Mode.  \\
+ \\
+ \textit{Summary:} & User clicks on close project chat and the chat window closes. \\ 
+ \\
+ \textit{Related use cases:} & Close global chat. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks close project chat.
+  \item Chat is notified that user has left.
+  \item Client closes project chat window.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Close global chat (jank6275)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & To close the global chat window. \\
+ \\
+ \textit{Pre-conditions:} & User must be registered, signed in, and anywhere on website.  \\
+ \\
+ \textit{Summary:} & User clicks on open global chat and the chat opens, displaying chat history and updating when needed. \\ 
+ \\
+ \textit{Related use cases:} & Close project chat. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks close global chat.
+  \item Chat is notified that user has left.
+  \item Client closes global chat window.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Write to project chat (jank6275)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & To send text to project chat. \\
+ \\
+ \textit{Pre-conditions:} & User must be registered, signed in, a project opened, with the project chat window open, and the text box selected.  \\
+ \\
+ \textit{Summary:} & User clicks in the project chat text box and then types a message then either presses enter or clicks the submit button. The text is displayed to all users in the chat, including the user. \\ 
+ \\
+ \textit{Related use cases:} & Write to global chat. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks in the project chat box.
+  \item User types a message and then presses enter or clicks submit button.
+  \item Message is relayed to all clients with project chat open.
+  \item Message is displayed.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Write to global chat (jank6275)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & To send text to global chat. \\
+ \\
+ \textit{Pre-conditions:} & User must be registered, signed in, anywhere on website, with the global chat window open, and the text box selected.  \\
+ \\
+ \textit{Summary:} & User clicks in the global chat text box and then types a message then either presses enter or clicks the submit button. The text is displayed to all users in the chat, including the user. \\ 
+ \\
+ \textit{Related use cases:} & Write to project chat. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks in the global chat box.
+  \item User types a message and then presses enter or clicks submit button.
+  \item Message is relayed to all clients with global chat open.
+  \item Message is displayed.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Modify chat font (jank6275)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & To change a users font style inside the global and project chat. \\
+ \\
+ \textit{Pre-conditions:} & User must be registered, signed in, the user settings window opened, and the chat settings tab open.  \\
+ \\
+ \textit{Summary:} & The user clicks the settings menu and changes their font style for both the project and global chat through a drop down box of available fonts. \\ 
+ \\
+ \textit{Related use cases:} & Modify chat color. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks the settings menu.
+  \item User clicks chat settings tab.
+  \item User clicks chat font drop down box.
+  \item User clicks desired font.
+  \item User clicks save.
+  \item The user\'s selection is saved in the database.
+  \item All further chat messages will use the selected font.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Modify chat color (jank6275)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & To change a users font color inside the global and project chat. \\
+ \\
+ \textit{Pre-conditions:} & User must be registered, signed in, the user settings window opened, and the chat settings tab open.  \\
+ \\
+ \textit{Summary:} & The user clicks the settings menu and changes their font color for both the project and global chat through a drop down box of available colors. \\ 
+ \\
+ \textit{Related use cases:} & Modify chat font. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks the settings menu.
+  \item User clicks chat settings tab.
+  \item User clicks chat color drop down box.
+  \item User clicks desired color.
+  \item User clicks save.
+  \item The user\'s selection is saved in the database.
+  \item All further chat messages from the user will use the selected color.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+
+
+\newpage
+
+\subsection{File Management (snev7821)}
+\subsection{Create New Project (snev7821)}
+\begin{framed}
+
+	\textbf{Task Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} The user performs this task to create a new project. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User must be registered.
+		\item User must be logged in.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks \textit{Projects} in the top menu bar.
+		\item System opens a drop-down menu.
+		\item User navigates to \textit{Add} -$>$ \textit{New Project}.
+		\item System opens an \textit{Add New Project} dialog window.
+		\item User provides a title and optionally description.
+		\item User clicks \textit{Add}.
+		\item System adds the file(s) to the project.
+	\end{enumerate}
+	\textbf{Alternatives:} 
+	\begin{enumerate}
+		\item Step 1: The user right clicks in the project panel and the system continues on to step 2 above.
+		\item Step 5: The user clicks \textit{Cancel} and a new project is not added.
+	\end{enumerate}
+	\textbf{Postconditions:}
+	\begin{enumerate}
+		\item A new project is added to the project.
+		\item The database is updated to reflect the changes.
+	\end{enumerate}
+	\textbf{Related:} Add Existing File to Project, Add New File to Project
+\end{framed} 
+
+\newpage
+
+
+
+
+\subsubsection{Add New File to Project (wern0096) modified for hw4 (snev7821)}
+\begin{framed}
+
+	\textbf{Task Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} The user performs this task to add a new file to the project. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User must be registered.
+		\item User must be logged in.
+		\item User must have a project open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks \textit{File} in the top menu bar.
+		\item System opens a drop-down menu.
+		\item User navigates to \textit{Add} -$>$ \textit{New File}.
+		\item System opens an \textit{Add New File} dialog window.
+		\item User selects the file type and names the file.
+		\item User clicks \textit{Add}.
+		\item System adds the file to the project.
+	\end{enumerate}
+	\textbf{Alternatives:} 
+	\begin{enumerate}
+		\item Step 1: The user right clicks in the project panel and the system continues on to step 2 above.
+		\item Step 5: The user clicks \textit{Cancel} and a new file is not added to the project.
+	\end{enumerate}
+	\textbf{Postconditions:}
+	\begin{enumerate}
+		\item A new file is added to the project.
+		\item The database is updated to reflect the changes.
+	\end{enumerate}
+	\textbf{Related:} Add Existing File to Project
+\end{framed} 
+
+\newpage
+
+\subsubsection{Add Existing File to Project (wern0096) modified for hw4 (snev7821)}
+\begin{framed}
+
+	\textbf{Task Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} The user performs this task to add an existing file to the project. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User must be registered.
+		\item User must be logged in.
+		\item User must have a project open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks \textit{File} in the top menu bar.
+		\item System opens a drop-down menu.
+		\item User navigates to \textit{Add} -$>$ \textit{Existing File}.
+		\item System opens an \textit{Add Existing File} dialog window.
+		\item User selects \textit{PC} or \textit{SQuire} or \textit{Github}.
+		\item System updates the dialog to reflect the selected source.
+		\item User navigates to the file's location and selects it.
+		\item User clicks \textit{Add}.
+		\item System adds the file to the project.
+	\end{enumerate}
+	\textbf{Alternatives:} 
+	\begin{enumerate}
+		\item Step 1: The user right clicks in the project panel and the system continues on to step 2 above.
+		\item Step 5-7: The user clicks \textit{Cancel} and a new file is not added to the project.
+	\end{enumerate}
+	\textbf{Postconditions:}
+	\begin{enumerate}
+		\item An existing file is added to the project.
+		\item The database is updated to reflect the changes.
+	\end{enumerate}
+	\textbf{Related:} Add New File to Project
+\end{framed} 
+
+\newpage
+
+\subsubsection{Delete File (wern0096) modified for hw4 (snev7821)}
+\begin{framed}
+
+	\textbf{Task Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} The user performs this task to delete a file from the project. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User must be registered.
+		\item User must be logged in.
+		\item User must have a project open.
+		\item User must be administrator of project.
+		\item Current project must have at least one file.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User right clicks a file in the project pane.
+		\item System opens a drop-down menu.
+		\item User navigates to \textit{Delete}.
+		\item System opens an \textit{Delete File} dialog window, asking if the user is sure.
+		\item User selects \textit{Yes}.
+		\item System deletes the file from the project.
+	\end{enumerate}
+	\textbf{Alternatives:} 
+	\begin{enumerate}
+		\item Step 5: The user clicks \textit{Cancel} instead and the file is not deleted from the project.
+		\item The user selects multiple files before step 1.
+	\end{enumerate}
+	\textbf{Postconditions:}
+	\begin{enumerate}
+		\item The file is deleted from the project.
+		\item The database is updated to reflect the changes.
+	\end{enumerate}
+		\textbf{Related:} Delete Project
+\end{framed} 
+\newpage
+
+
+\subsubsection{Delete Project (snev7821)}
+\begin{framed}
+
+	\textbf{Task Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} The user performs this task to delete a project. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User must be registered.
+		\item User must be logged in.
+		\item User must have a project open.
+		\item User must be sole administrator of project.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks \textit{Projects} tab.
+		\item System opens a drop-down menu.
+		\item User navigates to \textit{Delete}.
+		\item System opens an \textit{Delete Project} dialog window, asking if the user is sure.
+		\item User selects \textit{Yes}.
+		\item System deletes the project and related files from system.
+	\end{enumerate}
+	\textbf{Alternatives:} 
+	\begin{enumerate}
+		\item Step 5: The user clicks \textit{Cancel} instead and the project is not deleted.
+	\end{enumerate}
+	\textbf{Postconditions:}
+	\begin{enumerate}
+		\item The project (and related files) are deleted.
+		\item The database is updated to reflect the changes.
+	\end{enumerate}
+		\textbf{Related:} Delete File
+\end{framed} 
+\newpage
+
+\subsubsection{Export Project (wern0096) modified for hw4 (snev7821)}
+\begin{framed}
+
+	\textbf{Task Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} The user performs this task to download a project as a zip file. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User must be registered.
+		\item User must be logged in.
+		\item User must have a project open.
+		\item User must have download permissions.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks \textit{File} in the top menu bar.
+		\item System opens a drop-down menu.
+		\item User navigates to \textit{Export} -$>$ \textit{Project}.
+		\item System opens an \textit{Export} dialog window.
+		\item User navigates to the export location.
+		\item User clicks \textit{Export}.
+		\item System zips the file and downloads it to the specified location.
+	\end{enumerate}
+	\textbf{Alternatives:} 
+	\begin{enumerate}
+		\item Step 1: The user right clicks in the project panel and the system continues on to step 2 above.
+		\item Step 5: The user clicks \textit{Cancel} and the project is not exported.
+	\end{enumerate}
+	\textbf{Related:} Export Files
+\end{framed}
+
+\newpage
+
+\subsubsection{Export Files (wern0096) modified for hw4 (snev7821)}
+\begin{framed}
+
+	\textbf{Task Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} The user performs this task to download a number of files from a project. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User must be registered.
+		\item User must be logged in.
+		\item User must have a project open.
+		\item Must have at least one file in the project.
+		\item User must have download permissions.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks \textit{File} in the top menu bar.
+		\item System opens a drop-down menu.
+		\item User navigates to \textit{Export} -$>$ \textit{Files}.
+		\item System opens an \textit{Export} dialog window showing the project files on the left panel and the export location in the right panel.
+		\item User selects a number of files on the left pane.
+		\item User navigates to the export location in the right pane.
+		\item User clicks \textit{Export}.
+		\item System downloads the selected files to the specified location.
+	\end{enumerate}
+	\textbf{Alternatives:} 
+	\begin{enumerate}
+		\item Step 1: The user right clicks in the project panel and the system continues on to step 2 above.
+		\item Step 5: User selects a folder and all files under that folder are selected.
+		\item Step 5-6: The user clicks \textit{Cancel} and the project is not exported.
+	\end{enumerate}
+	\textbf{Related:} Export Project
+\end{framed}
+
+\newpage
+
+\subsubsection{Open File in New Tab (wern0096) modified for hw4 (snev7821)}
+\begin{framed}
+
+	\textbf{Category:} File Management \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} Allows users to open a file. \\ \\
+	\textbf{Purpose:} Opening files is essential in being able to work on a project. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item User is registered.
+		\item User is logged in.
+		\item User has a project open.
+		\item Current project contains at least one file.
+		\item User has read permission.
+	\end{enumerate}		
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User double clicks a file.
+		\item The editor opens its contents in a new tab and focuses on it.
+	\end{enumerate}	
+	\textbf{Alternatives:} Step 1: Instead of double clicking a file, the user right clicks it and navigates to \textit{Open}.
+\end{framed}
+\newpage
+
+
+
+
+\section{File Editing (snev7821)}
+\subsection{View Line Numbers (wern0096) updated by (snev7821)}
+\begin{framed}
+
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} Allows the user to hide line numbers to the left of the document. \\ \\
+	\textbf{Purpose:} In case user wants to hide line numbers so they have more space for text.\\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has view permission.
+		\item A file is open.
+		\item Line numbers are on
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User selects the \textit{View} menu option.
+		\item System displays a drop-down with various options.
+		\item User selects the \textit{Hide Line Numbers} option.
+		\item System hides line numbers to the left of the document.
+	\end{enumerate}
+	\textbf{Related:}
+	\begin{enumerate}
+		\item View References
+		\item View Dates
+		\item View Authors
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{View References (wern0096) updated for hw4 by (snev7821)}
+\begin{framed}
+
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} Allows the user to view the number of references to a given function. \\ \\
+	\textbf{Purpose:} It is useful to know the number of references to a given function for optimization and debugging purposes. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has view permission.
+		\item A \textbf{code} file is open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User selects the \textit{View} menu option.
+		\item System displays a drop-down with various options.
+		\item User selects the \textit{View References} option.
+		\item System displays the number of references above each method declaration.
+	\end{enumerate}
+	\textbf{Related:}
+	\begin{enumerate}
+		\item Hide Line Numbers
+		\item View Dates
+		\item View Authors
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{View Dates (wern0096) updated by (snev7821)}
+\begin{framed}
+
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} Allows the user to view the last date that each block of a document was edited. Blocks are defined as any number of lines that was written by a single user. Minimum block size is one line. \\ \\
+	\textbf{Purpose:} This provides a useful metric for how up-to-date parts of the document are. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has view permission.
+		\item A file is open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User selects the \textit{View} menu option.
+		\item System displays a drop-down with various options.
+		\item User selects the \textit{View Dates} option.
+		\item System displays the last date that each block of a document was edited.
+	\end{enumerate}
+	\textbf{Related:}
+	\begin{enumerate}
+		\item Hide Line Numbers
+		\item View References
+		\item View Authors
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{View Authors (wern0096) updated by (snev7821)}
+\begin{framed}
+
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} Allows the user to view the last author that edited each block of a document. Blocks are defined as any number of lines that was written by a single user. Minimum block size is one line. \\ \\
+	\textbf{Purpose:} This is an accountability tool allowing other users to identify who is responsible for a change to a document. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has read permission.
+		\item A file is open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User selects the \textit{View} menu option.
+		\item System displays a drop-down with various options.
+		\item User selects the \textit{View Authors} option.
+		\item System displays the name of the last editor of each line of the document.
+	\end{enumerate}
+	\textbf{Related:}
+	\begin{enumerate}
+		\item Hide Line Numbers
+		\item View References
+		\item View Dates
+	\end{enumerate}
+\end{framed}
+
+
+
+
+%2-24-16
+
+\newpage
+
+\subsection{Format Document (wern0096) updated by (snev7821)}
+\begin{framed}
+
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} Allows the user to format the document to a specified format \\ \\
+	\textbf{Purpose:} An easy tool for making sweeping changes to a large part of a document. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has read/write permission.
+		\item A file is open.
+		\item The document has formatting options set.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User selects the \textit{Edit} menu option.
+		\item System displays a drop-down with various options.
+		\item User selects the \textit{Format Document} option.
+		\item System formats the current document to the formatting settings currently set.
+	\end{enumerate}
+	\textbf{Alternatives:}
+	\begin{enumerate}
+		\item If no formatting settings are currently set, display a dialog box after step 3 and give the option for the user to do so now.
+	\end{enumerate}
+	\textbf{Related:}
+	\begin{enumerate}
+		\item Find/Replace
+		\item Comment Section
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{Find/Replace (wern0096) updated by (snev7821)}
+\begin{framed}
+
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} Allows the user to find and/or replace phrases. \\ \\
+	\textbf{Purpose:} This is a powerful tool that allows a user to make safer, quicker, and more efficient changes to a document. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has read/write permission.
+		\item A file is open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User selects the \textit{Edit} menu option.
+		\item System displays a drop-down with various options.
+		\item User selects the \textit{Find/Replace} option.
+		\item System displays a small form in an unobtrusive location.
+		\item User enter the phrase to find and selects find.
+		\item System highlights and focuses on the first occurrence of the phrase and all highlights all other occurrences.
+	\end{enumerate}
+	\textbf{Alternatives:}
+	\begin{enumerate}
+		\item User selects option to replace in step 5 and enters a phrase with which to replace the found occurrences of the searched phrase. The system replaces each occurrence.
+	\end{enumerate}
+	\textbf{Related:}
+	\begin{enumerate}
+		\item Format Document
+		\item Find/Replace
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{Comment Section (wern0096) updated by (snev7821)}
+\begin{framed}
+
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} Allows the user to comment out a part of a document. \\ \\
+	\textbf{Purpose:} A useful and quick way to disable a large part of a document. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item A file is open.
+		\item User has read/write permission.
+		\item Current open document supports commenting.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User selects the \textit{Edit} menu option.
+		\item System displays a drop-down with various options.
+		\item User selects the \textit{Comment Section} option.
+		\item System comments the selected area.
+	\end{enumerate}
+	\textbf{Alternatives:}
+	\begin{enumerate}
+		\item If document does not support commenting, display a dialog box telling the user.
+	\end{enumerate}
+	\textbf{Related:}
+	\begin{enumerate}
+		\item Format Document
+		\item Find/Replace
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{Display Typing User (wern0096) updated by (snev7821)}
+\begin{framed}
+
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Actors:} 
+	\begin{enumerate}
+		\item User
+		\item Other Users
+	\end{enumerate}
+	\textbf{Summary:} As the user types, the system displays their name, their typing, and their caret, in a different color, to other users. \\ \\
+	\textbf{Purpose:} Differentiate who is typing what. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has read/write permission.
+		\item A file is open.
+		\item Other users have the same document open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User begins typing.
+		\item System displays the user's typing, the user's name, and the user's caret, in a different color, to Other Users.
+		\item Other Users see User typing, his username, and his caret, in a different color.
+	\end{enumerate}
+\end{framed}
+
+\newpage
+
+\subsection{Display Syntax Highlighting (wern0096) updated by (snev7821)}
+\begin{framed}
+
+	\textbf{Category:} File Editing \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} As the user types code, the editor will change font color for different code structures and keywords. \\ \\
+	\textbf{Purpose:} Aids the user is writing code and identifying key code parts. \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered.
+		\item Must be logged in.
+		\item User has read/write permission.
+		\item A supported code file is open.
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User begins typing.
+		\item System automatically colors special code structures and keywords.
+	\end{enumerate}
+	\textbf{Related:} Display Syntax Errors
+\end{framed}
+
+\newpage
+
+\section{User Prefrences (snev7821)}
+\subsection{View User Preferences (snev7821)}
+\begin{framed}
+	\noindent\textbf{Name:} View User Preferences \\ \\
+	\textbf{Category:} User Preferences - Editor  \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} User views their preferences and from here can change them \\ \\
+	\textbf{Purpose:} Allows user to view their preferences and change them \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered
+		\item Must be logged in
+		\item User is on user homepage
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks "Manage Editor Preferences"
+		\item System presents user with preferences page
+	\end{enumerate}
+	\textbf{Related:} Modify chat font, Modify chat color, Edit user color
+\end{framed}
+
+\newpage
+
+\subsection{Modify Chat Font (snev7821)}
+\begin{framed}
+	\noindent\textbf{Name:} Modify Chat Font \\ \\
+	\textbf{Category:} User Preferences - Editor  \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} User changes the chat font \\ \\
+	\textbf{Purpose:} Allows user to change what chat font they see for themselves and others \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered
+		\item Must be logged in
+		\item User is on user editor preferences page
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks "Modify Chat Fonts" button
+		\item System brings up list of fonts, for the user and others
+		\item User selects a font for self
+		\item User sets a font for others
+		\item System saves user choices after each user action
+	\end{enumerate}
+	\textbf{Related:} Modify chat color, Edit user editor theme
+\end{framed}
+
+\newpage
+
+\subsection{Modify Chat Color (snev7821)}
+\begin{framed}
+	\noindent\textbf{Name:} Modify Chat Color \\ \\
+	\textbf{Category:} User Preferences - Editor  \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} User changes the chat color \\ \\
+	\textbf{Purpose:} Allows user to change what chat color they see for themselves and others \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered
+		\item Must be logged in
+		\item User is on user editor preferences page
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks "Modify Chat Colors" button
+		\item System brings up list of colors, for the user and others
+		\item User selects a color for self
+		\item User sets a color for others
+		\item System saves user choices after each user action
+	\end{enumerate}
+	\textbf{Related:} Modify chat font, Edit user editor theme
+\end{framed}
+
+\newpage
+
+\subsection{Edit User Editor Theme (snev7821)}
+\begin{framed}
+	\noindent\textbf{Name:} Edit User Editor Theme \\ \\
+	\textbf{Category:} User Preferences - Editor  \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:}User changes the Editor theme \\ \\
+	\textbf{Purpose:} Allows user to change theme of the collaborative editor \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered
+		\item Must be logged in
+		\item User is on user editor preferences page
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks "Modify Editor Theme" button
+		\item System brings up list of themes for editor
+		\item User selects a theme
+		\item System saves user selection
+	\end{enumerate}
+	\textbf{Related:} Modify chat font, Edit user color 
+\end{framed}
+
+\newpage
+
+\subsection{Turn Off Global Chat (snev7821)}
+\begin{framed}
+	\noindent\textbf{Name:} Turn Off Global Chat \\ \\
+	\textbf{Category:} User Preferences - Editor  \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} User turns off global chat \\ \\
+	\textbf{Purpose:} Allows user to choose whether or not to engage in global chat \\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered
+		\item Must be logged in
+		\item User is on user editor preferences page
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User checks "turn global chat off" box
+		\item System brings up warning, explaining what this does
+		\item User selects accept
+		\item System saves user selection
+		\item System disconnects user from global chat
+	\end{enumerate}
+	\textbf{Related:} Global chat
+\end{framed}
+
+\newpage
+
+\subsection{Psuedo-offline Mode (snev7821)}
+\begin{framed}
+	\noindent\textbf{Name:} Psuedo-offline Mode \\ \\
+	\textbf{Category:} User Preferences - Editor  \\ \\
+	\textbf{Actor:} User \\ \\
+	\textbf{Summary:} User changes to offline mode \\ \\
+	\textbf{Purpose:} Allows user to turn off online features, including chat, public profiles, etc. Site then serves as basic editing environment\\ \\
+	\textbf{Preconditions:} 
+	\begin{enumerate}
+		\item Must be registered
+		\item Must be logged in
+		\item User is on user editor preferences page
+	\end{enumerate}
+	\textbf{Steps:}
+	\begin{enumerate}
+		\item User clicks "offline mode" button
+		\item System brings up warning
+		\item User selects accept
+		\item System saves user selection
+		\item System closes chat
+		\item System loads offline user page
+		\item Upon disconnect with site, online mode restarts upon next connection
+	\end{enumerate}
+	\textbf{Related:} None 
+\end{framed}
+
+\section{Project Management}
+\subsection{Create Project (Created by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Users of sQuire. \\ 
+ \\
+ \textit{Goals:} & Create a Project. \\
+ \\
+ \textit{Pre-conditions:} & The user is logged in and at the bashboard. \\
+ \\
+ \textit{Summary:} & The user creates a project. \\ 
+ \\
+ \textit{Related use cases:} & None. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User selects the "+" icon and a wizard appears.
+  \item A name is choosen for the project.
+  \item Language is selected from a drop down menu.
+  \item User clicks finish.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & Create project from the editor. \\
+ \\
+ \textit{Post-conditions:} & The user assigns permissions to access the project. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Open a project (Created by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Users of sQuire. \\ 
+ \\
+ \textit{Goals:} & Choose the desired project and open it. \\
+ \\
+ \textit{Pre-conditions:} & One or more projects are available, the user is logged in and at the dashboard. \\
+ \\
+ \textit{Summary:} & User looks through a list of projects and selects the desired project. \\ 
+ \\
+ \textit{Related use cases:} & None. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks on projects in the menu bar.
+  \item A list of projects appears and the user clicks on the desired project.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & Open a project from recent projects. \\
+ \\
+ \textit{Post-conditions:} & User closes sQuire. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Join Project (Created by sass8427, Revised by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+\hline
+\\
+\textit{Actors:} & Users of sQuire. \\ 
+\\
+\textit{Goals:} & Join an existing project.\\
+\\
+\textit{Pre-conditions:} & Must be registered, logged in and have permission to join a project.\\
+\\
+\textit{Summary:} & The user logs in, chooses a project, and joins the project. \\
+\\
+\textit{Related use cases:} & Invite user to project, Accept user invite. \\
+\\
+\textit{Steps:} & \begin{enumerate}
+ \item The user selects a project.
+ \item The user chooses the "Join". 
+ \item The project is added to the users projects bar.
+ \item The user selects the project and selects "open".
+\end{enumerate}\\
+\\
+\textit{Alternatives:} & User may decline an inventation to join a project. \\
+\\
+\textit{Post-conditions:} & None \\
+\\
+\hline
+\end{tabular}
+
+\subsection{Leave project (Created by sass8427, Revised by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Remove member status from project. \\
+ \\
+ \textit{Pre-conditions:} & Logged in, member of the respective project, not project owner.  \\
+\\
+ \textit{Summary:} & A member of a project can unjoin that project at any time as long as they are not the project owner. To prevent mistakenly unjoining a project, the user is asked to confirm their decision.\\ 
+ \\
+ \textit{Related use cases:} & \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User selects a project.
+  \item User clicks "Unjoin". 
+  \item User is promted to confirm their decision
+  \item User clicks "Confirm".
+  \item User is removed from project member list.    
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User clicks "Cancel" at step 4, in which case the task is ends at that point. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Delete Project(Created by mora5651, Revised by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+\hline
+\\
+\textit{Actors:} & Users of sQuire.\\
+\\
+\textit{Goals:} & Delete an existing project. \\
+\\
+\textit{Pre-conditions:} & The user has the appropriate permissions to delete project. 
+\\
+\textit{Summary:} & A user deletes a project from the project workspace.\\
+\\
+\textit{Related use cases:} & Create a project. \\
+\\
+\textit{Steps:} & \begin{enumerate}
+ \item The user selects a project.
+ \item The user clicks on the "Delete project" button. 
+ \item A dialog is displayed. 
+ \item User select "delete" to delete the project. 
+ \end{enumerate}\\
+ \\
+ \textit{Alternatives:} & User may choose not to delete the project in the confirmation display.\\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Export Project(Created by knic1468, Revised by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+\hline
+\\
+\textit{Actors:} & User of sQuire.\\
+\\
+\textit{Goals:} & Export a workspace to a local file. \\
+\\
+\textit{Pre-conditions:} & The user needs permission to export the project. 
+\\
+\textit{Summary:} & User saves a file containing the project settings and files to a local machine. \\
+\\
+\textit{Related use cases:} & Importing a project, Creating a new project. \\
+\\
+\textit{Steps:} & \begin{enumerate}
+ \item The user clicks on the "Export File" button. 
+ \item System prompts the user to select a location and filename. 
+ \item User selects a file location.
+ \item The user enters a file name.
+ \item The user selects "export". 
+ \end{enumerate}\\
+ \\
+ \textit{Alternatives:} & The user cancels the export, The system prompts that a file already exists with the same name.\\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Accept Invite to Project (Created by carl7595, Revised by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }   
+ \hline
+ \\
+ \textit{Actors:} & User who received the invite. \\
+ \\
+ \textit{Goals:} & Gain access to a Project. \\
+ \\
+ \textit{Pre-conditions:} & User has a valid email address. \\
+ \\
+ \textit{Summary:} & Access is granted to a project using an invitation email. \\ 
+ \\
+ \textit{Related use cases:} & Create an account. \\
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Invitee clicks on the link received by email.
+	 \item The link opens in a browser.
+	 \item Dialog appear welcoming them to the project.
+	 \item The project is added to their Projects list.
+	\end{enumerate} \\
+ \\
+ \textit{Alternatives:} & The user ignores the invite. \\
+ \textit{Post-conditions:} & Email link is deactivated. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Remove User from Project (Created by carl7595, Revised by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }   
+ \hline
+ \\
+ \textit{Actors:} & User of sQuire \\
+ \\
+ \textit{Goals:} & Revoke access to the Project for a single or multuple users. \\
+ \\
+ \textit{Pre-conditions:} & The user has permission to edit the Project access list. \\
+ \\
+ \textit{Summary:} & One or more user accounts are removed from the access list for a project. \\ 
+ \\
+ \textit{Related use cases:} & Add users to a project.  \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The user selects the access list for the project.
+	 \item The user selects an account. 
+	 \item The user selects "Remove from Project".
+	 \item The user is prompted for confirmation
+	 \item The user selects 'Yes'.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & The user selects 'No' and the access list is not modified. \\
+ \\
+ \textit{Post-conditions:} &
+    \begin{itemize}
+	 \item The user that was removed is notified of the change.
+	 \item The user is prevented from accessing files.
+    \end{itemize}\\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Edit Project Permissions (Created by benz5834, Revised by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User of sQuire \\ 
+ \\
+ \textit{Goals:} & Edit the permissions for a project \\
+ \\
+ \textit{Pre-conditions:} & The user is logged in. \\
+ \\
+ \textit{Summary:} & User opens up the settings menu and navigates to permissions, adds (or removes) users individual access rights to the project.  \\ 
+ \\
+ \textit{Related use cases:} & Add user to project, Remove user from project. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The user selects a project.
+  \item The user selects settings.
+  \item The user selects permissions.
+  \item The user selects user from list of users.
+  \item The user adds read or write permissions to user.
+  \item The user selects save to save changes.
+  \item The user exits settings.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User can remove read or write permission instead in step 6. User can discard changes instead in step 7. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+
+\section{Settings - Preferences and Profile (brec9824)}
+\subsection{View A User's Profile (brec9824)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User of sQuire. \\ 
+ \\
+ \textit{Goals:} & User views a profile page. \\
+ \\
+ \textit{Pre-conditions:} & \begin{enumerate}
+  \item The user is logged in.
+ \end{enumerate} \\
+ \\
+ \textit{Summary:} & User clicks on their username or another user's name and a goes to a new page with the selected user's profile page.\\ 
+ \\
+ \textit{Related use cases:} & Modify Profile Info. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The user clicks on their username or another user's name.
+  \item The user's system sends a request to the main sQuire system for the selected users profile information.
+  \item sQuire system approves the request and sends the selected user's full profile info.
+  \item The user's system loads a new page displaying the selected user's full profile info.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & In step 3 sQuire approves the request but because of the selected user's privacy settings only partial profile info is sent to the user. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Modify Profile Info (brec9824)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User of sQuire. \\ 
+ \\
+ \textit{Goals:} & User updates their profile info including project preferences. \\
+ \\
+ \textit{Pre-conditions:} & \begin{enumerate}
+  \item The user is logged in.
+  \item The user is at their profile page.
+ \end{enumerate} \\
+ \\
+ \textit{Summary:} & User clicks on the edit button, modifies their info, clicks save and their info gets saved.\\ 
+ \\
+ \textit{Related use cases:} & Modify Profile Privacy. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The user clicks the edit button.
+  \item The user's system sends a request to the sQuire system.
+  \item sQuire system recieves the request and verifies the user's credentials.
+  \item The user's system loads a new page displaying the user's profile but with editable text boxes.
+  \item The user edits their desired info.
+  \item The user clicks the save button and the user's system sends the updated info to the sQuire system.
+  \item sQuire system recieves the new data, verifies the data meets predefined requirements and aprroves the update.
+  \item User is returned to their profile page as before with their updated info.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & \begin{enumerate} 
+  \item In step 3 the sQuire system denies the request because the user was idle to long and is not logged in anymore. 
+  \item In step 7 the sQuire system denies the user's request to update their profile: 1. the user's email was invalid 
+  2. the user's password didn't meet the security requirements 3. the user used ineligible words or phrases. User is notified of the denial and is returned to step 5.
+ \end{enumerate} \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Modify Profile Privacy (brec9824)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User of sQuire. \\ 
+ \\
+ \textit{Goals:} & User updates their profile info. \\
+ \\
+ \textit{Pre-conditions:} & \begin{enumerate}
+  \item The user is logged in.
+  \item The user is at their profile page.
+ \end{enumerate} \\
+ \\
+ \textit{Summary:} & User clicks on the privacy level checkbox, clicks save and their new privacy level is saved.\\ 
+ \\
+ \textit{Related use cases:} & Modify Profile Info. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The user clicks the appropriate privacy checkbox next to the data they wont to change the privacy of.
+  \item The user clicks the save button.
+  \item sQuire system recieves the request and verifies the user's credentials.
+  \item sQuire system recieves the updated privacy settings and aprroves the update.
+  \item User is returned to their profile page as before with their updated info.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & \begin{enumerate} 
+  \item In step 3 the sQuire system denies the request because the user was idle to long and is not logged in anymore.
+ \end{enumerate} \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Delete Account (brec9824)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User of sQuire. \\ 
+ \\
+ \textit{Goals:} & Delete the user's account. \\
+ \\
+ \textit{Pre-conditions:} & \begin{enumerate}
+  \item The user is logged in.
+  \item The user is at their profile page.
+ \end{enumerate} \\
+ \\
+ \textit{Summary:} & User clicks on the delete account button, then confirms their choice and their account is deleted from sQuire servers after a set amount of time.\\ 
+ \\
+ \textit{Related use cases:} & Modify Profile Info. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The user clicks the delete account button.
+  \item System covers the room window with a new window that is dark and nearly transparent.(Gives the appearance that the page is dimmed) 
+  \item System opens a pop-up window that contains a confirm button, a cancel button, and text that asks the user if they are sure and notifies them that this action is permanent.
+  \item The user clicks the submit button.
+  \item System closes the pop-up windows and the dim window in the background.
+  \item System kicks the user from their account and adds the account to a list for future deletions.
+  \item User is returned to sQuire's home page.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & \begin{enumerate} 
+  \item If the user in step 4 clicks cancel or clicks out of the pop-up window and onto the dim window in the background. The dim window created in step 2 and the pop-up window in step 3 closes and action is taken.
+ \end{enumerate} \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Quick Jump To Projects (brec9824)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User of sQuire. \\ 
+ \\
+ \textit{Goals:} & Go to a projects page that is listed in a user's profile. \\
+ \\
+ \textit{Pre-conditions:} & \begin{enumerate}
+  \item The user is logged in.
+  \item The user is at a user's profile page.
+ \end{enumerate} \\
+ \\
+ \textit{Summary:} & User clicks on the appropriate project name and then is redirected to the projects home page.\\ 
+ \\
+ \textit{Related use cases:} & None. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The user searches through the projects listed in the user's profile page and clicks the project name they would like to go to.
+  \item System recieves the request and searches for the specified project in the project data base.
+  \item System finds the project and sends the redirect info.
+  \item The user is then redirected to the given projects home page screen.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & \begin{enumerate} 
+  \item None.
+ \end{enumerate} \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+
+\section{Project User Management (boss2849)}
+\subsection{Modify read/write access (boss2849)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Modify a user\'s permissions. \\
+ \\
+ \textit{Pre-conditions:} & User is signed in and holds Admin rights for the currently selected Project\\
+ \\
+ \textit{Summary:} & User modifies another User\'s read/write permissions to portions of the project. \\
+ \\
+ \textit{Related use cases:} & None. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks Permissions Management
+  \item System displays permissions management window
+  \item User selects a file, multiple files, directory or entirety of project and grants/revokes read/write access
+  \item System modifes the target User\'s permissions and notifies them.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & 3. User selects cancel, System discards changes. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Remove User  (boss2849)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Remove a user from project. \\
+ \\
+ \textit{Pre-conditions:} & User is signed in, in project with Admin rights, and is on User Management page\\
+ \\
+ \textit{Summary:} & User removes a selected user from the Project \\ 
+ \\
+ \textit{Related use cases:} & Invite User, Modify Read/Write Access \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks Remove User button.
+  \item System displays list of active users for project.
+  \item User selects one or more other users from the list and presses Remove.
+  \item System prompts User for verification.
+  \item User presses Confirm.
+  \item System removes the selected users from the project.
+  \item System revokes read and write access from the selected users.
+  \item System notifies selected users that they have been removed from the project.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User presses Cancel in steps 3 or 5, System returns user to User Management page \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Invite User to Project  (boss2849)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Invite user(s) to project \\
+ \\
+ \textit{Pre-conditions:} & User is signed in, in project with Admin rights, and is on User Management page \\
+ \\
+ \textit{Summary:} & User invites user(s) to the current project. \\ 
+ \\
+ \textit{Related use cases:} & Remove User, Join Project \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks Invite Users button
+  \item System prompts user to enter username(s)/email(s)
+  \item User enters username(s)/email(s) of the user(s) to invite and presses Ok.
+  \item System looks up the specified user(s) and notifies them of invitation to the Project
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & \begin{enumerate}
+  \item User presses cancel in step 3, System returns User to User Management page
+  \item In step 4, username(s)/email(s) don\'t match any users, System notifies User of failed invitiations.
+ \end{enumerate} 
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Promote User to Admin  (boss2849)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Promote a specified User to Admin \\
+ \\
+ \textit{Pre-conditions:} & User is signed in, in project with Admin rights, and is on User Management page \\
+ \\
+ \textit{Summary:} & User selects another User to be given Admin rights for the project. \\ 
+ \\
+ \textit{Related use cases:} & Demote Admin \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User selects Promote to Admin.
+  \item System displays a list of non-Admin active users.
+  \item User selects user(s) and presses Submit.
+  \item System prompts user for confirmation.
+  \item User selects Confirm.
+  \item System grants Admin permissions to the selected user(s).
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User presses cancel in steps 3 or 5, no action taken. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Demote Admin  (boss2849)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Demote Admin to user \\
+ \\
+ \textit{Pre-conditions:} & User is signed in, in project with Admin rights, and is on User Management page \\
+ \\
+ \textit{Summary:} & User demotes selected Admins to normal Users for the project. \\ 
+ \\
+ \textit{Related use cases:} & Promote User to Admin \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User selects Demote Admin
+  \item System displays list of Admins
+  \item User selects Admin(s) to demote and presses Submit.
+  \item System prompts User for confirmation.
+  \item User presses Confirm.
+  \item System revokes Admin rights from selected User(s)
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & \begin{enumerate}
+  \item User presses cancel in steps 3 or 5, no action taken
+  \item User attempts to demote Admin that is the Owner of the project, System rejects request and notifies User.
+ \end{enumerate}
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Block User (boss2849)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Block a user from the project \\
+ \\
+ \textit{Pre-conditions:} & User is signed in, in project with Admin rights, and is on User Management page \\
+ \\
+ \textit{Summary:} & User blocks a user from the project, making them unable to view the project. \\ 
+ \\
+ \textit{Related use cases:} & Demote Admin \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks Block User.
+  \item System displays a list of active users.
+  \item User selects other user(s) to block and presses Submit.
+  \item System prompts User for confirmation.
+  \item User presses Confirm.
+  \item System blocks selected user(s) from the project, revoking read/write access, and revoking Admin status as necessary.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User presses cancel in steps 3 or 5.
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\section{Compile (boss2849)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Compile source \\
+ \\
+ \textit{Pre-conditions:} & User is logged in and viewing project. \\
+ \\
+ \textit{Summary:} & User requests that the code be compiled, the server compiles the code. \\
+ \\
+ \textit{Related use cases:} & Run, Compile To Jar \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+   \item User selects ``Compile'' from ``Build'' dropdown menu for the current module.
+   \item The Server receives the request to compile.
+   \item The Server caches the current state of the project using the SnapshotManager and compiles it using the active CompilerPlugin.
+   \item The Server returns the results of compilation to the User.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & In step 1, user chooses to compile entire project, including all sub modules. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\section{Run (boss2849)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User. \\ 
+ \\
+ \textit{Goals:} & Run the program. \\
+ \\
+ \textit{Pre-conditions:} & User is logged in and viewing a project. \\
+ \\
+ \textit{Summary:} & User chooses to run the program and the server compiles it or executes the last compilation result if no changes. \\
+ \\
+ \textit{Related use cases:} & Compile \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User selects ``Run'' from the ``Build'' menu drop down.
+  \item The Server receives the request to execute.
+  \item The Server retrieves the most recent compilation from the SnapshotManager.
+  \item The Server spawns a new window for the client that is the interface to the program.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & In step 3 the SnapshotManager has either an out of date compilation or no last compilation, the Server invokes the compiler to compile the project. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\section{Package to Jar (boss2849)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Compile and package source to a jar\\
+ \\
+ \textit{Pre-conditions:} & User is signed in and viewing a project. \\
+ \\
+ \textit{Summary:} & User selects to build the project to a jar, the server outputs a jar on the project path. \\
+ \\
+ \textit{Related use cases:} & Compile \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The user seclects ``Compile To Jar'' from ``Build'' dropdown menu.
+  \item The Server receives the request to build a jar.
+  \item The Server fetches the most recent compilation from the SnapshotManager.
+  \item The Server packages the result of the last compilation to a jar and outputs it on the project path.
+  \item The Server notifies the user of success.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & In step 3 the SnapshotManager has either an out of date compilation or no last compilation, the Server invokes the compiler to compile the project. In step 4 or 5, the compilation process fails and the Server notifies the user with the reason of failure. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\section{Enable code freeze (boss2849)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Impose a code freeze on the project. \\
+ \\
+ \textit{Pre-conditions:} & User is signed in, viewing a project, and has admin rights.\\
+ \\
+ \textit{Summary:} & User places a code freeze on the project, preventing editing until undone. \\
+ \\
+ \textit{Related use cases:} & None. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The User selects ``Code Freeze'' from the dropdown menu.
+  \item The Server receives the request for code freeze.
+  \item The Server restricts all editing of project files.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\end{document}

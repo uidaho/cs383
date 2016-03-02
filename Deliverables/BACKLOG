@@ -1,0 +1,14 @@
+Backlog for HW3 due already.
+    Get a Java compiler installed and learn Java, enough to do a main menu with at least: a background graphic, a "New Game", "Load Game", "Save Game", "Options", "About", and "Exit". There is no turnin item for this assignment item.
+
+Backlog for HW4 due March 4th.
+    finalize overview/scope -- staying on course completed
+    pick sections for sequence diagrams by Friday 2/29
+    clean-up functional requirements -- same sections by wednesday
+    clean up non-functional reuirements -- same sections by wednesday
+    clean up use case diagrams and descriptions by monday
+        For each use case, identify classes in the class diagram involved in implementing it.
+        For each functional and non-functional requirement, identify and label where it is reflected in the corresponding use cases or class diagram.
+    check for overlap in requirements by monday
+    preliminary class diagrams focused on relationships between classes by wednedsay
+    sequence diagrams (different subjects) by friday

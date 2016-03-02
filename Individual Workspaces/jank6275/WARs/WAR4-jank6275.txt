@@ -1,0 +1,16 @@
+From: Brandon Jank <jank6275@vandals.uidaho.edu> 
+To: Dr. J. <jeffery@cs.uidaho.edu>
+Subject: Status report, Brandon Jank, 2016-03-06 
+
+Weekly Status Report of Team 3 (Team Lambda) 
+for the Last Week Ending 2016-03-06 Sunday
+
+Activities Planned for Last Week:
+  - Clean-up vocab/class names.
+  - Finish preliminary class diagrams focused on relationships between classes 
+  - Complete sequence diagrams for Authentication instead of Communication
+  
+Activities Accomplished Last Week:
+
+
+Activities Planned for Next Week:

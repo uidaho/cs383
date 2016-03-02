@@ -1,0 +1,23 @@
+@startuml
+
+scale 800 width
+hide circles
+
+footer
+Created by Rick Boss
+Reviewed by Eric Gallegos
+endfooter
+
+class MainWindow
+interface CompilerPlugin 
+class JavaCompiler
+class Compiler      
+class SnapshotManager 
+
+MainWindow -d- Compiler : shows to
+JavaCompiler -u-|> CompilerPlugin : Compiles Code
+Compiler o--"1..*" CompilerPlugin : uses
+Compiler o-- SnapshotManager : invokes
+SnapshotManager -l- CompilerPlugin : uses
+
+@enduml

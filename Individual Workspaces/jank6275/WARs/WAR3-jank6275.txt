@@ -1,0 +1,28 @@
+From: Brandon Jank <jank6275@vandals.uidaho.edu> 
+To: Dr. J. <jeffery@cs.uidaho.edu>
+Subject: Status report, Brandon Jank, 2016-02-28 
+
+Weekly Status Report of Team 3 (Team Lambda) 
+for the Last Week Ending 2016-02-28 Sunday
+
+Activities Planned for Last Week:
+  - finalize overview/scope
+  - clean-up functional requirements
+  - clean up non-functional reuirements
+  - clean up use case diagrams and descriptions
+  - check for overlap in requirements
+
+Activities Accomplished Last Week:
+  - We picked a team name: Team Lambda
+  - The reporter for meetings is now: mars2671
+  - Finalized Overview: Squire, the "Kickstarter for Code".
+  - I created a Master Requirements Specification (MRS) document template.
+  - I revised old functional and non-functional requirements for communication.
+  - I revised use case diagrams and descriptions for communication.
+  - I revised and integrated class diagrams for communication.
+  - I integrated my requirements, use cases, and class diagrams into the MRS.
+
+Activities Planned for Next Week:
+  - Clean-up vocab/class names.
+  - Finish preliminary class diagrams focused on relationships between classes 
+  - Complete sequence diagrams for Authentication instead of Communication

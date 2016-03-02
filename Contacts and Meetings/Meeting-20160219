@@ -1,0 +1,98 @@
+Team Meeting - Friday 2/19/2016
+
+Absent Members: None
+Important Notes:
+- Assignment is due: Friday 2/19/16 10:00pm
+- The finished turnin, via Blackboard, should consist of an assembly document, image files, and plantUML files for each diagram.
+
+Tasks:
+- Finalize major sub-systems by 6pm tonight:
+    - Authentication                (mora5651)
+    - Project Management            (bolt1003)
+    - Project Ideas                 (mars2681)
+    - Settings-Preferences/Profile  (brec9824)
+    - Compiler                      (boss2849)
+    - Syntax                        (gall7417)
+    - Communication                 (jank6275)
+    - Project File Editor           (snev7821)
+
+- E-mail Dr.J with team officers and github with turn-in tonight:
+    - Elect a scrum master. (jank6275)
+    - Elect a github boss. (boss2849)
+    - Elect a reporter for WARs. (mars2671)
+    - https://github.com/uidaho/cs383
+
+- Class Diagram:
+    - For this sprint, as one of your team's sprint commitments, the team should develop a set of class diagrams for your project. Focus on the application domain, not auxiliary classes that are likely to be used in the implementation (e.g. GUI class libraries).
+    - Each person on the team is given one or more UML class diagrams that describe details about a portion of the project.
+    - A "detail" subteam (1-3 persons) should be assigned to each major subsystem. The number of subteams is up to your team, but remember to include:
+
+
+What is Due Tonight for HW#3
+    10pm due date for what?
+    individual's practice w/ class diagrams
+    Group-coordinated assembly of useful class diagrams
+    Old/past sprint backlog, results, and artifacts thereof
+    Plan for the next sprint (who's doing what)
+    
+Sprint Planning Meeting
+    Show your past sprint's backlog, and what you accomplished
+    What went well, and what needs improvement
+    Develop new sprint's backlog, each team member commits to one or more items.
+    
+What was accomplished on previ?
+    class diagrams drafts
+    class diagram revisions
+    class diagram final
+    class diagram integration
+    class diagram overview
+    class diagram descriptions/dictionary
+    divison of labor
+    
+What went well?
+    c9 is badass
+    cohesion of style
+    majoity of diagrams completed
+    delegated work equally
+    
+What needs improvement?
+    More communication.
+    More time in class to organize.
+    More use of backlog.
+    
+Develop Backlog
+    finalize overview/scope -- staying on course completed
+    clean-up functional requirements -- same sections by wednesday
+    clean up non-functional reuirements -- same sections by wednesday
+    clean up use case diagrams and descriptions
+    check for overlap in requirements
+    preliminary class diagrams focused on relationships between classes
+    sequence diagrams (different subjects)
+    
+    
+    
+- Sub-system assignemts for clean-up:
+    - Authentication                (mora5651)
+    - Project Management            (bolt1003)
+    - Project Ideas                 (mars2681)
+    - Settings-Preferences/Profile  (brec9824)
+    - Compiler                      (boss2849)
+    - Syntax                        (gall7417)
+    - Communication                 (jank6275)
+    - Project File Editor           (snev7821)
+    
+- Sub-system assignemts for sequence diagrams:
+    - Authentication                ()
+    - Project Management            ()
+    - Project Ideas                 ()
+    - Settings-Preferences/Profile  ()
+    - Compiler                      ()
+    - Syntax                        ()
+    - Communication                 ()
+    - Project File Editor           ()
+    
+    
+    overview and scope,
+functional and non-functional requirements,
+use case diagrams and descriptions, and
+preliminary class diagrams that focus on relationships between classes.

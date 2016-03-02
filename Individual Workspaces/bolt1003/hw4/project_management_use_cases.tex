@@ -1,0 +1,280 @@
+\documentclass[11pt]{report}
+
+\usepackage{graphicx}
+
+\marginparwidth 0.5in 
+\oddsidemargin 0.25in 
+\evensidemargin 0.25in 
+\marginparsep 0.25in
+\topmargin 0.0in 
+\textwidth 6in \textheight 8.5in
+
+\title{HW4: Use Cases}
+\author{bolt1003}
+
+\begin{document}
+\maketitle
+
+\chapter{Application Domain Specification}
+
+\section{Use Case Descriptions}
+
+\subsection{Create Project (Created by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Users of sQuire. \\ 
+ \\
+ \textit{Goals:} & Create a Project. \\
+ \\
+ \textit{Pre-conditions:} & The user is logged in and at the bashboard. \\
+ \\
+ \textit{Summary:} & The user creates a project. \\ 
+ \\
+ \textit{Related use cases:} & None. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User selects the "+" icon and a wizard appears.
+  \item A name is choosen for the project.
+  \item Language is selected from a drop down menu.
+  \item User clicks finish.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & Create project from the editor. \\
+ \\
+ \textit{Post-conditions:} & The user assigns permissions to access the project. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Open a project (Created by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Users of sQuire. \\ 
+ \\
+ \textit{Goals:} & Choose the desired project and open it. \\
+ \\
+ \textit{Pre-conditions:} & One or more projects are available, the user is logged in and at the dashboard. \\
+ \\
+ \textit{Summary:} & User looks through a list of projects and selects the desired project. \\ 
+ \\
+ \textit{Related use cases:} & None. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User clicks on projects in the menu bar.
+  \item A list of projects appears and the user clicks on the desired project.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & Open a project from recent projects. \\
+ \\
+ \textit{Post-conditions:} & User closes sQuire. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Join Project (Created by sass8427, Revised by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+\hline
+\\
+\textit{Actors:} & Users of sQuire. \\ 
+\\
+\textit{Goals:} & Join an existing project.\\
+\\
+\textit{Pre-conditions:} & Must be registered, logged in and have permission to join a project.\\
+\\
+\textit{Summary:} & The user logs in, chooses a project, and joins the project. \\
+\\
+\textit{Related use cases:} & Invite user to project, Accept user invite. \\
+\\
+\textit{Steps:} & \begin{enumerate}
+ \item The user selects a project.
+ \item The user chooses the "Join". 
+ \item The project is added to the users projects bar.
+ \item The user selects the project and selects "open".
+\end{enumerate}\\
+\\
+\textit{Alternatives:} & User may decline an inventation to join a project. \\
+\\
+\textit{Post-conditions:} & None \\
+\\
+\hline
+\end{tabular}
+
+\subsection{Leave project (Created by sass8427, Revised by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Remove member status from project. \\
+ \\
+ \textit{Pre-conditions:} & Logged in, member of the respective project, not project owner.  \\
+\\
+ \textit{Summary:} & A member of a project can unjoin that project at any time as long as they are not the project owner. To prevent mistakenly unjoining a project, the user is asked to confirm their decision.\\ 
+ \\
+ \textit{Related use cases:} & \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item User selects a project.
+  \item User clicks "Unjoin". 
+  \item User is promted to confirm their decision
+  \item User clicks "Confirm".
+  \item User is removed from project member list.    
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User clicks "Cancel" at step 4, in which case the task is ends at that point. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Delete Project(Created by mora5651, Revised by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+\hline
+\\
+\textit{Actors:} & Users of sQuire.\\
+\\
+\textit{Goals:} & Delete an existing project. \\
+\\
+\textit{Pre-conditions:} & The user has the appropriate permissions to delete project. 
+\\
+\textit{Summary:} & A user deletes a project from the project workspace.\\
+\\
+\textit{Related use cases:} & Create a project. \\
+\\
+\textit{Steps:} & \begin{enumerate}
+ \item The user selects a project.
+ \item The user clicks on the "Delete project" button. 
+ \item A dialog is displayed. 
+ \item User select "delete" to delete the project. 
+ \end{enumerate}\\
+ \\
+ \textit{Alternatives:} & User may choose not to delete the project in the confirmation display.\\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Export Project(Created by knic1468, Revised by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+\hline
+\\
+\textit{Actors:} & User of sQuire.\\
+\\
+\textit{Goals:} & Export a workspace to a local file. \\
+\\
+\textit{Pre-conditions:} & The user needs permission to export the project. 
+\\
+\textit{Summary:} & User saves a file containing the project settings and files to a local machine. \\
+\\
+\textit{Related use cases:} & Importing a project, Creating a new project. \\
+\\
+\textit{Steps:} & \begin{enumerate}
+ \item The user clicks on the "Export File" button. 
+ \item System prompts the user to select a location and filename. 
+ \item User selects a file location.
+ \item The user enters a file name.
+ \item The user selects "export". 
+ \end{enumerate}\\
+ \\
+ \textit{Alternatives:} & The user cancels the export, The system prompts that a file already exists with the same name.\\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Accept Invite to Project (Created by carl7595, Revised by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }   
+ \hline
+ \\
+ \textit{Actors:} & User who received the invite. \\
+ \\
+ \textit{Goals:} & Gain access to a Project. \\
+ \\
+ \textit{Pre-conditions:} & User has a valid email address. \\
+ \\
+ \textit{Summary:} & Access is granted to a project using an invitation email. \\ 
+ \\
+ \textit{Related use cases:} & Create an account. \\
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Invitee clicks on the link received by email.
+	 \item The link opens in a browser.
+	 \item Dialog appear welcoming them to the project.
+	 \item The project is added to their Projects list.
+	\end{enumerate} \\
+ \\
+ \textit{Alternatives:} & The user ignores the invite. \\
+ \textit{Post-conditions:} & Email link is deactivated. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Remove User from Project (Created by carl7595, Revised by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }   
+ \hline
+ \\
+ \textit{Actors:} & User of sQuire \\
+ \\
+ \textit{Goals:} & Revoke access to the Project for a single or multuple users. \\
+ \\
+ \textit{Pre-conditions:} & The user has permission to edit the Project access list. \\
+ \\
+ \textit{Summary:} & One or more user accounts are removed from the access list for a project. \\ 
+ \\
+ \textit{Related use cases:} & Add users to a project.  \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The user selects the access list for the project.
+	 \item The user selects an account. 
+	 \item The user selects "Remove from Project".
+	 \item The user is prompted for confirmation
+	 \item The user selects 'Yes'.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & The user selects 'No' and the access list is not modified. \\
+ \\
+ \textit{Post-conditions:} & \begin{itemize}
+	 \item The user that was removed is notified of the change.
+	 \item The user is prevented from accessing files.
+ \end{itemize}\\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Edit Project Permissions (Created by benz5834, Revised by bolt1003)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User of sQuire \\ 
+ \\
+ \textit{Goals:} & Edit the permissions for a project \\
+ \\
+ \textit{Pre-conditions:} & The user is logged in. \\
+ \\
+ \textit{Summary:} & User opens up the settings menu and navigates to permissions, adds (or removes) users individual access rights to the project.  \\ 
+ \\
+ \textit{Related use cases:} & Add user to project, Remove user from project. \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item The user selects a project.
+  \item The user selects settings.
+  \item The user selects permissions.
+  \item The user selects user from list of users.
+  \item The user adds read or write permissions to user.
+  \item The user selects save to save changes.
+  \item The user exits settings.
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & User can remove read or write permission instead in step 6. User can discard changes instead in step 7. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\end{document}

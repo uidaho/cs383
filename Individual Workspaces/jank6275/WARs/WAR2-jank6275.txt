@@ -1,0 +1,44 @@
+From: Brandon Jank <jank6275@vandals.uidaho.edu> 
+To: Dr. J. <jeffery@cs.uidaho.edu>
+Subject: Status report, Brandon Jank, 2016-02-19 
+
+Weekly Status Report of Team 3 (Team Lambda) 
+for the Last Week Ending 2016-02-21 Sunday
+
+Activities Planned for Last Week:
+  - Complete rough draft of class diagram for review
+  - Assign group for overview diagram.
+  - Review each other’s class diagrams.
+  - Integrate individual diagrams into Assembly Document for delivery to Dr. J.
+
+Activities Accomplished Last Week:
+  - Picked a team name: Team Lambda
+  - Elected team "officers":
+    - Scrum master: jank6275
+    - Github boss: boss2849
+    - Reporter for WARs: mars2671
+    - Github Repo: https://github.com/uidaho/cs383
+  - Class diagram drafts completed.
+  - Class diagram descriptions/dictionary completed.
+  - Reviewed each other’s class diagrams.
+  - Class diagram revisions completed.
+  - Assign group for overview diagram.
+  - Class diagram general overview completed.
+  - Integrated individual diagrams into Assembly Document for delivery to Dr. J.
+
+Activities Planned for Next Week:
+  - finalize overview/scope -- staying on course completed
+  - clean-up functional requirements -- same sections by wednesday
+  - clean up non-functional reuirements -- same sections by wednesday
+  - clean up use case diagrams and descriptions -- by friday
+  - check for overlap in requirements -- by friday
+    
+Activities Planned for Next Next Week:    
+  - preliminary class diagrams focused on relationships between classes 
+  - sequence diagrams (different subjects)
+
+New Issues:
+  - We need to be better about having more deadlines for work, the rush at the end kills.
+    
+Old Issues
+  - None

@@ -1,0 +1,49 @@
+Team Meeting - Monday 2/22/2016
+
+Absent Members: mora5651
+Important Notes:
+None.
+
+Team Officers
+    - Scrum master: jank6275
+    - Github boss: boss2849
+    - Scrum Reporter: mars2671
+
+Sub-systems and assignments
+- Sub-system assignemts for clean-up:
+    - Authentication                (mora5651)
+    - Project Management            (bolt1003)
+    - Project Ideas                 (mars2681)
+    - Settings-Preferences/Profile  (brec9824)
+    - Compiler                      (boss2849)
+    - Syntax                        (gall7417)
+    - Communication                 (jank6275)
+    - Project File Editor           (snev7821)
+    
+- Sub-system assignemts for sequence diagrams:
+    - Authentication                ()
+    - Project Management            ()
+    - Project Ideas                 ()
+    - Settings-Preferences/Profile  ()
+    - Compiler                      ()
+    - Syntax                        ()
+    - Communication                 ()
+    - Project File Editor           ()
+    
+PROJECT BACKLOG
+Activites Completed Since Last Meeting:
+    pruned through functional and non-functional requirements for each section.
+
+Activited Planned:
+    finalize overview/scope -- staying on course completed
+    pick sections for sequence diagrams by Friday 2/29
+    clean-up functional requirements -- same sections by wednesday
+    clean up non-functional reuirements -- same sections by wednesday
+    clean up use case diagrams and descriptions by monday
+        For each use case, identify classes in the class diagram involved in implementing it.
+        For each functional and non-functional requirement, identify and label where it is reflected in the corresponding use cases or class diagram.
+    check for overlap in requirements by monday
+    preliminary class diagrams focused on relationships between classes by wednedsay
+    sequence diagrams (different subjects) by friday
+
+    

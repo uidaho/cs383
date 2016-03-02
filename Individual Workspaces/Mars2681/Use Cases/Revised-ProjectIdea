@@ -1,0 +1,33 @@
+@startuml
+
+
+:User: as U
+:Project Administrator: as PA
+
+
+rectangle "User Actions"{
+(Browse Project Ideas) --> (View Project Idea)
+(View Project Idea) --> (Follow Project Idea)
+(View Project Idea) --> (Like/Dislike Project Idea)
+(View Project Idea) ..> (View Project Idea Comments) : Automatically Opened
+(View Project Idea Comments) --> (Comment On Project Idea)
+}
+
+
+rectangle "Authentication" {
+    U --> (View Home) 
+    PA --> (View Home) 
+    
+}
+(View Home) --> (View Project Idea Home)
+
+rectangle "Project Administrator Actions"{
+(Create Project Idea) --> (Edit Project Idea)
+
+}
+
+(View Project Idea Home) --> (Create Project Idea)
+(View Project Idea Home) --> (Edit Project Idea) :Requires pre-existing Project Idea
+(View Project Idea Home) --> (Browse Project Ideas)
+
+@enduml

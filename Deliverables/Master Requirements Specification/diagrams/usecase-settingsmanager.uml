@@ -1,0 +1,21 @@
+'Author: Robert Breckenridge
+'Feb 29, 2016
+
+@startuml
+top to bottom direction
+:User:
+scale 800 width
+
+rectangle "Requires Account Ownership"{
+    (Modify Profile Info)
+    (Modify Profile Privacy)
+    (Delete Account)
+}
+
+User --> (View A User’s Profile)
+(View A User’s Profile) --> (Modify Profile Info)
+(View A User’s Profile) --> (Modify Profile Privacy)
+(View A User’s Profile) --> (Delete Account)
+(View A User’s Profile) --> (Quick Jump To Projects)
+
+@enduml

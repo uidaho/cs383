@@ -1,12 +1,17 @@
 # CS 383 HW #2 - PlantUML Makefile
 
-FILE = user-management
+CLASS = compiler-classidagram
+CASE = compiler-use-case
 CC = java -jar plantuml.jar
 FLAGS = -tpng
 
-all: ${FILE}.tex
+all: 
+	${CC} ${FLAGS} *.uml
 
-${FILE}.tex: ${FILE}.uml
+${CLASS}.uml: 
+	${CC} ${FLAGS} ${FILE}.uml
+	
+${CASE}.uml: 
 	${CC} ${FLAGS} ${FILE}.uml
 
 clean:
