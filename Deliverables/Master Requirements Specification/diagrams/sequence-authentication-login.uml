@@ -1,0 +1,30 @@
+@startuml
+scale max 800*600
+title Authentication Sequence Diagram
+footer 
+Created by jank6275 and reviewed by mora5651.
+endfooter
+
+
+actor User
+activate User
+User -> MainWindow : login(username, password)
+activate MainWindow
+
+boundary MainWindow
+MainWindow -> SessionManager : checkCredentials(username, password)
+activate SessionManager
+
+entity SessionManager
+SessionManager -> Database : getUserInfo(userid)
+activate Database
+
+database Database
+Database --> SessionManager : [UserInformation]
+SessionManager -> SessionManager : checkCredentials
+deactivate Database
+SessionManager -> MainWindow : login fail/success message
+deactivate SessionManager
+MainWindow -> User : Logged in
+
+@enduml

@@ -1,120 +1,97 @@
 \contentsline {chapter}{\numberline {1}Overview and Scope}{2}
-\contentsline {section}{\numberline {1.1}Core Features (carl7595)}{2}
-\contentsline {section}{\numberline {1.2}Storage and Organization (benz5834)}{4}
-\contentsline {section}{\numberline {1.3}Security Nightmare (jank6275)}{4}
-\contentsline {section}{\numberline {1.4}Execution (guan2264)}{5}
-\contentsline {section}{\numberline {1.5}Collaboration (ratc8795)}{5}
-\contentsline {section}{\numberline {1.6}Achievement System (ratc8795)}{5}
+\contentsline {section}{\numberline {1.1}Core Features}{2}
+\contentsline {section}{\numberline {1.2}Storage and Organization}{4}
+\contentsline {section}{\numberline {1.3}Execution}{4}
+\contentsline {section}{\numberline {1.4}Collaboration}{4}
+\contentsline {section}{\numberline {1.5}Achievement System}{5}
+\contentsline {section}{\numberline {1.6}Chat System}{5}
 \contentsline {section}{\numberline {1.7}Permissions System (bolt1003)}{5}
-\contentsline {section}{\numberline {1.8}Interface Structure (mora5651)}{6}
-\contentsline {section}{\numberline {1.9}Chat System (knic1468)}{6}
+\contentsline {section}{\numberline {1.8}Interface Structure (mora5651)}{5}
+\contentsline {section}{\numberline {1.9}Security Nightmare (jank6275)}{6}
 \contentsline {chapter}{\numberline {2}Requirements Documentation}{7}
 \contentsline {section}{\numberline {2.1}Functional Requirements}{7}
-\contentsline {subsection}{\numberline {2.1.1}Authentication (mars2681)}{7}
-\contentsline {subsection}{\numberline {2.1.2}Project Management (mora5651)}{7}
-\contentsline {subsection}{\numberline {2.1.3}Project Ideas (snev7821)}{7}
+\contentsline {subsection}{\numberline {2.1.1}Authentication (mora5651)}{7}
+\contentsline {subsection}{\numberline {2.1.2}Project Management (bolt1003)}{7}
+\contentsline {subsection}{\numberline {2.1.3}Project Ideas (mars2681)}{7}
 \contentsline {subsection}{\numberline {2.1.4}Settings - Preferences and Profile (brec9824)}{8}
-\contentsline {subsection}{\numberline {2.1.5}Project File Editor (jank6275) Updated by (snev7821)}{8}
-\contentsline {subsection}{\numberline {2.1.6}Communication (bolt1003)}{9}
-\contentsline {subsection}{\numberline {2.1.7}Security (gall7417)}{9}
-\contentsline {subsection}{\numberline {2.1.8}Compiler (boss2849)}{10}
+\contentsline {subsection}{\numberline {2.1.5}Compiler (boss2849)}{8}
+\contentsline {subsection}{\numberline {2.1.6}Syntax (gall7417)}{8}
+\contentsline {subsection}{\numberline {2.1.7}Communication (jank6275)}{8}
+\contentsline {subsection}{\numberline {2.1.8}Project File Editor (snev7821)}{9}
+\contentsline {subsection}{\numberline {2.1.9}Security (gall7417)}{9}
 \contentsline {section}{\numberline {2.2}Non-Functional Requirements}{10}
 \contentsline {section}{\numberline {2.3}Use Case Diagrams}{12}
-\contentsline {subsection}{\numberline {2.3.1}Overview (jank6275)}{12}
-\contentsline {subsection}{\numberline {2.3.2}Project Ideas (dani2918)}{12}
-\contentsline {subsection}{\numberline {2.3.3}Authentication (alsh5301)}{13}
-\contentsline {subsection}{\numberline {2.3.4}Communication (jank6275)}{13}
-\contentsline {subsection}{\numberline {2.3.5}File Editing (wern0096)}{14}
-\contentsline {subsection}{\numberline {2.3.6}File Management (wern0096)}{14}
-\contentsline {subsection}{\numberline {2.3.7}Project Management (bolt1003)}{14}
-\contentsline {subsection}{\numberline {2.3.8}Settings - Preferences and Profile (brec9824)}{14}
-\contentsline {subsection}{\numberline {2.3.9}Project User Management (boss2849)}{15}
-\contentsline {subsection}{\numberline {2.3.10}User Editor Preferences (snev7821)}{15}
-\contentsline {subsection}{\numberline {2.3.11}Compiler (boss2849)}{15}
+\contentsline {subsection}{\numberline {2.3.1}Project Management (bolt1003)}{12}
+\contentsline {subsection}{\numberline {2.3.2}Project Ideas (mars2681)}{12}
+\contentsline {subsection}{\numberline {2.3.3}Settings, Preferences, and Profile (brec9824)}{13}
+\contentsline {subsection}{\numberline {2.3.4}Compiler (boss2849)}{13}
+\contentsline {subsection}{\numberline {2.3.5}Communication (jank6275)}{14}
+\contentsline {subsection}{\numberline {2.3.6}User Editor Preferences (snev7821)}{15}
 \contentsline {chapter}{\numberline {3}Use Case Descriptions}{16}
 \contentsline {section}{\numberline {3.1}Authentication (mora5651)}{17}
 \contentsline {subsection}{\numberline {3.1.1}Sign up (mora5651)}{17}
 \contentsline {subsection}{\numberline {3.1.2}Sign in (mora5651)}{18}
 \contentsline {subsection}{\numberline {3.1.3}Logout (mora5651)}{19}
-\contentsline {subsection}{\numberline {3.1.4}Forgotten Account Information (mora5651)}{20}
-\contentsline {section}{\numberline {3.2}Project Ideas (dani2918)}{21}
-\contentsline {subsection}{\numberline {3.2.1}Browse Project Ideas (dani2918)}{21}
-\contentsline {subsection}{\numberline {3.2.2}Create Project Idea Thread (dani2918)}{22}
-\contentsline {subsection}{\numberline {3.2.3}Manage Project Idea Thread (dani2918)}{23}
-\contentsline {subsection}{\numberline {3.2.4}Comment on Project Idea (dani2918)}{24}
-\contentsline {subsection}{\numberline {3.2.5}Vote on Project Idea (dani2918)}{25}
-\contentsline {subsection}{\numberline {3.2.6}Share Project Idea (dani2918)}{26}
-\contentsline {section}{\numberline {3.3}Communication (jank6275)}{27}
-\contentsline {subsection}{\numberline {3.3.1}Open project chat (jank6275)}{27}
-\contentsline {subsection}{\numberline {3.3.2}Open global chat (jank6275)}{28}
-\contentsline {subsection}{\numberline {3.3.3}Close project chat (jank6275)}{29}
-\contentsline {subsection}{\numberline {3.3.4}Close global chat (jank6275)}{30}
-\contentsline {subsection}{\numberline {3.3.5}Write to project chat (jank6275)}{31}
-\contentsline {subsection}{\numberline {3.3.6}Write to global chat (jank6275)}{32}
-\contentsline {subsection}{\numberline {3.3.7}Modify chat font (jank6275)}{33}
-\contentsline {subsection}{\numberline {3.3.8}Modify chat color (jank6275)}{34}
-\contentsline {subsection}{\numberline {3.3.9}File Management (snev7821)}{35}
-\contentsline {subsection}{\numberline {3.3.10}Create New Project (snev7821)}{35}
-\contentsline {subsubsection}{Add New File to Project (wern0096) modified for hw4 (snev7821)}{36}
-\contentsline {subsubsection}{Add Existing File to Project (wern0096) modified for hw4 (snev7821)}{37}
-\contentsline {subsubsection}{Delete File (wern0096) modified for hw4 (snev7821)}{38}
-\contentsline {subsubsection}{Delete Project (snev7821)}{39}
-\contentsline {subsubsection}{Export Project (wern0096) modified for hw4 (snev7821)}{40}
-\contentsline {subsubsection}{Export Files (wern0096) modified for hw4 (snev7821)}{41}
-\contentsline {subsubsection}{Open File in New Tab (wern0096) modified for hw4 (snev7821)}{42}
-\contentsline {section}{\numberline {3.4}File Editing (snev7821)}{43}
-\contentsline {subsection}{\numberline {3.4.1}View Line Numbers (wern0096) updated by (snev7821)}{43}
-\contentsline {subsection}{\numberline {3.4.2}View References (wern0096) updated for hw4 by (snev7821)}{44}
-\contentsline {subsection}{\numberline {3.4.3}View Dates (wern0096) updated by (snev7821)}{45}
-\contentsline {subsection}{\numberline {3.4.4}View Authors (wern0096) updated by (snev7821)}{46}
-\contentsline {subsection}{\numberline {3.4.5}Format Document (wern0096) updated by (snev7821)}{47}
-\contentsline {subsection}{\numberline {3.4.6}Find/Replace (wern0096) updated by (snev7821)}{48}
-\contentsline {subsection}{\numberline {3.4.7}Comment Section (wern0096) updated by (snev7821)}{49}
-\contentsline {subsection}{\numberline {3.4.8}Display Typing User (wern0096) updated by (snev7821)}{50}
-\contentsline {subsection}{\numberline {3.4.9}Display Syntax Highlighting (wern0096) updated by (snev7821)}{51}
-\contentsline {section}{\numberline {3.5}User Prefrences (snev7821)}{52}
-\contentsline {subsection}{\numberline {3.5.1}View User Preferences (snev7821)}{52}
-\contentsline {subsection}{\numberline {3.5.2}Modify Chat Font (snev7821)}{53}
-\contentsline {subsection}{\numberline {3.5.3}Modify Chat Color (snev7821)}{54}
-\contentsline {subsection}{\numberline {3.5.4}Edit User Editor Theme (snev7821)}{55}
-\contentsline {subsection}{\numberline {3.5.5}Turn Off Global Chat (snev7821)}{56}
-\contentsline {subsection}{\numberline {3.5.6}Psuedo-offline Mode (snev7821)}{57}
-\contentsline {section}{\numberline {3.6}Project Management}{58}
-\contentsline {subsection}{\numberline {3.6.1}Create Project (Created by bolt1003)}{58}
-\contentsline {subsection}{\numberline {3.6.2}Open a project (Created by bolt1003)}{59}
-\contentsline {subsection}{\numberline {3.6.3}Join Project (Created by sass8427, Revised by bolt1003)}{60}
-\contentsline {subsection}{\numberline {3.6.4}Leave project (Created by sass8427, Revised by bolt1003)}{61}
-\contentsline {subsection}{\numberline {3.6.5}Delete Project(Created by mora5651, Revised by bolt1003)}{62}
-\contentsline {subsection}{\numberline {3.6.6}Export Project(Created by knic1468, Revised by bolt1003)}{63}
-\contentsline {subsection}{\numberline {3.6.7}Accept Invite to Project (Created by carl7595, Revised by bolt1003)}{64}
-\contentsline {subsection}{\numberline {3.6.8}Remove User from Project (Created by carl7595, Revised by bolt1003)}{65}
-\contentsline {subsection}{\numberline {3.6.9}Edit Project Permissions (Created by benz5834, Revised by bolt1003)}{66}
-\contentsline {section}{\numberline {3.7}Settings - Preferences and Profile (brec9824)}{67}
-\contentsline {subsection}{\numberline {3.7.1}View A User's Profile (brec9824)}{67}
-\contentsline {subsection}{\numberline {3.7.2}Modify Profile Info (brec9824)}{68}
-\contentsline {subsection}{\numberline {3.7.3}Modify Profile Privacy (brec9824)}{69}
-\contentsline {subsection}{\numberline {3.7.4}Delete Account (brec9824)}{70}
-\contentsline {subsection}{\numberline {3.7.5}Quick Jump To Projects (brec9824)}{71}
-\contentsline {section}{\numberline {3.8}Project User Management (boss2849)}{72}
-\contentsline {subsection}{\numberline {3.8.1}Modify read/write access (boss2849)}{72}
-\contentsline {subsection}{\numberline {3.8.2}Remove User (boss2849)}{73}
-\contentsline {subsection}{\numberline {3.8.3}Invite User to Project (boss2849)}{74}
-\contentsline {subsection}{\numberline {3.8.4}Promote User to Admin (boss2849)}{75}
-\contentsline {subsection}{\numberline {3.8.5}Demote Admin (boss2849)}{76}
-\contentsline {subsection}{\numberline {3.8.6}Block User (boss2849)}{77}
-\contentsline {section}{\numberline {3.9}Compile (boss2849)}{78}
-\contentsline {section}{\numberline {3.10}Run (boss2849)}{79}
-\contentsline {section}{\numberline {3.11}Package to Jar (boss2849)}{80}
-\contentsline {section}{\numberline {3.12}Enable code freeze (boss2849)}{81}
-\contentsline {chapter}{\numberline {4}Class Diagrams}{82}
-\contentsline {section}{\numberline {4.1}Overview (brec9824, jank6275)}{82}
-\contentsline {section}{\numberline {4.2}Authentication (mora5651)}{83}
-\contentsline {section}{\numberline {4.3}Project Management (bolt1003)}{84}
-\contentsline {section}{\numberline {4.4}Project Ideas (mars2681)}{84}
-\contentsline {section}{\numberline {4.5}Settings - Preferences \& Profile (brec9824)}{85}
-\contentsline {section}{\numberline {4.6}Compiler (boss2849)}{86}
-\contentsline {section}{\numberline {4.7}Lexer (gall7417)}{87}
-\contentsline {section}{\numberline {4.8}Communication (jank6275)}{88}
-\contentsline {section}{\numberline {4.9}Project File Editor (snev7821)}{89}
-\contentsline {chapter}{\numberline {5}Sequence Diagrams}{90}
-\contentsline {section}{\numberline {5.1}Communication (jank6275)}{90}
+\contentsline {subsection}{\numberline {3.1.4}Forgotten Username (mora5651)}{20}
+\contentsline {subsection}{\numberline {3.1.5}Forgotten Password (mora5651)}{21}
+\contentsline {section}{\numberline {3.2}Project Ideas (dani2918)}{22}
+\contentsline {subsection}{\numberline {3.2.1}Browse Project Ideas (dani2918)}{22}
+\contentsline {subsection}{\numberline {3.2.2}Create Project Idea Thread (dani2918)}{23}
+\contentsline {subsection}{\numberline {3.2.3}Manage Project Idea Thread (dani2918)}{24}
+\contentsline {subsection}{\numberline {3.2.4}Comment on Project Idea (dani2918)}{25}
+\contentsline {subsection}{\numberline {3.2.5}Vote on Project Idea (dani2918)}{26}
+\contentsline {subsection}{\numberline {3.2.6}Share Project Idea (dani2918)}{27}
+\contentsline {section}{\numberline {3.3}Communication (jank6275)}{28}
+\contentsline {subsection}{\numberline {3.3.1}Open project chat (jank6275)}{28}
+\contentsline {subsection}{\numberline {3.3.2}Open global chat (jank6275)}{29}
+\contentsline {subsection}{\numberline {3.3.3}Close project chat (jank6275)}{30}
+\contentsline {subsection}{\numberline {3.3.4}Close global chat (jank6275)}{31}
+\contentsline {subsection}{\numberline {3.3.5}Write to project chat (jank6275)}{32}
+\contentsline {subsection}{\numberline {3.3.6}Write to global chat (jank6275)}{33}
+\contentsline {subsection}{\numberline {3.3.7}Modify chat font (jank6275)}{34}
+\contentsline {subsection}{\numberline {3.3.8}Modify chat color (jank6275)}{35}
+\contentsline {section}{\numberline {3.4}Project Management}{36}
+\contentsline {subsection}{\numberline {3.4.1}Create Project (Created by bolt1003)}{36}
+\contentsline {subsection}{\numberline {3.4.2}Open a project (Created by bolt1003)}{37}
+\contentsline {subsection}{\numberline {3.4.3}Join Project (Created by sass8427, Revised by bolt1003)}{38}
+\contentsline {subsection}{\numberline {3.4.4}Leave project (Created by sass8427, Revised by bolt1003)}{39}
+\contentsline {subsection}{\numberline {3.4.5}Delete Project(Created by mora5651, Revised by bolt1003)}{40}
+\contentsline {subsection}{\numberline {3.4.6}Export Project(Created by knic1468, Revised by bolt1003)}{41}
+\contentsline {subsection}{\numberline {3.4.7}Accept Invite to Project (Created by carl7595, Revised by bolt1003)}{42}
+\contentsline {subsection}{\numberline {3.4.8}Remove User from Project (Created by carl7595, Revised by bolt1003)}{43}
+\contentsline {subsection}{\numberline {3.4.9}Edit Project Permissions (Created by benz5834, Revised by bolt1003)}{44}
+\contentsline {subsection}{\numberline {3.4.10}Modify read/write access (boss2849)}{45}
+\contentsline {subsection}{\numberline {3.4.11}Remove User (boss2849)}{46}
+\contentsline {subsection}{\numberline {3.4.12}Invite User to Project (boss2849)}{47}
+\contentsline {subsection}{\numberline {3.4.13}Promote User to Admin (boss2849)}{48}
+\contentsline {subsection}{\numberline {3.4.14}Demote Admin (boss2849)}{49}
+\contentsline {subsection}{\numberline {3.4.15}Block User (boss2849)}{50}
+\contentsline {section}{\numberline {3.5}Settings - Preferences and Profile (brec9824)}{51}
+\contentsline {subsection}{\numberline {3.5.1}View A User's Profile (brec9824)}{51}
+\contentsline {subsection}{\numberline {3.5.2}Modify Profile Info (brec9824)}{52}
+\contentsline {subsection}{\numberline {3.5.3}Modify Profile Privacy (brec9824)}{53}
+\contentsline {subsection}{\numberline {3.5.4}Delete Account (brec9824)}{54}
+\contentsline {subsection}{\numberline {3.5.5}Quick Jump To Projects (brec9824)}{55}
+\contentsline {section}{\numberline {3.6}Compile (boss2849)}{56}
+\contentsline {section}{\numberline {3.7}Run (boss2849)}{57}
+\contentsline {section}{\numberline {3.8}Package to Jar (boss2849)}{58}
+\contentsline {section}{\numberline {3.9}Enable code freeze (boss2849)}{59}
+\contentsline {chapter}{\numberline {4}Class Diagrams}{60}
+\contentsline {section}{\numberline {4.1}Overview (brec9824, jank6275)}{60}
+\contentsline {section}{\numberline {4.2}Authentication (mora5651)}{61}
+\contentsline {section}{\numberline {4.3}Project Management (bolt1003)}{62}
+\contentsline {section}{\numberline {4.4}Project Ideas (mars2681)}{63}
+\contentsline {section}{\numberline {4.5}Settings, Preferences, and Profile (brec9824)}{64}
+\contentsline {section}{\numberline {4.6}Compiler (boss2849)}{65}
+\contentsline {section}{\numberline {4.7}Syntax (gall7417)}{66}
+\contentsline {section}{\numberline {4.8}Communication (jank6275)}{67}
+\contentsline {section}{\numberline {4.9}Project File Editor (snev7821)}{69}
+\contentsline {chapter}{\numberline {5}Sequence Diagrams}{70}
+\contentsline {section}{\numberline {5.1}Authentication (jank6275)}{70}
+\contentsline {section}{\numberline {5.2}Project Management (mars2681)}{70}
+\contentsline {section}{\numberline {5.3}Project Ideas (snev7821)}{71}
+\contentsline {section}{\numberline {5.4}Settings, Preferences, and Profile (gall7417)}{71}
+\contentsline {section}{\numberline {5.5}Compiler (bolt1003)}{72}
+\contentsline {section}{\numberline {5.6}Syntax (mora5651)}{72}
+\contentsline {section}{\numberline {5.7}Communication (boss2849)}{72}
+\contentsline {section}{\numberline {5.8}Project File Editor (brec9824)}{73}

@@ -1,0 +1,46 @@
+@startuml
+hide circle
+activate File
+File -> LexicalAnalysisDriver : invokes
+activate LexicalAnalysisDriver
+LexicalAnalysisDriver -> LexicalAnalysisJava : Calls
+deactivate LexicalAnalysisDriver
+
+
+activate LexicalAnalysisJava
+LexicalAnalysisJava -> JavaSyntaxLib : Calls
+
+
+activate JavaSyntaxLib
+JavaSyntaxLib --> LexicalAnalysisJava
+deactivate JavaSyntaxLib
+
+
+LexicalAnalysisJava  -> TypeCheck : SyntaxTypeCheck()
+
+
+activate TypeCheck
+TypeCheck --> File : Return(TypeCheck)
+deactivate TypeCheck
+
+
+LexicalAnalysisJava -> ColorCode  : SyntaxColorCheck()
+activate ColorCode
+ColorCode --> File : Return(ColorCode)
+deactivate ColorCode
+
+
+LexicalAnalysisJava -> ErrorCheck  : SyntaxErrorCheck()
+activate ErrorCheck
+
+alt successful case
+ErrorCheck --> File: Error Free
+else Error Case
+ErrorCheck --> File: Return Error Message 
+deactivate ErrorCheck
+end
+deactivate LexicalAnalysisJava
+
+
+deactivate File
+@enduml

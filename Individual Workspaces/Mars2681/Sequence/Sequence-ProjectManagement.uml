@@ -1,0 +1,90 @@
+@startuml
+hide circle
+
+activate User
+User --> Server : CreateProject()
+deactivate User
+activate Server
+Server --> Project : CreateProject()
+deactivate Server
+activate Project
+Project --> Project : Initialize()
+deactivate Project
+Project --> User
+
+
+User --> Server : DeleteProject()
+deactivate User
+activate Server
+Server --> Project : IsAdmin()
+deactivate Server
+activate Project
+Project --> Project : Delete()
+deactivate Project
+Project --> User
+
+
+User --> Server : EditProject()
+deactivate User
+activate Server
+Server --> Project : HasPermission()
+deactivate Server
+activate Project
+Project --> Project : Edit()
+deactivate Project
+Project --> User
+
+
+User --> Server : EditPermissions()
+deactivate User
+activate Server
+Server --> Project : IsAdmin()
+deactivate Server
+activate Project
+Project --> Project : EditPermissions()
+deactivate Project
+Project --> User
+
+
+User --> Server : JoinProject()
+deactivate User
+activate Server
+Server --> Server : AskToJoinProject()
+Server --> Project : PermissionAccepted()
+deactivate Server
+activate Project
+Project --> Project : GivePermission()
+deactivate Project
+Project --> User
+
+
+User --> Server : LeaveProject()
+deactivate User
+activate Server
+Server --> Project : EditPermission()
+deactivate Server
+activate Project
+Project --> Server : RemoveUserFromProjectUpdates()
+deactivate Project
+Project --> User
+
+User --> Server : ExportProject()
+deactivate User
+activate Server
+Server --> Project : IsAdmin()
+deactivate Server
+activate Project
+Project --> Project : ExportProject()
+deactivate Project
+Project --> Server : ExportProject()
+Server --> User 
+
+
+deactivate User
+
+activate Server
+
+
+activate Project
+@enduml
+

@@ -1,0 +1,34 @@
+@startuml
+hide circle
+
+File -> LexicalAnalysisDriver : invokes
+activate LexicalAnalysisDriver
+LexicalAnalysisDriver -> LexicalAnalysisJava : Calls
+deactivate LexicalAnalysisDriver
+
+
+activate LexicalAnalysisJava
+LexicalAnalysisJava -> JavaSyntaxLib : moveInDirection(dir)
+deactivate LexicalAnalysisJava
+
+activate JavaSyntaxLib
+JavaSyntaxLib --> LexicalAnalysisJava
+deactivate JavaSyntaxLib
+
+activate LexicalAnalysisJava
+LexicalAnalysisJava  -> TypeCheck : yes
+deactivate LexicalAnalysisJava
+
+activate TypeCheck
+TypeCheck -> ColorCode : goto(nextLevel)
+deactivate TypeCheck
+
+activate ColorCode
+ColorCode -> ErrorCheck : yes
+deactivate ColorCode
+
+ErrorCheck --> File
+
+
+deactivate File
+@enduml

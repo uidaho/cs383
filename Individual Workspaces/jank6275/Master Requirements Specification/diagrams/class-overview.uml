@@ -1,0 +1,104 @@
+@startuml
+scale 800 width
+title Squire Class Diagram Overview
+hide circle
+hide members
+footer
+Created by brec9824, jank6275.
+endfooter
+
+Squire *-- MainWindow
+Squire *-- Authentication
+Squire *-- SettingsManager
+Squire *-- Projects
+Squire *-- ChatClient
+Squire *-- ChatServer
+Squire *-- Admin
+Squire *-- Compiler
+
+'Authentication 
+'------------------------------------
+Authentication  o-- "1..*" User 
+User --* Profile
+User *-- Permissions
+
+
+'Settings Profile/Preferences  
+'-------------------------------------
+SettingsManager -- Authentication
+SettingsManager o-down- "1" Profile
+SettingsManager -right- UpdateProfileData : "Update Data"
+
+
+'File Editor 
+'------------------------------
+File -up-> Directory : stored 
+Directory -- System :organizes <
+class File --> System
+class System - Git : saves and retrieves
+
+
+'Syntax Class Diagram
+'--------------------------------------------
+File -- LexicalAnalysisDriver : "Invokes"
+LexicalAnalysisDriver -- LexicalAnalysisJava
+LexicalAnalysisJava <|-u- JavaSyntaxLib
+
+
+'Project Management 
+'----------------------------------------
+Admin -- ProjectManager
+ProjectManager *--"1..*" Projects
+Projects *--"1..*" Groups
+Projects *--"1..*" Settings
+Groups --"1..*" Permissions : "Control Access"
+Projects *-- Directory
+'removed User, Tools, Files, folders
+
+
+'Project Ideas
+'---------------------------------------
+Projects -down-* UserProjects
+Projects -down-* BrowseProject
+
+
+'Chat client 
+'--------------------------------
+MainWindow *-- ChatClient
+MainWindow *-- DisplayTextArea
+MainWindow *-- SendTextArea
+ChatClient *-- ClientConnectionThread
+DisplayTextArea <-- ClientRecieveThread : listens to
+SendTextArea --> ClientSendThread : sends to
+ClientConnectionThread o-- ChatSocket
+ClientConnectionThread *-- ClientSendThread
+ClientConnectionThread *-- ClientRecieveThread
+ClientRecieveThread --> ChatSocket : uses
+ClientSendThread --> ChatSocket : uses
+
+'Chat Server
+'-------------------------------
+ChatServer *-- ChatServerThread
+ChatServer *-- ChatLogThread
+ChatServerThread *-- ServerConnectionPool
+ChatServerThread *-- ChatSocket
+ChatLogThread *-- ChatLogBuffer
+ChatLogBuffer *--"0..*" ChatHistoryItem
+ChatLogBuffer o-- ServerConnectionPool : gets broadcast
+ServerConnectionPool *--"1..*" ServerConnection
+ServerConnection *-- ServerSendThread
+ServerConnection *-- ServerRecieveThread
+ServerConnection o-- ChatSocket
+ChatSocket <-- ServerSendThread : notifies
+ChatSocket --> ServerRecieveThread : listens
+
+
+'Compiler
+'-------------------------------
+MainWindow -- Compiler : shows to
+JavaCompiler -u-|> CompilerPlugin : Compiles Code
+Compiler o--"1..*" CompilerPlugin : uses
+Compiler o-- SnapshotManager : invokes
+SnapshotManager -l- CompilerPlugin : uses
+
+@enduml

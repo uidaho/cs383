@@ -1,5 +1,4 @@
 @startuml
-scale max 800*600
 footer
 Created  by: Kevin Morales (mora5651)
 Reviewed by: Brandon Jank (jank6275)
@@ -7,7 +6,7 @@ endfooter
 hide circles 
 hide members
 title <b>Authentication</b>
-Authentication  o-- "1..*" Users 
-Users *-- Profile
-Users *-- Permissions
+AuthenticationProcess  --  UserAccount : Authenticate
+UserAccount *-- Profile
+UserAccount *-- Permissions
 @enduml

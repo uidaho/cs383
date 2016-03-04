@@ -1,10 +1,10 @@
 @startuml
-User <<Human>>
+:User:
 user << Server>>
 
 :User: --> (Authentication)
-(Authentication) --> ModifyPreferences
-ModifyPreferences --> (View User Preferences)
+(Authentication) --> (ModifyPreferences)
+(ModifyPreferences) --> (View User Preferences)
 (View User Preferences) --> (Modify Chat Font)
 (View User Preferences) --> (Modify Chat Color)
 (View User Preferences) --> (Change Editor Theme)
@@ -12,10 +12,8 @@ ModifyPreferences --> (View User Preferences)
 (View User Preferences) --> (Activate Offline Mode)
 
 
-ModifyPreferences -> user
-user -> ModifyPreferences
+(ModifyPreferences) -> user
+user -> (ModifyPreferences)
 
 
-rectangle ModifyPreferences {
-  }
 @enduml

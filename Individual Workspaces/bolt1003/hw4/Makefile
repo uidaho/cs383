@@ -11,7 +11,7 @@ all: latex-make
 
 latex-make: 
 	${PLANTUML} ${PFLAGS} diagrams/*.uml
-	${LATEX} ${LFLAGS} use_cases.tex
+	${LATEX} ${LFLAGS} *use_case*.tex
 	${LATEX} ${LFLAGS} functional.tex
 	${LATEX} ${LFLAGS} nonfunctional.tex
 
