@@ -37,10 +37,23 @@ Activites Completed Since Last Meeting:
         For each use case, identify classes in the class diagram involved in implementing it.
         For each functional and non-functional requirement, identify and label where it is reflected in the corresponding use cases or class diagram.
     Picked sections for sequence diagrams
-
-Activites Planned:
     check for overlap in requirements by monday
     preliminary class diagrams focused on relationships between classes by wednedsay
     sequence diagrams (different subjects) by friday
 
+Activites Planned:
+    link your use cases to classes
+    link your classes to sequence diagrams
+    need more sequence diagrams (brec9824)
+    sequence diagrams not added yet (gall7417)
+    sprint plan PDF (gall7417)
+
+
     
+Can do better:
+- get work done on time
+- test compile when you add to master document
+
+
+Did good:
+- made good backlog progress

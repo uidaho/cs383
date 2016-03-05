@@ -1,0 +1,34 @@
+@startuml
+hide circle
+
+actor User
+activate User
+User --> MainWindow : selectChatClient()
+activate MainWindow
+
+MainWindow --> DisplayTextArea : show()
+activate DisplayTextArea
+MainWindow --> SendTextArea : show()
+
+activate ClientRecieveThread
+ClientRecieveThread <-- ChatSocket : recieveMessage(message)
+activate ChatSocket
+
+DisplayTextArea <-- ClientRecieveThread : handoffMessage(message)
+deactivate ClientRecieveThread
+
+MainWindow --> SendTextArea : receiveInput()
+activate SendTextArea
+SendTextArea --> DisplayTextArea : display(message)
+deactivate DisplayTextArea
+SendTextArea --> ClientSendThread : handoffMessage(message)
+deactivate SendTextArea
+activate ClientSendThread
+ClientSendThread --> ChatSocket : sendMessage(message)
+deactivate ClientSendThread
+
+deactivate MainWindow
+deactivate User
+deactivate ChatSocket
+
+@enduml

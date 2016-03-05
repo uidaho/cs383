@@ -1,0 +1,95 @@
+@startuml
+
+title File Editor Sequence Diagram
+footer 
+Created by brec9824.
+endfooter
+
+actor User
+
+''''''''''''''''''''''''''
+'Add New File
+''''''''''''''''''''''''''
+
+activate User
+User --> FileManager : addNewFile(fileName)
+deactivate User
+
+activate FileManager
+FileManager --> ServerData : syncData()
+
+activate ServerData
+ServerData --> FileManager
+deactivate ServerData
+
+FileManager --> User
+deactivate FileManager
+activate User
+
+'''''''''''''''''''''''
+'Open file
+'''''''''''''''''''''''
+
+User --> FileManager : openFile(fileName)
+deactivate User
+
+activate FileManager
+FileManager --> ServerData : syncData()
+
+activate ServerData
+ServerData --> FileManager
+deactivate ServerData
+
+FileManager --> User
+deactivate FileManager
+activate User
+
+'''''''''''''''''''''''''''
+'Import File
+'''''''''''''''''''''''''''
+User --> FileManager : importFile(file)
+deactivate User
+
+activate FileManager
+FileManager --> ServerData : syncData()
+
+activate ServerData
+ServerData --> FileManager
+deactivate ServerData
+
+FileManager --> User
+deactivate FileManager
+activate User
+
+'''''''''''''''''''''''
+'Export file
+'''''''''''''''''''''''
+
+User --> FileManager : exportFile(fileName)
+deactivate User
+
+activate FileManager
+FileManager --> User : zip
+deactivate FileManager
+
+activate User
+
+'''''''''''''''''''''''
+'Delete file
+'''''''''''''''''''''''
+
+User --> FileManager : deleteFile(fileName)
+deactivate User
+
+activate FileManager
+FileManager --> ServerData : syncData()
+
+activate ServerData
+ServerData --> FileManager
+deactivate ServerData
+
+FileManager --> User
+deactivate FileManager
+activate User
+
+@enduml

@@ -1,0 +1,41 @@
+@startuml
+scale 800 width
+title Lexer Class Diagram
+hide circle
+'left to right direction
+footer
+Created by Eric Gallegos
+Reviewed by Rick Boss
+endfooter
+
+class File{
+UpdateInterface()
+}
+
+File -- LexicalAnalysisDriver : "Invokes"
+
+class LexicalAnalysisDriver{
+parse()
+}
+
+LexicalAnalysisDriver -- LexicalAnalysisJava : "Calls"
+
+class TypeCheck{
+IsConditional()
+IsVariable()
+IsFunction()
+IsRegularExpression()
+}
+
+class ColorCode{
+CheckPreferences()
+ColorCode(word, type)
+}
+
+LexicalAnalysisJava <|-u- JavaSyntaxLib
+
+LexicalAnalysisJava o-- TypeCheck
+LexicalAnalysisJava o-- ColorCode
+LexicalAnalysisJava o-- ErrorCheck
+
+@enduml

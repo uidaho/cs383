@@ -19,21 +19,46 @@
 \tableofcontents
 \newpage
 
-\section{Functional Requirements}
-    \subsection{Compiler (boss2849)}
+\section{Compiler Functional Requirements}
         \begin{itemize}
             \item Compile project sub-modules or entire project.
             \item Compile and run code within IDE.
             \item Compile code and package to a JAR.
             \item Impose temporary code freeze during compilation.
         \end{itemize}
+        
+\secton{Class Diagram}
+    \subsection(compiler)
+    \begin{minipage}{1\textwidth}
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{uml-diagram/class-compiler}
+        \end{center}
+        \captionof{figure}{Use case driagram for compiler.}
+    \end{minipage}
 
 \section{Use Case Diagram}
-\subsection{Compiler (boss2849)}
+    \subsection(Compiler)
+    \begin{minipage}{1\textwidth}
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{uml-diagram/usecase-compiler}
+        \end{center}
+        \captionof{figure}{Use case driagram for compiler.}
+    \end{minipage}
+
+\section{Communication Sequence Diagram (boss2849)}
+    \begin{minipage}{1\textwidth}
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{diagrams/sequence-chat-client}
+        \end{center}
+        \captionof{figure}{Sequence diagram for chat client interaction.}
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{diagrams/sequence-chat-server}
+        \end{center}
+        \captionof{figure}{Sequence diagram for chat server interaction.}
+    \end{minipage}
 
 \section{Use Case Descriptions}
 \subsection{Compiler (boss2849)}
-
 \subsubsection{Compile (boss2849)}
 \begin{tabular}{ p{2cm} p{12cm} }
  \hline

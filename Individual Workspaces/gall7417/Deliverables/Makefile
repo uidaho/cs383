@@ -1,6 +1,6 @@
 # CS 383 HW #2 - Makefile
 
-LFILE    = hw3-reqdoc-team3
+LFILE    = SprintPlan
 LATEX    = latex
 LFLAGS   = -output-format=pdf
 PLANTUML = java -jar diagrams/plantuml.jar

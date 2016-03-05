@@ -1,28 +1,22 @@
-# CS 383 HW #2 - Makefile
+# CS 383 HW #4 - Makefile
+# by jank6275
 
-LFILE    = *
+LFILE    = project_management_use_cases
 LATEX    = latex
 LFLAGS   = -output-format=pdf
 PLANTUML = java -jar diagrams/plantuml.jar
 PFLAGS   = -tpng
 PFILES   = diagrams/
 
-all: latex-make
+all: ${LFILE}.pdf
 
-latex-make: 
-	${PLANTUML} ${PFLAGS} diagrams/*.uml
-	${LATEX} ${LFLAGS} *use_case*.tex
-	${LATEX} ${LFLAGS} functional.tex
-	${LATEX} ${LFLAGS} nonfunctional.tex
+${LFILE}.pdf: ${LFILE}.tex
+	${PLANTUML} ${PFLAGS} ${PFILES}*.uml
+	${LATEX} ${LFLAGS} ${LFILE}.tex
+	${LATEX} ${LFLAGS} ${LFILE}.tex
 
 clean:
 	rm -f ${LFILE}.aux ${LFILE}.dvi ${LFILE}.toc ${LFILE}.log ${LFILE}.pdf ${PFILES}*.png
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+overview:
+	${PLANTUML} ${PFLAGS} ${PFILES}overview.uml

@@ -1,0 +1,205 @@
+
+Create Project Idea *
+Edit Project Idea *
+Browse Project Ideas *
+View Project Idea
+Follow Project Idea *
+Like/Dislike Project Idea *
+Comment on Project Idea *
+
+
+\section{Project Ideas (mars2681)}
+\subsection{Browse Project Ideas (mars2681)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Browse new projects, popular projects, and user's projects\\
+ \\
+ \textit{Pre-conditions:} & User is signed in  \\
+ \\
+ \textit{Summary:} & User looks through posted project ideas to find projects to work on/discuss \\ 
+ \\
+ \textit{Related use cases:} & View Project Idea  \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Actor selects Browse Project Ideas button, they are then brough to Project Ideas page
+  \item System displays the project pages that the user is following, also the most popular projects, and new projects
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{View Project Idea (mars2681)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & View project idea page  \\
+ \\
+ \textit{Pre-conditions:} & User is signed in and in the Browse Project Ideas page  \\
+ \\
+ \textit{Summary:} &  User views a project ideas page to look at its information and follow/comment/like or dislike. \\ 
+ \\
+ \textit{Related use cases:} & Browse Project Ideas\\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Actor selects a project from the Browse Project Ideas Page
+  \item System brings actor to the project's info page
+  \item Actor can then look at the projects information, as well as continue on to follow or comment or vote on the project idea
+
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Create Project Idea (mars2681)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Project Administrator \\ 
+ \\
+ \textit{Goals:} & Generate public interest in project idea  \\
+ \\
+ \textit{Pre-conditions:} & Prospective project administrator is signed in  \\
+ \\
+ \textit{Summary:} &  Admin can make a page to show off their project idea to other users \\ 
+ \\
+ \textit{Related use cases:} & Manage Project Idea Thread \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Actor selects Create Project Idea button
+  \item Actor enters prospective project title and thoughts and ideas as a description
+  \item Actor selects Submit button
+  \item System adds the project page to the database for other users to see
+
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Edit Project Idea (mars2681)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & Project Administrator \\ 
+ \\
+ \textit{Goals:} & User edits the information on their project idea page \\
+ \\
+ \textit{Pre-conditions:} & Prospective project administrator is signed in and is now in the project idea page \\
+ \\
+ \textit{Summary:} &  User edits their pre-existing project idea page \\ 
+ \\
+ \textit{Related use cases:} & Create Project Idea Thread \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Actor clicks Edit Project Idea Page
+  \item Actor can then edit the title, description, and other information on the project idea page
+  \item Actor clicks Submit
+  \item System saves changes, updates page
+  
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & Actor selects Delete Changes and returns to Browse Project Ideas page. \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Comment on Project Idea (mars2681)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Provide detailed feedback on project ideas  \\
+ \\
+ \textit{Pre-conditions:} & Actor is signed in, has navigated to a project idea  \\
+ \\
+ \textit{Summary:} &  User provides feedback to or asks questions about a prospective project. \\ 
+ \\
+ \textit{Related use cases:} & Browse Project Ideas, Vote on Project Idea, Manage Project Idea Thread \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Actor selects Comment button
+  \item Actor types feedback into field 
+  \item Actor clicks Submit button
+  \item System shows confirmation that feedback was received 
+  \item System adds comment to Project Idea page's comments
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline 
+\end{tabular}
+
+\subsection{Like/Dislike Project Idea (mars2681)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User \\ 
+ \\
+ \textit{Goals:} & Support promising project ideas or offer criticism to unfavorable ones  \\
+ \\
+ \textit{Pre-conditions:} & Actor is signed in, has navigated to a project idea  \\
+ \\
+ \textit{Summary:} &  User offers support/discourages a project idea so that prospective project administrators get feedback and promising project ideas get publicity \\ 
+ \\
+ \textit{Related use cases:} & Comment on Project Idea \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Actor selects and Up Vote or Down Vote button
+  \item Actor selects Submit button 
+  \item System highlights which button the user has selected
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}
+
+\subsection{Follow Project Idea(mars2681)}
+\begin{tabular}{ p{2cm} p{12cm} }
+ \hline
+ \\
+ \textit{Actors:} & User, Project Administrator \\ 
+ \\
+ \textit{Goals:} & Follow project updates  \\
+ \\
+ \textit{Pre-conditions:} & Actor is signed in, has navigated to a project idea  \\
+ \\
+ \textit{Summary:} &  User follows project to receive updates and information about it \\ 
+ \\
+ \textit{Related use cases:} & View Project Idea \\ 
+ \\
+ \textit{Steps:} & \begin{enumerate}
+  \item Actor selects Follow button
+  \item System notifies user that they are now following the project
+  \item System automatically updates followed project information on Browse Project Ideas page
+ \end{enumerate} \\
+ \\
+ \textit{Alternatives:} & None \\
+ \\
+ \textit{Post-conditions:} & None. \\
+ \\
+\hline
+\end{tabular}

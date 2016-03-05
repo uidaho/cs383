@@ -1,0 +1,26 @@
+@startuml
+title Project Ideas
+footer 
+Created by mars2681 and reviewed by bolt1003.
+endfooter
+hide circles
+
+class ProjectIdeasMainPage {
+}
+
+class UserProjects{
+}
+
+class BrowseProjects{
+}
+
+class Project{
+}
+
+
+ProjectIdeasMainPage *-down-  UserProjects
+ProjectIdeasMainPage *-right-  BrowseProjects
+UserProjects *-right- "0*" Project
+BrowseProjects *-down- "10*" Project
+
+@enduml

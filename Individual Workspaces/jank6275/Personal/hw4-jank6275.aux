@@ -1,0 +1,48 @@
+\relax 
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Overview and Scope}{2}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces "Squire is a web-based collaborative software development environment with a project development center. Squire will allow multiple users to edit files and communicate in real time. Projects can be ``stubbed'' out by a user and then other users can join and/or vote to support for their favorite projects. After a certain amount of support, planning, and documentation is reached for a project, the project becomes a fully fleged project and then community development can start. Think ``kickstarter for code'' where people pledge their help with the project and not just financial support."\relax }}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Core Features}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Security Nightmare}{4}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Requirements Documentation}{5}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Functional Requirements}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Communication (jank6275)}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Non-Functional Requirements}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Use Case Diagrams}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Overview}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Communication}{7}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Use Case Descriptions}{8}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Communication (jank6275)}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Open project chat (Class Diagram 4.2.1)}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Open global chat (Class Diagram 4.2.1)}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Close project chat (Class Diagram 4.2.1)}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}Close global chat (Class Diagram 4.2.1)}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.5}Write to project chat (Class Diagram 4.2.1)}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.6}Write to global chat (Class Diagram 4.2.1)}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.7}Modify chat font (Settings Class Diagram)}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.8}Modify chat color (Settings Class Diagram)}{15}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Class Diagrams}{16}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Overview (brec9824, jank6275)}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Class overview of Squire displaying the connections between each subsystem and their classes.\relax }}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Communication (jank6275)}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Client}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces The ChatClient class will handle text communication in conjuction with the ChatServer class. The Main Window will be home to the ChatClient. The ChatClinet will consist of client send/recieve threads to handle user input/output in the Main Window via the ChatSocket.\relax }}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Server}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces The ChatServer class will handle text communication between ChatClient(s). The ChatLogThead records any messages broadcast by chat clients in the ServerConnectionPool as a ChatHistoryItem. Each ServerConnection consists of a send and recieve thread that utilize the ChatSocket to broadcast messages.\relax }}{18}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Sequence Diagrams}{19}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Authentication (jank6275)}{19}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Login}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces A sequence diagram for logging in to Squire.\relax }}{19}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Logout}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces A sequence diagram for logging out of Squire.\relax }}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Register}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces A sequence diagram for registering a nmew account with Squire.\relax }}{21}}

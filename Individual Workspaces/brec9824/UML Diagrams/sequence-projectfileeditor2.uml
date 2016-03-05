@@ -1,0 +1,29 @@
+@startuml
+
+title File Editor Sequence Diagram 2
+footer 
+Created by brec9824.
+endfooter
+
+actor User
+
+activate User
+User --> Interface
+activate Interface
+
+'''''''''''''''''''''''
+'Export file
+'''''''''''''''''''''''
+
+Interface --> FileManager : exportFile(fileName)
+deactivate Interface
+
+activate FileManager
+FileManager --> Interface : zip
+deactivate FileManager
+
+activate Interface
+Interface --> User
+deactivate Interface
+
+@enduml

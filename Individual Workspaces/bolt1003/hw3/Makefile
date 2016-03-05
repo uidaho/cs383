@@ -9,10 +9,9 @@ PFILES   = diagrams/
 
 all: ${LFILE}.pdf
 
-${LFILE}.pdf: ${LFILE}.tex diagrams
+${LFILE}.pdf: 
 	${PLANTUML} ${PFLAGS} ${PFILES}*.uml
-	${LATEX} ${LFLAGS} ${LFILE}.tex
-	${LATEX} ${LFLAGS} ${LFILE}.tex
+
 
 clean:
 	rm -f ${LFILE}.aux ${LFILE}.dvi ${LFILE}.toc ${LFILE}.log ${LFILE}.pdf ${PFILES}*.png

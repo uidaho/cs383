@@ -1,0 +1,37 @@
+@startuml
+
+title File Editor Sequence Diagram 1
+footer 
+Created by brec9824.
+endfooter
+
+actor User
+
+activate User
+User --> Interface
+activate Interface
+
+'''''''''''''''''''''''
+'Open file
+'''''''''''''''''''''''
+
+Interface --> FileManager : openFile(fileName)
+deactivate Interface
+
+activate FileManager
+FileManager --> ServerData : syncData()
+
+activate ServerData
+ServerData --> FileManager
+deactivate ServerData
+
+FileManager --> Interface
+deactivate FileManager
+activate Interface
+
+
+
+Interface --> User
+deactivate Interface
+
+@enduml
