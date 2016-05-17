@@ -1,17 +1,20 @@
 @startuml
+scale max 700 width
 
-footer 
-Created by snev7821 and reviewed by brec9824.
+footer
+Created by: John Snevily (snev7821) 
+Reviewed by: Robert Breckenridge (brec9824)
+Audit 04-11-2016 by: Ben Bolton (bolt1003)
 endfooter
-hide circle
 
+hide circle
 
 
 FileItem <|-- File
 FileItem <|-- Directory
 
 File "*" -  "1"Directory   
-Directory -- System : resides >
+Directory -- System : resides
 
 class File{
 +save()

@@ -1,0 +1,35 @@
+@startuml
+scale max 800*600
+title Login Sequence Diagram
+footer 
+Created by jank6275 and reviewed by mora5651.
+endfooter
+
+
+actor User
+activate User
+User -> MainWindow : login(username, password)
+activate MainWindow
+
+boundary MainWindow
+MainWindow -> Authentication : checkCredentials(username, password)
+activate Authentication
+
+entity Authentication
+Authentication -> Database : getUserInfo(userid)
+activate Database
+
+database Database
+Database --> Authentication : [UserInformation]
+deactivate Database
+Authentication -> Authentication : checkCredentials
+Authentication -> MainWindow : login success message
+deactivate Authentication
+MainWindow -> User : Logged in
+alt credentials do not match
+    Authentication -> MainWindow : login fail message
+    deactivate Authentication
+    MainWindow -> User : Not logged in
+end
+
+@enduml

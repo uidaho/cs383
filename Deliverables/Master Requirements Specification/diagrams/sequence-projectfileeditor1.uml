@@ -1,8 +1,12 @@
 @startuml
+scale max 700 width
 
 title File Editor Sequence Diagram 1
-footer 
-Created by brec9824.
+
+footer
+Created by: Robert Breckenridge (brec9824) 
+Reviewed by: Ben Bolton (bolt1003)
+Audit 04-11-2016 by: Ben Bolton (bolt1003)
 endfooter
 
 actor User

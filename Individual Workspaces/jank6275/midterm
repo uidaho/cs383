@@ -1,0 +1,50 @@
+Example Midterm: 
+http://www2.cs.uidaho.edu/~jeffery/courses/383/midterm-sample.html
+
+Software Engineering - "tools and methods that are useful for larger-scale software development projects"
+--------------------
+
+Sequence Diagrams - Shows how classes interract during a time period to achieve something.
+
+Class Diagrams - Shows relationships between classes.
+    - Know the forms of Inheretence
+        - Aggrigation <>--- "i was assembled by these pieces" 
+    - know how multiplicity works
+        - NO MULTIPLICITY by diamond, doesnt make sense.
+        - only have multiplicty on both ends with a user defined association.
+        
+Use Case Diagrams - shows actors and how they interact
+    - ovals instead of rectangles
+    - no arrowheads!
+    
+
+
+
+
+Waterfall Model 
+    - Requirements -> Design -> Coding -> Testing -> Maintenance
+
+Spiral Model 
+    - Requirements -> Design -> Coding -> Testing -> Maintenance -> Repeat
+
+Agile Model 
+    - "go back and modify"
+    - prioritized backlogs, two types: project backlog and sprint backlog
+    - sprints: short (week) burst of development
+    - customer can be involved in sprints rather than just the beginning for waterfall model or cycle for spiral model.
+    - scrum: daily meeting
+
+
+
+
+Requirements (What)
+    - Functional vs Non-Functional
+    - Come from Application Domain (learn boats to code for boats), asking questions, etc..
+    - use case descriptions
+        - name, ..,, etc..
+
+Design (How)
+    - user interfaces
+    - class diagrams
+    - traceablity/coverage
+    

@@ -1,0 +1,18 @@
+@startuml
+:User:
+user << Server>>
+
+:User: --> (Authentication)
+(Authentication) --> (ModifyPreferences)
+(ModifyPreferences) --> (View User Preferences)
+(View User Preferences) --> (Modify Chat Font)
+(View User Preferences) --> (Modify Chat Color)
+(View User Preferences) --> (Change Editor Theme)
+(View User Preferences) --> (Turn Off Global Chat)
+
+
+(ModifyPreferences) -> user
+user -> (ModifyPreferences)
+
+
+@enduml

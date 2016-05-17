@@ -1,0 +1,55 @@
+@startuml
+
+hide circle
+hide empty methods
+hide empty fields
+
+footer
+Created by bolt1003, Reviewed by mars2681
+endfooter
+
+title Project Management
+scale 800 width
+
+class Project_Manager{
+}
+
+class Projects{
+}
+
+class Users{
+}
+
+class Groups{
+}
+
+class Folders{
+}
+
+class Files{
+}
+
+class Permissions{
+}
+
+class Settings{
+}
+
+class TOOLS{
+}
+
+Project_Manager *--"1..*" Projects
+
+
+Projects *--left"1..*" Groups
+Projects *--right"*" Folders
+Projects *--"1..*" Settings
+Projects *--"1..32" Users
+Folders *--"*" Files
+Users --"1..*" TOOLS : "Enable Development" 
+Users -left-"1..*" Permissions : "Control Modification"
+Groups .."1..*" Users : "Augment Permissions"
+Groups --"1..*" Permissions : "Control Access"
+
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+scale max 700 width
+hide circles
+footer
+Created by: bolt1003
+Reviewed by: brec9824
+endfooter
+
+[*] --> Main_Menu
+
+Main_Menu -down-> Project_Manager : "Open Projects"
+
+Project_Manager --> Project : "Select Project"
+Project_Manager --> Main_Menu : "Close Project_Manager"
+
+Project --> File_Editor : "Select Open"
+Project --> Project_Editor : "Select Edit"
+Project --> Project_Manager : "Close Project_Manager"
+
+File_Editor --> Project : "Close File_Editor"
+Project_Editor --> Project : "Close Project_Editor"
+
+@enduml

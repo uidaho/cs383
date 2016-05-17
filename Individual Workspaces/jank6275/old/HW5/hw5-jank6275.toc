@@ -1,0 +1,8 @@
+\contentsline {chapter}{\numberline {1}Overview and Scope}{2}
+\contentsline {chapter}{\numberline {2}State Charts}{3}
+\contentsline {section}{\numberline {2.1}Communication (jank6275)}{3}
+\contentsline {chapter}{\numberline {3}User Interface Mockups}{5}
+\contentsline {section}{\numberline {3.1}Squire Editor (jank6275)}{5}
+\contentsline {section}{\numberline {3.2}Squire Chat (jank6275)}{6}
+\contentsline {chapter}{\numberline {4}Prototype Implementations}{7}
+\contentsline {section}{\numberline {4.1}Server Stack (jank6275)}{7}

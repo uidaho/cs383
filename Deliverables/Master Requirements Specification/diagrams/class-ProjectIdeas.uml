@@ -1,26 +1,25 @@
 @startuml
 title Project Ideas
-footer 
-Created by mars2681 and reviewed by bolt1003.
+scale max 700 width
+
+footer
+Created by: Eric Marsh (mars2681) 
+Reviewed by: Ben Bolton (bolt1003)
+Audit 04-11-2016 by: Ben Bolton (bolt1003)
+Rewritten by John Snevily (snev7821)
 endfooter
+
 hide circles
+hide members
 
-class ProjectIdeasMainPage {
-}
-
-class UserProjects{
-}
-
-class BrowseProjects{
-}
-
-class Project{
-}
-
-
-ProjectIdeasMainPage *-down-  UserProjects
-ProjectIdeasMainPage *-right-  BrowseProjects
-UserProjects *-right- "0*" Project
-BrowseProjects *-down- "10*" Project
+ProjectIdeasMainPage -down-  Categories : displays
+ProjectIdeasMainPage -- OwnedProjects
+OwnedProjects "0" *-- "0..*"Project
+Categories "1" *-down- "1..*" Project 
+Project -- Info
+Project -- Comments
+Project -- LikesDislikes
+Project -- Progressbar
+Project -- PledgedUsers
 
 @enduml

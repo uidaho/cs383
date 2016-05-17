@@ -1,8 +1,14 @@
 @startuml
+scale max 700 width
+'Updated: March 28, 2016
 title Settings Profile/Prefrences
-footer 
-Created by brec9824 and reviewed by snev7821.
+
+footer
+Created by: Robert Breckenridge (brec9824)
+Reviewed by: John Snevily (snev7821) 
+Audit 04-11-2016 by: Ben Bolton (bolt1003)
 endfooter
+
 hide circles
 
 class SettingsManager {
@@ -13,8 +19,6 @@ changeBio()
 changePrivacy()
 }
 class UpdateProfileData {
-}
-class User {
 }
 class Authentication {
 }
@@ -29,8 +33,7 @@ prefShape : int
 projOwnerList[] : string
 projMemberList[] : string
 }
-Profile *-left- User
 SettingsManager o-down- Profile
-SettingsManager -right- UpdateProfileData : "Update Data"
-Authentication -right- SettingsManager : "Authenticate"
+SettingsManager -right- UpdateProfileData : "Updates"
+Authentication -right- SettingsManager : "Authenticates"
 @enduml

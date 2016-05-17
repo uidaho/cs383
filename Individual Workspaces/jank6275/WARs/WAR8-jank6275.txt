@@ -1,0 +1,29 @@
+From: Brandon Jank <jank6275@vandals.uidaho.edu> 
+To: Dr. J. <jeffery@cs.uidaho.edu>
+Subject: Status report, Brandon Jank, 2016-04-10
+
+Weekly Status Report of Team Lambda
+for the Last Week Ending 2016-04-10 Sunday
+
+Activities Planned for Last Week:
+    Make instructor changes to Overview Class Diagram.
+    Create prototype implimentation for Authentication.
+    Migrate to slack.com for internal team communication.
+
+Activities Accomplished Last Week:
+    Secure nginx and php5-fpm install.
+    Setup php5-fpm to setuid for each person and the main application.
+    Create theme/view for authentication class.
+    Migrate backlog to github issue tracker: https://github.com/uidaho/squireproject/issues
+    Write documentation for configuring the server.
+    Write documentation for using mysql admin.
+    Write documentation for setting up IDE and floobits.
+    Write documentation for setting up developer test/dev server.
+    Linked project to travis.ci so that all branches can be continually unit tested after each commit. (#29)
+
+Activities Planned for Next Week:
+    Write documentation for creating unit tests.
+    Write documentation for creating database migrations.
+
+The last weeks commits and issues (backlog) for the entire team can be found at:
+    https://github.com/uidaho/squireproject/pulse

@@ -1,12 +1,16 @@
 @startuml
 
+footer
+Created by: John Snevily (snev7821)
+Reviewed by: Rick Boss (boss2849)
+endfooter
+
 Interface -> Database: list_projects(arg)
 Activate Interface
 Activate Database 
 Database -> Database: get_projects()
 Database --> Interface:return(sorted by arg)
 Deactivate Database
-Deactivate Interface
 Interface -> Project: view_project()
 Activate Project
 Activate Interface

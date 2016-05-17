@@ -1,0 +1,13 @@
+@startuml
+hide circles
+
+[*] --> Main_Menu
+
+Main_Menu -down-> SettingsManager : "Open Settings Menu"
+
+SettingsManager --> UpdateProfileData : "Edit Setting Field"
+SettingsManager --> Main_Menu : "Close Settings"
+
+UpdateProfileData --> SettingsManager : "Confirm Change"
+
+@enduml

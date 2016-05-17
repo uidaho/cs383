@@ -1,0 +1,44 @@
+@startuml
+hide circle
+
+activate ChatServer
+ChatServer --> ChatLogThread : start()
+activate ChatLogThread
+ChatLogThread --> ChatLogBuffer : init()
+activate ChatLogBuffer
+ChatLogBuffer --> ChatLogBuffer : loadHistoryItems()
+ChatServer --> ChatServerThread : spawnServerThread()
+activate ChatServerThread
+ChatServerThread --> ServerConnectionPool : initPool()
+activate ServerConnectionPool
+ServerConnectionPool --> ServerConnection : newConnection()
+activate ServerConnection
+ServerConnection --> ChatSocket : attachSocket()
+activate ChatSocket
+ChatSocket --> ServerReceiveThread : spawnReceiveThread()
+activate ServerReceiveThread
+ChatSocket --> ServerSendThread : spawnSendThread()
+activate ServerSendThread
+
+ServerReceiveThread --> ChatSocket : receiveMessage(messsage)
+ChatSocket --> ServerConnection : handoffMessage(message)
+ServerConnection --> ServerConnectionPool : broadcast(message)
+ServerConnectionPool --> ChatLogBuffer : add(message)
+
+ServerReceiveThread --> ChatSocket : receiveQuit()
+ChatSocket --> ServerReceiveThread : stop()
+destroy ServerReceiveThread
+ChatSocket --> ServerSendThread : stop()
+destroy ServerSendThread
+ServerConnection --> ServerConnection : stop()
+destroy ChatSocket
+ServerConnection --> ServerConnectionPool : remove()
+destroy ServerConnection
+
+deactivate ServerConnectionPool
+deactivate ChatServerThread
+deactivate ChatLogBuffer
+deactivate ChatLogThread
+deactivate ChatServer
+
+@enduml

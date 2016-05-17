@@ -1,0 +1,19 @@
+From: Brandon Jank <jank6275@vandals.uidaho.edu> 
+To: Dr. J. <jeffery@cs.uidaho.edu>
+Subject: Status report, Brandon Jank, 2016-04-17
+
+Weekly Status Report of Team Lambda
+for the Last Week Ending 2016-04-17 Sunday
+
+Activities Planned for Last Week:
+    Write documentation for creating unit tests.
+    Write documentation for creating database migrations.
+
+Activities Accomplished Last Week:
+
+
+Activities Planned for Next Week:
+
+
+The last weeks commits and issues (backlog) for the entire team can be found at:
+    https://github.com/uidaho/squireproject/pulse

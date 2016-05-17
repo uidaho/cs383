@@ -1,0 +1,21 @@
+From: Brandon Jank <jank6275@vandals.uidaho.edu> 
+To: Dr. J. <jeffery@cs.uidaho.edu>
+Subject: Status report, Brandon Jank, 2016-04-03 
+
+Weekly Status Report of Team Lambda
+for the Last Week Ending 2016-04-03 Sunday
+
+Activities Planned for Last Week:
+    Each person do 2 prototype implementations.
+    Create official libraries/technology stack diagram.
+  
+Activities Accomplished Last Week:
+    Setup basic bootstrap CSS theme and html template
+    Research possible software for squire: Firebase, LEMP Stack, Ace, CodeMirror
+    Install composer for larvel installs.
+    Configured webserver to serve wildcard USER.squireproject.com using /home/USER/squireproject/public 
+    Install and configure postfix server and mail dns/spf records.
+
+Activities Planned for Next Week:
+    Make instructor changes to Overview Class Diagram.
+    Create prototype implimentation for Authentication.

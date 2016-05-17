@@ -1,0 +1,31 @@
+From: Brandon Jank <jank6275@vandals.uidaho.edu> 
+To: Dr. J. <jeffery@cs.uidaho.edu>
+Subject: Status report, Brandon Jank, 2016-03-13 
+
+Weekly Status Report of Team 3 (Team Lambda) 
+for the Last Week Ending 2016-03-13 Sunday
+
+Activities Planned for Last Week:
+  - Clean-up vocab/class names.
+  - Finish preliminary class diagrams focused on relationships between classes 
+  - Complete sequence diagrams for Authentication instead of Communication
+  - Study for midterms.
+  - Take midterms.
+  
+Activities Accomplished Last Week:
+  - Clean-up vocab/class names.
+  - Finish preliminary class diagrams focused on relationships between classes 
+  - Complete sequence diagrams for Authentication instead of Communication
+  - Study for midterms.
+  - Take midterms.
+  - cleaned up backlog entries that were not marked as completed, but were.
+  - created new backlog entries for various errors
+
+Activities Planned for Next Week:
+  - Spring break!
+  - Plan for HW5 sprint
+  - Refine class diagrams
+  - Start planning for implimentation
+  - create a UI design
+  - create a statechart
+  - get a library/tech stack together

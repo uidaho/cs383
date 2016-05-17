@@ -1,0 +1,16 @@
+'Author: Robert Breckenridge
+'Updated: March 28, 2016
+
+@startuml
+top to bottom direction
+:User:
+:Authenticated_User:
+scale 800 width
+
+User --> (View A User’s Profile)
+Authenticated_User --> (Modify Profile Info)
+Authenticated_User --> (Modify Profile Privacy)
+Authenticated_User --> (Delete Account)
+Authenticated_User --> (Quick Jump To Projects)
+
+@enduml

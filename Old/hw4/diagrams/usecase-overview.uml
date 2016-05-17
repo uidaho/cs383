@@ -1,0 +1,24 @@
+@startuml
+scale 800 width
+title Usecase Diagram Overview
+footer 
+Created by jank6275 and reviewed by mora5651.
+endfooter
+
+actor User
+actor Admin
+
+User --> (Authentication \n alsh5301)
+Admin --> (Authentication \n alsh5301)
+
+(Authentication \n alsh5301) -- (Project Management \n sass8427)
+(Authentication \n alsh5301) -- (Project Ideas \n dani2918)
+(Authentication \n alsh5301) -- (User Preferences \n snev7821)
+(Authentication \n alsh5301) -- (User Profile \n bolt1003)
+(Authentication \n alsh5301) -- (Communication \n jank6275)
+
+(Project Management \n sass8427) -- (Communication \n jank6275)
+(Project Management \n sass8427) -- (Project User Management \n boss2849)
+(Project Management \n sass8427) -- (Project File Management \n wern0096)
+
+@enduml

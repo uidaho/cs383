@@ -1,0 +1,21 @@
+@startuml
+
+footer
+Created  by: 
+Reviewed by:  ()
+endfooter
+
+[*] --> BrowsingProjects
+BrowsingProjects: Overview of projects
+BrowsingProjects: forum page
+BrowsingProjects -> BrowsingProjects: sortprojects(sort)
+BrowsingProjects --> ProjectView :selectproject()
+
+ProjectView: Details of projects
+ProjectView -->AcceptProject: userpledge()
+ProjectView -->BrowsingProjects: voted(up/down)
+ProjectView -> ProjectView: next/previous project() 
+
+
+AcceptProject -> [*]:openproject()
+@enduml

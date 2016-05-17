@@ -1,0 +1,62 @@
+@startuml
+scale max 800 width
+
+footer
+Created by: Robert Breckenridge (brec9824)
+'Audit 04-11-2016 by: Ben Bolton (bolt1003)
+endfooter
+
+(squireproject) -- (app)
+(squireproject) -- (bootstrap)
+(squireproject) -- (config)
+(squireproject) ---- (database)
+(squireproject) ---- (public)
+(squireproject) -- (resources)
+(squireproject) -- (tests)
+
+
+'------Sub-folders--------
+
+'----app----'
+(app) -- (Console)
+ (Console) -- (Commands)
+(app) -- (Events)
+(app) -- (Exceptions)
+(app) -- (Http)
+ (Http) -- (Controllers)
+  (Controllers) -- (Auth)
+ (Http) -- (Middleware)
+ (Http) -- (Requests)
+(app) -- (Jobs)
+(app) -- (Listeners)
+(app) -- (Policies)
+(app) -- (Providers)
+
+'----boostrap----
+(bootstrap) -- (cache)
+
+'----database----
+(database) -- (factories)
+(database) -- (migrations)
+(database) -- (seeds)
+
+'----public----
+(public) -- (css)
+(public) -- (images)
+(public) -- (js)
+
+'----resources----
+(resources) -- (assets)
+ (assets) -- (sass)
+(resources) -- (lang)
+ (lang) -- (en)
+(resources) -- (views)
+ (views) -- (auth)
+  (auth) -- (emails)
+  (auth) -- (passwords)
+ (views) -- (errors)
+ (views) -- (layouts)
+ (views) -- (pages)
+ (views) -- (vendor)
+
+@enduml

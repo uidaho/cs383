@@ -1,13 +1,19 @@
 @startuml
-scale 200 width
+scale max 700 width
+
 footer
-Created  by: Kevin Morales (mora5651)
+Created by: Kevin Morales (mora5651)
 Reviewed by: Brandon Jank (jank6275)
+Audit 04-11-2016 by: Ben Bolton (bolt1003)
+Corrections by: John Snevily (snev7821) 
 endfooter
+
 hide circles 
 hide members
 title <b>Authentication</b>
 AuthenticationProcess  --  UserAccount : Authenticate
-UserAccount *-- Profile
-UserAccount *-- Permissions
+UserAccount -- Profile : has
+UserAccount *-- FilePermissions
+UserAccount -- Settings : server changes
+Profile -- Settings : user changes 
 @enduml

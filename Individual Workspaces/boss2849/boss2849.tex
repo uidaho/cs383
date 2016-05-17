@@ -1,6 +1,9 @@
-\documentclass[11pt]{article}
+\documentclass[11pt]{report}
 
+\usepackage{caption}
 \usepackage{graphicx}
+\usepackage{hyperref} 
+\usepackage{color}
 
 \marginparwidth 0.5in 
 \oddsidemargin 0.25in 
@@ -9,164 +12,49 @@
 \topmargin 0.0in 
 \textwidth 6in \textheight 8.5in
 
-\title{sQuire: A Web Based Collaborative Editor\\Homework 4 Individual Work\\Group 3}
+\title{sQuire: A Web Based Collaborative Editor\\Homework 7 Individual Work\\Group 3}
 \author{Rick Boss (boss2849)}
 
 \begin{document}
 \maketitle
 
-\newpage
-\tableofcontents
-\newpage
+\chapter{Personal Work}
+\section{Projects Team}
+    \includegraphics[width=0.9\textwidth]{images/project}
+    \\
+    \begin{itemize}
+        \item Start project: Added image upload, title, description, and body for the user to specify when creating a project. (\color{blue} \href{https://github.com/uidaho/squireproject/pull/47}{\underline{PR 47}}\color{black})
+        \item Start project: User must be logged in to start a project. (\color{blue} \href{https://github.com/uidaho/squireproject/pull/47}{\underline{PR 47}}\color{black})
+        \item Start project: Implemented title uniqueness requirement. (\color{blue} \href{https://github.com/uidaho/squireproject/pull/47}{\underline{PR 47}}\color{black})
+        \item Start project: Implemented length constraints on title, description and body as well as verifying an image is uploaded for thumbnail. (\color{blue} \href{https://github.com/uidaho/squireproject/pull/74}{\underline{PR 74}}\color{black})
+        \item Created unit testing for Login, Registration, General permissions, Project creation and viewing. (\color{blue} \href{https://github.com/uidaho/squireproject/pull/75}{\underline{PR 75}}\color{black})
+        \item Updated create project, login, register, and reset forms to all use new css theme. (\color{blue} \href{https://github.com/uidaho/squireproject/pull/107}{\underline{PR 107}}\color{black})
+        \item Project list: Added pagination, only 16 projects are displayed at a time, the rest overflowing to following pages. (\color{blue} \href{https://github.com/uidaho/squireproject/pull/120}{\underline{PR 120}}\color{black})
+        \item Project list: Added sorting, sortable ascending/descending by author, title, and creation/modified dates. (\color{blue} \href{https://github.com/uidaho/squireproject/pull/120}{\underline{PR 120}}\color{black})
+    \end{itemize}
 
-\section{Functional Requirements}
-    \subsection{Compiler (boss2849)}
-        \begin{itemize}
-            \item Compile project sub-modules or entire project.
-            \item Compile and run code within IDE.
-            \item Compile code and package to a JAR.
-            \item Impose temporary code freeze during compilation.
-        \end{itemize}
+\section{Unit Tests}
+    \includegraphics[width=0.9\textwidth]{images/testing} \\
+    Majority implemented with \color{blue} \href{https://github.com/uidaho/squireproject/pull/75}{\underline{this pull request.}} \color{black}
+    \begin{itemize}
+        \item Login: Deny invalid credentials.
+        \item Login: Accept valid credentials and redirect.
+        \item Project comments: Auth/non-auth users view.
+        \item Project creation: Visit as guest.
+        \item Project creation: Invalid title.
+        \item Project creation: Invalid description.
+        \item Project creation: Invalid body.
+        \item Project creation: Invalid image.
+        \item Project creation: Create valid project.
+        \item Project page: Attempt delete project using direct link.
+        \item Project page: Attempt delete project as non-owner.
+        \item Project page: Delete a valid proejct.
+        \item Registration: Invalid username.
+        \item Registration: Invald email address.
+        \item Registration: Mismatched passwords.
+        \item Registration: Invalid password.
+        \item Registration: Valid input.
+    \end{itemize}
 
-\section{Compiler Class Diagram}
-    \begin{minipage}{1\textwidth}
-        \begin{center}
-            \includegraphics[width=0.7\textwidth]{uml-diagram/class-compiler} \\
-            Class diagram for compiler.
-        \end{center}
-    \end{minipage}
-
-\section{Compiler Use Case Diagram}
-    \begin{minipage}{1\textwidth}
-        \begin{center}
-            \includegraphics[width=0.7\textwidth]{uml-diagram/usecase-compiler} \\
-            Use case driagram for compiler.
-        \end{center}
-    \end{minipage}
-
-\section{Communication Sequence Diagram}
-    \begin{minipage}{1\textwidth}
-        \begin{center}
-            \includegraphics[width=0.7\textwidth]{uml-diagram/sequence-chat-client} \\
-            Sequence diagram for chat client interaction.
-        \end{center}
-        \begin{center}
-            \includegraphics[width=0.7\textwidth]{uml-diagram/sequence-chat-server} \\
-            Sequence diagram for chat server interaction.
-        \end{center}
-    \end{minipage}
-
-\section{Compiler Use Case Descriptions}
-\subsubsection{Compile (boss2849)}
-\begin{tabular}{ p{2cm} p{12cm} }
- \hline
- \\
- \textit{Actors:} & User \\ 
- \\
- \textit{Goals:} & Compile source \\
- \\
- \textit{Pre-conditions:} & User is logged in and viewing project. \\
- \\
- \textit{Summary:} & User requests that the code be compiled, the server compiles the code. \\
- \\
- \textit{Related use cases:} & Run, Compile To Jar \\ 
- \\
- \textit{Steps:} & \begin{enumerate}
-   \item User selects ``Compile'' from ``Build'' dropdown menu for the current module.
-   \item The Server receives the request to compile.
-   \item The Server caches the current state of the project using the SnapshotManager and compiles it using the active CompilerPlugin.
-   \item The Server returns the results of compilation to the User.
- \end{enumerate} \\
- \\
- \textit{Alternatives:} & In step 1, user chooses to compile entire project, including all sub modules. \\
- \\
- \textit{Post-conditions:} & None. \\
- \\
-\hline
-\end{tabular}
-
-\subsubsection{Run (boss2849)}
-\begin{tabular}{ p{2cm} p{12cm} }
- \hline
- \\
- \textit{Actors:} & User. \\ 
- \\
- \textit{Goals:} & Run the program. \\
- \\
- \textit{Pre-conditions:} & User is logged in and viewing a project. \\
- \\
- \textit{Summary:} & User chooses to run the program and the server compiles it or executes the last compilation result if no changes. \\
- \\
- \textit{Related use cases:} & Compile \\ 
- \\
- \textit{Steps:} & \begin{enumerate}
-  \item User selects ``Run'' from the ``Build'' menu drop down.
-  \item The Server receives the request to execute.
-  \item The Server retrieves the most recent compilation from the SnapshotManager.
-  \item The Server spawns a new window for the client that is the interface to the program.
- \end{enumerate} \\
- \\
- \textit{Alternatives:} & In step 3 the SnapshotManager has either an out of date compilation or no last compilation, the Server invokes the compiler to compile the project. \\
- \\
- \textit{Post-conditions:} & None. \\
- \\
-\hline
-\end{tabular}
-
-\subsubsection{Package to Jar (boss2849)}
-\begin{tabular}{ p{2cm} p{12cm} }
- \hline
- \\
- \textit{Actors:} & User \\ 
- \\
- \textit{Goals:} & Compile and package source to a jar\\
- \\
- \textit{Pre-conditions:} & User is signed in and viewing a project. \\
- \\
- \textit{Summary:} & User selects to build the project to a jar, the server outputs a jar on the project path. \\
- \\
- \textit{Related use cases:} & Compile \\ 
- \\
- \textit{Steps:} & \begin{enumerate}
-  \item The user seclects ``Compile To Jar'' from ``Build'' dropdown menu.
-  \item The Server receives the request to build a jar.
-  \item The Server fetches the most recent compilation from the SnapshotManager.
-  \item The Server packages the result of the last compilation to a jar and outputs it on the project path.
-  \item The Server notifies the user of success.
- \end{enumerate} \\
- \\
- \textit{Alternatives:} & In step 3 the SnapshotManager has either an out of date compilation or no last compilation, the Server invokes the compiler to compile the project. In step 4 or 5, the compilation process fails and the Server notifies the user with the reason of failure. \\
- \\
- \textit{Post-conditions:} & None. \\
- \\
-\hline
-\end{tabular}
-
-\subsubsection{Enable code freeze (boss2849)}
-\begin{tabular}{ p{2cm} p{12cm} }
- \hline
- \\
- \textit{Actors:} & User \\ 
- \\
- \textit{Goals:} & Impose a code freeze on the project. \\
- \\
- \textit{Pre-conditions:} & User is signed in, viewing a project, and has admin rights.\\
- \\
- \textit{Summary:} & User places a code freeze on the project, preventing editing until undone. \\
- \\
- \textit{Related use cases:} & None. \\ 
- \\
- \textit{Steps:} & \begin{enumerate}
-  \item The User selects ``Code Freeze'' from the dropdown menu.
-  \item The Server receives the request for code freeze.
-  \item The Server restricts all editing of project files.
- \end{enumerate} \\
- \\
- \textit{Alternatives:} & None. \\
- \\
- \textit{Post-conditions:} & None. \\
- \\
-\hline
-\end{tabular}
 
 \end{document}

@@ -1,0 +1,47 @@
+@startuml
+title Project Management Sequence Diagram
+footer 
+Created by mars2681 reviewed by mora5651.
+endfooter
+
+actor User
+
+activate User
+User --> Server : CreateProject()
+deactivate User
+activate Server
+Server --> Project : CreateProject()
+deactivate Server
+activate Project
+Project --> Project : Initialize()
+Project --> User : MakeUserAdmin()
+deactivate Project
+
+
+activate User
+User --> Server : EditProject()
+deactivate User
+activate Server
+Server --> Project : IsAdmin()
+deactivate Server
+activate Project
+Project --> Project : Edit()
+deactivate Project
+
+
+activate User
+User --> Server : ExportProject()
+deactivate User
+activate Server
+Server --> Project : IsAdmin()
+deactivate Server
+activate Project
+Project --> Project : ExportProject()
+deactivate Project
+
+
+deactivate User
+
+
+@enduml
+

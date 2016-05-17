@@ -1,6 +1,13 @@
 @startuml
-
+scale max 700 width
 title Project Management Sequence Diagram
+
+footer
+Created by: Eric Marsh (mars2681) 
+Reviewed by: Ben Bolton (bolt1003)
+Audit 04-11-2016 by: Ben Bolton (bolt1003)
+endfooter
+
 footer 
 Created by mars2681.
 endfooter

@@ -1,0 +1,16 @@
+@startuml
+title Project Ideas
+footer 
+Created by mars2681 and reviewed by bolt1003.
+endfooter
+hide circles
+hide members
+
+ProjectIdeasMainPage *-down-  Categories
+Categories *-down- Project
+Project *-- ProjectInfo
+Project *-- Comments
+Project *-- LikesDislikes
+Project *-- Progressbar
+
+@enduml

@@ -1,0 +1,98 @@
+@startuml
+footer 
+Created by brec9824 and reviewed by .
+endfooter
+folder squireproject
+folder app
+ folder Console
+  folder Commands
+ folder Events
+ folder Exceptions
+ folder Http
+  folder Controllers
+   folder Auth
+  folder Middleware
+  folder Requests
+ folder Jobs
+ folder Listeners
+ folder Policies
+ folder Providers
+folder bootstrap
+ folder cache
+folder config
+folder database
+ folder factories
+ folder migrations
+ folder seeds
+folder public
+ folder css
+ folder images
+ folder js
+folder resources
+ folder assets
+  folder sass
+ folder lang
+  folder en
+ folder views
+  folder auth
+   folder emails
+   folder passwords
+  folder errors
+  folder layouts
+  folder pages
+  folder vendor
+folder tests
+squireproject -- app
+squireproject -- bootstrap
+squireproject -- config
+squireproject ---- database
+squireproject ---- public
+squireproject -- resources
+squireproject -- tests
+
+
+'------Sub-folders--------
+
+'----app----'
+app -- Console
+ Console -- Commands
+app -- Events
+app -- Exceptions
+app -- Http
+ Http -- Controllers
+  Controllers -- Auth
+ Http -- Middleware
+ Http -- Requests
+app -- Jobs
+app -- Listeners
+app -- Policies
+app -- Providers
+
+'----boostrap----
+bootstrap -- cache
+
+'----database----
+database -- factories
+database -- migrations
+database -- seeds
+
+'----public----
+public -- css
+public -- images
+public -- js
+
+'----resources----
+resources -- assets
+ assets -- sass
+resources -- lang
+ lang -- en
+resources -- views
+ views -- auth
+  auth -- emails
+  auth -- passwords
+ views -- errors
+ views -- layouts
+ views -- pages
+ views -- vendor
+
+@enduml

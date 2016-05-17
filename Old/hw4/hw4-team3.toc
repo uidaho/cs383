@@ -1,0 +1,115 @@
+\contentsline {chapter}{\numberline {1}Overview and Scope}{4}
+\contentsline {section}{\numberline {1.1}Core Features}{4}
+\contentsline {section}{\numberline {1.2}Storage and Organization}{6}
+\contentsline {section}{\numberline {1.3}Execution}{6}
+\contentsline {section}{\numberline {1.4}Collaboration}{6}
+\contentsline {section}{\numberline {1.5}Achievement System}{7}
+\contentsline {section}{\numberline {1.6}Chat System}{7}
+\contentsline {section}{\numberline {1.7}Permissions System (bolt1003)}{7}
+\contentsline {section}{\numberline {1.8}Interface Structure (mora5651)}{7}
+\contentsline {section}{\numberline {1.9}Security Nightmare (jank6275)}{8}
+\contentsline {chapter}{\numberline {2}Requirements Documentation}{9}
+\contentsline {section}{\numberline {2.1}Functional Requirements}{9}
+\contentsline {subsection}{\numberline {2.1.1}Authentication (mora5651)}{9}
+\contentsline {subsection}{\numberline {2.1.2}Project Management (bolt1003)}{9}
+\contentsline {subsection}{\numberline {2.1.3}Project Ideas (mars2681)}{10}
+\contentsline {subsection}{\numberline {2.1.4}Settings - Preferences and Profile (brec9824)}{10}
+\contentsline {subsection}{\numberline {2.1.5}Compiler (boss2849)}{10}
+\contentsline {subsection}{\numberline {2.1.6}Syntax (gall7417)}{11}
+\contentsline {subsection}{\numberline {2.1.7}Communication (jank6275)}{11}
+\contentsline {subsection}{\numberline {2.1.8}Project File Editor (snev7821)}{11}
+\contentsline {subsection}{\numberline {2.1.9}Security (gall7417)}{11}
+\contentsline {section}{\numberline {2.2}Non-Functional Requirements}{12}
+\contentsline {chapter}{\numberline {3}Use Case Diagrams}{14}
+\contentsline {section}{\numberline {3.1}Overview (jank6275)}{14}
+\contentsline {section}{\numberline {3.2}Authentication (mora5651)}{15}
+\contentsline {section}{\numberline {3.3}Project Ideas (mars2681)}{15}
+\contentsline {section}{\numberline {3.4}Communication (jank6275)}{16}
+\contentsline {section}{\numberline {3.5}User Preferences (snev7821)}{17}
+\contentsline {section}{\numberline {3.6}Project Management (bolt1003)}{17}
+\contentsline {section}{\numberline {3.7}Settings, Preferences, and Profile (brec9824)}{18}
+\contentsline {section}{\numberline {3.8}Compiler (boss2849)}{18}
+\contentsline {chapter}{\numberline {4}Use Case Descriptions}{19}
+\contentsline {section}{\numberline {4.1}Authentication (mora5651)}{20}
+\contentsline {subsection}{\numberline {4.1.1}Sign up (Use Case Diagram 3.2)}{20}
+\contentsline {subsection}{\numberline {4.1.2}Sign in (Use Case Diagram 3.2)}{21}
+\contentsline {subsection}{\numberline {4.1.3}Logout (Use Case Diagram 3.2)}{22}
+\contentsline {subsection}{\numberline {4.1.4}Forgotten Username (Use Case Diagram 3.2)}{23}
+\contentsline {subsection}{\numberline {4.1.5}Forgotten Password (Use Case Diagram 3.2)}{24}
+\contentsline {section}{\numberline {4.2}Project Ideas (mars2681)}{25}
+\contentsline {subsection}{\numberline {4.2.1}Browse Project Ideas }{25}
+\contentsline {subsection}{\numberline {4.2.2}View Project Idea}{26}
+\contentsline {subsection}{\numberline {4.2.3}Create Project Idea}{27}
+\contentsline {subsection}{\numberline {4.2.4}Edit Project Idea }{28}
+\contentsline {subsection}{\numberline {4.2.5}Comment on Project Idea}{29}
+\contentsline {subsection}{\numberline {4.2.6}Like/Dislike Project Idea}{30}
+\contentsline {subsection}{\numberline {4.2.7}Follow Project Idea}{31}
+\contentsline {section}{\numberline {4.3}Communication (jank6275)}{32}
+\contentsline {subsection}{\numberline {4.3.1}Open project chat (Class Diagram 5.8)}{32}
+\contentsline {subsection}{\numberline {4.3.2}Open global chat (Class Diagram 5.8)}{33}
+\contentsline {subsection}{\numberline {4.3.3}Close project chat (Class Diagram 5.8)}{34}
+\contentsline {subsection}{\numberline {4.3.4}Close global chat (Class Diagram 5.8)}{35}
+\contentsline {subsection}{\numberline {4.3.5}Write to project chat (Class Diagram 5.8)}{36}
+\contentsline {subsection}{\numberline {4.3.6}Write to global chat (Class Diagram 5.8)}{37}
+\contentsline {subsection}{\numberline {4.3.7}Modify chat font (Settings Class Diagram)}{38}
+\contentsline {subsection}{\numberline {4.3.8}Modify chat color (Settings Class Diagram)}{39}
+\contentsline {section}{\numberline {4.4}Project File Editor (snev7821)}{40}
+\contentsline {subsection}{\numberline {4.4.1}Add New File to Project}{40}
+\contentsline {subsection}{\numberline {4.4.2}Add Existing File to Project}{41}
+\contentsline {subsection}{\numberline {4.4.3}Delete File}{42}
+\contentsline {subsection}{\numberline {4.4.4}Export Files}{43}
+\contentsline {subsection}{\numberline {4.4.5}Open File in New Tab}{44}
+\contentsline {subsection}{\numberline {4.4.6}View Line Numbers }{45}
+\contentsline {subsection}{\numberline {4.4.7}View References}{46}
+\contentsline {subsection}{\numberline {4.4.8}View Dates}{47}
+\contentsline {subsection}{\numberline {4.4.9}View Authors}{48}
+\contentsline {subsection}{\numberline {4.4.10}Format Document}{49}
+\contentsline {subsection}{\numberline {4.4.11}Find/Replace}{50}
+\contentsline {subsection}{\numberline {4.4.12}Display Typing User}{51}
+\contentsline {section}{\numberline {4.5}Project Management (bolt1003) (Use Case Diagram: 3.6)}{52}
+\contentsline {subsection}{\numberline {4.5.1}Create Project (Use Case Diagram: 3.6)}{52}
+\contentsline {subsection}{\numberline {4.5.2}Open a project (Use Case Diagram: 3.6)}{53}
+\contentsline {subsection}{\numberline {4.5.3}Join Project (Use Case Diagram: 3.6)}{54}
+\contentsline {subsection}{\numberline {4.5.4}Leave project (Use Case Diagram: 3.6)}{55}
+\contentsline {subsection}{\numberline {4.5.5}Delete Project (Use Case Diagram: 3.6)}{56}
+\contentsline {subsection}{\numberline {4.5.6}Export Project (Use Case Diagram: 3.6)}{57}
+\contentsline {subsection}{\numberline {4.5.7}Accept Invite to Project (Use Case Diagram: 3.6)}{58}
+\contentsline {subsection}{\numberline {4.5.8}Remove User from Project (Use Case Diagram: 3.6)}{59}
+\contentsline {subsection}{\numberline {4.5.9}Edit Project Permissions (Use Case Diagram: 3.6)}{60}
+\contentsline {subsection}{\numberline {4.5.10}Invite User to Project (Use Case Diagram: 3.6)}{61}
+\contentsline {subsection}{\numberline {4.5.11}Promote User to Admin (Use Case Diagram: 3.6)}{62}
+\contentsline {subsection}{\numberline {4.5.12}Demote Admin (Use Case Diagram: 3.6)}{63}
+\contentsline {subsection}{\numberline {4.5.13}Block User (Use Case Diagram: 3.6)}{64}
+\contentsline {section}{\numberline {4.6}Settings - Preferences and Profile (brec9824)}{65}
+\contentsline {subsection}{\numberline {4.6.1}View A User's Profile}{65}
+\contentsline {subsection}{\numberline {4.6.2}Modify Profile Info}{66}
+\contentsline {subsection}{\numberline {4.6.3}Modify Profile Privacy}{67}
+\contentsline {subsection}{\numberline {4.6.4}Delete Account}{68}
+\contentsline {subsection}{\numberline {4.6.5}Quick Jump To Projects}{69}
+\contentsline {section}{\numberline {4.7}Compiler (boss2849) (Use Case Diagram 3.8) }{70}
+\contentsline {subsection}{\numberline {4.7.1}Compile (Use Case Diagram 3.8)}{70}
+\contentsline {subsection}{\numberline {4.7.2}Run (Use Case Diagram 3.8)}{71}
+\contentsline {subsection}{\numberline {4.7.3}Package to Jar (Use Case Diagram 3.8)}{72}
+\contentsline {subsection}{\numberline {4.7.4}Enable code freeze (Use Case Diagram 3.8)}{73}
+\contentsline {chapter}{\numberline {5}Class Diagrams}{74}
+\contentsline {section}{\numberline {5.1}Overview (brec9824, jank6275)}{74}
+\contentsline {section}{\numberline {5.2}Authentication (mora5651)}{75}
+\contentsline {section}{\numberline {5.3}Project Management (bolt1003) (Sequence Diagram 6.2)}{76}
+\contentsline {section}{\numberline {5.4}Project Ideas (mars2681)}{77}
+\contentsline {section}{\numberline {5.5}Settings, Preferences, and Profile (brec9824)}{78}
+\contentsline {section}{\numberline {5.6}Compiler (boss2849) (Sequence Diagram 6.5)}{79}
+\contentsline {section}{\numberline {5.7}Syntax (gall7417)}{80}
+\contentsline {section}{\numberline {5.8}Communication (jank6275)}{81}
+\contentsline {section}{\numberline {5.9}Project File Editor (snev7821)}{83}
+\contentsline {chapter}{\numberline {6}Sequence Diagrams}{84}
+\contentsline {section}{\numberline {6.1}Authentication (jank6275)}{84}
+\contentsline {subsection}{\numberline {6.1.1}Login}{84}
+\contentsline {subsection}{\numberline {6.1.2}Logout}{85}
+\contentsline {subsection}{\numberline {6.1.3}Register}{86}
+\contentsline {section}{\numberline {6.2}Project Management (mars2681)}{87}
+\contentsline {section}{\numberline {6.3}Project Ideas (snev7821)}{88}
+\contentsline {section}{\numberline {6.4}Settings, Preferences, and Profile (gall7417)}{88}
+\contentsline {section}{\numberline {6.5}Compiler (bolt1003)}{89}
+\contentsline {section}{\numberline {6.6}Syntax (mora5651)}{89}
+\contentsline {section}{\numberline {6.7}Communication (boss2849)}{90}
+\contentsline {section}{\numberline {6.8}Project File Editor (brec9824)}{91}

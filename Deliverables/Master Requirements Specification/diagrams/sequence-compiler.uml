@@ -1,5 +1,11 @@
 @startuml
+scale max 700 width
 hide circle
+
+footer
+Created by: Ben Bolton (bolt1003)
+Reviewed by: Robert Breckenridge (brec9824)
+endfooter
 
 activate Interface
 Interface --> Compiler : compile(text)

@@ -1,0 +1,29 @@
+@startuml
+
+title Project Management
+scale 800 width
+
+footer
+Created by bolt1003
+endfooter
+
+actor User
+actor Administrator
+
+User --> Administrator
+
+User -- (Join Project)
+User -- (Leave Project)
+Administrator -- (Create Project)
+User -- (Open Project)
+Administrator -- (Delete Project)
+User -- (Export Project)
+User -- (Accept invite to project)
+User -- (Invite User to Project)
+Administrator -- (Remove user from project)
+Administrator -- (Edit Project Permissions)
+Administrator -- (Block User)
+Administrator -- (Demote Admin)
+Administrator -- (Promote User to Admin)
+
+@enduml

@@ -1,0 +1,31 @@
+@startuml
+scale max 800*600
+title Logout Sequence Diagram
+footer 
+Created by jank6275 and reviewed by mora5651.
+endfooter
+
+
+actor User
+activate User
+User -> MainWindow : logout(userid)
+activate MainWindow
+
+boundary MainWindow
+MainWindow -> Authentication : logoutUser(userid)
+activate Authentication
+
+entity Authentication
+Authentication -> Authentication : isCurrentUser
+
+alt false
+    Authentication -> MainWindow : logout failed message
+    deactivate Authentication
+    MainWindow -> User : Stays logged in
+else true
+    Authentication -> MainWindow : logout success message
+    destroy Authentication
+    MainWindow -> User : Logged out
+end
+
+@enduml

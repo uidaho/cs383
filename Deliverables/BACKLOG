@@ -1,17 +1,213 @@
-Backlog for HW3 due already:
-    Get a Java compiler installed and learn Java, enough to do a main menu with at least: a background graphic, a "New Game", "Load Game", "Save Game", "Options", "About", and "Exit". There is no turnin item for this assignment item.
-
-Backlog for HW4 due March 4th:
-    finalize overview/scope -- staying on course completed
-    pick sections for sequence diagrams by Friday 2/29
-    clean-up functional requirements -- same sections by wednesday
-    clean up non-functional reuirements -- same sections by wednesday
-    clean up use case diagrams and descriptions by monday
-        For each use case, identify classes in the class diagram involved in implementing it.
-        For each functional and non-functional requirement, identify and label where it is reflected in the corresponding use cases or class diagram.
-    check for overlap in requirements by monday
-    preliminary class diagrams focused on relationships between classes by wednedsay
-    sequence diagrams (different subjects) by friday
+Team Lambda Project Backlog
 
 
-Completed:
+Migrated the majority to GitHub (github.com/uidaho/squireproject/issues)
+
+
+#################################################################################
+PROJECT BACKLOG:
+    Urgent:
+        Setup a ssh key for github in your squire shell. ssh-keygen -t rsa -b 4096 -C "your_email@example.com" (Everyone)
+
+    Auth Team Backlog:
+        Research whats needed to impliment authentication with laravel.
+        Prototype implementation: Promote User to Admin x
+        Prototype implementation: Demote Admin x
+        Prototype implementation: Block User x
+        Prototype implementation: Delete Account x
+        Prototype implementation: Sign up x
+        Prototype implementation: Sign in x
+        Prototype implementation: Logout x
+        Prototype implementation: Forgotten Username x
+        Prototype implementation: Forgotten Password x
+        Prototype implementation: google recaptcha
+        
+    Filesystem Team Backlog:
+        Prototype implementation: Add New File to Project x
+        Prototype implementation: Add Existing File to Project x
+        Prototype implementation: Delete File x
+        Prototype implementation: Export Files x
+        Prototype implementation: Open File in New Tab x
+    
+    Settings/Profile Team Backlog:
+        Compile a list of all settings in the Ace file editor we want to support.
+        Prototype implementation: Modify chat font Settings x
+        Prototype implementation: Modify chat color Settings x
+        Prototype implementation: View Line Numbers -
+        Prototype implementation: View References 
+        Prototype implementation: View Dates -
+        Prototype implementation: View Authors -
+        Prototype implementation: View A User’s Profile x
+        Prototype implementation: Modify Profile Info -
+        Prototype implementation: Modify Profile Privacy -
+    
+    CMS Team Backlog:
+        Research whats needed to impliment a CMS controller with laravel.
+        Prototype implementation: Browse Project Ideas x
+        Prototype implementation: View Project Idea x
+        Prototype implementation: Create Project Idea x
+        Prototype implementation: Edit Project Idea x
+        Prototype implementation: Comment on Project Idea x
+        Prototype implementation: Like/Dislike Project Idea x
+        Prototype implementation: Follow Project Idea x
+
+    Server Team Backlog:
+        Install Laravel Framework on server. x
+        Create new git repo for website. x
+        Add base framework and templates to git repo. x
+        Setup accounts for team members. x
+        Setup nginx with team member folders. x
+    
+    Misc:
+        Create a favicon.ico for squire! x
+        Create official libraries/technology stack diagram x
+        Prototype implementation: Communication 
+        Prototype implementation: Open project chat
+        Prototype implementation: Open global chat
+        Prototype implementation: Close project chat
+        Prototype implementation: Close global chat
+        Prototype implementation: Write to project chat
+        Prototype implementation: Write to global chat
+        Prototype implementation: Format Document 
+        Prototype implementation: Find/Replace 
+        Prototype implementation: Display Typing User x
+        Prototype implementation: Create Project x
+        Prototype implementation: Open a project x
+        Prototype implementation: Join Project -
+        Prototype implementation: Leave project -
+        Prototype implementation: Delete Project x
+        Prototype implementation: Export Project -
+        Prototype implementation: Accept Invite to Project -
+        Prototype implementation: Remove User from Project -
+        Prototype implementation: Edit Project Permissions
+        Prototype implementation: Invite User to Project -
+        Prototype implementation: Quick Jump To Projects x
+        Prototype implementation: Compile x
+        Prototype implementation: Run x
+        Prototype implementation: Package to Jar x
+        Prototype implementation: Enable code freeze -
+
+
+
+#################################################################################
+SPRINT BACKLOG: (Stuff to complete this sprint) Due April 11th at 7pm
+    1. Translate your project's design (use cases, diagrams) into code.
+    2. Add/refine design details as needed.
+    3. Review all class diagrams, consider all aggregations to see if they should instead be a user-defined association. If they have an association name, get the diamond off them; it is either/or. Association names should not be whole sentences or long phrases; those go in the diagram dictionary.
+    4. Add "diagram dictionary" below each class diagram if you do not have it already, defining the semantics of your classes and associations.
+    5. Review and/or add reviewer information to sequence diagrams if it is not already present.
+    6. Correct instructor feedback items.
+    7. Prioritize backlog items to target code deliverables for the most central use cases. Try to deliver the first runnable prototype.
+    8. In your sprint report, demo use cases that are done and non-usecase progress that has been made.
+    9. Your group submission should be organized into three sections/chapters: requirements, design, and implementation. Regarding the implementation, the document should not include all source files, but rather, project organization (directories, summaries of files' contents) and JavaDoc or equivalent reference information.
+
+    Make instructor changes to Overview Class Diagram.
+    Make instructor changes to Project Ideas Class Diagram (mars2681)
+    Make instructor changes to Compiler Class Diagram (boss2849)
+    Make instructor changes to Project File Editor Class Diagram (snev7821)
+    Make instructor changes to Communication Sequence Diagram (boss2849)
+    
+    Misc:
+        Create Group Deliverable consisting of teams statecharts, mockups, and prototype implimentations.
+#################################################################################
+IN PROGRESS BACKLOG:
+
+    Make instructor changes to Overview Class Diagram.
+    
+    Auth Team Backlog (brec9824, mora5651):
+        Prototype implementation: Forgotten Username (mora5651)
+        Prototype implementation: Forgotten Password (mora5651)
+    
+    Filesystem Team Backlog ():
+    
+    Settings/Profile Team Backlog (mora5651, bolt1003):
+    Prototype implementation: Modify Profile Info (mora5651)
+    Prototype implementation: Modify Profile Privacy (mora5651)
+    
+    CMS Team Backlog (jank6275, ):
+
+    Server Team (jank6275, ):
+        Install Laravel Framework dependancies on server (jank6275)
+        Create documentation for server and dependency install (jank6275)
+        Create documentation for laravel install (jank6275)
+        Create local server for prototyping (bolt1003)
+    
+    Sprint:
+        Lookup possible software for squire (Eric)
+        Statechart Settings, Preferences, and Profile (Eric)
+
+#################################################################################
+COMPLETED BACKLOG:
+    Sprint Ending April 11th:
+    -------------------------
+    
+        Make instructor changes to Overview Class Diagram.
+            Make instructor changes to Project Management Class Diagram (Completed 4/6/2016 by bolt1003)
+
+    
+        Auth Team:
+            Prototype implementation: Sign up (Completed 4/4/2016 by brec9824)
+            Prototype implementation: Sign in (Completed 4/4/2016 by brec9824)
+            Prototype implementation: Logout (Completed 4/4/2016 by brec9824)
+            Prototype implementation: Password reset (Completed 4/6/2016 by brec9824)
+    
+        Filesystem Team:
+        
+        Settings/Profile Team:
+      
+        
+        CMS Team:
+    
+        Server Team:
+            Install composer for larvel installs. (Completed 3/27/2016 by jank6275)
+            Configured webserver to serve wildcard USER.squireproject.com using /home/USER/squireproject/public  (Completed 3/28/2016 by jank6275)
+            Install and configure postfix server and mail dns/spf records. (Completed 3/28/2016 by jank6275)
+        
+        Sprint:
+            Make instructor changes to Settings, Preferences, and Profile Class Diagram (brec9824)
+            Make instructor changes to Settings, Preferences, and Profile Use Case Diagram (brec9824)
+            Updated Master Requirements Specification with hw5's group work and moved hw4 over to Old directory (brec9824)
+
+
+    Sprint Ending March 25th:
+    -------------------------
+        Auth Team:
+    
+        Filesystem Team:
+        
+        Settings/Profile Team:
+        
+        CMS Team:
+    
+        Server Team:
+            Register internet domain: squireproject.com (jank6275) 
+            Generate SSL certificate for *.squireproject.com  (jank6275)
+            Setup and harden Ubuntu 14.04 server (jank6275)
+            Install and configure nginx webserver (jank6275)
+            Install and configure MySQL server (jank6275)
+            Create Firebase account and database (jank6275)
+            Setup basic bootstrap CSS theme and html template (jank6275)
+        
+        Sprint:
+            Research possible software for squire: Firebase, LEMP Stack, Ace, CodeMirror  (jank6275) (Completed 3/21/2016)
+            Interface mockup - Communication (jank6275) (Completed 3/25/2016)
+            Interface mockup - home, register, login, project finder (brec9824) (Completed 3/25/2016)
+            Statechart - Authentication (brec9824) (Completed 3/25/2016)
+            Statechart - Communication (jank6275) (Completed 3/25/2016)
+            Statechart - Compiler (rickbau5)
+            Interface mockup - Compiler (rickbau5)
+
+
+    Sprint Ending March 4th:
+    -------------------------
+        finalize overview/scope -- staying on course completed (Completed 3/4/2016)
+        pick sections for sequence diagrams by Friday 2/29 (Completed 3/4/2016)
+        clean-up functional requirements -- same sections by wednesday (Completed 3/4/2016)
+        clean up non-functional reuirements -- same sections by wednesday (Completed 3/4/2016)
+        clean up use case diagrams and descriptions by monday (Completed 3/4/2016)
+            For each use case, identify classes in the class diagram involved in implementing it. (Completed 3/4/2016)
+            For each functional and non-functional requirement, identify and label where it is reflected in the corresponding use cases or class diagram. (Completed 3/4/2016)
+        check for overlap in requirements by monday (Completed 3/4/2016)
+        preliminary class diagrams focused on relationships between classes by wednedsay (Completed 3/4/2016)
+        sequence diagrams (different subjects) by friday (Completed 3/4/2016)
+

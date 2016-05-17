@@ -1,5 +1,11 @@
 @startuml
+scale max 700 width
 hide circle
+
+footer
+Created by: boss2849
+Reviewed by:
+endfooter
 
 activate ChatServer
 ChatServer --> ChatLogThread : start()

@@ -1,10 +1,11 @@
 @startuml
 
 title Project Management
-scale 800 width
+scale 700 width
 
 footer
 Created by bolt1003
+Reviewed by: brec9824
 endfooter
 
 actor User

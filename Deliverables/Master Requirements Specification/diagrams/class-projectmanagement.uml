@@ -1,15 +1,18 @@
 @startuml
+scale max 700 width
 
 hide circle
 hide empty methods
 hide empty fields
 
 footer
-Created by bolt1003, Reviewed by mars2681
+Created by: Eric Marsh (mars2681) 
+Reviewed by: Ben Bolton (bolt1003)
+Audit 04-11-2016 by: Ben Bolton (bolt1003)
+Corrections: John Snevily (snev7821)
 endfooter
 
 title Project Management
-scale 800 width
 
 class Project_Manager{
 }
@@ -44,10 +47,11 @@ Project_Manager *--"1..*" Projects
 Projects *--left"1..*" Groups
 Projects *--right"*" Folders
 Projects *--"1..*" Settings
+Projects *--"1..32" Users
 Folders *--"*" Files
 Users --"1..*" TOOLS : "Enable Development" 
-Users -right-"1..*" Permissions : "Control Modification"
-Groups *--"1..32" Users
+Users -left-"1..*" Permissions : "Control Modification"
+Groups .."1..*" Users : "Augment Permissions"
 Groups --"1..*" Permissions : "Control Access"
 
 

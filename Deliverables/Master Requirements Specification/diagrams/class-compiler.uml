@@ -1,22 +1,18 @@
 @startuml
 
-scale 800 width
+scale max 700 width
 hide circles
 
 footer
-Created by Rick Boss
-Reviewed by Eric Gallegos
+Created by: Rick Boss (boss2849) 
+Audit 5-12-2016 by: Rick Boss (boss2849)
 endfooter
 
 class MainWindow
-interface CompilerPlugin 
-class JavaCompiler
-class Compiler      
-class SnapshotManager 
+class CompileController
+class FirebaseLib
 
-MainWindow -d- Compiler : shows to
-JavaCompiler -u-|> CompilerPlugin
-Compiler o--"1..*" CompilerPlugin
-Compiler o-- SnapshotManager
-SnapshotManager -l- CompilerPlugin
+MainWindow -d- CompileController : output status to <
+CompileController o-- FirebaseLib : uses
+
 @enduml

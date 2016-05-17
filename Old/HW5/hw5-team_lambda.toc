@@ -1,0 +1,23 @@
+\contentsline {chapter}{\numberline {1}Overview and Scope}{2}
+\contentsline {chapter}{\numberline {2}State Charts}{3}
+\contentsline {section}{\numberline {2.1}Project Forum (snev7821)}{3}
+\contentsline {section}{\numberline {2.2}Settings/Preferences (gall7417)}{3}
+\contentsline {section}{\numberline {2.3}Compile (boss2849)}{4}
+\contentsline {section}{\numberline {2.4}Project Management (bolt1003)}{5}
+\contentsline {section}{\numberline {2.5}Communication (jank6275)}{6}
+\contentsline {section}{\numberline {2.6}Authentication (brec9824)}{7}
+\contentsline {chapter}{\numberline {3}User Interface Mockups}{8}
+\contentsline {section}{\numberline {3.1}Project Management (bolt1003)}{8}
+\contentsline {section}{\numberline {3.2}Settings and Preferences (gall7417)}{9}
+\contentsline {section}{\numberline {3.3}Squire Editor (jank6275)}{10}
+\contentsline {section}{\numberline {3.4}Squire Chat (jank6275)}{11}
+\contentsline {section}{\numberline {3.5}Project Browser (snev7821)}{11}
+\contentsline {section}{\numberline {3.6}Compile Mockup (boss2849)}{12}
+\contentsline {section}{\numberline {3.7}Syntax Mockup (mars2681)}{12}
+\contentsline {section}{\numberline {3.8}Home (brec9824)}{13}
+\contentsline {section}{\numberline {3.9}Register (brec9824)}{14}
+\contentsline {section}{\numberline {3.10}Login (brec9824)}{15}
+\contentsline {section}{\numberline {3.11}Project Finder (brec9824)}{16}
+\contentsline {section}{\numberline {3.12}Project Idea (mora5651)}{17}
+\contentsline {chapter}{\numberline {4}Prototype Implementations}{18}
+\contentsline {section}{\numberline {4.1}Server Stack (jank6275)}{18}

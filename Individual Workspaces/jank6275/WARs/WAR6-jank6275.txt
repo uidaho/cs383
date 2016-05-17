@@ -1,0 +1,31 @@
+From: Brandon Jank <jank6275@vandals.uidaho.edu> 
+To: Dr. J. <jeffery@cs.uidaho.edu>
+Subject: Status report, Brandon Jank, 2016-03-27 
+
+Weekly Status Report of Team Lambda
+for the Last Week Ending 2016-03-27 Sunday
+
+Activities Planned for Last Week:
+  - Spring break!
+  - Plan for HW5 sprint
+  - Refine class diagrams
+  - Start planning for implimentation
+  - create a UI design
+  - create a statechart
+  - get a library/tech stack together
+  
+Activities Accomplished Last Week:
+    Register internet domain: squireproject.com (jank6275) 
+    Generate SSL certificate for *.squireproject.com  (jank6275)
+    Setup and harden Ubuntu 14.04 server (jank6275)
+    Install and configure nginx webserver (jank6275)
+    Install and configure MySQL server (jank6275)
+    Create Firebase account and database (jank6275)
+    Setup basic bootstrap CSS theme and html template (jank6275)
+    Research possible software for squire: Firebase, LEMP Stack, Ace, CodeMirror  (jank6275)
+    Interface mockup - Communication (jank6275) 
+    Statechart - Communication (jank6275)
+
+Activities Planned for Next Week:
+    Each person do 2 prototype implementations.
+    Create official libraries/technology stack diagram.

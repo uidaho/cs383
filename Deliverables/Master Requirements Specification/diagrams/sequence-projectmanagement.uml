@@ -1,7 +1,12 @@
 @startuml
+scale max 700 width
 title Project Management Sequence Diagram
-footer 
-Created by mars2681.
+footer
+
+footer
+Created by: Eric Marsh (mars2681) 
+Reviewed by: Kevin Morales (mora5651)
+Audit 04-11-2016 by: Ben Bolton (bolt1003)
 endfooter
 
 actor User
@@ -19,17 +24,6 @@ deactivate Project
 
 
 activate User
-User --> Server : DeleteProject()
-deactivate User
-activate Server
-Server --> Project : IsAdmin()
-deactivate Server
-activate Project
-Project --> Project : Delete()
-deactivate Project
-
-
-activate User
 User --> Server : EditProject()
 deactivate User
 activate Server
@@ -37,29 +31,6 @@ Server --> Project : IsAdmin()
 deactivate Server
 activate Project
 Project --> Project : Edit()
-deactivate Project
-
-
-activate User
-User --> Server : EditPermissions()
-deactivate User
-activate Server
-Server --> Project : IsAdmin()
-deactivate Server
-activate Project
-Project --> Project : EditPermissions()
-deactivate Project
-
-
-activate User
-User --> Server : JoinProject()
-deactivate User
-activate Server
-Server --> Server : AskAdminToJoinProject()
-Server --> Project : PermissionAccepted()
-deactivate Server
-activate Project
-Project --> Project : GiveUserPermission()
 deactivate Project
 
 

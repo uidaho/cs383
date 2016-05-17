@@ -1,0 +1,34 @@
+@startuml
+'Updated: March 28, 2016
+title Settings Profile/Prefrences
+footer 
+Created by brec9824 and reviewed by snev7821.
+endfooter
+hide circles
+
+class SettingsManager {
+profile : Profile
+changeEmail()
+changePassword()
+changeBio()
+changePrivacy()
+}
+class UpdateProfileData {
+}
+class Authentication {
+}
+class Profile {
+user : User
+pImageID : int
+bio : string
+publicBitmask : int
+friendBitmask : int
+prefColor : int
+prefShape : int
+projOwnerList[] : string
+projMemberList[] : string
+}
+SettingsManager o-down- Profile
+SettingsManager -right- UpdateProfileData : "Updates"
+Authentication -right- SettingsManager : "Authenticates"
+@enduml

@@ -1,0 +1,30 @@
+@startuml
+hide circle
+
+activate Interface
+Interface --> Compiler : compile(text)
+deactivate Interface
+activate Compiler
+Compiler --> Lexical_Analyser : validSyntax(text)
+deactivate Compiler
+activate Lexical_Analyser
+Lexical_Analyser --> Compiler : return false
+deactivate Lexical_Analyser
+activate Compiler
+Compiler --> Error_Handler: lookupError(err_num)
+deactivate Compiler
+activate Error_Handler
+Error_Handler --> Interface : displayError(Err_Description)
+deactivate Error_Handler
+activate Interface
+Interface --> Error_Handler : return
+deactivate Interface
+activate Error_Handler
+Error_Handler --> Compiler : return
+deactivate Error_Handler
+activate Compiler
+Compiler --> Interface : return false
+deactivate Compiler
+activate Interface
+
+@enduml

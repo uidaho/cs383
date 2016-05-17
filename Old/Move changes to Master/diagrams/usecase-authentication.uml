@@ -1,0 +1,10 @@
+@startuml
+'scale 800 width
+User << Human >>
+
+    User --> (Sign up) 
+    User --> (Login) 
+    User --> (LogOut) 
+    User --> (Forgotten Username)
+    User --> (Forgotten Password)
+@enduml

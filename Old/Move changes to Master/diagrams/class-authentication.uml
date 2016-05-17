@@ -1,0 +1,13 @@
+@startuml
+scale 200 width
+footer
+Created  by: Kevin Morales (mora5651)
+Reviewed by: Brandon Jank (jank6275)
+endfooter
+hide circles 
+hide members
+title <b>Authentication</b>
+AuthenticationProcess  --  UserAccount : Authenticate
+UserAccount *-- Profile
+UserAccount *-- Permissions
+@enduml

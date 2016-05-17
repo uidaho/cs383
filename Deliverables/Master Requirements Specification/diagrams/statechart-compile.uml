@@ -1,0 +1,14 @@
+@startuml
+title Compile Project
+
+footer
+Created by: Rick Boss (boss2849)
+Reviewed by: John Snevily (snev7821)
+endfooter
+
+[*] --> Compiler : Compile requested
+Compiler --> FirebaseLib : downloads files to local filesytsem
+FirebaseLib --> [*] : on success, returns success and link to jar download
+FirebaseLib --> [*] : on failure, returns error messages
+
+@enduml

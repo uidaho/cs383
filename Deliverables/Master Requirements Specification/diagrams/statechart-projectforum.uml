@@ -1,0 +1,22 @@
+@startuml
+scale max 700 width
+
+footer
+Created  by: John Snevily (snev7821)
+Reviewed by:  Ben Bolton (bolt1003)
+endfooter
+
+[*] --> BrowsingProjects
+BrowsingProjects: Overview of projects
+BrowsingProjects: forum page
+BrowsingProjects -> BrowsingProjects: sortprojects(sort)
+BrowsingProjects --> ProjectView :selectproject()
+
+ProjectView: Details of projects
+ProjectView -->AcceptProject: userpledge()
+ProjectView -->BrowsingProjects: voted(up/down)
+ProjectView -> ProjectView: next/previous project() 
+
+
+AcceptProject -> [*]:openproject()
+@enduml

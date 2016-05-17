@@ -1,0 +1,25 @@
+@startuml
+hide circles
+title
+Authentication
+endtitle
+footer
+Created by: Robert Breckenridge (brec9824)
+Reviewed by:  ()
+endfooter
+
+[*] --> Non_Authenticated
+
+Non_Authenticated -down-> Authenticating : attempt login
+
+Authenticating --> Authenticating : [time<=30]
+
+Authenticating --> Authenticated : correct credentials
+
+Authenticating --> Failed_Authentication : incorrect/timed-out
+
+Failed_Authentication --> Non_Authenticated : [time<=10]
+
+Authenticated --> Non_Authenticated: timed-out
+
+@enduml

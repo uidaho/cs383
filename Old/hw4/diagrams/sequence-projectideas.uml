@@ -1,0 +1,23 @@
+@startuml
+
+Interface -> Database: list_projects(arg)
+Activate Interface
+Activate Database 
+Database -> Database: get_projects()
+Database --> Interface:return(sorted by arg)
+Deactivate Database
+Deactivate Interface
+Interface -> Project: view_project()
+Activate Project
+Activate Interface
+Project --> Interface: return_info()
+Deactivate Project
+Interface -> Project: vote(arg)
+Activate Project
+Project -> Project: set_vote_count(arg)
+Project --> Interface: return
+Deactivate Project
+Deactivate Interface
+
+
+@enduml

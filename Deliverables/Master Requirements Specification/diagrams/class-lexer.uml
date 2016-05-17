@@ -1,8 +1,16 @@
 @startuml
-scale 800 width
+scale max 700 width
 title Lexer Class Diagram
 hide circle
 'left to right direction
+
+footer
+Created by: Eric Gallegos (gall7417)  
+Reviewed by: Rick Boss (boss2849) 
+Audit 04-11-2016 by: Ben Bolton (bolt1003)
+Updated John Snevily (snev7821)
+endfooter
+
 footer
 Created by Eric Gallegos
 Reviewed by Rick Boss
@@ -34,8 +42,8 @@ ColorCode(word, type)
 
 LexicalAnalysisJava <|-u- JavaSyntaxLib
 
-LexicalAnalysisJava o-- TypeCheck
-LexicalAnalysisJava o-- ColorCode
-LexicalAnalysisJava o-- ErrorCheck
+LexicalAnalysisJava -- TypeCheck
+LexicalAnalysisJava -- ColorCode
+LexicalAnalysisJava *-- ErrorCheck
 
 @enduml

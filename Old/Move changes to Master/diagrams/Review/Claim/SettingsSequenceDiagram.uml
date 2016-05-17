@@ -1,0 +1,31 @@
+@startuml
+hide circle
+
+activate Interface
+Interface --> SettingsManager : EditSettings(user)
+deactivate Interface
+activate SettingsManager
+SettingsManager --> Authentication : Authenticate(user)
+deactivate SettingsManager
+activate Authentication
+Authentication --> SettingsManager : return true
+deactivate Authentication
+activate SettingsManager
+SettingsManager --> SettingsEditor : ChangePassword(user)
+deactivate SettingsManager
+activate SettingsEditor
+SettingsEditor --> SettingsManager : return password
+deactivate SettingsEditor
+activate SettingsManager
+SettingsManager --> UpdateProfileData : Update(user)
+deactivate SettingsManager
+activate UpdateProfileData
+UpdateProfileData --> SettingsManager : return
+deactivate UpdateProfileData
+activate SettingsManager
+SettingsManager --> Interface : return
+deactivate SettingsEditor
+activate Interface
+
+@enduml
+

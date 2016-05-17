@@ -1,10 +1,13 @@
 @startuml
-scale 800 width
+scale max 700 width
 title Squire Class Diagram Overview
 hide circle
 hide members
+
 footer
-Created by brec9824, jank6275.
+Created by: Brandon Jank (jank6275) 
+Created by: Robert Breckenridge (brec9824)
+Audit 04-11-2016 by: Ben Bolton (bolt1003)
 endfooter
 
 Squire *-- MainWindow
@@ -25,7 +28,7 @@ User *-- Permissions
 
 'Settings Profile/Preferences  
 '-------------------------------------
-SettingsManager -- Authentication
+SettingsManager -- Authentication : Confirms identity
 SettingsManager o-down- "1" Profile
 SettingsManager -right- UpdateProfileData : "Update Data"
 
@@ -33,8 +36,8 @@ SettingsManager -right- UpdateProfileData : "Update Data"
 'File Editor 
 '------------------------------
 File -up-> Directory : stored 
-Directory -- System :organizes <
-class File --> System
+Directory -- System : organizes 
+class File -- System : stores data
 class System - Git : saves and retrieves
 
 
@@ -47,7 +50,7 @@ LexicalAnalysisJava <|-u- JavaSyntaxLib
 
 'Project Management 
 '----------------------------------------
-Admin -- ProjectManager
+Admin -- ProjectManager : Edits Permissions
 ProjectManager *--"1..*" Projects
 Projects *--"1..*" Groups
 Projects *--"1..*" Settings
@@ -68,13 +71,13 @@ MainWindow *-- ChatClient
 MainWindow *-- DisplayTextArea
 MainWindow *-- SendTextArea
 ChatClient *-- ClientConnectionThread
-DisplayTextArea <-- ClientRecieveThread : listens to
-SendTextArea --> ClientSendThread : sends to
+DisplayTextArea -- ClientRecieveThread : listens to
+SendTextArea -- ClientSendThread : sends to
 ClientConnectionThread o-- ChatSocket
 ClientConnectionThread *-- ClientSendThread
 ClientConnectionThread *-- ClientRecieveThread
-ClientRecieveThread --> ChatSocket : uses
-ClientSendThread --> ChatSocket : uses
+ClientRecieveThread -- ChatSocket : listens to
+ClientSendThread -- ChatSocket : broadcasts on
 
 'Chat Server
 '-------------------------------
@@ -89,8 +92,8 @@ ServerConnectionPool *--"1..*" ServerConnection
 ServerConnection *-- ServerSendThread
 ServerConnection *-- ServerRecieveThread
 ServerConnection o-- ChatSocket
-ChatSocket <-- ServerSendThread : notifies
-ChatSocket --> ServerRecieveThread : listens
+ChatSocket -- ServerSendThread : notifies
+ChatSocket -- ServerRecieveThread : listens
 
 
 'Compiler

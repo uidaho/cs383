@@ -1,0 +1,20 @@
+@startuml
+scale max 800*600
+title Communication State Diagram
+'left to right direction
+footer 
+Created by jank6275 and reviewed by .
+endfooter
+
+[*] --> SelectProject
+SelectProject --> SetName : Succeeded
+SelectProject --> [*] : Aborted
+SetName --> ChattingWithUsers : Succeeded
+SetName --> [*] : Aborted
+ChattingWithUsers --> ConnectedClient : Connecting
+ConnectedClient --> ChattingWithUsers : Client added
+ConnectedClient --> DisconnectedClient : Disconnecting client
+DisconnectedClient --> ChatServerShutdown : Disconnecting server
+ChatServerShutdown --> [*]
+
+@enduml

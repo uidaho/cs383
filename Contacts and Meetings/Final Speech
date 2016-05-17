@@ -1,0 +1,23 @@
+Eric and Kevin's Speech for Wednesday!
+
+1. Register new user
+2. Log out, and sign back in -- Authentication
+3. Explore projects
+4. Follow, request join
+5. Leave comment, edit, then delete it -- Project ideas
+6. Create a project (Requires an image, but doesnt save that image to the project)
+7. Go to project page, accept some invites and unaccept some -- Project management
+8. Show editor, type some stuff and everyone else types stuff too -- Compiler
+8. Show off chat table (everyone chat at us) -- communication
+9. Show off profile page -- preferences
+10. Show off user settings -- settings manager
+
+
+usecases:
+    authentication x
+    communication x
+    compiler x
+    preferences x
+    project ideas x
+    project management x
+    settings manager x

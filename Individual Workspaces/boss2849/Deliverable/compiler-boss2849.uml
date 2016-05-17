@@ -5,19 +5,13 @@ hide circles
 
 footer
 Created by Rick Boss
-Reviewed by Eric Gallegos
 endfooter
 
 class MainWindow
-interface CompilerPlugin 
-class JavaCompiler
-class Compiler      
-class SnapshotManager 
+class CompileController
+class FirebaseLib
 
-MainWindow -d- Compiler : shows to
-JavaCompiler -u-|> CompilerPlugin : Compiles Code
-Compiler o--"1..*" CompilerPlugin : uses
-Compiler o-- SnapshotManager : invokes
-SnapshotManager -l- CompilerPlugin : uses
+MainWindow -d- CompileController : output status to <
+CompileController o-- FirebaseLib : uses
 
 @enduml

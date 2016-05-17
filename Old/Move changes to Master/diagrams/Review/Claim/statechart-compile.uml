@@ -1,0 +1,14 @@
+@startuml
+title Compile Project
+footer
+Created by: 
+Reviewed by:
+endfooter
+
+[*] --> Compiler : Compile requested
+Compiler --> SnapShotManager : get latest code snapshot
+SnapShotManager --> CompilerPlugin : compile code
+SnapShotManager --> [*] : no differences, return latest compilation
+CompilerPlugin --> [*] : return compiled code
+
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+
+actor User
+actor Server <<Application>>
+
+(View Project) as view
+
+User --> view : Authenticated
+view --> (Compile)
+view --> (Run)
+view --> (Package to JAR)
+view --> (Enable code freeze)
+
+(Compile) --> Server
+(Run) --> Server
+(Package to JAR) --> Server
+(Enable code freeze) --> Server
+
+@enduml

@@ -1,0 +1,63 @@
+
+
+configure new server
+root@www:~# passwd
+root@www:~# nano /etc/motd.tail                                          
+root@www:~# mysql_secure_installation
+root@www:~# ufw allow ssh
+root@www:~# ufw allow http
+root@www:~# ufw allow https
+root@www:~# ufw allow mail
+root@www:~# ufw enable
+root@www:~# ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22                         ALLOW       Anywhere
+80                         ALLOW       Anywhere
+443                        ALLOW       Anywhere
+25/tcp                     ALLOW       Anywhere
+22 (v6)                    ALLOW       Anywhere (v6)
+80 (v6)                    ALLOW       Anywhere (v6)
+443 (v6)                   ALLOW       Anywhere (v6)
+25/tcp (v6)                ALLOW       Anywhere (v6)
+
+
+install LEMP stack
+root@www:~# apt-get update
+root@www:~# apt-get upgrade
+root@www:~# apt-get install nginx php5-fpm php5-cli php5-mcrypt git lrzsz unzip zip
+root@www:~# nano /etc/php5/fpm/php.ini
+	cgi.fix_pathinfo=0
+
+generate dhparams into /etc/nginx/ssl
+generate csr
+openssl req -new -newkey rsa:2048 -nodes -out star_squireproject_com.csr -keyout star_squireproject_com.key -subj "/C=US/ST=Idaho/L=Moscow/O=Squire Project/OU=Web/CN=*.squireproject.com"
+install certificates into /etc/nginx/ssl
+
+
+NGINX CONFIG
+root@www:~# nano /etc/nginx/sites-available/squireproject.com
+	see squireproject.com.nginx
+root@www:~# nano /etc/nginx/sites-available/star.squireproject.com
+	see star.squireproject.com.nginx
+root@www:~# rm /etc/nginx/sites-enabled/default
+root@www:~# ln -s /etc/nginx/sites-available/squireproject.com /etc/nginx/sites-enabled/squireproject.com
+root@www:~# ln -s /etc/nginx/sites-available/star.squireproject.com /etc/nginx/sites-enabled/star.squireproject.com
+
+SETUP PRIMARY DOMAIN AND PMA
+root@www:~# adduser squire
+root@www:~# su squire
+squire@www:~$ cd
+squire@www:~$ mkdir public
+squire@www:~$ cd public
+squire@www:~/public$ wget https://files.phpmyadmin.net/phpMyAdmin/4.6.0/phpMyAdmin-4.6.0-all-languages.zip
+squire@www:~/public$ unzip phpMyAdmin-4.6.0-all-languages.zip
+squire@www:~/public$ mv phpMyAdmin-4.6.0-all-languages phpmyadmin
+squire@www:~/public$ rm phpMyAdmin-4.6.0-all-languages.zip
+
+
+INSTALL COMPOSER
+apt-get install curl php5-cli git
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer

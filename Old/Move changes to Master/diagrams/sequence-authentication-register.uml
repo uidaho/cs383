@@ -1,0 +1,35 @@
+@startuml
+scale max 800*600
+title Registration Sequence Diagram
+footer 
+Created by jank6275 and reviewed by mora5651.
+endfooter
+
+
+actor User
+activate User
+User -> MainWindow : register(aRegistrationInfo)
+activate MainWindow
+
+boundary MainWindow
+MainWindow -> Authentication : checkRegistration(aRegistrationInfo)
+activate Authentication
+
+entity Authentication
+Authentication -> Database : userExists(aRegistrationInfo)
+activate Database
+
+database Database
+Database --> Authentication : [boolean]
+deactivate Database
+
+Authentication -> MainWindow : account created message
+deactivate Authentication
+MainWindow -> User : go to login
+alt user already exists
+    Authentication -> MainWindow : creation failed message
+    deactivate Authentication
+    MainWindow -> User : go back to register
+end
+
+@enduml

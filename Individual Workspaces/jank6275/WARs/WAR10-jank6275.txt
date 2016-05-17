@@ -1,0 +1,30 @@
+From: Brandon Jank <jank6275@vandals.uidaho.edu> 
+To: Dr. J. <jeffery@cs.uidaho.edu>
+Subject: Status report, Brandon Jank, 2016-04-24
+
+Weekly Status Report of Team Lambda
+for the Last Week Ending 2016-04-24 Sunday
+
+Activities Planned for Last Week:
+    Write documentation for creating unit tests.
+    Write documentation for creating database migrations.
+    Write unit tests for editor class.
+    Write test cases for editor related use cases.
+
+Activities Accomplished Last Week:
+    Added 404 page.
+    Reformatted project using bootstrap CSS.
+    Made editor class play nice with projects class.
+    Create unit tests for editor class.
+    Add the ability to delete files from a project.
+    Add the ability to create files in a project.
+    Restricted ability to delte items to just the owner or project owner.
+
+
+Activities Planned for Next Week:
+    Create more unit tests for the editor.
+    Complete compile class.
+    Complete syntax checking class.
+
+The last weeks commits and issues (backlog) for the entire team can be found at:
+    https://github.com/uidaho/squireproject/pulse
